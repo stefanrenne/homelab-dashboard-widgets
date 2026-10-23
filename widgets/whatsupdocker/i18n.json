@@ -1,0 +1,22 @@
+{
+  "en": {
+    "monitoring": "Monitoring",
+    "updates": "Updates"
+  },
+  "nl": {
+    "monitoring": "Bewaakt",
+    "updates": "Updates"
+  },
+  "fr": {
+    "monitoring": "Surveillés",
+    "updates": "Mises à jour"
+  },
+  "de": {
+    "monitoring": "Überwacht",
+    "updates": "Updates"
+  },
+  "es": {
+    "monitoring": "Monitorizados",
+    "updates": "Actualizaciones"
+  }
+}

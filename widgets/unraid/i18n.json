@@ -1,0 +1,67 @@
+{
+  "en": {
+    "cpu": "CPU",
+    "memoryPercent": "Memory Used",
+    "memoryUsed": "Memory Used",
+    "memoryAvailable": "Memory Free",
+    "notifications": "Alerts",
+    "arrayFree": "Array Free",
+    "arrayUsed": "Array Used",
+    "arrayUsedPercent": "Array Used",
+    "status": "Status",
+    "started": "Started",
+    "stopped": "Stopped"
+  },
+  "nl": {
+    "cpu": "CPU",
+    "memoryPercent": "Geheugen gebruikt",
+    "memoryUsed": "Geheugen gebruikt",
+    "memoryAvailable": "Geheugen vrij",
+    "notifications": "Meldingen",
+    "arrayFree": "Array vrij",
+    "arrayUsed": "Array gebruikt",
+    "arrayUsedPercent": "Array gebruikt",
+    "status": "Status",
+    "started": "Gestart",
+    "stopped": "Gestopt"
+  },
+  "fr": {
+    "cpu": "CPU",
+    "memoryPercent": "Mémoire utilisée",
+    "memoryUsed": "Mémoire utilisée",
+    "memoryAvailable": "Mémoire libre",
+    "notifications": "Alertes",
+    "arrayFree": "Array libre",
+    "arrayUsed": "Array utilisé",
+    "arrayUsedPercent": "Array utilisé",
+    "status": "Statut",
+    "started": "Démarré",
+    "stopped": "Arrêté"
+  },
+  "de": {
+    "cpu": "CPU",
+    "memoryPercent": "Speicher belegt",
+    "memoryUsed": "Speicher belegt",
+    "memoryAvailable": "Speicher frei",
+    "notifications": "Meldungen",
+    "arrayFree": "Array frei",
+    "arrayUsed": "Array belegt",
+    "arrayUsedPercent": "Array belegt",
+    "status": "Status",
+    "started": "Gestartet",
+    "stopped": "Gestoppt"
+  },
+  "es": {
+    "cpu": "CPU",
+    "memoryPercent": "Memoria usada",
+    "memoryUsed": "Memoria usada",
+    "memoryAvailable": "Memoria libre",
+    "notifications": "Alertas",
+    "arrayFree": "Array libre",
+    "arrayUsed": "Array usado",
+    "arrayUsedPercent": "Array usado",
+    "status": "Estado",
+    "started": "Iniciado",
+    "stopped": "Detenido"
+  }
+}

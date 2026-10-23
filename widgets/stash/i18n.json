@@ -1,0 +1,42 @@
+{
+  "en": {
+    "scenes": "Scenes",
+    "images": "Images",
+    "galleries": "Galleries",
+    "performers": "Performers",
+    "studios": "Studios",
+    "tags": "Tags"
+  },
+  "nl": {
+    "scenes": "Scènes",
+    "images": "Afbeeldingen",
+    "galleries": "Galerijen",
+    "performers": "Performers",
+    "studios": "Studio’s",
+    "tags": "Tags"
+  },
+  "fr": {
+    "scenes": "Scènes",
+    "images": "Images",
+    "galleries": "Galeries",
+    "performers": "Artistes",
+    "studios": "Studios",
+    "tags": "Tags"
+  },
+  "de": {
+    "scenes": "Szenen",
+    "images": "Bilder",
+    "galleries": "Galerien",
+    "performers": "Darsteller",
+    "studios": "Studios",
+    "tags": "Tags"
+  },
+  "es": {
+    "scenes": "Escenas",
+    "images": "Imágenes",
+    "galleries": "Galerías",
+    "performers": "Intérpretes",
+    "studios": "Estudios",
+    "tags": "Etiquetas"
+  }
+}

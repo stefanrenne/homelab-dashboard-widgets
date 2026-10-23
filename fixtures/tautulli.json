@@ -1,0 +1,29 @@
+{
+ "_note": "Tautulli get_activity.",
+ "routes": {
+  "GET /api/v2": {
+   "response": {
+    "result": "success",
+    "message": null,
+    "data": {
+     "stream_count": "1",
+     "sessions": [
+      {
+       "media_type": "episode",
+       "state": "playing",
+       "grandparent_title": "Silo",
+       "parent_media_index": "3",
+       "media_index": "9",
+       "title": "Farewell",
+       "full_title": "Silo - Farewell",
+       "friendly_name": "alice",
+       "view_offset": "234000",
+       "duration": "3480000",
+       "progress_percent": "7"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

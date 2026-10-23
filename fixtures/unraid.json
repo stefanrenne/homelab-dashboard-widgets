@@ -1,0 +1,50 @@
+{
+ "_note": "Unraid API GraphQL (schema as documented for Unraid 7; verify against your server).",
+ "routes": {
+  "POST /graphql": {
+   "data": {
+    "metrics": {
+     "cpu": {
+      "percentTotal": 2.4
+     },
+     "memory": {
+      "total": 68719476736,
+      "available": 53601191936,
+      "percentTotal": 22
+     }
+    },
+    "array": {
+     "state": "STARTED",
+     "capacity": {
+      "kilobytes": {
+       "free": "25094742016",
+       "used": "37642113024",
+       "total": "62736855040"
+      }
+     },
+     "caches": [
+      {
+       "name": "trunk",
+       "fsSize": 1953514584,
+       "fsUsed": 683730104,
+       "fsFree": 1269784480
+      },
+      {
+       "name": "frunk",
+       "fsSize": 976762584,
+       "fsUsed": 400472659,
+       "fsFree": 576289925
+      }
+     ]
+    },
+    "notifications": {
+     "overview": {
+      "unread": {
+       "total": 2
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "_note": "Bazarr API.",
+ "routes": {
+  "GET /api/episodes/wanted": {
+   "data": [],
+   "total": 200
+  },
+  "GET /api/movies/wanted": {
+   "data": [],
+   "total": 3
+  }
+ }
+}

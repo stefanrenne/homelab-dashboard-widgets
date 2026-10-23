@@ -1,0 +1,17 @@
+{
+  "en": {
+    "noActiveStreams": "No active streams"
+  },
+  "nl": {
+    "noActiveStreams": "Geen actieve streams"
+  },
+  "fr": {
+    "noActiveStreams": "Aucun flux actif"
+  },
+  "de": {
+    "noActiveStreams": "Keine aktiven Streams"
+  },
+  "es": {
+    "noActiveStreams": "Sin transmisiones activas"
+  }
+}

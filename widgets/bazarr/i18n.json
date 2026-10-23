@@ -1,0 +1,22 @@
+{
+  "en": {
+    "missingEpisodes": "Missing Episodes",
+    "missingMovies": "Missing Movies"
+  },
+  "nl": {
+    "missingEpisodes": "Ontbrekende afleveringen",
+    "missingMovies": "Ontbrekende films"
+  },
+  "fr": {
+    "missingEpisodes": "Épisodes manquants",
+    "missingMovies": "Films manquants"
+  },
+  "de": {
+    "missingEpisodes": "Fehlende Folgen",
+    "missingMovies": "Fehlende Filme"
+  },
+  "es": {
+    "missingEpisodes": "Episodios faltantes",
+    "missingMovies": "Películas faltantes"
+  }
+}

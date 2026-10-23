@@ -1,0 +1,16 @@
+{
+ "_note": "Seerr API v1.",
+ "routes": {
+  "GET /api/v1/request/count": {
+   "total": 11,
+   "movie": 6,
+   "tv": 5,
+   "pending": 0,
+   "approved": 11,
+   "declined": 0,
+   "processing": 0,
+   "available": 0,
+   "completed": 0
+  }
+ }
+}

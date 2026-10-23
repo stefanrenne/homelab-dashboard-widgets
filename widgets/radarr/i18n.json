@@ -1,0 +1,32 @@
+{
+  "en": {
+    "wanted": "Wanted",
+    "missing": "Missing",
+    "queued": "Queued",
+    "movies": "Movies"
+  },
+  "nl": {
+    "wanted": "Gewenst",
+    "missing": "Ontbrekend",
+    "queued": "In wachtrij",
+    "movies": "Films"
+  },
+  "fr": {
+    "wanted": "Voulus",
+    "missing": "Manquants",
+    "queued": "En file",
+    "movies": "Films"
+  },
+  "de": {
+    "wanted": "Gesucht",
+    "missing": "Fehlend",
+    "queued": "In Warteschlange",
+    "movies": "Filme"
+  },
+  "es": {
+    "wanted": "Buscadas",
+    "missing": "Faltan",
+    "queued": "En cola",
+    "movies": "Películas"
+  }
+}

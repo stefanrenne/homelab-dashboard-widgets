@@ -1,0 +1,9 @@
+id: seerr
+name: Seerr
+version: 0.1.0
+apiVersion: 1
+description: Pending, approved and completed requests in Overseerr, Jellyseerr or Seerr.
+refresh: 1m
+options:
+  url: { type: url, required: true }      # e.g. http://seerr:5055
+  key: { type: string, secret: true, required: true }

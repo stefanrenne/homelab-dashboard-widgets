@@ -1,0 +1,9 @@
+id: prowlarr
+name: Prowlarr
+version: 0.1.0
+apiVersion: 1
+description: Grabs and queries over all indexers, and how many failed.
+refresh: 1m
+options:
+  url: { type: url, required: true }      # e.g. http://prowlarr:9696
+  key: { type: string, secret: true, required: true }

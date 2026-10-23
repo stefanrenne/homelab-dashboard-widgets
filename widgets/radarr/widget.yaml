@@ -1,0 +1,10 @@
+id: radarr
+name: Radarr
+version: 0.1.0
+apiVersion: 1
+description: Wanted, missing, queued and downloaded movies, with the download queue (homepage's radarr widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }      # e.g. http://radarr:7878
+  key: { type: string, secret: true, required: true }
+  enableQueue: { type: boolean, default: false }

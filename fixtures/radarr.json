@@ -1,0 +1,560 @@
+{
+ "_note": "Radarr API v3. Matches 8 wanted, 13 missing, 1 queued, 62 movies.",
+ "routes": {
+  "GET /api/v3/movie": [
+   {
+    "id": 0,
+    "title": "Movie 0",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 1,
+    "title": "Movie 1",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 2,
+    "title": "Movie 2",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 3,
+    "title": "Movie 3",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 4,
+    "title": "Movie 4",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 5,
+    "title": "Movie 5",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 6,
+    "title": "Movie 6",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 7,
+    "title": "Movie 7",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 8,
+    "title": "Movie 8",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 9,
+    "title": "Movie 9",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 10,
+    "title": "Movie 10",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 11,
+    "title": "Movie 11",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 12,
+    "title": "Movie 12",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 13,
+    "title": "Movie 13",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 14,
+    "title": "Movie 14",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 15,
+    "title": "Movie 15",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 16,
+    "title": "Movie 16",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 17,
+    "title": "Movie 17",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 18,
+    "title": "Movie 18",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 19,
+    "title": "Movie 19",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 20,
+    "title": "Movie 20",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 21,
+    "title": "Movie 21",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 22,
+    "title": "Movie 22",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 23,
+    "title": "Movie 23",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 24,
+    "title": "Movie 24",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 25,
+    "title": "Movie 25",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 26,
+    "title": "Movie 26",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 27,
+    "title": "Movie 27",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 28,
+    "title": "Movie 28",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 29,
+    "title": "Movie 29",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 30,
+    "title": "Movie 30",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 31,
+    "title": "Movie 31",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 32,
+    "title": "Movie 32",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 33,
+    "title": "Movie 33",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 34,
+    "title": "Movie 34",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 35,
+    "title": "Movie 35",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 36,
+    "title": "Movie 36",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 37,
+    "title": "Movie 37",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 38,
+    "title": "Movie 38",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 39,
+    "title": "Movie 39",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 40,
+    "title": "Movie 40",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 41,
+    "title": "Movie 41",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 42,
+    "title": "Movie 42",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 43,
+    "title": "Movie 43",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 44,
+    "title": "Movie 44",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 45,
+    "title": "Movie 45",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 46,
+    "title": "Movie 46",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 47,
+    "title": "Movie 47",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 48,
+    "title": "Movie 48",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 49,
+    "title": "Movie 49",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 50,
+    "title": "Movie 50",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 51,
+    "title": "Movie 51",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 52,
+    "title": "Movie 52",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 53,
+    "title": "Movie 53",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 54,
+    "title": "Movie 54",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 55,
+    "title": "Movie 55",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 56,
+    "title": "Movie 56",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 57,
+    "title": "Movie 57",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 58,
+    "title": "Movie 58",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 59,
+    "title": "Movie 59",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 60,
+    "title": "Movie 60",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 61,
+    "title": "Movie 61",
+    "monitored": true,
+    "hasFile": true,
+    "isAvailable": true
+   },
+   {
+    "id": 100,
+    "title": "Wanted 0",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 101,
+    "title": "Wanted 1",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 102,
+    "title": "Wanted 2",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 103,
+    "title": "Wanted 3",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 104,
+    "title": "Wanted 4",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 105,
+    "title": "Wanted 5",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 106,
+    "title": "Wanted 6",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 107,
+    "title": "Wanted 7",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": true
+   },
+   {
+    "id": 108,
+    "title": "Wanted 8",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": false
+   },
+   {
+    "id": 109,
+    "title": "Wanted 9",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": false
+   },
+   {
+    "id": 110,
+    "title": "Wanted 10",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": false
+   },
+   {
+    "id": 111,
+    "title": "Wanted 11",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": false
+   },
+   {
+    "id": 112,
+    "title": "Wanted 12",
+    "monitored": true,
+    "hasFile": false,
+    "isAvailable": false
+   },
+   {
+    "id": 200,
+    "title": "Unmonitored",
+    "monitored": false,
+    "hasFile": false,
+    "isAvailable": true
+   }
+  ],
+  "GET /api/v3/queue/status": {
+   "totalCount": 1,
+   "count": 1,
+   "errors": false,
+   "warnings": true
+  },
+  "GET /api/v3/queue/details": [
+   {
+    "movieId": 101,
+    "title": "The.Social.Reckoning.2026.1080p.WEB",
+    "status": "completed",
+    "trackedDownloadState": "importBlocked",
+    "trackedDownloadStatus": "warning",
+    "timeleft": "00:00:00",
+    "size": 4200000000.0,
+    "sizeleft": 0,
+    "movie": {
+     "title": "The Social Reckoning"
+    }
+   }
+  ]
+ }
+}

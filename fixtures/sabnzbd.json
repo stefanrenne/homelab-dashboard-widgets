@@ -1,0 +1,15 @@
+{
+ "_note": "SABnzbd mode=queue.",
+ "routes": {
+  "GET /api": {
+   "queue": {
+    "status": "Idle",
+    "kbpersec": "0.00",
+    "speed": "0 ",
+    "noofslots": 0,
+    "timeleft": "0:00:00",
+    "slots": []
+   }
+  }
+ }
+}

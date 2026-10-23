@@ -1,0 +1,27 @@
+{
+  "en": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "completed": "Completed"
+  },
+  "nl": {
+    "pending": "In afwachting",
+    "approved": "Goedgekeurd",
+    "completed": "Voltooid"
+  },
+  "fr": {
+    "pending": "En attente",
+    "approved": "Approuvées",
+    "completed": "Terminées"
+  },
+  "de": {
+    "pending": "Ausstehend",
+    "approved": "Genehmigt",
+    "completed": "Abgeschlossen"
+  },
+  "es": {
+    "pending": "Pendientes",
+    "approved": "Aprobadas",
+    "completed": "Completadas"
+  }
+}

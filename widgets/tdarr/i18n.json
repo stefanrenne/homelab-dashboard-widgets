@@ -1,0 +1,32 @@
+{
+  "en": {
+    "queue": "Queue",
+    "processed": "Processed",
+    "errored": "Errored",
+    "saved": "Saved"
+  },
+  "nl": {
+    "queue": "Wachtrij",
+    "processed": "Verwerkt",
+    "errored": "Mislukt",
+    "saved": "Bespaard"
+  },
+  "fr": {
+    "queue": "File",
+    "processed": "Traités",
+    "errored": "En erreur",
+    "saved": "Économisé"
+  },
+  "de": {
+    "queue": "Warteschlange",
+    "processed": "Verarbeitet",
+    "errored": "Fehlerhaft",
+    "saved": "Gespart"
+  },
+  "es": {
+    "queue": "Cola",
+    "processed": "Procesados",
+    "errored": "Con error",
+    "saved": "Ahorrado"
+  }
+}

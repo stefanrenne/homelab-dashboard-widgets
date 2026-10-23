@@ -1,0 +1,15 @@
+{
+ "_note": "Tdarr cruddb statistics.",
+ "routes": {
+  "POST /api/v2/cruddb": {
+   "_id": "statistics",
+   "table1Count": 3,
+   "table2Count": 1180,
+   "table3Count": 4,
+   "table4Count": 0,
+   "table5Count": 950,
+   "table6Count": 1,
+   "sizeDiff": 1534.6
+  }
+ }
+}

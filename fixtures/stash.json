@@ -1,0 +1,17 @@
+{
+ "_note": "Stash GraphQL stats.",
+ "routes": {
+  "POST /graphql": {
+   "data": {
+    "stats": {
+     "scene_count": 5518,
+     "image_count": 10230,
+     "gallery_count": 88,
+     "performer_count": 2640,
+     "studio_count": 412,
+     "tag_count": 1418
+    }
+   }
+  }
+ }
+}

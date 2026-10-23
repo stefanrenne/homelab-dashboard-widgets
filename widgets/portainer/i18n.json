@@ -1,0 +1,27 @@
+{
+  "en": {
+    "running": "Running",
+    "stopped": "Stopped",
+    "total": "Total"
+  },
+  "nl": {
+    "running": "Actief",
+    "stopped": "Gestopt",
+    "total": "Totaal"
+  },
+  "fr": {
+    "running": "En cours",
+    "stopped": "Arrêtés",
+    "total": "Total"
+  },
+  "de": {
+    "running": "Läuft",
+    "stopped": "Gestoppt",
+    "total": "Gesamt"
+  },
+  "es": {
+    "running": "En ejecución",
+    "stopped": "Detenidos",
+    "total": "Total"
+  }
+}

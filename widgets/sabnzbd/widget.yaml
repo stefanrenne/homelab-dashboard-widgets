@@ -1,0 +1,9 @@
+id: sabnzbd
+name: SABnzbd
+version: 0.1.0
+apiVersion: 1
+description: Download rate, queue length and time left.
+refresh: 10s
+options:
+  url: { type: url, required: true }      # e.g. http://sabnzbd:8080
+  key: { type: string, secret: true, required: true }

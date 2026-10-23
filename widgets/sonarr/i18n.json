@@ -1,0 +1,27 @@
+{
+  "en": {
+    "wanted": "Wanted",
+    "queued": "Queued",
+    "series": "Series"
+  },
+  "nl": {
+    "wanted": "Gewenst",
+    "queued": "In wachtrij",
+    "series": "Series"
+  },
+  "fr": {
+    "wanted": "Voulus",
+    "queued": "En file",
+    "series": "Séries"
+  },
+  "de": {
+    "wanted": "Gesucht",
+    "queued": "In Warteschlange",
+    "series": "Serien"
+  },
+  "es": {
+    "wanted": "Buscados",
+    "queued": "En cola",
+    "series": "Series"
+  }
+}

@@ -1,0 +1,144 @@
+{
+ "_note": "Sonarr API v3. Matches 11 wanted, 3 queued, 24 series.",
+ "routes": {
+  "GET /api/v3/wanted/missing": {
+   "page": 1,
+   "pageSize": 1,
+   "totalRecords": 11,
+   "records": []
+  },
+  "GET /api/v3/queue": {
+   "page": 1,
+   "pageSize": 1,
+   "totalRecords": 3,
+   "records": []
+  },
+  "GET /api/v3/series": [
+   {
+    "id": 0,
+    "title": "South Park"
+   },
+   {
+    "id": 1,
+    "title": "MobLand"
+   },
+   {
+    "id": 2,
+    "title": "Grey's Anatomy"
+   },
+   {
+    "id": 3,
+    "title": "Series 0"
+   },
+   {
+    "id": 4,
+    "title": "Series 1"
+   },
+   {
+    "id": 5,
+    "title": "Series 2"
+   },
+   {
+    "id": 6,
+    "title": "Series 3"
+   },
+   {
+    "id": 7,
+    "title": "Series 4"
+   },
+   {
+    "id": 8,
+    "title": "Series 5"
+   },
+   {
+    "id": 9,
+    "title": "Series 6"
+   },
+   {
+    "id": 10,
+    "title": "Series 7"
+   },
+   {
+    "id": 11,
+    "title": "Series 8"
+   },
+   {
+    "id": 12,
+    "title": "Series 9"
+   },
+   {
+    "id": 13,
+    "title": "Series 10"
+   },
+   {
+    "id": 14,
+    "title": "Series 11"
+   },
+   {
+    "id": 15,
+    "title": "Series 12"
+   },
+   {
+    "id": 16,
+    "title": "Series 13"
+   },
+   {
+    "id": 17,
+    "title": "Series 14"
+   },
+   {
+    "id": 18,
+    "title": "Series 15"
+   },
+   {
+    "id": 19,
+    "title": "Series 16"
+   },
+   {
+    "id": 20,
+    "title": "Series 17"
+   },
+   {
+    "id": 21,
+    "title": "Series 18"
+   },
+   {
+    "id": 22,
+    "title": "Series 19"
+   },
+   {
+    "id": 23,
+    "title": "Series 20"
+   }
+  ],
+  "GET /api/v3/queue/details": [
+   {
+    "seriesId": 0,
+    "title": "South Park S29E04 1080p WEB H264-FLUX",
+    "status": "completed",
+    "trackedDownloadState": "importPending",
+    "timeleft": "00:00:00",
+    "size": 1,
+    "sizeleft": 0
+   },
+   {
+    "seriesId": 1,
+    "title": "MobLand S02E06 A Different Corner 1080p WEB H264-EZTV",
+    "status": "completed",
+    "trackedDownloadState": "importPending",
+    "timeleft": "00:00:00",
+    "size": 1,
+    "sizeleft": 0
+   },
+   {
+    "seriesId": 2,
+    "title": "Greys Anatomy S23E02 Slippin and Slidin 1080p WEB H264-EZTV",
+    "status": "completed",
+    "trackedDownloadState": "importPending",
+    "timeleft": "00:00:00",
+    "size": 1,
+    "sizeleft": 0
+   }
+  ]
+ }
+}

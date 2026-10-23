@@ -1,0 +1,28 @@
+{
+ "_note": "Prowlarr API v1.",
+ "routes": {
+  "GET /api/v1/indexerstats": {
+   "id": 1,
+   "indexers": [
+    {
+     "indexerId": 1,
+     "indexerName": "A",
+     "numberOfQueries": 30,
+     "numberOfGrabs": 25,
+     "numberOfFailedQueries": 0,
+     "numberOfFailedGrabs": 0
+    },
+    {
+     "indexerId": 2,
+     "indexerName": "B",
+     "numberOfQueries": 14,
+     "numberOfGrabs": 12,
+     "numberOfFailedQueries": 0,
+     "numberOfFailedGrabs": 0
+    }
+   ],
+   "userAgents": [],
+   "hosts": []
+  }
+ }
+}

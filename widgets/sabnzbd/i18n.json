@@ -1,0 +1,27 @@
+{
+  "en": {
+    "rate": "Rate",
+    "queue": "Queue",
+    "timeleft": "Time Left"
+  },
+  "nl": {
+    "rate": "Snelheid",
+    "queue": "Wachtrij",
+    "timeleft": "Resterend"
+  },
+  "fr": {
+    "rate": "Débit",
+    "queue": "File",
+    "timeleft": "Restant"
+  },
+  "de": {
+    "rate": "Rate",
+    "queue": "Warteschlange",
+    "timeleft": "Verbleibend"
+  },
+  "es": {
+    "rate": "Velocidad",
+    "queue": "Cola",
+    "timeleft": "Restante"
+  }
+}
