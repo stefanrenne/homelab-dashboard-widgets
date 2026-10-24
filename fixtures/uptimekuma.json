@@ -1,0 +1,10 @@
+{
+ "_note": "Uptime Kuma status page 'home': three monitors, one down, and an incident.",
+ "routes": {
+  "GET /api/status-page/home": { "config": { "slug": "home", "title": "Home" }, "incident": { "id": 1, "title": "NAS offline", "createdDate": "2026-10-24 06:00:00" }, "publicGroupList": [] },
+  "GET /api/status-page/heartbeat/home": {
+   "heartbeatList": { "1": [{ "status": 1 }, { "status": 1 }], "2": [{ "status": 1 }, { "status": 0 }], "3": [{ "status": 0 }, { "status": 1 }] },
+   "uptimeList": { "1_24": 1, "2_24": 0.9, "3_24": 0.995 }
+  }
+ }
+}

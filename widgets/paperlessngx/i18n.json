@@ -1,0 +1,70 @@
+{
+  "en": {
+    "inbox": "Inbox",
+    "total": "Documents"
+  },
+  "nl": {
+    "inbox": "Inbox",
+    "total": "Documenten"
+  },
+  "fr": {
+    "inbox": "Boîte de réception",
+    "total": "Documents"
+  },
+  "de": {
+    "inbox": "Posteingang",
+    "total": "Dokumente"
+  },
+  "es": {
+    "inbox": "Bandeja",
+    "total": "Documentos"
+  },
+  "ca": {
+    "inbox": "Safata",
+    "total": "Documents"
+  },
+  "he": {
+    "inbox": "תיבת דואר",
+    "total": "מסמכים"
+  },
+  "hr": {
+    "inbox": "Ulazni",
+    "total": "Dokumenti"
+  },
+  "hu": {
+    "inbox": "Beérkezett",
+    "total": "Dokumentumok"
+  },
+  "it": {
+    "inbox": "In arrivo",
+    "total": "Documenti"
+  },
+  "nb-NO": {
+    "inbox": "Innboks",
+    "total": "Dokumenter"
+  },
+  "pt": {
+    "inbox": "Entrada",
+    "total": "Documentos"
+  },
+  "ru": {
+    "inbox": "Входящие",
+    "total": "Документы"
+  },
+  "sv": {
+    "inbox": "Inkorg",
+    "total": "Dokument"
+  },
+  "vi": {
+    "inbox": "Hộp thư",
+    "total": "Tài liệu"
+  },
+  "zh-Hans": {
+    "inbox": "收件箱",
+    "total": "文档"
+  },
+  "zh-Hant": {
+    "inbox": "收件匣",
+    "total": "文件"
+  }
+}

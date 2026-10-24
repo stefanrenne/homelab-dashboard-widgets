@@ -1,0 +1,4 @@
+{
+ "_note": "Paperless-ngx statistics with an inbox tag.",
+ "routes": { "GET /api/statistics/": { "documents_total": 2384, "documents_inbox": 7, "inbox_tag": 1, "character_count": 9123456, "document_file_type_counts": [] } }
+}

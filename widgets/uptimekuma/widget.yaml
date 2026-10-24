@@ -1,0 +1,9 @@
+id: uptimekuma
+name: Uptime Kuma
+version: 0.1.0
+apiVersion: 1
+description: Monitors up and down, average uptime and the incident of one status page (homepage's uptimekuma widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. http://uptime-kuma.lan:3001
+  slug: { type: string, required: true }   # the status page's address after /status/

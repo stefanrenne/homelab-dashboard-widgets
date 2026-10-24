@@ -22,6 +22,7 @@ const REQUIRED = {
   openmeteo: { latitude: 52.37, longitude: 4.89, units: 'metric', cache: 5 },
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
+  uptimekuma: { slug: 'home' },
 };
 
 async function run(id, options = {}, { params } = {}) {
@@ -753,4 +754,22 @@ test('immich: users, photos, videos and storage, on the version 1 or 2 path', as
   assert.deepEqual(values(await run('immich', { version: 2 })), { users: 3, photos: 48210, videos: 1834, storage: '612.4 GB' });
   assert.equal(lastRequest('immich').headers['x-api-key'], 'test-key');
   assert.deepEqual(values(await run('immich')), { users: 1, photos: 30000, videos: 1000, storage: '400 GB' });
+});
+
+test('paperlessngx: inbox (marked) and total documents, with a token or a login', async () => {
+  const out = await run('paperlessngx');
+  assert.deepEqual(values(out), { inbox: 7, total: 2384 });
+  assert.equal(out.blocks[0].status, 'warn');
+  assert.equal(lastRequest('paperlessngx').headers.authorization, 'Token test-key');
+  await run('paperlessngx', { key: undefined, username: 'u', password: 'p' });
+  assert.equal(lastRequest('paperlessngx').headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
+});
+
+test('uptimekuma: up, down (marked), average uptime and the incident of a status page', async () => {
+  const out = await run('uptimekuma', { slug: 'home' });
+  const v = values(out);
+  assert.deepEqual([v.up, v.down, v.uptime], [2, 1, '96.5%']);
+  assert.match(v.incident, /^\d+:\d\d:\d\d$/);
+  assert.deepEqual(out.blocks.map((b) => b.status ?? null), [null, 'error', null, 'warn']);
+  await assert.rejects(run('uptimekuma', { slug: '../x' }), /slug/);
 });
