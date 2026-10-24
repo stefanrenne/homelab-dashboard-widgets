@@ -1,0 +1,11 @@
+id: downloadstation
+name: Synology Download Station
+version: 0.1.0
+apiVersion: 1
+description: Downloads in progress and done, with their rates, in Synology Download Station (homepage's downloadstation widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # the NAS, e.g. http://nas.lan:5000
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }
+  insecure: { type: boolean, default: false }   # accept a self-signed certificate (https on port 5001)

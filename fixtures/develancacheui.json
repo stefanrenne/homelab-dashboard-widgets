@@ -1,0 +1,1 @@
+{ "_note": "DeveLanCacheUI totals.", "routes": { "GET /DownloadStats/GetTotalDownloadStats": { "totalCacheHitBytes": 4812300000000, "totalCacheMissBytes": 612400000000 } } }

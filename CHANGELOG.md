@@ -46,6 +46,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `backrest` (latest and 30-day backups, failures marked) and `booklore` (libraries, books, reading and finished), as homepage's widgets.
 - `beszel`, `bookorbit`, `caddy` and `calibreweb`, as homepage's widgets.
 - `changedetectionio`, `channelsdvrserver`, `checkmk`, `cloudflared`, `coinmarketcap` and `crowdsec`, as homepage's widgets.
+- `develancacheui`, `dispatcharr`, `dockhand`, `downloadstation`, `esphome` and `evcc`, as homepage's widgets.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

@@ -1,0 +1,70 @@
+{
+  "en": {
+    "cachehitbytes": "Cache hits",
+    "cachemissbytes": "Cache misses"
+  },
+  "nl": {
+    "cachehitbytes": "Uit cache",
+    "cachemissbytes": "Niet in cache"
+  },
+  "fr": {
+    "cachehitbytes": "Depuis le cache",
+    "cachemissbytes": "Hors cache"
+  },
+  "de": {
+    "cachehitbytes": "Aus Cache",
+    "cachemissbytes": "Nicht im Cache"
+  },
+  "es": {
+    "cachehitbytes": "Desde caché",
+    "cachemissbytes": "Sin caché"
+  },
+  "ca": {
+    "cachehitbytes": "Des de memòria",
+    "cachemissbytes": "Sense memòria"
+  },
+  "he": {
+    "cachehitbytes": "מהמטמון",
+    "cachemissbytes": "לא במטמון"
+  },
+  "hr": {
+    "cachehitbytes": "Iz predmemorije",
+    "cachemissbytes": "Mimo predmemorije"
+  },
+  "hu": {
+    "cachehitbytes": "Gyorsítótár",
+    "cachemissbytes": "Nem gyorsítótár"
+  },
+  "it": {
+    "cachehitbytes": "Dalla cache",
+    "cachemissbytes": "Fuori cache"
+  },
+  "nb-NO": {
+    "cachehitbytes": "Fra cache",
+    "cachemissbytes": "Utenom cache"
+  },
+  "pt": {
+    "cachehitbytes": "Da cache",
+    "cachemissbytes": "Sem cache"
+  },
+  "ru": {
+    "cachehitbytes": "Из кеша",
+    "cachemissbytes": "Мимо кеша"
+  },
+  "sv": {
+    "cachehitbytes": "Från cache",
+    "cachemissbytes": "Utanför cache"
+  },
+  "vi": {
+    "cachehitbytes": "Từ bộ đệm",
+    "cachemissbytes": "Ngoài bộ đệm"
+  },
+  "zh-Hans": {
+    "cachehitbytes": "缓存命中",
+    "cachemissbytes": "缓存未命中"
+  },
+  "zh-Hant": {
+    "cachehitbytes": "快取命中",
+    "cachemissbytes": "快取未命中"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "en": {
+    "pv_power": "Solar",
+    "grid_power": "Grid",
+    "home_power": "Home",
+    "charge_power": "Charging"
+  },
+  "nl": {
+    "pv_power": "Zon",
+    "grid_power": "Net",
+    "home_power": "Huis",
+    "charge_power": "Laden"
+  },
+  "fr": {
+    "pv_power": "Solaire",
+    "grid_power": "Réseau",
+    "home_power": "Maison",
+    "charge_power": "Charge"
+  },
+  "de": {
+    "pv_power": "Solar",
+    "grid_power": "Netz",
+    "home_power": "Haus",
+    "charge_power": "Laden"
+  },
+  "es": {
+    "pv_power": "Solar",
+    "grid_power": "Red",
+    "home_power": "Casa",
+    "charge_power": "Carga"
+  },
+  "ca": {
+    "pv_power": "Solar",
+    "grid_power": "Xarxa",
+    "home_power": "Casa",
+    "charge_power": "Càrrega"
+  },
+  "he": {
+    "pv_power": "סולארי",
+    "grid_power": "רשת חשמל",
+    "home_power": "בית",
+    "charge_power": "טעינה"
+  },
+  "hr": {
+    "pv_power": "Solarno",
+    "grid_power": "Mreža",
+    "home_power": "Kuća",
+    "charge_power": "Punjenje"
+  },
+  "hu": {
+    "pv_power": "Napelem",
+    "grid_power": "Hálózat",
+    "home_power": "Otthon",
+    "charge_power": "Töltés"
+  },
+  "it": {
+    "pv_power": "Solare",
+    "grid_power": "Rete",
+    "home_power": "Casa",
+    "charge_power": "Ricarica"
+  },
+  "nb-NO": {
+    "pv_power": "Sol",
+    "grid_power": "Nett",
+    "home_power": "Hjem",
+    "charge_power": "Lading"
+  },
+  "pt": {
+    "pv_power": "Solar",
+    "grid_power": "Rede",
+    "home_power": "Casa",
+    "charge_power": "Carga"
+  },
+  "ru": {
+    "pv_power": "Солнце",
+    "grid_power": "Сеть",
+    "home_power": "Дом",
+    "charge_power": "Зарядка"
+  },
+  "sv": {
+    "pv_power": "Sol",
+    "grid_power": "Elnät",
+    "home_power": "Hem",
+    "charge_power": "Laddning"
+  },
+  "vi": {
+    "pv_power": "Mặt trời",
+    "grid_power": "Lưới điện",
+    "home_power": "Nhà",
+    "charge_power": "Sạc"
+  },
+  "zh-Hans": {
+    "pv_power": "光伏",
+    "grid_power": "电网",
+    "home_power": "家庭",
+    "charge_power": "充电"
+  },
+  "zh-Hant": {
+    "pv_power": "太陽能",
+    "grid_power": "電網",
+    "home_power": "家庭",
+    "charge_power": "充電"
+  }
+}

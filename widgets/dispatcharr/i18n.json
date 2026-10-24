@@ -1,0 +1,70 @@
+{
+  "en": {
+    "channels": "Channels",
+    "streams": "Streams"
+  },
+  "nl": {
+    "channels": "Kanalen",
+    "streams": "Streams"
+  },
+  "fr": {
+    "channels": "Chaînes",
+    "streams": "Flux"
+  },
+  "de": {
+    "channels": "Kanäle",
+    "streams": "Streams"
+  },
+  "es": {
+    "channels": "Canales",
+    "streams": "Streams"
+  },
+  "ca": {
+    "channels": "Canals",
+    "streams": "Fluxos"
+  },
+  "he": {
+    "channels": "ערוצים",
+    "streams": "הזרמות"
+  },
+  "hr": {
+    "channels": "Kanali",
+    "streams": "Streamovi"
+  },
+  "hu": {
+    "channels": "Csatornák",
+    "streams": "Streamek"
+  },
+  "it": {
+    "channels": "Canali",
+    "streams": "Stream"
+  },
+  "nb-NO": {
+    "channels": "Kanaler",
+    "streams": "Strømmer"
+  },
+  "pt": {
+    "channels": "Canais",
+    "streams": "Streams"
+  },
+  "ru": {
+    "channels": "Каналы",
+    "streams": "Потоки"
+  },
+  "sv": {
+    "channels": "Kanaler",
+    "streams": "Strömmar"
+  },
+  "vi": {
+    "channels": "Kênh",
+    "streams": "Luồng phát"
+  },
+  "zh-Hans": {
+    "channels": "频道",
+    "streams": "串流"
+  },
+  "zh-Hant": {
+    "channels": "頻道",
+    "streams": "串流"
+  }
+}

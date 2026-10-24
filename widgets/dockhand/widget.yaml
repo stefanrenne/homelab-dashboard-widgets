@@ -1,0 +1,13 @@
+id: dockhand
+name: Dockhand
+version: 0.1.0
+apiVersion: 1
+description: Containers, CPU, memory, images, volumes, stacks and updates in Dockhand, for one environment or all (homepage's dockhand widget).
+refresh: 1m
+defaultFields: [running, total, cpu, memory]
+options:
+  url: { type: url, required: true }       # e.g. http://dockhand.lan:3001
+  environment: { type: string }            # one environment, by name or id; default all together
+  username: { type: string }               # local authentication
+  password: { type: string, secret: true }
+  key: { type: string, secret: true }      # an API key instead of a login

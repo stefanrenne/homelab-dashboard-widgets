@@ -1,0 +1,7 @@
+{ "_note": "Synology Download Station: API info, a login, and three tasks (one done).", "routes": {
+ "GET /webapi/query.cgi": { "success": true, "data": { "SYNO.API.Auth": { "path": "entry.cgi", "maxVersion": 7 }, "SYNO.DownloadStation.Task": { "path": "DownloadStation/task.cgi", "maxVersion": 3 } } },
+ "POST /webapi/entry.cgi": { "success": true, "data": { "sid": "sid-ds" } },
+ "GET /webapi/DownloadStation/task.cgi": { "success": true, "data": { "total": 3, "tasks": [
+  { "id": "a", "size": 4000000000, "additional": { "transfer": { "size_downloaded": 1000000000, "speed_download": 2500000, "speed_upload": 0 } } },
+  { "id": "b", "size": 700000000, "additional": { "transfer": { "size_downloaded": 700000000, "speed_download": 0, "speed_upload": 150000 } } },
+  { "id": "c", "size": 300000000, "additional": { "transfer": { "size_downloaded": 0, "speed_download": 500000, "speed_upload": 0 } } } ] } } } }

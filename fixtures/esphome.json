@@ -1,0 +1,1 @@
+{ "_note": "ESPHome dashboard /ping.", "routes": { "GET /ping": { "kitchen.yaml": true, "garden.yaml": true, "garage.yaml": false, "test.yaml": null } } }

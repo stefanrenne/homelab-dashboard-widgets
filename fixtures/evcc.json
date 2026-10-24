@@ -1,0 +1,1 @@
+{ "_note": "evcc 0.207+ state: exporting to the grid while charging.", "routes": { "GET /api/state": { "pvPower": 5230, "grid": { "power": -1210 }, "homePower": 620, "loadpoints": [{ "chargePower": 3400 }, { "chargePower": 0 }] } } }

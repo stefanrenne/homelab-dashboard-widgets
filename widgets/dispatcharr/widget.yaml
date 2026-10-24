@@ -1,0 +1,11 @@
+id: dispatcharr
+name: Dispatcharr
+version: 0.1.0
+apiVersion: 1
+description: Channels and active streams in Dispatcharr, and optionally the streams one per row (homepage's dispatcharr widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # e.g. http://dispatcharr.lan:9191
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }
+  enableActiveStreams: { type: boolean, default: false }   # a row per active stream

@@ -30,6 +30,8 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  dispatcharr: { username: 'admin', password: 'pw' },
+  downloadstation: { username: 'dl', password: 'pw' },
   checkmk: { site: 'cmk', username: 'automation', password: 's3cret' },
   get cloudflared() { return { url: `${mock.url}/cloudflared`, accountid: 'acc1', tunnelid: 'tun1' }; },
   coinmarketcap: { symbols: ['BTC', 'ETH'], currency: 'EUR' },
@@ -1225,4 +1227,21 @@ test('changedetectionio, channelsdvrserver, checkmk, cloudflared, coinmarketcap 
   const cs = await run('crowdsec');
   assert.deepEqual(values(cs), { alerts: 3, bans: 3 });
   assert.equal(lastRequest('crowdsec').headers.authorization, 'Bearer jwt-1');
+});
+
+test('develancacheui, dispatcharr, dockhand, downloadstation, esphome and evcc', async () => {
+  assert.deepEqual(values(await run('develancacheui')), { cachehitbytes: '4.8 TB', cachemissbytes: '612.4 GB' });
+  const disp = await run('dispatcharr', { enableActiveStreams: true });
+  assert.deepEqual(values(disp), { channels: 3, streams: 2 });
+  assert.deepEqual(disp.rows, [{ label: 'NPO 1 HD', value: '2 · 6.4 Mbit/s', icon: 'play' }, { label: 'Sport 2', value: '1 · 8.2 Mbit/s', icon: 'play' }]);
+  assert.equal(lastRequest('dispatcharr').headers.authorization, 'Bearer jwt-a');
+  const dock = await run('dockhand', { key: 'k' });
+  assert.deepEqual(values(dock), { running: 25, stopped: 2, paused: 0, pending_updates: 3, total: 27, cpu: '8%', memory: '40%', images: 36, volumes: 16, stacks: '6 / 7', events_today: 44 });
+  assert.deepEqual(values(await run('dockhand', { key: 'k', environment: 'PI' })).running, 5);
+  await assert.rejects(run('dockhand', { key: 'k', environment: 'nope' }), /no environment "nope"/);
+  assert.deepEqual(values(await run('downloadstation')), { leech: 2, download: '3 MB/s', seed: 1, upload: '150 kB/s' });
+  assert.equal(lastRequest('downloadstation').query._sid, 'sid-ds');
+  const esp = await run('esphome', { username: 'u', password: 'p' });
+  assert.deepEqual(values(esp), { online: 2, offline: 1, offline_alt: 2, unknown: 1, total: 4 });
+  assert.deepEqual(values(await run('evcc')), { pv_power: '5.2kW', grid_power: '-1.2kW', home_power: '0.6kW', charge_power: '3.4kW' });
 });

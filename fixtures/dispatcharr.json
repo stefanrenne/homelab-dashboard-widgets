@@ -1,0 +1,6 @@
+{ "_note": "Dispatcharr: a token, three channels, two streams.", "routes": {
+ "POST /api/accounts/token/": { "access": "jwt-a", "refresh": "jwt-r" },
+ "GET /api/channels/channels/": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
+ "GET /proxy/ts/status": { "count": 2, "channels": [
+  { "channel_name": "NPO 1 HD", "clients": [{}, {}], "avg_bitrate_kbps": 6400 },
+  { "stream_name": "Sport 2", "clients": [{}], "avg_bitrate_kbps": 8200 } ] } } }

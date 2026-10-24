@@ -57,6 +57,12 @@ Every widget has its own page with setup, fields and options on the
 | `cloudflared` | tunnel status, origin IP | `accountid`, `tunnelid`, `key` |
 | `coinmarketcap` | a row per cryptocurrency with price and change | `key`, `symbols` or `slugs`, `currency`, `defaultinterval` |
 | `crowdsec` | alerts (24 hours), active bans | `url`, `username`, `password` |
+| `develancacheui` | data from the LAN cache and from the internet | `url` |
+| `dispatcharr` | channels, active streams; streams per row with `enableActiveStreams` | `url`, `username`, `password` |
+| `dockhand` | containers, CPU, memory; more via `fields` | `url`, `environment`, `username`/`password` or `key` |
+| `downloadstation` | leech, download rate, seed, upload rate (Synology) | `url`, `username`, `password` |
+| `esphome` | devices online, offline, not online, total | `url`, `username`, `password` |
+| `evcc` | solar, grid, home and charging power | `url` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

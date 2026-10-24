@@ -1,0 +1,12 @@
+id: esphome
+name: ESPHome
+version: 0.1.0
+apiVersion: 1
+description: ESPHome devices online, offline and unknown (homepage's esphome widget).
+refresh: 1m
+defaultFields: [online, offline, offline_alt, total]
+options:
+  url: { type: url, required: true }       # the ESPHome dashboard, e.g. http://esphome.lan:6052
+  username: { type: string }               # with authentication on in the dashboard
+  password: { type: string, secret: true }
+  key: { type: string, secret: true }      # instead: the value of the dashboard's "authenticated" cookie

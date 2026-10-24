@@ -1,0 +1,121 @@
+{
+  "en": {
+    "online": "Online",
+    "offline": "Offline",
+    "offline_alt": "Not online",
+    "unknown": "Unknown",
+    "total": "Total"
+  },
+  "nl": {
+    "online": "Online",
+    "offline": "Offline",
+    "offline_alt": "Niet online",
+    "unknown": "Onbekend",
+    "total": "Totaal"
+  },
+  "fr": {
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "offline_alt": "Pas en ligne",
+    "unknown": "Inconnu",
+    "total": "Total"
+  },
+  "de": {
+    "online": "Online",
+    "offline": "Offline",
+    "offline_alt": "Nicht online",
+    "unknown": "Unbekannt",
+    "total": "Gesamt"
+  },
+  "es": {
+    "online": "En línea",
+    "offline": "Sin conexión",
+    "offline_alt": "Apagados",
+    "unknown": "Desconocido",
+    "total": "Total"
+  },
+  "ca": {
+    "online": "En línia",
+    "offline": "Fora de línia",
+    "offline_alt": "Apagats",
+    "unknown": "Desconegut",
+    "total": "Total"
+  },
+  "he": {
+    "online": "מחובר",
+    "offline": "מנותק",
+    "offline_alt": "לא מחוברים",
+    "unknown": "לא ידוע",
+    "total": "סך הכול"
+  },
+  "hr": {
+    "online": "Na mreži",
+    "offline": "Izvan mreže",
+    "offline_alt": "Nisu na mreži",
+    "unknown": "Nepoznato",
+    "total": "Ukupno"
+  },
+  "hu": {
+    "online": "Hálózaton",
+    "offline": "Offline",
+    "offline_alt": "Nem elérhető",
+    "unknown": "Ismeretlen",
+    "total": "Összesen"
+  },
+  "it": {
+    "online": "In linea",
+    "offline": "Offline",
+    "offline_alt": "Non in linea",
+    "unknown": "Sconosciuto",
+    "total": "Totale"
+  },
+  "nb-NO": {
+    "online": "Tilkoblet",
+    "offline": "Frakoblet",
+    "offline_alt": "Frakoblet",
+    "unknown": "Ukjent",
+    "total": "Totalt"
+  },
+  "pt": {
+    "online": "Ligado",
+    "offline": "Offline",
+    "offline_alt": "Não ligados",
+    "unknown": "Desconhecido",
+    "total": "Total"
+  },
+  "ru": {
+    "online": "В сети",
+    "offline": "Не в сети",
+    "offline_alt": "Не в сети",
+    "unknown": "Неизвестно",
+    "total": "Всего"
+  },
+  "sv": {
+    "online": "Ansluten",
+    "offline": "Offline",
+    "offline_alt": "Ej online",
+    "unknown": "Okänt",
+    "total": "Totalt"
+  },
+  "vi": {
+    "online": "Trực tuyến",
+    "offline": "Ngoại tuyến",
+    "offline_alt": "Mất kết nối",
+    "unknown": "Không rõ",
+    "total": "Tổng"
+  },
+  "zh-Hans": {
+    "online": "在线",
+    "offline": "离线",
+    "offline_alt": "未在线",
+    "unknown": "未知",
+    "total": "总计"
+  },
+  "zh-Hant": {
+    "online": "線上",
+    "offline": "離線",
+    "offline_alt": "未上線",
+    "unknown": "未知",
+    "total": "總計"
+  }
+}

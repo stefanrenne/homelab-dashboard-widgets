@@ -1,0 +1,3 @@
+{ "_note": "Dockhand dashboard stats: two environments.", "routes": { "GET /api/dashboard/stats": [
+ { "id": 1, "name": "local", "containers": { "running": 20, "stopped": 2, "paused": 0, "total": 22, "pendingUpdates": 3 }, "metrics": { "cpuPercent": 12.4, "memoryPercent": 51 }, "images": { "total": 30 }, "volumes": { "total": 14 }, "stacks": { "running": 5, "total": 6 }, "events": { "today": 41 } },
+ { "id": 2, "name": "pi", "containers": { "running": 5, "total": 5 }, "metrics": { "cpuPercent": 3.6, "memoryPercent": 29 }, "images": { "total": 6 }, "volumes": { "total": 2 }, "stacks": { "running": 1, "total": 1 }, "events": { "today": 3 } } ] } }
