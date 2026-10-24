@@ -1,0 +1,11 @@
+{
+ "_note": "Emby: two sessions playing (an episode, paused audio), one idle; and the library counts.",
+ "routes": {
+  "GET /emby/Sessions": [
+   { "UserName": "anna", "NowPlayingItem": { "Type": "Episode", "Name": "Pilot", "SeriesName": "Silo", "ParentIndexNumber": 1, "IndexNumber": 1, "RunTimeTicks": 34800000000 }, "PlayState": { "PositionTicks": 2340000000, "IsPaused": false } },
+   { "UserName": "bob", "NowPlayingItem": { "Type": "Audio", "Name": "Breathe", "Album": "The Dark Side of the Moon", "AlbumArtist": "Pink Floyd", "RunTimeTicks": 1630000000 }, "PlayState": { "PositionTicks": 600000000, "IsPaused": true } },
+   { "UserName": "carl", "PlayState": {} }
+  ],
+  "GET /emby/Items/Counts": { "MovieCount": 812, "SeriesCount": 143, "EpisodeCount": 6021, "SongCount": 9310, "AlbumCount": 702, "ArtistCount": 233 }
+ }
+}

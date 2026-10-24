@@ -1,0 +1,138 @@
+{
+  "en": {
+    "movies": "Movies",
+    "series": "Series",
+    "episodes": "Episodes",
+    "songs": "Songs",
+    "albums": "Albums",
+    "noActiveStreams": "No active streams"
+  },
+  "nl": {
+    "movies": "Films",
+    "series": "Series",
+    "episodes": "Afleveringen",
+    "songs": "Nummers",
+    "albums": "Albums",
+    "noActiveStreams": "Geen actieve streams"
+  },
+  "fr": {
+    "movies": "Films",
+    "series": "Séries",
+    "episodes": "Épisodes",
+    "songs": "Titres",
+    "albums": "Albums",
+    "noActiveStreams": "Aucun flux actif"
+  },
+  "de": {
+    "movies": "Filme",
+    "series": "Serien",
+    "episodes": "Episoden",
+    "songs": "Titel",
+    "albums": "Alben",
+    "noActiveStreams": "Keine aktiven Streams"
+  },
+  "es": {
+    "movies": "Películas",
+    "series": "Series",
+    "episodes": "Episodios",
+    "songs": "Canciones",
+    "albums": "Álbumes",
+    "noActiveStreams": "Sin transmisiones activas"
+  },
+  "ca": {
+    "movies": "Pel·lícules",
+    "series": "Sèries",
+    "episodes": "Episodis",
+    "songs": "Cançons",
+    "albums": "Àlbums",
+    "noActiveStreams": "Cap reproducció activa"
+  },
+  "he": {
+    "movies": "סרטים",
+    "series": "סדרות",
+    "episodes": "פרקים",
+    "songs": "שירים",
+    "albums": "אלבומים",
+    "noActiveStreams": "אין הזרמות פעילות"
+  },
+  "hr": {
+    "movies": "Filmovi",
+    "series": "Serije",
+    "episodes": "Epizode",
+    "songs": "Pjesme",
+    "albums": "Albumi",
+    "noActiveStreams": "Nema aktivnih streamova"
+  },
+  "hu": {
+    "movies": "Filmek",
+    "series": "Sorozatok",
+    "episodes": "Epizódok",
+    "songs": "Dalok",
+    "albums": "Albumok",
+    "noActiveStreams": "Nincs aktív lejátszás"
+  },
+  "it": {
+    "movies": "Film",
+    "series": "Serie",
+    "episodes": "Episodi",
+    "songs": "Brani",
+    "albums": "Album",
+    "noActiveStreams": "Nessuna riproduzione attiva"
+  },
+  "nb-NO": {
+    "movies": "Filmer",
+    "series": "Serier",
+    "episodes": "Episoder",
+    "songs": "Sanger",
+    "albums": "Album",
+    "noActiveStreams": "Ingen aktive strømmer"
+  },
+  "pt": {
+    "movies": "Filmes",
+    "series": "Séries",
+    "episodes": "Episódios",
+    "songs": "Músicas",
+    "albums": "Álbuns",
+    "noActiveStreams": "Sem transmissões ativas"
+  },
+  "ru": {
+    "movies": "Фильмы",
+    "series": "Сериалы",
+    "episodes": "Серии",
+    "songs": "Треки",
+    "albums": "Альбомы",
+    "noActiveStreams": "Нет активных потоков"
+  },
+  "sv": {
+    "movies": "Filmer",
+    "series": "Serier",
+    "episodes": "Avsnitt",
+    "songs": "Låtar",
+    "albums": "Album",
+    "noActiveStreams": "Inga aktiva strömmar"
+  },
+  "vi": {
+    "movies": "Phim",
+    "series": "Phim bộ",
+    "episodes": "Tập",
+    "songs": "Bài hát",
+    "albums": "Album",
+    "noActiveStreams": "Không có luồng phát"
+  },
+  "zh-Hans": {
+    "movies": "电影",
+    "series": "剧集",
+    "episodes": "剧集数",
+    "songs": "歌曲",
+    "albums": "专辑",
+    "noActiveStreams": "无活动串流"
+  },
+  "zh-Hant": {
+    "movies": "電影",
+    "series": "影集",
+    "episodes": "集數",
+    "songs": "歌曲",
+    "albums": "專輯",
+    "noActiveStreams": "無播放中串流"
+  }
+}

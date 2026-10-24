@@ -516,3 +516,22 @@ test('plex: streams on every call, library counts per type, kept for a while', a
   await plex.fetch(ctx);
   assert.deepEqual(mock.requests.slice(before).map((r) => r.route), ['GET /status/sessions'], 'libraries and counts are kept');
 });
+
+test('jellyfin and emby: a row per stream with position and progress, library counts with enableBlocks', async () => {
+  for (const id of ['jellyfin', 'emby']) {
+    const out = await run(id, { enableBlocks: true, enableUser: true, showEpisodeNumber: true });
+    assert.deepEqual(out.rows, [
+      { label: 'Silo: S01 · E01 - Pilot (anna)', icon: 'play', value: '3:54 / 58:00', progress: 6.7 },
+      { label: 'Pink Floyd - The Dark Side of the Moon - Breathe (bob)', icon: 'pause', value: '1:00 / 2:43', progress: 36.8 },
+    ], id);
+    assert.deepEqual(values(out), { movies: 812, series: 143, episodes: 6021, songs: 9310, ...(id === 'jellyfin' ? { albums: 702 } : {}) });
+    const plain = await run(id, {});
+    assert.equal(plain.blocks, undefined, 'no blocks by default, as in homepage');
+    assert.equal(plain.rows[0].label, 'Pilot - Silo');
+  }
+  assert.equal(lastRequest('jellyfin').headers.authorization, 'MediaBrowser Token="test-key"');
+  assert.equal(lastRequest('emby').headers['x-emby-token'], 'test-key');
+  const { default: jellyfin } = await import(path.join(WIDGETS, 'jellyfin', 'server.js'));
+  const idle = await jellyfin.fetch({ options: { url: 'http://x', key: 'k' }, fetch: async () => new Response('[]') });
+  assert.deepEqual(idle.rows, [{ label: 'noActiveStreams' }]);
+});

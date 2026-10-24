@@ -1,0 +1,13 @@
+id: emby
+name: Emby
+version: 0.1.0
+apiVersion: 1
+description: What is playing on Emby, one row per stream, and optionally the library counts (homepage's emby widget).
+refresh: 10s
+options:
+  url: { type: url, required: true }       # e.g. http://emby.lan:8096
+  key: { type: string, secret: true, required: true }   # Settings > Advanced > API Keys
+  enableNowPlaying: { type: boolean, default: true }    # a row per stream that is playing
+  enableBlocks: { type: boolean, default: false }       # movies, series, episodes and songs
+  enableUser: { type: boolean, default: false }         # the user's name after the title
+  showEpisodeNumber: { type: boolean, default: false }  # S01 · E02 in episode titles
