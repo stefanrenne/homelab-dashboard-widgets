@@ -1,0 +1,1 @@
+{ "_note": "apcupsd speaks its own TCP protocol; the tests run a small NIS server instead of the mock.", "routes": {} }

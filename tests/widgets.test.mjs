@@ -12,8 +12,15 @@ const IDS = fs.readdirSync(WIDGETS).filter((d) => fs.existsSync(path.join(WIDGET
 const LANGS = ['en', 'nl', 'fr', 'de', 'es', 'ca', 'he', 'hr', 'hu', 'it', 'nb-NO', 'pt', 'ru', 'sv', 'vi', 'zh-Hans', 'zh-Hant'];
 
 let mock;
-before(async () => (mock = await startMock()));
-after(() => mock.close());
+let apcupsd; // apcups speaks apcupsd's TCP protocol, not HTTP
+before(async () => {
+  mock = await startMock();
+  apcupsd = await nis(['STATUS   : ONLINE', 'LOADPCT  : 10.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 60.0 Minutes']);
+});
+after(() => {
+  mock.close();
+  apcupsd.close();
+});
 
 const silent = { info() {}, warn() {}, error() {} };
 
@@ -23,6 +30,7 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
   grafana: { username: 'admin', password: 'pw' },
@@ -1096,4 +1104,35 @@ test('calendar client: a month with dots, the chosen day\'s events, paging asks 
   agenda.el.data = { blocks: [], calendar: { view: 'agenda', maxEvents: 1, timezone: 'UTC', events: [{ date: soon, title: 'Dentist', color: 'rose' }, { date: soon, title: 'Later', color: 'rose' }], failed: [] } };
   assert.deepEqual([...agenda.el.shadowRoot.querySelectorAll('li .t')].map((n) => n.textContent), ['Dentist'], 'maxEvents');
   assert.equal(agenda.el.shadowRoot.querySelectorAll('h4').length, 1);
+});
+
+/** A tiny apcupsd network information server answering "status". */
+async function nis(lines) {
+  const net = await import('node:net');
+  const srv = net.createServer((sock) => {
+    sock.once('data', (d) => {
+      assert.equal(d.toString('latin1', 2), 'status');
+      const parts = lines.map((l) => { const b = Buffer.from(l, 'latin1'); const h = Buffer.alloc(2); h.writeUInt16BE(b.length); return Buffer.concat([h, b]); });
+      const all = Buffer.concat([...parts, Buffer.alloc(2)]);
+      sock.write(all.subarray(0, 20));
+      setTimeout(() => sock.end(all.subarray(20)), 5);
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  return { url: `tcp://127.0.0.1:${srv.address().port}`, close: () => srv.close() };
+}
+
+test('apcups: status, load, charge and runtime over apcupsd\'s NIS protocol; on battery marked', async () => {
+  const ups = await nis(['APC      : 001,036,0866', 'STATUS   : ONLINE ', 'LOADPCT  : 23.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 45.3 Minutes', 'END APC  : 2026-10-24 08:00:00 +0200']);
+  const onBattery = await nis(['STATUS   : ONBATT', 'LOADPCT  : 30.0 Percent', 'BCHARGE  : 64.0 Percent', 'TIMELEFT : 75.0 Minutes']);
+  try {
+    const out = await run('apcups', { url: ups.url });
+    assert.deepEqual(values(out), { status: 'online', load: '23%', bcharge: '100%', timeleft: '45:18' });
+    const bat = await run('apcups', { url: onBattery.url });
+    assert.deepEqual([values(bat).status, values(bat).timeleft, bat.blocks[0].status], ['onBattery', '1:15:00', 'warn']);
+    await assert.rejects(run('apcups', { url: 'tcp://127.0.0.1:1' }), /apcupsd answered nothing \(ECONNREFUSED\)/);
+  } finally {
+    ups.close();
+    onBattery.close();
+  }
 });

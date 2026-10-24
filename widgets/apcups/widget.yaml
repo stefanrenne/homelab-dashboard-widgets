@@ -1,0 +1,8 @@
+id: apcups
+name: APC UPS
+version: 0.1.0
+apiVersion: 1
+description: Status, load, battery charge and runtime left of an APC UPS through apcupsd (homepage's apcups widget).
+refresh: 30s
+options:
+  url: { type: string, required: true }   # apcupsd's network server, e.g. tcp://nas.lan:3551

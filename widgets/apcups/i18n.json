@@ -1,0 +1,155 @@
+{
+  "en": {
+    "status": "Status",
+    "load": "Load",
+    "bcharge": "Battery",
+    "timeleft": "Runtime left",
+    "online": "Online",
+    "onBattery": "On battery",
+    "lost": "Lost"
+  },
+  "nl": {
+    "status": "Status",
+    "load": "Belasting",
+    "bcharge": "Batterij",
+    "timeleft": "Looptijd",
+    "online": "Online",
+    "onBattery": "Op batterij",
+    "lost": "Verbinding weg"
+  },
+  "fr": {
+    "status": "État",
+    "load": "Charge",
+    "bcharge": "Batterie",
+    "timeleft": "Autonomie",
+    "online": "En ligne",
+    "onBattery": "Sur batterie",
+    "lost": "Perdu"
+  },
+  "de": {
+    "status": "Status",
+    "load": "Last",
+    "bcharge": "Akku",
+    "timeleft": "Restlaufzeit",
+    "online": "Online",
+    "onBattery": "Auf Akku",
+    "lost": "Verloren"
+  },
+  "es": {
+    "status": "Estado",
+    "load": "Carga",
+    "bcharge": "Batería",
+    "timeleft": "Autonomía",
+    "online": "En línea",
+    "onBattery": "Con batería",
+    "lost": "Perdido"
+  },
+  "ca": {
+    "status": "Estat",
+    "load": "Càrrega",
+    "bcharge": "Bateria",
+    "timeleft": "Autonomia",
+    "online": "En línia",
+    "onBattery": "Amb bateria",
+    "lost": "Perdut"
+  },
+  "he": {
+    "status": "מצב",
+    "load": "עומס",
+    "bcharge": "סוללה",
+    "timeleft": "זמן שנותר",
+    "online": "מחובר",
+    "onBattery": "על סוללה",
+    "lost": "אבד"
+  },
+  "hr": {
+    "status": "Stanje",
+    "load": "Opterećenje",
+    "bcharge": "Baterija",
+    "timeleft": "Preostalo",
+    "online": "Na mreži",
+    "onBattery": "Na bateriji",
+    "lost": "Izgubljeno"
+  },
+  "hu": {
+    "status": "Állapot",
+    "load": "Terhelés",
+    "bcharge": "Akkumulátor",
+    "timeleft": "Hátralévő",
+    "online": "Hálózaton",
+    "onBattery": "Akkuról",
+    "lost": "Elveszett"
+  },
+  "it": {
+    "status": "Stato",
+    "load": "Carico",
+    "bcharge": "Batteria",
+    "timeleft": "Autonomia",
+    "online": "In linea",
+    "onBattery": "A batteria",
+    "lost": "Perso"
+  },
+  "nb-NO": {
+    "status": "Status",
+    "load": "Last",
+    "bcharge": "Batteri",
+    "timeleft": "Gjenstår",
+    "online": "Tilkoblet",
+    "onBattery": "På batteri",
+    "lost": "Mistet"
+  },
+  "pt": {
+    "status": "Estado",
+    "load": "Carga",
+    "bcharge": "Bateria",
+    "timeleft": "Autonomia",
+    "online": "Ligado",
+    "onBattery": "Na bateria",
+    "lost": "Perdido"
+  },
+  "ru": {
+    "status": "Состояние",
+    "load": "Нагрузка",
+    "bcharge": "Батарея",
+    "timeleft": "Осталось",
+    "online": "В сети",
+    "onBattery": "От батареи",
+    "lost": "Потеряно"
+  },
+  "sv": {
+    "status": "Status",
+    "load": "Last",
+    "bcharge": "Batteri",
+    "timeleft": "Kvar",
+    "online": "Ansluten",
+    "onBattery": "På batteri",
+    "lost": "Förlorad"
+  },
+  "vi": {
+    "status": "Trạng thái",
+    "load": "Tải",
+    "bcharge": "Pin",
+    "timeleft": "Còn lại",
+    "online": "Trực tuyến",
+    "onBattery": "Dùng pin",
+    "lost": "Mất"
+  },
+  "zh-Hans": {
+    "status": "状态",
+    "load": "负载",
+    "bcharge": "电池",
+    "timeleft": "剩余时间",
+    "online": "在线",
+    "onBattery": "电池供电",
+    "lost": "失联"
+  },
+  "zh-Hant": {
+    "status": "狀態",
+    "load": "負載",
+    "bcharge": "電池",
+    "timeleft": "剩餘時間",
+    "online": "線上",
+    "onBattery": "電池供電",
+    "lost": "失聯"
+  }
+}
