@@ -15,6 +15,7 @@ Every widget has its own page with setup, fields and options on the
 | `jellyfin` | a row per stream; movies, series, episodes, songs, albums with `enableBlocks` | `url`, `key`, `enableNowPlaying`, `enableBlocks`, `enableUser`, `showEpisodeNumber` |
 | `emby` | a row per stream; movies, series, episodes, songs with `enableBlocks` | `url`, `key`, `enableNowPlaying`, `enableBlocks`, `enableUser`, `showEpisodeNumber` |
 | `homeassistant` | people home, lights on, switches on; or up to four states and templates (`custom`) | `url`, `key`, `custom` |
+| `proxmox` | VMs and containers running, CPU and memory of the cluster or a node | `url`, `username` (token id), `password` (secret), `node`, `insecure` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

@@ -268,7 +268,7 @@ test('every widget has a README for its docs page: title, every field, an exampl
     assert.equal(readme.split('\n')[0], `# ${m.name}`, `${id}: the title is the manifest name`);
     // a service widget (type: <id>) or a header widget in widgets.yaml (- <id>:)
     assert.match(readme.split(/^## Example$/m)[1] ?? '', new RegExp(`type: ${id}\\b|^- ${id}:`, 'm'), `${id}: an example that uses it`);
-    const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9_]+)`/g)].map((x) => x[1]));
+    const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9_.]+)`/g)].map((x) => x[1]));
     const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
     for (const b of out.blocks ?? []) assert.ok(fields.has(b.key ?? b.label), `${id}: field ${b.key ?? b.label} missing from README`);
   }
@@ -551,4 +551,12 @@ test('homeassistant: people, lights and switches from one states call; custom st
   ]);
   assert.deepEqual(JSON.parse(lastRequest('homeassistant').body), { template: '{{ states.switch | list | count }}' });
   await assert.rejects(run('homeassistant', { custom: [{ state: '../config' }] }), /entity id/);
+});
+
+test('proxmox: VMs and containers running of all (no templates), CPU and memory of the online nodes, or one node', async () => {
+  assert.deepEqual(values(await run('proxmox', { username: 'api@pam!dash', password: 's3cret' })),
+    { vms: '2 / 3', lxc: '2 / 2', 'resources.cpu': '33.3%', 'resources.mem': '33.3%' });
+  assert.equal(lastRequest('proxmox').headers.authorization, 'PVEAPIToken=api@pam!dash=s3cret');
+  assert.deepEqual(values(await run('proxmox', { node: 'pve-2' })), { vms: '1 / 1', lxc: '1 / 1', 'resources.cpu': '50%', 'resources.mem': '25%' });
+  assert.deepEqual(values(await run('proxmox', { node: 'pve-3' })), { vms: '0 / 0', lxc: '0 / 0', 'resources.cpu': null, 'resources.mem': null }, 'an offline node');
 });

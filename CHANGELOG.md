@@ -20,6 +20,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `plex`: active streams and the movie, TV and album counts of a Plex Media Server, as homepage's plex widget.
 - `jellyfin` and `emby`: a row per stream with position and progress, and the library counts with `enableBlocks`, as homepage's widgets (without media control: the widgets only read).
 - `homeassistant`: people at home, lights and switches on, or up to four states and templates of your own (`custom`), as homepage's homeassistant widget.
+- `proxmox`: VMs and containers running, and the CPU and memory of a Proxmox VE cluster or one node, as homepage's proxmox widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

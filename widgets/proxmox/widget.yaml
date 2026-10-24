@@ -1,0 +1,12 @@
+id: proxmox
+name: Proxmox VE
+version: 0.1.0
+apiVersion: 1
+description: Running and total VMs and containers, and the CPU and memory of a Proxmox cluster or one node (homepage's proxmox widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # e.g. https://pve.lan:8006
+  username: { type: string, required: true }               # the API token id, e.g. api@pam!dashboard
+  password: { type: string, secret: true, required: true } # the token's secret
+  node: { type: string }                   # only this node; default the whole cluster
+  insecure: { type: boolean, default: true }   # accept Proxmox's self-signed certificate (as homepage does)

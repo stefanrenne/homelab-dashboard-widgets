@@ -1,0 +1,17 @@
+{
+ "_note": "Proxmox VE cluster/resources: two online nodes and one offline, VMs, containers and a template.",
+ "routes": {
+  "GET /api2/json/cluster/resources": { "data": [
+   { "id": "node/pve-1", "type": "node", "node": "pve-1", "status": "online", "cpu": 0.25, "maxcpu": 8, "mem": 12000000000, "maxmem": 32000000000 },
+   { "id": "node/pve-2", "type": "node", "node": "pve-2", "status": "online", "cpu": 0.5, "maxcpu": 4, "mem": 4000000000, "maxmem": 16000000000 },
+   { "id": "node/pve-3", "type": "node", "node": "pve-3", "status": "offline", "maxcpu": 4, "maxmem": 16000000000 },
+   { "id": "qemu/100", "type": "qemu", "node": "pve-1", "status": "running", "template": 0 },
+   { "id": "qemu/101", "type": "qemu", "node": "pve-1", "status": "stopped", "template": 0 },
+   { "id": "qemu/102", "type": "qemu", "node": "pve-2", "status": "running", "template": 0 },
+   { "id": "qemu/9000", "type": "qemu", "node": "pve-1", "status": "stopped", "template": 1 },
+   { "id": "lxc/200", "type": "lxc", "node": "pve-1", "status": "running", "template": 0 },
+   { "id": "lxc/201", "type": "lxc", "node": "pve-2", "status": "running", "template": 0 },
+   { "id": "storage/pve-1/local", "type": "storage", "node": "pve-1", "status": "available" }
+  ] }
+ }
+}

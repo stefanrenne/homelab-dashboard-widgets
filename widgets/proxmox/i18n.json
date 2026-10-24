@@ -1,0 +1,104 @@
+{
+  "en": {
+    "vms": "VMs",
+    "lxc": "Containers",
+    "cpu": "CPU",
+    "memory": "Memory"
+  },
+  "nl": {
+    "vms": "VM's",
+    "lxc": "Containers",
+    "cpu": "CPU",
+    "memory": "Geheugen"
+  },
+  "fr": {
+    "vms": "VM",
+    "lxc": "Conteneurs",
+    "cpu": "CPU",
+    "memory": "Mémoire"
+  },
+  "de": {
+    "vms": "VMs",
+    "lxc": "Container",
+    "cpu": "CPU",
+    "memory": "Speicher"
+  },
+  "es": {
+    "vms": "VM",
+    "lxc": "Contenedores",
+    "cpu": "CPU",
+    "memory": "Memoria"
+  },
+  "ca": {
+    "vms": "MV",
+    "lxc": "Contenidors",
+    "cpu": "CPU",
+    "memory": "Memòria"
+  },
+  "he": {
+    "vms": "מכונות",
+    "lxc": "קונטיינרים",
+    "cpu": "מעבד",
+    "memory": "זיכרון"
+  },
+  "hr": {
+    "vms": "VM-ovi",
+    "lxc": "Kontejneri",
+    "cpu": "CPU",
+    "memory": "Memorija"
+  },
+  "hu": {
+    "vms": "VM-ek",
+    "lxc": "Konténerek",
+    "cpu": "CPU",
+    "memory": "Memória"
+  },
+  "it": {
+    "vms": "VM",
+    "lxc": "Container",
+    "cpu": "CPU",
+    "memory": "Memoria"
+  },
+  "nb-NO": {
+    "vms": "VM-er",
+    "lxc": "Containere",
+    "cpu": "CPU",
+    "memory": "Minne"
+  },
+  "pt": {
+    "vms": "VMs",
+    "lxc": "Contentores",
+    "cpu": "CPU",
+    "memory": "Memória"
+  },
+  "ru": {
+    "vms": "ВМ",
+    "lxc": "Контейнеры",
+    "cpu": "ЦП",
+    "memory": "Память"
+  },
+  "sv": {
+    "vms": "VM:ar",
+    "lxc": "Containrar",
+    "cpu": "CPU",
+    "memory": "Minne"
+  },
+  "vi": {
+    "vms": "Máy ảo",
+    "lxc": "Container",
+    "cpu": "CPU",
+    "memory": "Bộ nhớ"
+  },
+  "zh-Hans": {
+    "vms": "虚拟机",
+    "lxc": "容器",
+    "cpu": "CPU",
+    "memory": "内存"
+  },
+  "zh-Hant": {
+    "vms": "虛擬機",
+    "lxc": "容器",
+    "cpu": "CPU",
+    "memory": "記憶體"
+  }
+}
