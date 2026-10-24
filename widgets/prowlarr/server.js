@@ -7,12 +7,16 @@ export default {
     if (!res.ok) throw new Error(`Prowlarr answered ${res.status}`);
     const { indexers = [] } = await res.json();
     const sum = (field) => indexers.reduce((n, i) => n + (Number(i[field]) || 0), 0);
+    const failed = (key, field) => {
+      const value = sum(field);
+      return { key, label: key, value, ...(value > 0 ? { status: 'warn' } : {}) };
+    };
     return {
       blocks: [
         { key: 'grabs', label: 'grabs', value: sum('numberOfGrabs') },
         { key: 'queries', label: 'queries', value: sum('numberOfQueries') },
-        { key: 'failGrabs', label: 'failGrabs', value: sum('numberOfFailedGrabs') },
-        { key: 'failQueries', label: 'failQueries', value: sum('numberOfFailedQueries') },
+        failed('failGrabs', 'numberOfFailedGrabs'),
+        failed('failQueries', 'numberOfFailedQueries'),
       ],
     };
   },

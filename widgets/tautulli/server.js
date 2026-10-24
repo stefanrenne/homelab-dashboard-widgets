@@ -2,13 +2,13 @@
 
 const pad = (n) => String(n ?? 0).padStart(2, '0');
 
-/** Milliseconds -> "3:54" or "1:02:03". */
+/** Milliseconds -> "3:54" or "1:02:03", the one time format of these widgets. */
 export function clock(ms) {
   const total = Math.max(0, Math.floor((Number(ms) || 0) / 1000));
   const h = Math.floor(total / 3600);
   const m = Math.floor((total % 3600) / 60);
   const s = total % 60;
-  return h ? `${h}:${pad(m)}:${pad(s)}` : `${pad(m)}:${pad(s)}`;
+  return h ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
 }
 
 export function streamTitle(s, { showEpisodeNumber, enableUser }) {
@@ -39,7 +39,8 @@ export default {
     return {
       rows: sessions.map((s) => ({
         label: streamTitle(s, ctx.options),
-        value: clock(s.view_offset),
+        // where it is / how long it is: "3:54 / 58:00"
+        value: Number(s.duration) > 0 ? `${clock(s.view_offset)} / ${clock(s.duration)}` : clock(s.view_offset),
         progress: Math.max(0, Math.min(100, Number(s.progress_percent) || 0)),
       })),
     };

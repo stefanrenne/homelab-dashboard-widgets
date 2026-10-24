@@ -1,6 +1,6 @@
 id: sonarr
 name: Sonarr
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Wanted and queued episodes and the number of series, with the download queue (homepage's sonarr widget).
 refresh: 30s
@@ -8,3 +8,4 @@ options:
   url: { type: url, required: true }      # e.g. http://sonarr:8989
   key: { type: string, secret: true, required: true }
   enableQueue: { type: boolean, default: false }
+  queueLimit: { type: number, default: 5 }     # rows shown; problems come first, the rest as "+N more"

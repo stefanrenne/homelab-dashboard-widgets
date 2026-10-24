@@ -8,7 +8,7 @@ export default {
     const c = await res.json();
     return {
       blocks: [
-        { key: 'pending', label: 'pending', value: c.pending ?? 0 },
+        { key: 'pending', label: 'pending', value: c.pending ?? 0, ...(c.pending > 0 ? { status: 'warn' } : {}) },
         { key: 'approved', label: 'approved', value: c.approved ?? 0 },
         // Older Overseerr versions have no "completed" and call it "available".
         { key: 'completed', label: 'completed', value: c.completed ?? c.available ?? 0 },

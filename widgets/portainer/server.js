@@ -8,10 +8,12 @@ export default {
     if (res.status === 404) throw new Error(`Portainer has no environment ${ctx.options.env}`);
     if (!res.ok) throw new Error(`Portainer answered ${res.status}`);
     const containers = await res.json();
+    const running = containers.filter((c) => c.State === 'running').length;
     return {
       blocks: [
-        { key: 'running', label: 'running', value: containers.filter((c) => c.State === 'running').length },
-        { key: 'stopped', label: 'stopped', value: containers.filter((c) => c.State === 'exited').length },
+        { key: 'running', label: 'running', value: running },
+        // everything that is not running (exited, created, paused, dead), so the three add up
+        { key: 'stopped', label: 'stopped', value: containers.length - running },
         { key: 'total', label: 'total', value: containers.length },
       ],
     };

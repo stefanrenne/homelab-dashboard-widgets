@@ -119,7 +119,12 @@
     "trackedDownloadState": "importPending",
     "timeleft": "00:00:00",
     "size": 1,
-    "sizeleft": 0
+    "sizeleft": 0,
+    "episode": {
+     "seasonNumber": 29,
+     "episodeNumber": 4,
+     "title": "x"
+    }
    },
    {
     "seriesId": 1,
@@ -128,7 +133,12 @@
     "trackedDownloadState": "importPending",
     "timeleft": "00:00:00",
     "size": 1,
-    "sizeleft": 0
+    "sizeleft": 0,
+    "episode": {
+     "seasonNumber": 2,
+     "episodeNumber": 6,
+     "title": "x"
+    }
    },
    {
     "seriesId": 2,
@@ -137,7 +147,12 @@
     "trackedDownloadState": "importPending",
     "timeleft": "00:00:00",
     "size": 1,
-    "sizeleft": 0
+    "sizeleft": 0,
+    "episode": {
+     "seasonNumber": 23,
+     "episodeNumber": 2,
+     "title": "x"
+    }
    }
   ]
  }

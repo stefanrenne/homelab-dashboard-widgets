@@ -1,5 +1,5 @@
 {
- "_note": "Radarr API v3. Matches 8 wanted, 13 missing, 1 queued, 62 movies.",
+ "_note": "Radarr API v3. 8 wanted, 13 missing, 7 queued (one import blocked), 62 movies.",
  "routes": {
   "GET /api/v3/movie": [
    {
@@ -536,12 +536,90 @@
    }
   ],
   "GET /api/v3/queue/status": {
-   "totalCount": 1,
+   "totalCount": 7,
    "count": 1,
    "errors": false,
    "warnings": true
   },
   "GET /api/v3/queue/details": [
+   {
+    "movieId": 300,
+    "status": "downloading",
+    "trackedDownloadState": "downloading",
+    "trackedDownloadStatus": "ok",
+    "timeleft": "00:10:30",
+    "size": 4000000000.0,
+    "sizeleft": 500000000.0,
+    "movie": {
+     "title": "Movie 1",
+     "year": 2020
+    }
+   },
+   {
+    "movieId": 301,
+    "status": "downloading",
+    "trackedDownloadState": "downloading",
+    "trackedDownloadStatus": "ok",
+    "timeleft": "00:11:30",
+    "size": 4000000000.0,
+    "sizeleft": 1000000000.0,
+    "movie": {
+     "title": "Movie 2",
+     "year": 2021
+    }
+   },
+   {
+    "movieId": 302,
+    "status": "downloading",
+    "trackedDownloadState": "downloading",
+    "trackedDownloadStatus": "ok",
+    "timeleft": "00:12:30",
+    "size": 4000000000.0,
+    "sizeleft": 1500000000.0,
+    "movie": {
+     "title": "Movie 3",
+     "year": 2022
+    }
+   },
+   {
+    "movieId": 303,
+    "status": "downloading",
+    "trackedDownloadState": "downloading",
+    "trackedDownloadStatus": "ok",
+    "timeleft": "00:13:30",
+    "size": 4000000000.0,
+    "sizeleft": 2000000000.0,
+    "movie": {
+     "title": "Movie 4",
+     "year": 2023
+    }
+   },
+   {
+    "movieId": 304,
+    "status": "downloading",
+    "trackedDownloadState": "downloading",
+    "trackedDownloadStatus": "ok",
+    "timeleft": "00:14:30",
+    "size": 4000000000.0,
+    "sizeleft": 2500000000.0,
+    "movie": {
+     "title": "Movie 5",
+     "year": 2024
+    }
+   },
+   {
+    "movieId": 305,
+    "status": "downloading",
+    "trackedDownloadState": "downloading",
+    "trackedDownloadStatus": "ok",
+    "timeleft": "00:15:30",
+    "size": 4000000000.0,
+    "sizeleft": 3000000000.0,
+    "movie": {
+     "title": "Movie 6",
+     "year": 2025
+    }
+   },
    {
     "movieId": 101,
     "title": "The.Social.Reckoning.2026.1080p.WEB",
@@ -552,7 +630,8 @@
     "size": 4200000000.0,
     "sizeleft": 0,
     "movie": {
-     "title": "The Social Reckoning"
+     "title": "The Social Reckoning",
+     "year": 2026
     }
    }
   ]

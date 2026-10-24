@@ -6,20 +6,28 @@ dashboard on purpose: this repository is an ordinary widget collection, installe
 
 | Widget | Shows | Options |
 |---|---|---|
-| `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key` |
-| `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key` |
+| `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
+| `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `bazarr` | missing episodes, missing movies | `url`, `key` |
 | `prowlarr` | grabs, queries, failed grabs, failed queries | `url`, `key` |
 | `sabnzbd` | rate, queue, time left | `url`, `key` |
 | `seerr` | pending, approved, completed (Overseerr, Jellyseerr, Seerr) | `url`, `key` |
-| `stash` | scenes, images, galleries, performers, studios, tags | `url`, `key` |
+| `stash` | scenes, performers, tags (also images, galleries, studios via `fields`) | `url`, `key` |
 | `tautulli` | current streams with progress | `url`, `key`, `enableUser`, `showEpisodeNumber` |
 | `tdarr` | queue, processed, errored, saved | `url`, `key` (optional) |
 | `whatsupdocker` | monitoring, updates | `url`, `username`, `password` |
 | `portainer` | running, stopped, total | `url`, `key`, `env` |
-| `unraid` | cpu, memory, array and pools (homepage field names) | `url`, `key`, `pool1`–`pool4` |
+| `unraid` | memory %, cpu, array %, pool1 %; more via `fields` (homepage field names) | `url`, `key`, `pool1`–`pool4` |
 
 Pick blocks with the dashboard's `fields`, e.g. `fields: [cpu, memoryPercent, pool1UsedPercent]`.
+
+What the widgets have in common:
+- **Queues lead with problems.** Blocked or failed imports come first, marked, followed by the
+  rest up to `queueLimit` and "+N more". Rows name the movie or episode, not the release.
+- **Counts that need you are marked**: failed grabs, errored files, pending requests, updates,
+  unread Unraid alerts, a stopped array, a paused SABnzbd.
+- **One unit system and one time format**: decimal (kB, MB, GB, TB) and `m:ss` / `h:mm:ss`.
+- **Labels fit a phone**: short whole words in every language, at most two lines.
 
 ## Install
 

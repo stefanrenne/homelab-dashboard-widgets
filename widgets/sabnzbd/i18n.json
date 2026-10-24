@@ -2,26 +2,31 @@
   "en": {
     "rate": "Rate",
     "queue": "Queue",
-    "timeleft": "Time Left"
+    "timeleft": "Time Left",
+    "paused": "Paused"
   },
   "nl": {
     "rate": "Snelheid",
     "queue": "Wachtrij",
-    "timeleft": "Resterend"
+    "timeleft": "Resterend",
+    "paused": "Gepauzeerd"
   },
   "fr": {
     "rate": "Débit",
     "queue": "File",
-    "timeleft": "Restant"
+    "timeleft": "Restant",
+    "paused": "En pause"
   },
   "de": {
     "rate": "Rate",
-    "queue": "Warteschlange",
-    "timeleft": "Verbleibend"
+    "queue": "Einträge",
+    "timeleft": "Verbleibend",
+    "paused": "Pausiert"
   },
   "es": {
     "rate": "Velocidad",
     "queue": "Cola",
-    "timeleft": "Restante"
+    "timeleft": "Restante",
+    "paused": "En pausa"
   }
 }

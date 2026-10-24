@@ -2,31 +2,31 @@
   "en": {
     "grabs": "Grabs",
     "queries": "Queries",
-    "failGrabs": "Fail Grabs",
-    "failQueries": "Fail Queries"
+    "failGrabs": "Failed Grabs",
+    "failQueries": "Failed Queries"
   },
   "nl": {
     "grabs": "Grabs",
-    "queries": "Zoekopdrachten",
+    "queries": "Zoekacties",
     "failGrabs": "Mislukte grabs",
-    "failQueries": "Mislukte zoekopdr."
+    "failQueries": "Zoekfouten"
   },
   "fr": {
-    "grabs": "Récupérations",
+    "grabs": "Captures",
     "queries": "Requêtes",
-    "failGrabs": "Récup. échouées",
-    "failQueries": "Requêtes échouées"
+    "failGrabs": "Captures ratées",
+    "failQueries": "Requêtes ratées"
   },
   "de": {
     "grabs": "Grabs",
     "queries": "Abfragen",
-    "failGrabs": "Fehlg. Grabs",
-    "failQueries": "Fehlg. Abfragen"
+    "failGrabs": "Grab-Fehler",
+    "failQueries": "Abfrage-Fehler"
   },
   "es": {
     "grabs": "Capturas",
     "queries": "Consultas",
-    "failGrabs": "Capturas fallidas",
-    "failQueries": "Consultas fallidas"
+    "failGrabs": "Errores captura",
+    "failQueries": "Errores búsqueda"
   }
 }

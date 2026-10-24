@@ -1,5 +1,5 @@
 {
- "_note": "Portainer, environment 1. 32 running.",
+ "_note": "Portainer, environment 1. 32 running, 1 exited, 1 created.",
  "routes": {
   "GET /api/endpoints/1/docker/containers/json": [
    {
@@ -129,6 +129,14 @@
    {
     "Id": "31",
     "State": "running"
+   },
+   {
+    "Id": "x1",
+    "State": "exited"
+   },
+   {
+    "Id": "x2",
+    "State": "created"
    }
   ]
  }

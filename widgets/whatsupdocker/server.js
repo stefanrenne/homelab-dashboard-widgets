@@ -13,7 +13,10 @@ export default {
     return {
       blocks: [
         { key: 'monitoring', label: 'monitoring', value: containers.length },
-        { key: 'updates', label: 'updates', value: containers.filter((c) => c.updateAvailable).length },
+        (() => {
+          const updates = containers.filter((c) => c.updateAvailable).length;
+          return { key: 'updates', label: 'updates', value: updates, ...(updates > 0 ? { status: 'warn' } : {}) };
+        })(),
       ],
     };
   },

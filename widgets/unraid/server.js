@@ -1,7 +1,9 @@
 // Unraid: CPU, memory, array and cache pools through the Unraid API (GraphQL).
 //
 // Block keys follow homepage's unraid widget, so `fields: [cpu, memoryPercent,
-// pool1UsedPercent]` works the same. Sizes from the API are in KiB.
+// pool1UsedPercent]` works the same. Without `fields` the dashboard shows the four in
+// widget.yaml's defaultFields. Each label has one meaning: "Memory" is the percentage,
+// "Memory used" the amount. Sizes from the API are in KiB; shown in decimal units.
 
 const QUERY = `{
   metrics { cpu { percentTotal } memory { total available percentTotal } }
@@ -9,18 +11,19 @@ const QUERY = `{
   notifications { overview { unread { total } } }
 }`;
 
-const UNITS = ['KB', 'MB', 'GB', 'TB', 'PB'];
+const UNITS = ['B', 'kB', 'MB', 'GB', 'TB', 'PB']; // decimal, as in every widget
 
-export function formatKiB(kib) {
-  let n = Number(kib) || 0;
+export function formatBytes(bytes) {
+  let n = Number(bytes) || 0;
   let i = 0;
-  while (n >= 1024 && i < UNITS.length - 1) {
-    n /= 1024;
+  while (Math.abs(n) >= 1000 && i < UNITS.length - 1) {
+    n /= 1000;
     i++;
   }
   return `${Math.round(n * 10) / 10} ${UNITS[i]}`;
 }
 
+const kib = (v) => formatBytes((Number(v) || 0) * 1024);
 const pct = (used, total) => (total > 0 ? Math.round((100 * used) / total) : null);
 const title = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -38,32 +41,32 @@ export default {
     const { metrics = {}, array = {}, notifications = {} } = json.data ?? {};
     const mem = metrics.memory ?? {};
     const cap = array.capacity?.kilobytes ?? {};
-    const memUsedBytes = (Number(mem.total) || 0) - (Number(mem.available) || 0);
+    const state = String(array.state ?? 'unknown').toLowerCase();
+    const unread = notifications.overview?.unread?.total ?? 0;
 
     const blocks = [
-      { key: 'memoryUsed', label: 'memoryUsed', value: formatKiB(memUsedBytes / 1024) },
-      { key: 'memoryAvailable', label: 'memoryAvailable', value: formatKiB((Number(mem.available) || 0) / 1024) },
-      { key: 'memoryPercent', label: 'memoryPercent', value: mem.percentTotal === undefined ? null : Math.round(mem.percentTotal), unit: '%' },
+      { key: 'memoryUsed', label: 'memoryUsed', value: formatBytes((Number(mem.total) || 0) - (Number(mem.available) || 0)) },
+      { key: 'memoryAvailable', label: 'memoryFree', value: formatBytes(mem.available) },
+      { key: 'memoryPercent', label: 'memory', value: mem.percentTotal === undefined ? null : Math.round(mem.percentTotal), unit: '%' },
       { key: 'cpu', label: 'cpu', value: metrics.cpu?.percentTotal === undefined ? null : Math.round(metrics.cpu.percentTotal), unit: '%' },
-      { key: 'notifications', label: 'notifications', value: notifications.overview?.unread?.total ?? 0 },
-      { key: 'status', label: 'status', value: String(array.state ?? 'unknown').toLowerCase() },
-      { key: 'arrayFree', label: 'arrayFree', value: formatKiB(cap.free) },
-      { key: 'arrayUsed', label: 'arrayUsed', value: formatKiB(cap.used) },
-      { key: 'arrayUsedPercent', label: 'arrayUsedPercent', value: pct(Number(cap.used), Number(cap.total)), unit: '%' },
+      { key: 'notifications', label: 'notifications', value: unread, ...(unread > 0 ? { status: 'warn' } : {}) },
+      { key: 'status', label: 'status', value: state, ...(state === 'started' ? {} : { status: 'warn' }) },
+      { key: 'arrayFree', label: 'arrayFree', value: kib(cap.free) },
+      { key: 'arrayUsed', label: 'arrayUsed', value: kib(cap.used) },
+      { key: 'arrayUsedPercent', label: 'array', value: pct(Number(cap.used), Number(cap.total)), unit: '%' },
     ];
     for (const n of [1, 2, 3, 4]) {
       const name = ctx.options[`pool${n}`];
       if (!name) continue;
       const pool = (array.caches ?? []).find((c) => c.name === name);
-      if (!pool) {
-        ctx.log.warn(`pool "${name}" not found; pools: ${(array.caches ?? []).map((c) => c.name).join(', ')}`);
-      }
+      if (!pool) ctx.log.warn(`pool "${name}" not found; pools: ${(array.caches ?? []).map((c) => c.name).join(', ')}`);
+      const vars = { pool: title(name) };
       blocks.push(
-        { key: `pool${n}Free`, label: `${title(name)} Free`, value: pool ? formatKiB(pool.fsFree) : null },
-        { key: `pool${n}Used`, label: `${title(name)} Used`, value: pool ? formatKiB(pool.fsUsed) : null },
-        { key: `pool${n}UsedPercent`, label: `${title(name)} Used`, value: pool ? pct(Number(pool.fsUsed), Number(pool.fsSize)) : null, unit: '%' },
+        { key: `pool${n}Free`, label: 'poolFree', vars, value: pool ? kib(pool.fsFree) : null },
+        { key: `pool${n}Used`, label: 'poolUsed', vars, value: pool ? kib(pool.fsUsed) : null },
+        { key: `pool${n}UsedPercent`, label: 'pool', vars, value: pool ? pct(Number(pool.fsUsed), Number(pool.fsSize)) : null, unit: '%' },
       );
     }
-    return { status: 'up', blocks };
+    return { blocks };
   },
 };

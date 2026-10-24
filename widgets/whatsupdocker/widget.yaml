@@ -1,6 +1,6 @@
 id: whatsupdocker
 name: What's up Docker
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Containers being watched and how many have an update.
 refresh: 5m
