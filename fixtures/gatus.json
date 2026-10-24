@@ -1,0 +1,5 @@
+{ "_note": "Gatus: two endpoints up, one down; 7 of 9 results succeeded.", "routes": {
+ "GET /api/v1/endpoints/statuses": [
+  { "name": "website", "results": [{ "success": true }, { "success": true }, { "success": true }] },
+  { "name": "api", "results": [{ "success": false }, { "success": true }, { "success": true }] },
+  { "name": "nas", "results": [{ "success": true }, { "success": true }, { "success": false }] }] } }

@@ -1,0 +1,172 @@
+{
+  "en": {
+    "name": "Name",
+    "address": "Address",
+    "last_seen": "Last seen",
+    "status": "Status",
+    "now": "Now",
+    "never": "Never",
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "nl": {
+    "name": "Naam",
+    "address": "Adres",
+    "last_seen": "Laatst gezien",
+    "status": "Status",
+    "now": "Nu",
+    "never": "Nooit",
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "fr": {
+    "name": "Nom",
+    "address": "Adresse",
+    "last_seen": "Vu il y a",
+    "status": "État",
+    "now": "Maintenant",
+    "never": "Jamais",
+    "online": "En ligne",
+    "offline": "Hors ligne"
+  },
+  "de": {
+    "name": "Name",
+    "address": "Adresse",
+    "last_seen": "Zuletzt aktiv",
+    "status": "Status",
+    "now": "Jetzt",
+    "never": "Nie",
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "es": {
+    "name": "Nombre",
+    "address": "Dirección",
+    "last_seen": "Visto hace",
+    "status": "Estado",
+    "now": "Ahora",
+    "never": "Nunca",
+    "online": "En línea",
+    "offline": "Sin conexión"
+  },
+  "ca": {
+    "name": "Nom",
+    "address": "Adreça",
+    "last_seen": "Vist fa",
+    "status": "Estat",
+    "now": "Ara",
+    "never": "Mai",
+    "online": "En línia",
+    "offline": "Fora de línia"
+  },
+  "he": {
+    "name": "שם",
+    "address": "כתובת",
+    "last_seen": "נראה לאחרונה",
+    "status": "מצב",
+    "now": "עכשיו",
+    "never": "אף פעם",
+    "online": "מחובר",
+    "offline": "מנותק"
+  },
+  "hr": {
+    "name": "Naziv",
+    "address": "Adresa",
+    "last_seen": "Zadnje viđen",
+    "status": "Stanje",
+    "now": "Sada",
+    "never": "Nikad",
+    "online": "Na mreži",
+    "offline": "Izvan mreže"
+  },
+  "hu": {
+    "name": "Név",
+    "address": "Cím",
+    "last_seen": "Utoljára",
+    "status": "Állapot",
+    "now": "Most",
+    "never": "Soha",
+    "online": "Hálózaton",
+    "offline": "Offline"
+  },
+  "it": {
+    "name": "Nome",
+    "address": "Indirizzo",
+    "last_seen": "Visto",
+    "status": "Stato",
+    "now": "Ora",
+    "never": "Mai",
+    "online": "In linea",
+    "offline": "Offline"
+  },
+  "nb-NO": {
+    "name": "Navn",
+    "address": "Adresse",
+    "last_seen": "Sist sett",
+    "status": "Status",
+    "now": "Nå",
+    "never": "Aldri",
+    "online": "Tilkoblet",
+    "offline": "Frakoblet"
+  },
+  "pt": {
+    "name": "Nome",
+    "address": "Endereço",
+    "last_seen": "Visto há",
+    "status": "Estado",
+    "now": "Agora",
+    "never": "Nunca",
+    "online": "Ligado",
+    "offline": "Offline"
+  },
+  "ru": {
+    "name": "Имя",
+    "address": "Адрес",
+    "last_seen": "Был в сети",
+    "status": "Состояние",
+    "now": "Сейчас",
+    "never": "Никогда",
+    "online": "В сети",
+    "offline": "Не в сети"
+  },
+  "sv": {
+    "name": "Namn",
+    "address": "Adress",
+    "last_seen": "Senast sedd",
+    "status": "Status",
+    "now": "Nu",
+    "never": "Aldrig",
+    "online": "Ansluten",
+    "offline": "Offline"
+  },
+  "vi": {
+    "name": "Tên",
+    "address": "Địa chỉ",
+    "last_seen": "Lần cuối",
+    "status": "Trạng thái",
+    "now": "Bây giờ",
+    "never": "Không bao giờ",
+    "online": "Trực tuyến",
+    "offline": "Ngoại tuyến"
+  },
+  "zh-Hans": {
+    "name": "名称",
+    "address": "地址",
+    "last_seen": "最后在线",
+    "status": "状态",
+    "now": "现在",
+    "never": "永不",
+    "online": "在线",
+    "offline": "离线"
+  },
+  "zh-Hant": {
+    "name": "名稱",
+    "address": "位址",
+    "last_seen": "最後上線",
+    "status": "狀態",
+    "now": "現在",
+    "never": "永不",
+    "online": "線上",
+    "offline": "離線"
+  }
+}

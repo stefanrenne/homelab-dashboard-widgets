@@ -1,0 +1,11 @@
+id: gluetun
+name: Gluetun
+version: 0.1.0
+apiVersion: 1
+description: The VPN's public IP address, region and country, and the forwarded port, in Gluetun (homepage's gluetun widget).
+refresh: 60s
+defaultFields: [public_ip, region, country]
+options:
+  url: { type: url, required: true }       # the control server, e.g. http://gluetun.lan:8000
+  key: { type: string, secret: true }      # the control server's API key, when its routes need one
+  version: { type: number, default: 1 }    # 2 for Gluetun 3.40.1 and later

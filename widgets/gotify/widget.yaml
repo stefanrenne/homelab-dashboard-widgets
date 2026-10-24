@@ -1,0 +1,9 @@
+id: gotify
+name: Gotify
+version: 0.1.0
+apiVersion: 1
+description: Applications, clients and messages in Gotify (homepage's gotify widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # e.g. http://gotify.lan
+  key: { type: string, secret: true, required: true }   # a client token (Clients in Gotify's web interface)

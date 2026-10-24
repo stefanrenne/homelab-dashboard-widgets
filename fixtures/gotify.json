@@ -1,0 +1,4 @@
+{ "_note": "Gotify: two applications, three clients, four messages.", "routes": {
+ "GET /application": [{ "id": 1, "name": "Backups" }, { "id": 2, "name": "Alerts" }],
+ "GET /client": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
+ "GET /message": { "messages": [{ "id": 4 }, { "id": 3 }, { "id": 2 }, { "id": 1 }], "paging": { "size": 4, "limit": 200 } } } }

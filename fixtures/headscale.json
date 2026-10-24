@@ -1,0 +1,2 @@
+{ "_note": "Headscale node 3, offline.", "routes": {
+ "GET /api/v1/node/3": { "node": { "id": "3", "name": "nas", "givenName": "nas-lan", "ipAddresses": ["100.64.0.3", "fd7a:115c:a1e0::3"], "lastSeen": "2026-03-01T10:00:00Z", "online": false } } } }

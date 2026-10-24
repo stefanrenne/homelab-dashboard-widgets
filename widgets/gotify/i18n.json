@@ -1,0 +1,87 @@
+{
+  "en": {
+    "apps": "Apps",
+    "clients": "Clients",
+    "messages": "Messages"
+  },
+  "nl": {
+    "apps": "Apps",
+    "clients": "Clients",
+    "messages": "Berichten"
+  },
+  "fr": {
+    "apps": "Applis",
+    "clients": "Clients",
+    "messages": "Messages"
+  },
+  "de": {
+    "apps": "Apps",
+    "clients": "Clients",
+    "messages": "Nachrichten"
+  },
+  "es": {
+    "apps": "Apps",
+    "clients": "Clientes",
+    "messages": "Mensajes"
+  },
+  "ca": {
+    "apps": "Apps",
+    "clients": "Clients",
+    "messages": "Missatges"
+  },
+  "he": {
+    "apps": "אפליקציות",
+    "clients": "לקוחות",
+    "messages": "הודעות"
+  },
+  "hr": {
+    "apps": "Aplikacije",
+    "clients": "Klijenti",
+    "messages": "Poruke"
+  },
+  "hu": {
+    "apps": "Alkalmazások",
+    "clients": "Kliensek",
+    "messages": "Üzenetek"
+  },
+  "it": {
+    "apps": "App",
+    "clients": "Client",
+    "messages": "Messaggi"
+  },
+  "nb-NO": {
+    "apps": "Apper",
+    "clients": "Klienter",
+    "messages": "Meldinger"
+  },
+  "pt": {
+    "apps": "Apps",
+    "clients": "Clientes",
+    "messages": "Mensagens"
+  },
+  "ru": {
+    "apps": "Приложения",
+    "clients": "Клиенты",
+    "messages": "Сообщения"
+  },
+  "sv": {
+    "apps": "Appar",
+    "clients": "Klienter",
+    "messages": "Meddelanden"
+  },
+  "vi": {
+    "apps": "Ứng dụng",
+    "clients": "Máy khách",
+    "messages": "Tin nhắn"
+  },
+  "zh-Hans": {
+    "apps": "应用",
+    "clients": "客户端",
+    "messages": "消息"
+  },
+  "zh-Hant": {
+    "apps": "應用程式",
+    "clients": "用戶端",
+    "messages": "訊息"
+  }
+}

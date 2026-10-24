@@ -13,14 +13,34 @@ const LANGS = ['en', 'nl', 'fr', 'de', 'es', 'ca', 'he', 'hr', 'hu', 'it', 'nb-N
 
 let mock;
 let apcupsd; // apcups speaks apcupsd's TCP protocol, not HTTP
+let a2s; // gamedig speaks Valve's server query over UDP
 before(async () => {
   mock = await startMock();
   apcupsd = await nis(['STATUS   : ONLINE', 'LOADPCT  : 10.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 60.0 Minutes']);
+  a2s = await gameServer();
 });
 after(() => {
   mock.close();
   apcupsd.close();
+  a2s.close();
 });
+
+/** A fake game server answering A2S_INFO, after a challenge as newer servers do. */
+async function gameServer() {
+  const dgram = await import('node:dgram');
+  const socket = dgram.createSocket('udp4');
+  const asked = [];
+  socket.on('message', (msg, from) => {
+    asked.push(msg);
+    const head = Buffer.from([0xff, 0xff, 0xff, 0xff]);
+    if (msg.length === 25) return socket.send(Buffer.concat([head, Buffer.from([0x41, 1, 2, 3, 4])]), from.port, from.address);
+    const str = (x) => Buffer.from(`${x}\0`, 'utf8');
+    const info = Buffer.concat([head, Buffer.from([0x49, 17]), str('Homelab CS'), str('de_dust2'), str('csgo'), str('Counter-Strike'), Buffer.from([0xda, 0x02, 12, 24, 2, 0x64, 0x6c, 0, 1])]);
+    socket.send(info, from.port, from.address);
+  });
+  await new Promise((r) => socket.bind(0, '127.0.0.1', r));
+  return { url: `udp://127.0.0.1:${socket.address().port}`, asked, close: () => socket.close() };
+}
 
 const silent = { info() {}, warn() {}, error() {} };
 
@@ -42,6 +62,9 @@ const REQUIRED = {
   duplicati: { password: 'pw' },
   filebrowser: { username: 'dashboard', password: 'pw' },
   freshrss: { username: 'anna', password: 'pw' },
+  get gamedig() { return { url: a2s.url, serverType: 'csgo', timeout: 1 }; },
+  gitlab: { user_id: '42' },
+  headscale: { nodeId: '3' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -87,7 +110,7 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
 });
 
 // blocks whose value is a name from the service (a host name, an operating system), not a key
-const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'] };
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'] };
 
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
@@ -1304,4 +1327,48 @@ test('duplicati, feed, filebrowser, fileflows, firefly, flood, freshrss and frit
   assert.deepEqual(values(fritz), { connectionStatus: 'connected', uptime: '4d 3h', maxDown: '31.3 MB/s', maxUp: '5 MB/s', down: '1.3 MB/s', up: '12.5 kB/s', received: '1.5 TB', sent: '98 GB',
     externalIPAddress: '203.0.113.24', externalIPv6Address: '2001:db8:1::1', externalIPv6Prefix: null });
   assert.equal(lastRequest('fritzbox').headers.soapaction.split('#')[0], 'urn:schemas-upnp-org:service:WANIPConnection:1');
+});
+
+test('gamedig, gatus, ghostfolio, gitlab, gluetun, gotify, hdhomerun and headscale', async () => {
+  const game = await run('gamedig');
+  const g = values(game);
+  assert.deepEqual({ ...g, ping: undefined }, { status: 'online', name: 'Homelab CS', map: 'de_dust2', currentPlayers: '12 / 24', players: 12, maxPlayers: 24, bots: 2, ping: undefined });
+  assert.match(g.ping, /^\d+ms$/);
+  assert.deepEqual([...a2s.asked.at(-1).subarray(25)], [1, 2, 3, 4], 'the challenge is sent back');
+  const off = await run('gamedig', { url: 'udp://127.0.0.1:9', timeout: 0.2 });
+  assert.deepEqual(off.blocks[0], { key: 'status', label: 'status', value: 'offline', status: 'error' });
+  await assert.rejects(run('gamedig', { url: 'udp://127.0.0.1' }), /udp:\/\/host:port/);
+
+  const gatus = await run('gatus');
+  assert.deepEqual(values(gatus), { up: 2, down: 1, uptime: '77.8%' });
+  assert.equal(gatus.blocks[1].status, 'warn');
+
+  const gf = await run('ghostfolio');
+  assert.deepEqual(values(gf), { gross_percent_today: '-0.42%', gross_percent_1y: '-0.42%', gross_percent_max: '-0.42%', net_worth: '48210.46 EUR' });
+  assert.equal(gf.blocks[0].status, 'warn');
+  assert.ok(mock.requests.some((r) => r.widget === 'ghostfolio' && r.query.range === '1y'));
+  assert.equal(lastRequest('ghostfolio').headers.authorization, 'Bearer test-key');
+
+  assert.deepEqual(values(await run('gitlab')), { groups: 3, issues: 9, merges: 2, projects: 17 });
+  assert.equal(lastRequest('gitlab').headers['private-token'], 'test-key');
+  await assert.rejects(run('gitlab', { user_id: '../x' }), /user_id/);
+
+  assert.deepEqual(values(await run('gluetun', { version: 2 })), { public_ip: '198.51.100.77', region: 'North Holland', country: 'Netherlands', port_forwarded: 51413 });
+  assert.equal(values(await run('gluetun')).port_forwarded, null, 'the old route is not allowed: no port');
+  assert.equal(lastRequest('gluetun').headers['x-api-key'], 'test-key');
+
+  assert.deepEqual(values(await run('gotify')), { apps: 2, clients: 3, messages: 4 });
+  assert.equal(lastRequest('gotify').headers['x-gotify-key'], 'test-key');
+
+  const hd = await run('hdhomerun');
+  assert.deepEqual(values(hd), { channels: 3, hd: 2, tunerCount: '1 / 2', channelNumber: '1', channelNetwork: 'NPO 1', signalStrength: '82%', signalQuality: '45%', symbolQuality: '100%', clientIP: '192.0.2.20', networkRate: '8.5Mbit/s' });
+  assert.equal(hd.blocks.find((b) => b.key === 'signalQuality').status, 'warn');
+  assert.equal(values(await run('hdhomerun', { tuner: 1 })).channelNetwork, null);
+
+  const hs = await run('headscale');
+  const h = values(hs);
+  assert.deepEqual([h.name, h.address, h.status], ['nas-lan', '100.64.0.3', 'offline']);
+  assert.match(h.last_seen, /^\d+d \d+h$/);
+  assert.equal(hs.blocks[3].status, 'warn');
+  await assert.rejects(run('headscale', { nodeId: '3/../x' }), /nodeId/);
 });

@@ -1,0 +1,8 @@
+id: gatus
+name: Gatus
+version: 0.1.0
+apiVersion: 1
+description: Endpoints up and down, and the uptime over their recent results, in Gatus (homepage's gatus widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # e.g. http://gatus.lan:8080

@@ -1,0 +1,3 @@
+{ "_note": "Gluetun control server; the old port route is not allowed (no fixture: 404).", "routes": {
+ "GET /v1/publicip/ip": { "public_ip": "198.51.100.77", "region": "North Holland", "country": "Netherlands", "city": "Amsterdam" },
+ "GET /v1/portforward": { "port": 51413 } } }

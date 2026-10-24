@@ -1,0 +1,104 @@
+{
+  "en": {
+    "groups": "Groups",
+    "issues": "Issues",
+    "merges": "Merge requests",
+    "projects": "Projects"
+  },
+  "nl": {
+    "groups": "Groepen",
+    "issues": "Issues",
+    "merges": "Merge requests",
+    "projects": "Projecten"
+  },
+  "fr": {
+    "groups": "Groupes",
+    "issues": "Tickets",
+    "merges": "Fusions",
+    "projects": "Projets"
+  },
+  "de": {
+    "groups": "Gruppen",
+    "issues": "Issues",
+    "merges": "Merge Requests",
+    "projects": "Projekte"
+  },
+  "es": {
+    "groups": "Grupos",
+    "issues": "Incidencias",
+    "merges": "Fusiones",
+    "projects": "Proyectos"
+  },
+  "ca": {
+    "groups": "Grups",
+    "issues": "Incidències",
+    "merges": "Fusions",
+    "projects": "Projectes"
+  },
+  "he": {
+    "groups": "קבוצות",
+    "issues": "בעיות",
+    "merges": "בקשות מיזוג",
+    "projects": "פרויקטים"
+  },
+  "hr": {
+    "groups": "Grupe",
+    "issues": "Problemi",
+    "merges": "Zahtjevi spajanja",
+    "projects": "Projekti"
+  },
+  "hu": {
+    "groups": "Csoportok",
+    "issues": "Hibajegyek",
+    "merges": "Egyesítések",
+    "projects": "Projektek"
+  },
+  "it": {
+    "groups": "Gruppi",
+    "issues": "Issue",
+    "merges": "Merge",
+    "projects": "Progetti"
+  },
+  "nb-NO": {
+    "groups": "Grupper",
+    "issues": "Saker",
+    "merges": "Flettinger",
+    "projects": "Prosjekter"
+  },
+  "pt": {
+    "groups": "Grupos",
+    "issues": "Issues",
+    "merges": "Pedidos de merge",
+    "projects": "Projetos"
+  },
+  "ru": {
+    "groups": "Группы",
+    "issues": "Задачи",
+    "merges": "Запросы слияния",
+    "projects": "Проекты"
+  },
+  "sv": {
+    "groups": "Grupper",
+    "issues": "Ärenden",
+    "merges": "Merge requests",
+    "projects": "Projekt"
+  },
+  "vi": {
+    "groups": "Nhóm",
+    "issues": "Vấn đề",
+    "merges": "Yêu cầu hợp nhất",
+    "projects": "Dự án"
+  },
+  "zh-Hans": {
+    "groups": "群组",
+    "issues": "问题",
+    "merges": "合并请求",
+    "projects": "项目"
+  },
+  "zh-Hant": {
+    "groups": "群組",
+    "issues": "問題",
+    "merges": "合併請求",
+    "projects": "專案"
+  }
+}

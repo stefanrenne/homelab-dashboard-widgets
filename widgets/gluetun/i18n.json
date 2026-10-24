@@ -1,0 +1,104 @@
+{
+  "en": {
+    "public_ip": "Public IP",
+    "region": "Region",
+    "country": "Country",
+    "port_forwarded": "Forwarded port"
+  },
+  "nl": {
+    "public_ip": "Publiek IP",
+    "region": "Regio",
+    "country": "Land",
+    "port_forwarded": "Open poort"
+  },
+  "fr": {
+    "public_ip": "IP publique",
+    "region": "Région",
+    "country": "Pays",
+    "port_forwarded": "Port redirigé"
+  },
+  "de": {
+    "public_ip": "Öffentliche IP",
+    "region": "Region",
+    "country": "Land",
+    "port_forwarded": "Offener Port"
+  },
+  "es": {
+    "public_ip": "IP pública",
+    "region": "Región",
+    "country": "País",
+    "port_forwarded": "Puerto reenviado"
+  },
+  "ca": {
+    "public_ip": "IP pública",
+    "region": "Regió",
+    "country": "País",
+    "port_forwarded": "Port reenviat"
+  },
+  "he": {
+    "public_ip": "IP ציבורי",
+    "region": "אזור",
+    "country": "מדינה",
+    "port_forwarded": "פורט מועבר"
+  },
+  "hr": {
+    "public_ip": "Javni IP",
+    "region": "Regija",
+    "country": "Država",
+    "port_forwarded": "Proslijeđeni port"
+  },
+  "hu": {
+    "public_ip": "Nyilvános IP",
+    "region": "Régió",
+    "country": "Ország",
+    "port_forwarded": "Továbbított port"
+  },
+  "it": {
+    "public_ip": "IP pubblico",
+    "region": "Regione",
+    "country": "Paese",
+    "port_forwarded": "Porta inoltrata"
+  },
+  "nb-NO": {
+    "public_ip": "Offentlig IP",
+    "region": "Region",
+    "country": "Land",
+    "port_forwarded": "Videresendt port"
+  },
+  "pt": {
+    "public_ip": "IP público",
+    "region": "Região",
+    "country": "País",
+    "port_forwarded": "Porta encaminhada"
+  },
+  "ru": {
+    "public_ip": "Публичный IP",
+    "region": "Регион",
+    "country": "Страна",
+    "port_forwarded": "Проброшенный порт"
+  },
+  "sv": {
+    "public_ip": "Publik IP",
+    "region": "Region",
+    "country": "Land",
+    "port_forwarded": "Öppen port"
+  },
+  "vi": {
+    "public_ip": "IP công khai",
+    "region": "Khu vực",
+    "country": "Quốc gia",
+    "port_forwarded": "Cổng chuyển tiếp"
+  },
+  "zh-Hans": {
+    "public_ip": "公网 IP",
+    "region": "地区",
+    "country": "国家",
+    "port_forwarded": "转发端口"
+  },
+  "zh-Hant": {
+    "public_ip": "公用 IP",
+    "region": "地區",
+    "country": "國家",
+    "port_forwarded": "轉發連接埠"
+  }
+}

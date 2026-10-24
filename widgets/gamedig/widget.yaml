@@ -1,0 +1,11 @@
+id: gamedig
+name: GameDig
+version: 0.1.0
+apiVersion: 1
+description: Status, map, players and ping of a game server that answers Valve's server query (homepage's gamedig widget).
+refresh: 30s
+defaultFields: [map, currentPlayers, ping]
+options:
+  url: { type: string, required: true }    # the server, e.g. udp://game.lan:27015
+  serverType: { type: string }             # homepage's game id, e.g. csgo (only Valve-query games)
+  timeout: { type: number, default: 3 }    # seconds to wait for an answer

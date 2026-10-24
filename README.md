@@ -71,6 +71,14 @@ Every widget has its own page with setup, fields and options on the
 | `flood` | torrents downloading and seeding, with rates | `url`, `username`, `password` |
 | `freshrss` | unread articles and subscriptions | `url`, `username`, `password` |
 | `fritzbox` | connection, uptime, line speed and traffic | `url`, `insecure` |
+| `gamedig` | status, map, players and ping of a game server (Valve's server query) | `url`, `serverType`, `timeout` |
+| `gatus` | endpoints up and down, uptime | `url` |
+| `ghostfolio` | portfolio performance today, over a year and in total, net worth | `url`, `key` |
+| `gitlab` | groups, issues, merge requests and projects of a user | `url`, `key`, `user_id` |
+| `gluetun` | the VPN's public IP, region, country and forwarded port | `url`, `key`, `version` |
+| `gotify` | applications, clients and messages | `url`, `key` |
+| `hdhomerun` | channels, tuners in use, a tuner's channel and signal | `url`, `tuner` |
+| `headscale` | a node's name, address, last seen and online state | `url`, `nodeId`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

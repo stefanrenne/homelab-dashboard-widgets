@@ -1,0 +1,104 @@
+{
+  "en": {
+    "gross_percent_today": "Today",
+    "gross_percent_1y": "Past year",
+    "gross_percent_max": "All time",
+    "net_worth": "Net worth"
+  },
+  "nl": {
+    "gross_percent_today": "Vandaag",
+    "gross_percent_1y": "Afgelopen jaar",
+    "gross_percent_max": "Sinds begin",
+    "net_worth": "Vermogen"
+  },
+  "fr": {
+    "gross_percent_today": "Aujourd’hui",
+    "gross_percent_1y": "Sur un an",
+    "gross_percent_max": "Depuis le début",
+    "net_worth": "Patrimoine"
+  },
+  "de": {
+    "gross_percent_today": "Heute",
+    "gross_percent_1y": "Letztes Jahr",
+    "gross_percent_max": "Seit Beginn",
+    "net_worth": "Vermögen"
+  },
+  "es": {
+    "gross_percent_today": "Hoy",
+    "gross_percent_1y": "Último año",
+    "gross_percent_max": "Desde el inicio",
+    "net_worth": "Patrimonio"
+  },
+  "ca": {
+    "gross_percent_today": "Avui",
+    "gross_percent_1y": "Últim any",
+    "gross_percent_max": "Des de l’inici",
+    "net_worth": "Patrimoni"
+  },
+  "he": {
+    "gross_percent_today": "היום",
+    "gross_percent_1y": "השנה האחרונה",
+    "gross_percent_max": "מההתחלה",
+    "net_worth": "שווי נקי"
+  },
+  "hr": {
+    "gross_percent_today": "Danas",
+    "gross_percent_1y": "Prošla godina",
+    "gross_percent_max": "Od početka",
+    "net_worth": "Imovina"
+  },
+  "hu": {
+    "gross_percent_today": "Ma",
+    "gross_percent_1y": "Elmúlt év",
+    "gross_percent_max": "Kezdettől",
+    "net_worth": "Vagyon"
+  },
+  "it": {
+    "gross_percent_today": "Oggi",
+    "gross_percent_1y": "Ultimo anno",
+    "gross_percent_max": "Dall’inizio",
+    "net_worth": "Patrimonio"
+  },
+  "nb-NO": {
+    "gross_percent_today": "I dag",
+    "gross_percent_1y": "Siste år",
+    "gross_percent_max": "Fra start",
+    "net_worth": "Formue"
+  },
+  "pt": {
+    "gross_percent_today": "Hoje",
+    "gross_percent_1y": "Último ano",
+    "gross_percent_max": "Desde o início",
+    "net_worth": "Património"
+  },
+  "ru": {
+    "gross_percent_today": "Сегодня",
+    "gross_percent_1y": "За год",
+    "gross_percent_max": "За всё время",
+    "net_worth": "Капитал"
+  },
+  "sv": {
+    "gross_percent_today": "Idag",
+    "gross_percent_1y": "Senaste året",
+    "gross_percent_max": "Sedan start",
+    "net_worth": "Förmögenhet"
+  },
+  "vi": {
+    "gross_percent_today": "Hôm nay",
+    "gross_percent_1y": "Năm qua",
+    "gross_percent_max": "Từ đầu",
+    "net_worth": "Tài sản ròng"
+  },
+  "zh-Hans": {
+    "gross_percent_today": "今天",
+    "gross_percent_1y": "过去一年",
+    "gross_percent_max": "全部时间",
+    "net_worth": "净资产"
+  },
+  "zh-Hant": {
+    "gross_percent_today": "今天",
+    "gross_percent_1y": "過去一年",
+    "gross_percent_max": "全部時間",
+    "net_worth": "淨資產"
+  }
+}

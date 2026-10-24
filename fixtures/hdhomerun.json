@@ -1,0 +1,5 @@
+{ "_note": "HDHomeRun: three channels (two HD); tuner 0 plays NPO 1 with a weak signal quality, tuner 1 is idle.", "routes": {
+ "GET /lineup.json": [{ "GuideNumber": "1", "GuideName": "NPO 1", "HD": 1 }, { "GuideNumber": "2", "GuideName": "NPO 2", "HD": 1 }, { "GuideNumber": "3", "GuideName": "Regio" }],
+ "GET /status.json": [
+  { "Resource": "tuner0", "VctNumber": "1", "VctName": "NPO 1", "SignalStrengthPercent": 82, "SignalQualityPercent": 45, "SymbolQualityPercent": 100, "TargetIP": "192.0.2.20", "NetworkRate": 8460000 },
+  { "Resource": "tuner1" }] } }

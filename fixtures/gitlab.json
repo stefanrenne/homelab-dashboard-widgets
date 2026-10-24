@@ -1,0 +1,2 @@
+{ "_note": "GitLab associations_count of user 42.", "routes": {
+ "GET /api/v4/users/42/associations_count": { "groups_count": 3, "projects_count": 17, "issues_count": 9, "merge_requests_count": 2 } } }

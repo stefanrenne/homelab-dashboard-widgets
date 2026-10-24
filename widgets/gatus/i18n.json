@@ -1,0 +1,87 @@
+{
+  "en": {
+    "up": "Up",
+    "down": "Down",
+    "uptime": "Uptime"
+  },
+  "nl": {
+    "up": "Actief",
+    "down": "Offline",
+    "uptime": "Uptime"
+  },
+  "fr": {
+    "up": "Actif",
+    "down": "Hors ligne",
+    "uptime": "Temps actif"
+  },
+  "de": {
+    "up": "Aktiv",
+    "down": "Ausgefallen",
+    "uptime": "Laufzeit"
+  },
+  "es": {
+    "up": "Activa",
+    "down": "Caída",
+    "uptime": "Tiempo activo"
+  },
+  "ca": {
+    "up": "Actiu",
+    "down": "Caigut",
+    "uptime": "Temps actiu"
+  },
+  "he": {
+    "up": "פעיל",
+    "down": "נפל",
+    "uptime": "זמן פעולה"
+  },
+  "hr": {
+    "up": "Radi",
+    "down": "Ne radi",
+    "uptime": "Vrijeme rada"
+  },
+  "hu": {
+    "up": "Működik",
+    "down": "Leállt",
+    "uptime": "Üzemidő"
+  },
+  "it": {
+    "up": "Attivo",
+    "down": "Giù",
+    "uptime": "Tempo attivo"
+  },
+  "nb-NO": {
+    "up": "Oppe",
+    "down": "Nede",
+    "uptime": "Oppetid"
+  },
+  "pt": {
+    "up": "Ativo",
+    "down": "Em baixo",
+    "uptime": "Tempo ativo"
+  },
+  "ru": {
+    "up": "Работает",
+    "down": "Недоступен",
+    "uptime": "Время работы"
+  },
+  "sv": {
+    "up": "Uppe",
+    "down": "Nere",
+    "uptime": "Drifttid"
+  },
+  "vi": {
+    "up": "Hoạt động",
+    "down": "Ngừng",
+    "uptime": "Hoạt động"
+  },
+  "zh-Hans": {
+    "up": "正常",
+    "down": "宕机",
+    "uptime": "运行时间"
+  },
+  "zh-Hant": {
+    "up": "正常",
+    "down": "停止",
+    "uptime": "運作時間"
+  }
+}

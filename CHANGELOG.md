@@ -48,6 +48,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `changedetectionio`, `channelsdvrserver`, `checkmk`, `cloudflared`, `coinmarketcap` and `crowdsec`, as homepage's widgets.
 - `develancacheui`, `dispatcharr`, `dockhand`, `downloadstation`, `esphome` and `evcc`, as homepage's widgets.
 - Widgets for Duplicati, RSS and Atom feeds, File Browser, FileFlows, Firefly III, Flood, FreshRSS and the FRITZ!Box.
+- Widgets for game servers (Valve's server query), Gatus, Ghostfolio, GitLab, Gluetun, Gotify, HDHomeRun and Headscale.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.
