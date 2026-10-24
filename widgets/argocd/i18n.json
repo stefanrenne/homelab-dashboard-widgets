@@ -1,0 +1,172 @@
+{
+  "en": {
+    "apps": "Applications",
+    "synced": "Synced",
+    "outOfSync": "Out of sync",
+    "healthy": "Healthy",
+    "progressing": "Progressing",
+    "degraded": "Degraded",
+    "suspended": "Suspended",
+    "missing": "Missing"
+  },
+  "nl": {
+    "apps": "Apps",
+    "synced": "In sync",
+    "outOfSync": "Niet in sync",
+    "healthy": "Gezond",
+    "progressing": "Bezig",
+    "degraded": "Verminderd",
+    "suspended": "Gepauzeerd",
+    "missing": "Ontbrekend"
+  },
+  "fr": {
+    "apps": "Applications",
+    "synced": "Synchronisé",
+    "outOfSync": "Pas à jour",
+    "healthy": "Sains",
+    "progressing": "En cours",
+    "degraded": "Dégradés",
+    "suspended": "Suspendus",
+    "missing": "Manquants"
+  },
+  "de": {
+    "apps": "Anwendungen",
+    "synced": "Synchron",
+    "outOfSync": "Nicht synchron",
+    "healthy": "Gesund",
+    "progressing": "Laufend",
+    "degraded": "Gestört",
+    "suspended": "Ausgesetzt",
+    "missing": "Fehlend"
+  },
+  "es": {
+    "apps": "Aplicaciones",
+    "synced": "Sincronizado",
+    "outOfSync": "Desfasado",
+    "healthy": "Saludables",
+    "progressing": "En curso",
+    "degraded": "Degradados",
+    "suspended": "Suspendidos",
+    "missing": "Faltan"
+  },
+  "ca": {
+    "apps": "Aplicacions",
+    "synced": "Sincronitzat",
+    "outOfSync": "Sense sync",
+    "healthy": "Saludables",
+    "progressing": "En curs",
+    "degraded": "Degradats",
+    "suspended": "Suspesos",
+    "missing": "Absents"
+  },
+  "he": {
+    "apps": "יישומים",
+    "synced": "מסונכרן",
+    "outOfSync": "לא מסונכרן",
+    "healthy": "תקינים",
+    "progressing": "בתהליך",
+    "degraded": "פגועים",
+    "suspended": "מושהים",
+    "missing": "חסרים"
+  },
+  "hr": {
+    "apps": "Aplikacije",
+    "synced": "Usklađeno",
+    "outOfSync": "Neusklađeno",
+    "healthy": "Zdravo",
+    "progressing": "U tijeku",
+    "degraded": "Degradirano",
+    "suspended": "Obustavljeno",
+    "missing": "Nedostaje"
+  },
+  "hu": {
+    "apps": "Alkalmazások",
+    "synced": "Szinkronban",
+    "outOfSync": "Eltérő",
+    "healthy": "Egészséges",
+    "progressing": "Folyamatban",
+    "degraded": "Romlott",
+    "suspended": "Szünetel",
+    "missing": "Hiányzik"
+  },
+  "it": {
+    "apps": "Applicazioni",
+    "synced": "In sync",
+    "outOfSync": "Non in sync",
+    "healthy": "Integri",
+    "progressing": "In corso",
+    "degraded": "Degradati",
+    "suspended": "Sospesi",
+    "missing": "Mancanti"
+  },
+  "nb-NO": {
+    "apps": "Apper",
+    "synced": "Synkronisert",
+    "outOfSync": "Usynkront",
+    "healthy": "Sunne",
+    "progressing": "Pågår",
+    "degraded": "Redusert",
+    "suspended": "Pauset",
+    "missing": "Mangler"
+  },
+  "pt": {
+    "apps": "Aplicações",
+    "synced": "Sincronizado",
+    "outOfSync": "Fora de sync",
+    "healthy": "Saudáveis",
+    "progressing": "Em curso",
+    "degraded": "Degradados",
+    "suspended": "Suspensos",
+    "missing": "Em falta"
+  },
+  "ru": {
+    "apps": "Приложения",
+    "synced": "Синхронно",
+    "outOfSync": "Рассинхрон",
+    "healthy": "Исправны",
+    "progressing": "В процессе",
+    "degraded": "Деградация",
+    "suspended": "На паузе",
+    "missing": "Отсутствует"
+  },
+  "sv": {
+    "apps": "Appar",
+    "synced": "Synkat",
+    "outOfSync": "Ej synkat",
+    "healthy": "Friska",
+    "progressing": "Pågår",
+    "degraded": "Försämrade",
+    "suspended": "Pausade",
+    "missing": "Saknas"
+  },
+  "vi": {
+    "apps": "Ứng dụng",
+    "synced": "Đã đồng bộ",
+    "outOfSync": "Lệch đồng bộ",
+    "healthy": "Khỏe mạnh",
+    "progressing": "Đang xử lý",
+    "degraded": "Suy giảm",
+    "suspended": "Tạm ngưng",
+    "missing": "Còn thiếu"
+  },
+  "zh-Hans": {
+    "apps": "应用",
+    "synced": "已同步",
+    "outOfSync": "未同步",
+    "healthy": "健康",
+    "progressing": "进行中",
+    "degraded": "降级",
+    "suspended": "已暂停",
+    "missing": "缺失"
+  },
+  "zh-Hant": {
+    "apps": "應用程式",
+    "synced": "已同步",
+    "outOfSync": "未同步",
+    "healthy": "健康",
+    "progressing": "進行中",
+    "degraded": "降級",
+    "suspended": "已暫停",
+    "missing": "缺少"
+  }
+}

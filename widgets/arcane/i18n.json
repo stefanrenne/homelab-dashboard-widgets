@@ -1,0 +1,155 @@
+{
+  "en": {
+    "running": "Running",
+    "stopped": "Stopped",
+    "total": "Total",
+    "images": "Images",
+    "images_used": "Images used",
+    "images_unused": "Images unused",
+    "updates": "Updates"
+  },
+  "nl": {
+    "running": "Actief",
+    "stopped": "Gestopt",
+    "total": "Totaal",
+    "images": "Images",
+    "images_used": "In gebruik",
+    "images_unused": "Ongebruikt",
+    "updates": "Updates"
+  },
+  "fr": {
+    "running": "En cours",
+    "stopped": "Arrêtés",
+    "total": "Total",
+    "images": "Images",
+    "images_used": "Utilisées",
+    "images_unused": "Inutilisées",
+    "updates": "Mises à jour"
+  },
+  "de": {
+    "running": "Läuft",
+    "stopped": "Gestoppt",
+    "total": "Gesamt",
+    "images": "Images",
+    "images_used": "Genutzt",
+    "images_unused": "Ungenutzt",
+    "updates": "Updates"
+  },
+  "es": {
+    "running": "En marcha",
+    "stopped": "Detenidos",
+    "total": "Total",
+    "images": "Imágenes",
+    "images_used": "En uso",
+    "images_unused": "Sin usar",
+    "updates": "Pendientes"
+  },
+  "ca": {
+    "running": "En marxa",
+    "stopped": "Aturat",
+    "total": "Total",
+    "images": "Imatges",
+    "images_used": "En ús",
+    "images_unused": "Sense ús",
+    "updates": "Noves versions"
+  },
+  "he": {
+    "running": "פועלים",
+    "stopped": "נעצר",
+    "total": "סך הכול",
+    "images": "אימג׳ים",
+    "images_used": "בשימוש",
+    "images_unused": "לא בשימוש",
+    "updates": "עדכונים"
+  },
+  "hr": {
+    "running": "Radi",
+    "stopped": "Zaustavljeno",
+    "total": "Ukupno",
+    "images": "Slike",
+    "images_used": "U upotrebi",
+    "images_unused": "Nekorišteno",
+    "updates": "Ažuriranja"
+  },
+  "hu": {
+    "running": "Fut",
+    "stopped": "Leállítva",
+    "total": "Összesen",
+    "images": "Képfájlok",
+    "images_used": "Használt",
+    "images_unused": "Nem használt",
+    "updates": "Frissítések"
+  },
+  "it": {
+    "running": "Attivi",
+    "stopped": "Fermato",
+    "total": "Totale",
+    "images": "Immagini",
+    "images_used": "In uso",
+    "images_unused": "Inutilizzate",
+    "updates": "Novità"
+  },
+  "nb-NO": {
+    "running": "Kjører",
+    "stopped": "Stoppet",
+    "total": "Totalt",
+    "images": "Images",
+    "images_used": "I bruk",
+    "images_unused": "Ubrukt",
+    "updates": "Oppdatering"
+  },
+  "pt": {
+    "running": "Em execução",
+    "stopped": "Parado",
+    "total": "Total",
+    "images": "Imagens",
+    "images_used": "Em uso",
+    "images_unused": "Sem uso",
+    "updates": "Atualizações"
+  },
+  "ru": {
+    "running": "Работает",
+    "stopped": "Остановлен",
+    "total": "Всего",
+    "images": "Образы",
+    "images_used": "Используются",
+    "images_unused": "Не используются",
+    "updates": "Обновления"
+  },
+  "sv": {
+    "running": "Körs",
+    "stopped": "Stoppad",
+    "total": "Totalt",
+    "images": "Avbilder",
+    "images_used": "Används",
+    "images_unused": "Oanvända",
+    "updates": "Uppdatering"
+  },
+  "vi": {
+    "running": "Đang chạy",
+    "stopped": "Đã dừng",
+    "total": "Tổng",
+    "images": "Image",
+    "images_used": "Đang dùng",
+    "images_unused": "Không dùng",
+    "updates": "Cập nhật"
+  },
+  "zh-Hans": {
+    "running": "运行中",
+    "stopped": "已停止",
+    "total": "总计",
+    "images": "镜像",
+    "images_used": "已使用",
+    "images_unused": "未使用",
+    "updates": "更新"
+  },
+  "zh-Hant": {
+    "running": "執行中",
+    "stopped": "已停止",
+    "total": "總計",
+    "images": "映像",
+    "images_used": "使用中",
+    "images_unused": "未使用",
+    "updates": "更新"
+  }
+}

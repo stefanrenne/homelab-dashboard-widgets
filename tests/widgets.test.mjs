@@ -30,6 +30,7 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  arcane: { env: '1' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -1135,4 +1136,19 @@ test('apcups: status, load, charge and runtime over apcupsd\'s NIS protocol; on 
     ups.close();
     onBattery.close();
   }
+});
+
+test('arcane, argocd, atsumeru and autobrr: their counts, with what needs you marked', async () => {
+  const arcane = await run('arcane');
+  assert.deepEqual(values(arcane), { running: 21, stopped: 3, total: 24, images: 40, images_used: 24, images_unused: 16, image_updates: 5 });
+  assert.equal(arcane.blocks.at(-1).status, 'warn');
+  assert.equal(lastRequest('arcane').headers['x-api-key'], 'test-key');
+  const argo = await run('argocd');
+  assert.deepEqual(values(argo), { apps: 4, synced: 3, outOfSync: 1, healthy: 2, progressing: 1, degraded: 1, suspended: 0, missing: 0 });
+  assert.deepEqual(argo.blocks.filter((b) => b.status).map((b) => [b.key, b.status]), [['outOfSync', 'warn'], ['degraded', 'error']]);
+  assert.equal(lastRequest('argocd').headers.authorization, 'Bearer test-key');
+  assert.deepEqual(values(await run('atsumeru', { username: 'u', password: 'p' })), { series: 312, archives: 1840, chapters: 9214, categories: 12 });
+  assert.equal(lastRequest('atsumeru').headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
+  assert.deepEqual(values(await run('autobrr')), { approvedPushes: 180, rejectedPushes: 30, filters: 2, indexers: 3 });
+  assert.equal(lastRequest('autobrr').headers['x-api-token'], 'test-key');
 });

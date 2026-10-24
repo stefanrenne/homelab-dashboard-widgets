@@ -1,0 +1,104 @@
+{
+  "en": {
+    "approvedPushes": "Approved pushes",
+    "rejectedPushes": "Rejected pushes",
+    "filters": "Filters",
+    "indexers": "Indexers"
+  },
+  "nl": {
+    "approvedPushes": "Goedgekeurd",
+    "rejectedPushes": "Afgewezen",
+    "filters": "Filters",
+    "indexers": "Indexers"
+  },
+  "fr": {
+    "approvedPushes": "Approuvés",
+    "rejectedPushes": "Rejetés",
+    "filters": "Filtres",
+    "indexers": "Indexeurs"
+  },
+  "de": {
+    "approvedPushes": "Angenommen",
+    "rejectedPushes": "Abgelehnt",
+    "filters": "Filter",
+    "indexers": "Indexer"
+  },
+  "es": {
+    "approvedPushes": "Aprobados",
+    "rejectedPushes": "Rechazados",
+    "filters": "Filtros",
+    "indexers": "Indexadores"
+  },
+  "ca": {
+    "approvedPushes": "Aprovats",
+    "rejectedPushes": "Rebutjats",
+    "filters": "Filtres",
+    "indexers": "Indexadors"
+  },
+  "he": {
+    "approvedPushes": "אושרו",
+    "rejectedPushes": "נדחו",
+    "filters": "מסננים",
+    "indexers": "אינדקסים"
+  },
+  "hr": {
+    "approvedPushes": "Odobreno",
+    "rejectedPushes": "Odbijeno",
+    "filters": "Filtri",
+    "indexers": "Indekseri"
+  },
+  "hu": {
+    "approvedPushes": "Elfogadva",
+    "rejectedPushes": "Elutasítva",
+    "filters": "Szűrők",
+    "indexers": "Indexelők"
+  },
+  "it": {
+    "approvedPushes": "Approvati",
+    "rejectedPushes": "Rifiutati",
+    "filters": "Filtri",
+    "indexers": "Indexer"
+  },
+  "nb-NO": {
+    "approvedPushes": "Godkjent",
+    "rejectedPushes": "Avvist",
+    "filters": "Filtre",
+    "indexers": "Indekserere"
+  },
+  "pt": {
+    "approvedPushes": "Aprovados",
+    "rejectedPushes": "Rejeitados",
+    "filters": "Filtros",
+    "indexers": "Indexadores"
+  },
+  "ru": {
+    "approvedPushes": "Принято",
+    "rejectedPushes": "Отклонено",
+    "filters": "Фильтры",
+    "indexers": "Индексаторы"
+  },
+  "sv": {
+    "approvedPushes": "Godkända",
+    "rejectedPushes": "Avvisade",
+    "filters": "Filter",
+    "indexers": "Indexerare"
+  },
+  "vi": {
+    "approvedPushes": "Đã duyệt",
+    "rejectedPushes": "Bị từ chối",
+    "filters": "Bộ lọc",
+    "indexers": "Chỉ mục"
+  },
+  "zh-Hans": {
+    "approvedPushes": "已批准",
+    "rejectedPushes": "已拒绝",
+    "filters": "过滤器",
+    "indexers": "索引器"
+  },
+  "zh-Hant": {
+    "approvedPushes": "已核准",
+    "rejectedPushes": "已拒絕",
+    "filters": "篩選器",
+    "indexers": "索引器"
+  }
+}

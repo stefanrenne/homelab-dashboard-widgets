@@ -1,0 +1,4 @@
+{
+ "_note": "Atsumeru server info.",
+ "routes": { "GET /api/server/info": { "name": "Atsumeru", "version": "1.0", "stats": { "total_series": 312, "total_archives": 1840, "total_chapters": 9214, "total_categories": 12 } } }
+}

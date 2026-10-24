@@ -1,0 +1,104 @@
+{
+  "en": {
+    "series": "Series",
+    "archives": "Archives",
+    "chapters": "Chapters",
+    "categories": "Categories"
+  },
+  "nl": {
+    "series": "Series",
+    "archives": "Archieven",
+    "chapters": "Hoofdstukken",
+    "categories": "Categorieën"
+  },
+  "fr": {
+    "series": "Séries",
+    "archives": "Archives",
+    "chapters": "Chapitres",
+    "categories": "Catégories"
+  },
+  "de": {
+    "series": "Serien",
+    "archives": "Archive",
+    "chapters": "Kapitel",
+    "categories": "Kategorien"
+  },
+  "es": {
+    "series": "Series",
+    "archives": "Archivos",
+    "chapters": "Capítulos",
+    "categories": "Categorías"
+  },
+  "ca": {
+    "series": "Sèries",
+    "archives": "Arxius",
+    "chapters": "Capítols",
+    "categories": "Categories"
+  },
+  "he": {
+    "series": "סדרות",
+    "archives": "ארכיונים",
+    "chapters": "פרקים",
+    "categories": "קטגוריות"
+  },
+  "hr": {
+    "series": "Serije",
+    "archives": "Arhive",
+    "chapters": "Poglavlja",
+    "categories": "Kategorije"
+  },
+  "hu": {
+    "series": "Sorozatok",
+    "archives": "Archívumok",
+    "chapters": "Fejezetek",
+    "categories": "Kategóriák"
+  },
+  "it": {
+    "series": "Serie",
+    "archives": "Archivi",
+    "chapters": "Capitoli",
+    "categories": "Categorie"
+  },
+  "nb-NO": {
+    "series": "Serier",
+    "archives": "Arkiver",
+    "chapters": "Kapitler",
+    "categories": "Kategorier"
+  },
+  "pt": {
+    "series": "Séries",
+    "archives": "Arquivos",
+    "chapters": "Capítulos",
+    "categories": "Categorias"
+  },
+  "ru": {
+    "series": "Сериалы",
+    "archives": "Архивы",
+    "chapters": "Главы",
+    "categories": "Категории"
+  },
+  "sv": {
+    "series": "Serier",
+    "archives": "Arkiv",
+    "chapters": "Kapitel",
+    "categories": "Kategorier"
+  },
+  "vi": {
+    "series": "Phim bộ",
+    "archives": "Tệp lưu trữ",
+    "chapters": "Chương",
+    "categories": "Danh mục"
+  },
+  "zh-Hans": {
+    "series": "剧集",
+    "archives": "归档",
+    "chapters": "章节",
+    "categories": "分类"
+  },
+  "zh-Hant": {
+    "series": "影集",
+    "archives": "封存檔",
+    "chapters": "章節",
+    "categories": "分類"
+  }
+}

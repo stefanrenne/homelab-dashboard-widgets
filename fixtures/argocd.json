@@ -1,0 +1,9 @@
+{
+ "_note": "Argo CD applications: four, one out of sync and degraded, one progressing.",
+ "routes": { "GET /api/v1/applications": { "items": [
+  { "metadata": { "name": "dashboard" }, "status": { "sync": { "status": "Synced" }, "health": { "status": "Healthy" } } },
+  { "metadata": { "name": "monitoring" }, "status": { "sync": { "status": "Synced" }, "health": { "status": "Healthy" } } },
+  { "metadata": { "name": "media" }, "status": { "sync": { "status": "OutOfSync" }, "health": { "status": "Degraded" } } },
+  { "metadata": { "name": "backup" }, "status": { "sync": { "status": "Synced" }, "health": { "status": "Progressing" } } }
+ ] } }
+}

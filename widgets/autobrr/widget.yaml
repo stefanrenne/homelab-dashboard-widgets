@@ -1,0 +1,9 @@
+id: autobrr
+name: autobrr
+version: 0.1.0
+apiVersion: 1
+description: Approved and rejected pushes, filters and indexers in autobrr (homepage's autobrr widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://autobrr.lan:7474
+  key: { type: string, secret: true, required: true }   # Settings > API Keys

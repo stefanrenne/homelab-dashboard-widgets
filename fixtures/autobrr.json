@@ -1,0 +1,8 @@
+{
+ "_note": "autobrr release stats, filters and indexers.",
+ "routes": {
+  "GET /api/release/stats": { "total_count": 4120, "filtered_count": 210, "filter_rejected_count": 3910, "push_approved_count": 180, "push_rejected_count": 30 },
+  "GET /api/filters": [{ "id": 1, "name": "TV 1080p" }, { "id": 2, "name": "Movies 2160p" }],
+  "GET /api/release/indexers": [{ "name": "a" }, { "name": "b" }, { "name": "c" }]
+ }
+}
