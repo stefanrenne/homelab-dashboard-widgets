@@ -1,0 +1,104 @@
+{
+  "en": {
+    "speed": "Speed",
+    "active": "Active",
+    "queue": "Queue",
+    "total": "Total"
+  },
+  "nl": {
+    "speed": "Snelheid",
+    "active": "Actief",
+    "queue": "Wachtrij",
+    "total": "Totaal"
+  },
+  "fr": {
+    "speed": "Débit",
+    "active": "Actifs",
+    "queue": "File",
+    "total": "Total"
+  },
+  "de": {
+    "speed": "Rate",
+    "active": "Aktiv",
+    "queue": "Einträge",
+    "total": "Gesamt"
+  },
+  "es": {
+    "speed": "Velocidad",
+    "active": "Activos",
+    "queue": "Cola",
+    "total": "Total"
+  },
+  "ca": {
+    "speed": "Velocitat",
+    "active": "Actius",
+    "queue": "Cua",
+    "total": "Total"
+  },
+  "he": {
+    "speed": "מהירות",
+    "active": "פעילים",
+    "queue": "תור",
+    "total": "סך הכול"
+  },
+  "hr": {
+    "speed": "Brzina",
+    "active": "Aktivni",
+    "queue": "Red",
+    "total": "Ukupno"
+  },
+  "hu": {
+    "speed": "Sebesség",
+    "active": "Aktív",
+    "queue": "Sor",
+    "total": "Összesen"
+  },
+  "it": {
+    "speed": "Velocità",
+    "active": "Attivi",
+    "queue": "Coda",
+    "total": "Totale"
+  },
+  "nb-NO": {
+    "speed": "Fart",
+    "active": "Aktive",
+    "queue": "Kø",
+    "total": "Totalt"
+  },
+  "pt": {
+    "speed": "Velocidade",
+    "active": "Ativos",
+    "queue": "Fila",
+    "total": "Total"
+  },
+  "ru": {
+    "speed": "Скорость",
+    "active": "Активные",
+    "queue": "Очередь",
+    "total": "Всего"
+  },
+  "sv": {
+    "speed": "Hastighet",
+    "active": "Aktiva",
+    "queue": "Kö",
+    "total": "Totalt"
+  },
+  "vi": {
+    "speed": "Tốc độ",
+    "active": "Đang chạy",
+    "queue": "Hàng đợi",
+    "total": "Tổng"
+  },
+  "zh-Hans": {
+    "speed": "速度",
+    "active": "活动",
+    "queue": "队列",
+    "total": "总计"
+  },
+  "zh-Hant": {
+    "speed": "速度",
+    "active": "活動",
+    "queue": "佇列",
+    "total": "總計"
+  }
+}

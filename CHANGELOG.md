@@ -54,6 +54,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - Widgets for Mealie, Medusa, MikroTik, Minecraft, Miniflux, MJPEG streams, Moonraker (Klipper) and Mylar3.
 - Widgets for MySpeed, NetAlertX, NetBird, Netdata, NextDNS, ntfy, OctoPrint and TP-Link Omada.
 - Widgets for OpenDTU, OPNsense, OpenWrt, Pangolin, PeaNUT (Network UPS Tools), pfSense, PhotoPrism and Plant-it.
+- Widgets for Prometheus, Prometheus Metric (PromQL queries), Pterodactyl, Pulse, pyLoad, QNAP, qui and RomM.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

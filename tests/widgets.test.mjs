@@ -146,6 +146,8 @@ const REQUIRED = {
   pangolin: { org: 'homelab' },
   peanut: { key: 'ups' },
   pfsense: { wan: 'igb0' },
+  prometheusmetric: { metrics: [] },
+  qnap: { username: 'dashboard', password: 'pw' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -1651,4 +1653,50 @@ test('opendtu, opnsense, openwrt, pangolin, peanut, pfsense, photoprism and plan
 
   assert.deepEqual(values(await run('plantit')), { events: 214, plants: 37, photos: 152, species: 29 });
   assert.equal(lastRequest('plantit').headers.key, 'test-key');
+});
+
+test('prometheus, prometheusmetric, pterodactyl, pulse, pyload, qnap, qui and romm', async () => {
+  const prom = await run('prometheus');
+  assert.deepEqual(values(prom), { targets_up: 2, targets_down: 1, targets_total: 3 });
+  assert.equal(prom.blocks[1].status, 'warn');
+
+  const { formatValue } = await import(path.join(WIDGETS, 'prometheusmetric', 'server.js'));
+  const pm = await run('prometheusmetric', { metrics: [{ label: 'Disk free', query: 'node_filesystem_avail_bytes', format: { type: 'bytes' } }, { label: 'Raw', key: 'raw', query: 'up' }] });
+  assert.deepEqual(pm.blocks, [{ key: 'Disk free', label: 'Disk free', value: '1.2 GB' }, { key: 'raw', label: 'Raw', value: '1234567890' }]);
+  assert.equal(lastRequest('prometheusmetric').query.query, 'up');
+  assert.deepEqual([
+    formatValue('0.256', { type: 'percent', scale: 100, options: { maximumFractionDigits: 1 } }),
+    formatValue('3', { type: 'number', scale: '1/2', prefix: '$' }),
+    formatValue('93784', { type: 'duration' }),
+    formatValue('2500000', { type: 'byterate' }),
+    formatValue('8000', { type: 'bitrate', suffix: ' up' }),
+    formatValue('', { type: 'number' }),
+  ], ['25.6%', '$1.5', '1d 2h', '2.5 MB/s', '8 kbit/s up', null]);
+  await assert.rejects(run('prometheusmetric', { metrics: [{ label: 'x' }] }), /metrics\[0\]: a query is needed/);
+
+  assert.deepEqual(values(await run('pterodactyl')), { nodes: 2, servers: 3 });
+
+  const pulse = await run('pulse');
+  assert.deepEqual(values(pulse), { nodes: '2 / 2', vms: '2 / 3', lxcs: '2 / 2' });
+  assert.equal(pulse.blocks[1].status, 'warn');
+  assert.equal(lastRequest('pulse').headers['x-api-token'], 'test-key');
+  assert.deepEqual(values(await run('pulse', { version: 2 })), { nodes: 2, vms: 3, lxcs: 2 });
+
+  assert.deepEqual(values(await run('pyload')), { speed: '3.3 MB/s', active: 2, queue: 5, total: 12 });
+  assert.equal(lastRequest('pyload').headers['x-api-key'], 'test-key');
+  assert.deepEqual(values(await run('pyload', { key: undefined })), { speed: '512 kB/s', active: 1, queue: 3, total: 9 });
+  assert.equal(lastRequest('pyload').body, 'session=sess-0.4');
+
+  assert.deepEqual(values(await run('qnap')), { cpuUsage: '12%', memUsage: '70%', systemTempC: '46°C', poolUsage: '53%' });
+  assert.equal(lastRequest('qnap').query.sid, 'qsid1');
+  assert.equal(new URLSearchParams(mock.requests.find((r) => r.widget === 'qnap' && r.route.startsWith('POST')).body).get('pwd'), Buffer.from('pw').toString('base64'));
+  const vol = await run('qnap', { volume: 'DataVol1' });
+  assert.deepEqual(vol.blocks[3], { key: 'volumeUsage', label: 'volumeUsage', vars: { volume: 'DataVol1' }, value: 75, unit: '%' });
+  await assert.rejects(run('qnap', { volume: 'Nope' }), /no QNAP volume "Nope" \(DataVol1, Backup\)/);
+
+  assert.deepEqual(values(await run('qui')), { leech: '2 / 4', download: '4.2 MB/s', seed: '30 / 38', upload: '830 kB/s', total: 42, errored: 1 });
+  assert.deepEqual(values(await run('qui', { instance: '1' })), { leech: '1 / 1', download: '1 MB/s', seed: '8 / 8', upload: '50 kB/s', total: 10, errored: 0, ratio: 2.46, freeSpace: '812 GB' });
+  assert.equal(lastRequest('qui').headers['x-api-key'], 'test-key');
+
+  assert.deepEqual(values(await run('romm')), { platforms: 14, totalRoms: 1842, saves: 96, states: 41, screenshots: 230, totalfilesize: '612.3 GB' });
 });

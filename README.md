@@ -118,6 +118,14 @@ Every widget has its own page with setup, fields and options on the
 | `pfsense` | load, memory, temperature, disk and the WAN of a firewall | `url`, `wan`, `version`, `username`, `password`, `headers` |
 | `photoprism` | albums, photos, videos and people | `url`, `username`, `password`, `key` |
 | `plantit` | diary events, plants, photos and species | `url`, `key` |
+| `prometheus` | scrape targets up, down and in total | `url`, `username`, `password` |
+| `prometheusmetric` | up to four PromQL results with your own labels | `url`, `metrics`, `username`, `password` |
+| `pterodactyl` | nodes and game servers | `url`, `key` |
+| `pulse` | Proxmox nodes, VMs and containers running | `url`, `key`, `version` |
+| `pyload` | download rate, active and queued downloads | `url`, `username`, `password`, `key` |
+| `qnap` | CPU, memory, temperature and storage use of a NAS | `url`, `username`, `password`, `volume` |
+| `qui` | torrents and rates across qBittorrent instances | `url`, `key`, `instance` |
+| `romm` | platforms, games, saves and states | `url`, `username`, `password` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

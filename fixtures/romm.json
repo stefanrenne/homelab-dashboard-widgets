@@ -1,0 +1,2 @@
+{ "_note": "RomM stats.", "routes": {
+ "GET /api/stats": { "PLATFORMS": 14, "ROMS": 1842, "SAVES": 96, "STATES": 41, "SCREENSHOTS": 230, "TOTAL_FILESIZE_BYTES": 612300000000 } } }

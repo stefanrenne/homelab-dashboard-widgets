@@ -1,0 +1,4 @@
+{ "_note": "pyload-ng's status_server, and pyLoad 0.4's login and statusServer.", "routes": {
+ "GET /api/status_server": { "pause": false, "active": 2, "queue": 5, "total": 12, "speed": 3250000, "download": true, "reconnect": false },
+ "POST /api/login": "sess-0.4",
+ "POST /api/statusServer": { "pause": false, "active": 1, "queue": 3, "total": 9, "speed": 512000 } } }

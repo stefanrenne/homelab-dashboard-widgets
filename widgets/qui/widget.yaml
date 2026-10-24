@@ -1,0 +1,11 @@
+id: qui
+name: qui
+version: 0.1.0
+apiVersion: 1
+description: Torrents downloading and seeding with their rates across the qBittorrent instances of qui (homepage's qui widget).
+refresh: 15s
+defaultFields: [leech, download, seed, upload]
+options:
+  url: { type: url, required: true }       # e.g. http://qui.lan:7476
+  key: { type: string, secret: true, required: true }   # Settings > API Keys
+  instance: { type: string }               # one instance's ID; without it all instances together

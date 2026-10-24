@@ -1,0 +1,87 @@
+{
+  "en": {
+    "nodes": "Nodes",
+    "vms": "VMs",
+    "lxcs": "Containers"
+  },
+  "nl": {
+    "nodes": "Nodes",
+    "vms": "VM's",
+    "lxcs": "Containers"
+  },
+  "fr": {
+    "nodes": "Nœuds",
+    "vms": "VM",
+    "lxcs": "Conteneurs"
+  },
+  "de": {
+    "nodes": "Knoten",
+    "vms": "VMs",
+    "lxcs": "Container"
+  },
+  "es": {
+    "nodes": "Nodos",
+    "vms": "VM",
+    "lxcs": "Contenedores"
+  },
+  "ca": {
+    "nodes": "Nodes",
+    "vms": "MV",
+    "lxcs": "Contenidors"
+  },
+  "he": {
+    "nodes": "צמתים",
+    "vms": "מכונות",
+    "lxcs": "קונטיינרים"
+  },
+  "hr": {
+    "nodes": "Čvorovi",
+    "vms": "VM-ovi",
+    "lxcs": "Kontejneri"
+  },
+  "hu": {
+    "nodes": "Csomópontok",
+    "vms": "VM-ek",
+    "lxcs": "Konténerek"
+  },
+  "it": {
+    "nodes": "Nodi",
+    "vms": "VM",
+    "lxcs": "Container"
+  },
+  "nb-NO": {
+    "nodes": "Noder",
+    "vms": "VM-er",
+    "lxcs": "Containere"
+  },
+  "pt": {
+    "nodes": "Nós",
+    "vms": "VMs",
+    "lxcs": "Contentores"
+  },
+  "ru": {
+    "nodes": "Узлы",
+    "vms": "ВМ",
+    "lxcs": "Контейнеры"
+  },
+  "sv": {
+    "nodes": "Noder",
+    "vms": "VM:ar",
+    "lxcs": "Containrar"
+  },
+  "vi": {
+    "nodes": "Nút",
+    "vms": "Máy ảo",
+    "lxcs": "Container"
+  },
+  "zh-Hans": {
+    "nodes": "节点",
+    "vms": "虚拟机",
+    "lxcs": "容器"
+  },
+  "zh-Hant": {
+    "nodes": "節點",
+    "vms": "虛擬機",
+    "lxcs": "容器"
+  }
+}

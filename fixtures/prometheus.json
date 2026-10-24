@@ -1,0 +1,22 @@
+{
+ "_note": "Prometheus: three active targets, one down.",
+ "routes": {
+  "GET /api/v1/targets": {
+   "status": "success",
+   "data": {
+    "activeTargets": [
+     {
+      "health": "up"
+     },
+     {
+      "health": "up"
+     },
+     {
+      "health": "down"
+     }
+    ],
+    "droppedTargets": []
+   }
+  }
+ }
+}

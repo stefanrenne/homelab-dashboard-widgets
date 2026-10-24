@@ -1,0 +1,87 @@
+{
+  "en": {
+    "targets_up": "Targets up",
+    "targets_down": "Targets down",
+    "targets_total": "Targets"
+  },
+  "nl": {
+    "targets_up": "Doelen online",
+    "targets_down": "Doelen offline",
+    "targets_total": "Doelen"
+  },
+  "fr": {
+    "targets_up": "Cibles actives",
+    "targets_down": "Cibles en panne",
+    "targets_total": "Cibles"
+  },
+  "de": {
+    "targets_up": "Ziele aktiv",
+    "targets_down": "Ziele ausgefallen",
+    "targets_total": "Ziele"
+  },
+  "es": {
+    "targets_up": "Destinos activos",
+    "targets_down": "Destinos caídos",
+    "targets_total": "Destinos"
+  },
+  "ca": {
+    "targets_up": "Destinacions actives",
+    "targets_down": "Destinacions caigudes",
+    "targets_total": "Destinacions"
+  },
+  "he": {
+    "targets_up": "יעדים פעילים",
+    "targets_down": "יעדים נפולים",
+    "targets_total": "יעדים"
+  },
+  "hr": {
+    "targets_up": "Ciljevi rade",
+    "targets_down": "Ciljevi ne rade",
+    "targets_total": "Ciljevi"
+  },
+  "hu": {
+    "targets_up": "Célok elérhetők",
+    "targets_down": "Célok kiestek",
+    "targets_total": "Célok"
+  },
+  "it": {
+    "targets_up": "Target attivi",
+    "targets_down": "Target inattivi",
+    "targets_total": "Destinazioni"
+  },
+  "nb-NO": {
+    "targets_up": "Mål oppe",
+    "targets_down": "Mål nede",
+    "targets_total": "Mål"
+  },
+  "pt": {
+    "targets_up": "Alvos ativos",
+    "targets_down": "Alvos em baixo",
+    "targets_total": "Destinos"
+  },
+  "ru": {
+    "targets_up": "Цели в работе",
+    "targets_down": "Цели упали",
+    "targets_total": "Цели"
+  },
+  "sv": {
+    "targets_up": "Mål uppe",
+    "targets_down": "Mål nere",
+    "targets_total": "Mål"
+  },
+  "vi": {
+    "targets_up": "Đích hoạt động",
+    "targets_down": "Đích ngừng",
+    "targets_total": "Đích"
+  },
+  "zh-Hans": {
+    "targets_up": "目标在线",
+    "targets_down": "目标离线",
+    "targets_total": "目标"
+  },
+  "zh-Hant": {
+    "targets_up": "目標在線",
+    "targets_down": "目標離線",
+    "targets_total": "目標"
+  }
+}

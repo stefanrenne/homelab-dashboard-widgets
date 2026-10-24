@@ -1,0 +1,20 @@
+{
+ "_note": "A Prometheus instant query answering a vector.",
+ "routes": {
+  "GET /api/v1/query": {
+   "status": "success",
+   "data": {
+    "resultType": "vector",
+    "result": [
+     {
+      "metric": {},
+      "value": [
+       1772359200,
+       "1234567890"
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

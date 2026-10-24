@@ -1,0 +1,70 @@
+{
+  "en": {
+    "nodes": "Nodes",
+    "servers": "Servers"
+  },
+  "nl": {
+    "nodes": "Nodes",
+    "servers": "Servers"
+  },
+  "fr": {
+    "nodes": "Nœuds",
+    "servers": "Serveurs"
+  },
+  "de": {
+    "nodes": "Knoten",
+    "servers": "Server"
+  },
+  "es": {
+    "nodes": "Nodos",
+    "servers": "Servidores"
+  },
+  "ca": {
+    "nodes": "Nodes",
+    "servers": "Servidors"
+  },
+  "he": {
+    "nodes": "צמתים",
+    "servers": "שרתים"
+  },
+  "hr": {
+    "nodes": "Čvorovi",
+    "servers": "Poslužitelji"
+  },
+  "hu": {
+    "nodes": "Csomópontok",
+    "servers": "Szerverek"
+  },
+  "it": {
+    "nodes": "Nodi",
+    "servers": "Server"
+  },
+  "nb-NO": {
+    "nodes": "Noder",
+    "servers": "Servere"
+  },
+  "pt": {
+    "nodes": "Nós",
+    "servers": "Servidores"
+  },
+  "ru": {
+    "nodes": "Узлы",
+    "servers": "Серверы"
+  },
+  "sv": {
+    "nodes": "Noder",
+    "servers": "Servrar"
+  },
+  "vi": {
+    "nodes": "Nút",
+    "servers": "Máy chủ"
+  },
+  "zh-Hans": {
+    "nodes": "节点",
+    "servers": "服务器"
+  },
+  "zh-Hant": {
+    "nodes": "節點",
+    "servers": "伺服器"
+  }
+}

@@ -1,0 +1,4 @@
+{ "_note": "Pterodactyl: two nodes with three servers.", "routes": {
+ "GET /api/application/nodes": { "object": "list", "data": [
+  { "attributes": { "name": "node-a", "relationships": { "servers": { "data": [{}, {}] } } } },
+  { "attributes": { "name": "node-b", "relationships": { "servers": { "data": [{}] } } } }] } } }

@@ -1,0 +1,6 @@
+{ "_note": "Pulse: two nodes, three VMs (one stopped), two containers; and Pulse 6's summary.", "routes": {
+ "GET /api/resources": { "resources": [
+  { "type": "node", "status": "online" }, { "type": "node", "status": "online" },
+  { "type": "vm", "status": "running" }, { "type": "vm", "status": "running" }, { "type": "vm", "status": "stopped" },
+  { "type": "container", "status": "running" }, { "type": "container", "status": "running" }] },
+ "GET /api/state/summary": { "nodes": 2, "vms": 3, "containers": 2 } } }

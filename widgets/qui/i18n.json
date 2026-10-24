@@ -1,0 +1,172 @@
+{
+  "en": {
+    "leech": "Leeching",
+    "download": "Download",
+    "seed": "Seeding",
+    "upload": "Upload",
+    "total": "Total",
+    "errored": "Errored",
+    "ratio": "Ratio",
+    "freeSpace": "Free space"
+  },
+  "nl": {
+    "leech": "Downloaden",
+    "download": "Download",
+    "seed": "Seeden",
+    "upload": "Upload",
+    "total": "Totaal",
+    "errored": "Mislukt",
+    "ratio": "Ratio",
+    "freeSpace": "Vrije ruimte"
+  },
+  "fr": {
+    "leech": "Téléchargés",
+    "download": "Réception",
+    "seed": "Partagés",
+    "upload": "Envoi",
+    "total": "Total",
+    "errored": "En erreur",
+    "ratio": "Ratio",
+    "freeSpace": "Espace libre"
+  },
+  "de": {
+    "leech": "Laden",
+    "download": "Download",
+    "seed": "Seeden",
+    "upload": "Upload",
+    "total": "Gesamt",
+    "errored": "Fehlerhaft",
+    "ratio": "Verhältnis",
+    "freeSpace": "Freier Platz"
+  },
+  "es": {
+    "leech": "Descargando",
+    "download": "Descarga",
+    "seed": "Compartiendo",
+    "upload": "Subida",
+    "total": "Total",
+    "errored": "Con error",
+    "ratio": "Ratio",
+    "freeSpace": "Espacio libre"
+  },
+  "ca": {
+    "leech": "Baixant",
+    "download": "Baixada",
+    "seed": "Compartint",
+    "upload": "Pujada",
+    "total": "Total",
+    "errored": "Amb errors",
+    "ratio": "Ràtio",
+    "freeSpace": "Espai lliure"
+  },
+  "he": {
+    "leech": "בהורדה",
+    "download": "הורדה",
+    "seed": "בשיתוף",
+    "upload": "העלאה",
+    "total": "סך הכול",
+    "errored": "שגיאות",
+    "ratio": "יחס",
+    "freeSpace": "שטח פנוי"
+  },
+  "hr": {
+    "leech": "Preuzimanje",
+    "download": "Preuzimanje",
+    "seed": "Dijeljenje",
+    "upload": "Slanje",
+    "total": "Ukupno",
+    "errored": "Pogreške",
+    "ratio": "Omjer",
+    "freeSpace": "Slobodno mjesto"
+  },
+  "hu": {
+    "leech": "Letöltés",
+    "download": "Letöltés",
+    "seed": "Seedelés",
+    "upload": "Feltöltés",
+    "total": "Összesen",
+    "errored": "Hibás",
+    "ratio": "Arány",
+    "freeSpace": "Szabad hely"
+  },
+  "it": {
+    "leech": "In download",
+    "download": "Download",
+    "seed": "In seed",
+    "upload": "Upload",
+    "total": "Totale",
+    "errored": "Con errori",
+    "ratio": "Rapporto",
+    "freeSpace": "Spazio libero"
+  },
+  "nb-NO": {
+    "leech": "Laster ned",
+    "download": "Ned",
+    "seed": "Deler",
+    "upload": "Opp",
+    "total": "Totalt",
+    "errored": "Med feil",
+    "ratio": "Forhold",
+    "freeSpace": "Ledig plass"
+  },
+  "pt": {
+    "leech": "Em download",
+    "download": "Download",
+    "seed": "Em partilha",
+    "upload": "Upload",
+    "total": "Total",
+    "errored": "Com erro",
+    "ratio": "Rácio",
+    "freeSpace": "Espaço livre"
+  },
+  "ru": {
+    "leech": "Загрузка",
+    "download": "Загрузка",
+    "seed": "Раздача",
+    "upload": "Отдача",
+    "total": "Всего",
+    "errored": "С ошибкой",
+    "ratio": "Рейтинг",
+    "freeSpace": "Свободно"
+  },
+  "sv": {
+    "leech": "Laddar ned",
+    "download": "Ned",
+    "seed": "Delar",
+    "upload": "Upp",
+    "total": "Totalt",
+    "errored": "Med fel",
+    "ratio": "Kvot",
+    "freeSpace": "Ledigt utrymme"
+  },
+  "vi": {
+    "leech": "Đang tải",
+    "download": "Tải xuống",
+    "seed": "Đang chia sẻ",
+    "upload": "Tải lên",
+    "total": "Tổng",
+    "errored": "Bị lỗi",
+    "ratio": "Tỷ lệ",
+    "freeSpace": "Còn trống"
+  },
+  "zh-Hans": {
+    "leech": "下载中",
+    "download": "下载",
+    "seed": "做种中",
+    "upload": "上传",
+    "total": "总计",
+    "errored": "出错",
+    "ratio": "分享率",
+    "freeSpace": "可用空间"
+  },
+  "zh-Hant": {
+    "leech": "下載中",
+    "download": "下載",
+    "seed": "做種中",
+    "upload": "上傳",
+    "total": "總計",
+    "errored": "出錯",
+    "ratio": "分享率",
+    "freeSpace": "可用空間"
+  }
+}

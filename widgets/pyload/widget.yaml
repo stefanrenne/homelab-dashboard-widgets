@@ -1,0 +1,11 @@
+id: pyload
+name: pyLoad
+version: 0.1.0
+apiVersion: 1
+description: Download rate, active and queued downloads in pyLoad (homepage's pyload widget).
+refresh: 15s
+options:
+  url: { type: url, required: true }       # e.g. http://pyload.lan:8000
+  username: { type: string }
+  password: { type: string, secret: true }
+  key: { type: string, secret: true }      # pyload-ng's API key, instead of a user

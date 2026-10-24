@@ -1,0 +1,12 @@
+id: qnap
+name: QNAP
+version: 0.1.0
+apiVersion: 1
+description: CPU, memory, temperature and pool or volume use of a QNAP NAS (homepage's qnap widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # the NAS, e.g. https://nas.lan
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }
+  volume: { type: string }                 # one volume's name as in Storage & Snapshots; without it all volumes together
+  insecure: { type: boolean, default: false }  # accept the NAS's self-signed certificate

@@ -1,0 +1,138 @@
+{
+  "en": {
+    "platforms": "Platforms",
+    "totalRoms": "Games",
+    "saves": "Saves",
+    "states": "States",
+    "screenshots": "Screenshots",
+    "totalfilesize": "Size"
+  },
+  "nl": {
+    "platforms": "Platforms",
+    "totalRoms": "Games",
+    "saves": "Saves",
+    "states": "Save states",
+    "screenshots": "Screenshots",
+    "totalfilesize": "Grootte"
+  },
+  "fr": {
+    "platforms": "Plateformes",
+    "totalRoms": "Jeux",
+    "saves": "Sauvegardes",
+    "states": "États",
+    "screenshots": "Captures",
+    "totalfilesize": "Taille"
+  },
+  "de": {
+    "platforms": "Plattformen",
+    "totalRoms": "Spiele",
+    "saves": "Spielstände",
+    "states": "Zustände",
+    "screenshots": "Screenshots",
+    "totalfilesize": "Größe"
+  },
+  "es": {
+    "platforms": "Plataformas",
+    "totalRoms": "Juegos",
+    "saves": "Partidas",
+    "states": "Estados",
+    "screenshots": "Capturas",
+    "totalfilesize": "Tamaño"
+  },
+  "ca": {
+    "platforms": "Plataformes",
+    "totalRoms": "Jocs",
+    "saves": "Partides",
+    "states": "Estats",
+    "screenshots": "Captures",
+    "totalfilesize": "Mida"
+  },
+  "he": {
+    "platforms": "פלטפורמות",
+    "totalRoms": "משחקים",
+    "saves": "שמירות",
+    "states": "מצבים",
+    "screenshots": "צילומי מסך",
+    "totalfilesize": "גודל"
+  },
+  "hr": {
+    "platforms": "Platforme",
+    "totalRoms": "Igre",
+    "saves": "Spremanja",
+    "states": "Stanja",
+    "screenshots": "Snimke",
+    "totalfilesize": "Veličina"
+  },
+  "hu": {
+    "platforms": "Platformok",
+    "totalRoms": "Játékok",
+    "saves": "Mentések",
+    "states": "Állapotok",
+    "screenshots": "Képek",
+    "totalfilesize": "Méret"
+  },
+  "it": {
+    "platforms": "Piattaforme",
+    "totalRoms": "Giochi",
+    "saves": "Salvataggi",
+    "states": "Stati",
+    "screenshots": "Screenshot",
+    "totalfilesize": "Dimensione"
+  },
+  "nb-NO": {
+    "platforms": "Plattformer",
+    "totalRoms": "Spill",
+    "saves": "Lagringer",
+    "states": "Tilstander",
+    "screenshots": "Skjermbilder",
+    "totalfilesize": "Størrelse"
+  },
+  "pt": {
+    "platforms": "Plataformas",
+    "totalRoms": "Jogos",
+    "saves": "Gravações",
+    "states": "Estados",
+    "screenshots": "Capturas",
+    "totalfilesize": "Tamanho"
+  },
+  "ru": {
+    "platforms": "Платформы",
+    "totalRoms": "Игры",
+    "saves": "Сохранения",
+    "states": "Состояния",
+    "screenshots": "Скриншоты",
+    "totalfilesize": "Размер"
+  },
+  "sv": {
+    "platforms": "Plattformar",
+    "totalRoms": "Spel",
+    "saves": "Sparfiler",
+    "states": "Lägen",
+    "screenshots": "Skärmbilder",
+    "totalfilesize": "Storlek"
+  },
+  "vi": {
+    "platforms": "Nền tảng",
+    "totalRoms": "Trò chơi",
+    "saves": "Bản lưu",
+    "states": "Trạng thái",
+    "screenshots": "Ảnh chụp",
+    "totalfilesize": "Dung lượng"
+  },
+  "zh-Hans": {
+    "platforms": "平台",
+    "totalRoms": "游戏",
+    "saves": "存档",
+    "states": "即时存档",
+    "screenshots": "截图",
+    "totalfilesize": "大小"
+  },
+  "zh-Hant": {
+    "platforms": "平台",
+    "totalRoms": "遊戲",
+    "saves": "存檔",
+    "states": "即時存檔",
+    "screenshots": "截圖",
+    "totalfilesize": "大小"
+  }
+}

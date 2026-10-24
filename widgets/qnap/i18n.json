@@ -1,0 +1,121 @@
+{
+  "en": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memory",
+    "systemTempC": "Temperature",
+    "poolUsage": "Storage used",
+    "volumeUsage": "{volume} used"
+  },
+  "nl": {
+    "cpuUsage": "CPU",
+    "memUsage": "Geheugen",
+    "systemTempC": "Temperatuur",
+    "poolUsage": "Opslag gebruikt",
+    "volumeUsage": "{volume} gebruikt"
+  },
+  "fr": {
+    "cpuUsage": "CPU",
+    "memUsage": "Mémoire",
+    "systemTempC": "Température",
+    "poolUsage": "Stockage utilisé",
+    "volumeUsage": "{volume} utilisé"
+  },
+  "de": {
+    "cpuUsage": "CPU",
+    "memUsage": "Speicher",
+    "systemTempC": "Temperatur",
+    "poolUsage": "Speicher belegt",
+    "volumeUsage": "{volume} belegt"
+  },
+  "es": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memoria",
+    "systemTempC": "Temperatura",
+    "poolUsage": "Espacio usado",
+    "volumeUsage": "{volume} usado"
+  },
+  "ca": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memòria",
+    "systemTempC": "Temperatura",
+    "poolUsage": "Espai usat",
+    "volumeUsage": "{volume} usat"
+  },
+  "he": {
+    "cpuUsage": "מעבד",
+    "memUsage": "זיכרון",
+    "systemTempC": "טמפרטורה",
+    "poolUsage": "אחסון בשימוש",
+    "volumeUsage": "{volume} בשימוש"
+  },
+  "hr": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memorija",
+    "systemTempC": "Temperatura",
+    "poolUsage": "Pohrana zauzeta",
+    "volumeUsage": "{volume} zauzeto"
+  },
+  "hu": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memória",
+    "systemTempC": "Hőmérséklet",
+    "poolUsage": "Tárhely foglalt",
+    "volumeUsage": "{volume} foglalt"
+  },
+  "it": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memoria",
+    "systemTempC": "Temperatura",
+    "poolUsage": "Spazio usato",
+    "volumeUsage": "{volume} usato"
+  },
+  "nb-NO": {
+    "cpuUsage": "CPU",
+    "memUsage": "Minne",
+    "systemTempC": "Temperatur",
+    "poolUsage": "Lagring brukt",
+    "volumeUsage": "{volume} brukt"
+  },
+  "pt": {
+    "cpuUsage": "CPU",
+    "memUsage": "Memória",
+    "systemTempC": "Temperatura",
+    "poolUsage": "Espaço usado",
+    "volumeUsage": "{volume} usado"
+  },
+  "ru": {
+    "cpuUsage": "ЦП",
+    "memUsage": "Память",
+    "systemTempC": "Температура",
+    "poolUsage": "Занято места",
+    "volumeUsage": "{volume} занято"
+  },
+  "sv": {
+    "cpuUsage": "CPU",
+    "memUsage": "Minne",
+    "systemTempC": "Temperatur",
+    "poolUsage": "Lagring använd",
+    "volumeUsage": "{volume} använt"
+  },
+  "vi": {
+    "cpuUsage": "CPU",
+    "memUsage": "Bộ nhớ",
+    "systemTempC": "Nhiệt độ",
+    "poolUsage": "Đã dùng",
+    "volumeUsage": "{volume} đã dùng"
+  },
+  "zh-Hans": {
+    "cpuUsage": "CPU",
+    "memUsage": "内存",
+    "systemTempC": "温度",
+    "poolUsage": "已用存储",
+    "volumeUsage": "{volume} 已用"
+  },
+  "zh-Hant": {
+    "cpuUsage": "CPU",
+    "memUsage": "記憶體",
+    "systemTempC": "溫度",
+    "poolUsage": "已用儲存",
+    "volumeUsage": "{volume} 已用"
+  }
+}
