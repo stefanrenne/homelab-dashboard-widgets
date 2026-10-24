@@ -1,0 +1,3 @@
+{ "_note": "Wallos: the mock answers every month alike.", "routes": {
+ "GET /api/subscriptions/get_subscriptions.php": { "success": true, "subscriptions": [{ "name": "Domain renewal", "next_payment": "2026-03-04" }, { "name": "Backblaze", "next_payment": "2026-03-10" }, { "name": "Spotify", "next_payment": "2026-03-15" }] },
+ "GET /api/subscriptions/get_monthly_cost.php": { "success": true, "monthly_cost": 41.97, "localized_monthly_cost": "€41.97", "currency_symbol": "€" } } }

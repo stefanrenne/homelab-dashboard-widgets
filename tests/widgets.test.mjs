@@ -16,12 +16,14 @@ let apcupsd; // apcups speaks apcupsd's TCP protocol, not HTTP
 let a2s; // gamedig speaks Valve's server query over UDP
 let myjd; // jdownloader's My.JDownloader answers encrypted
 let mc; // minecraft speaks the Server List Ping over TCP
+let urb; // urbackup checks its login hash
 before(async () => {
   mock = await startMock();
   apcupsd = await nis(['STATUS   : ONLINE', 'LOADPCT  : 10.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 60.0 Minutes']);
   a2s = await gameServer();
   myjd = await myJDownloader();
   mc = await minecraftServer();
+  urb = await urbackupServer();
 });
 after(() => {
   mock.close();
@@ -29,7 +31,38 @@ after(() => {
   a2s.close();
   myjd.close();
   mc.close();
+  urb.close();
 });
+
+/** A fake UrBackup web interface: salt, login (checking the hash), status and usage. */
+async function urbackupServer() {
+  const http = await import('node:http');
+  const { loginHash } = await import(path.join(WIDGETS, 'urbackup', 'server.js'));
+  const salt = { ses: 'pre', rnd: 'r4nd', salt: 's4lt', pbkdf2_rounds: 10000 };
+  const now = Date.now() / 1000;
+  const srv = http.createServer((req, res) => {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', () => {
+      const a = new URL(req.url, 'http://x').searchParams.get('a');
+      const p = new URLSearchParams(body);
+      const send = (o) => res.end(JSON.stringify(o));
+      if (a === 'salt') return send(p.get('username') === 'dashboard' ? salt : { error: 0 });
+      if (a === 'login') return send(p.get('password') === loginHash('pw', salt) ? { success: true, session: 'ses-1' } : { success: false });
+      if (p.get('ses') !== 'ses-1') return send({ error: 1 });
+      if (a === 'status') return send({ status: [
+        { name: 'nas', lastbackup: now - 3600, lastbackup_image: now - 7200, file_ok: true, image_ok: true },
+        { name: 'laptop', lastbackup: now - 3600, image_not_supported: true, file_ok: false },
+        { name: 'old', lastbackup: now - 30 * 86400, lastbackup_image: now - 30 * 86400, file_ok: true, image_ok: true },
+        { name: 'pc', lastbackup: now - 600, image_disabled: true, file_ok: true }] });
+      if (a === 'usage') return send({ usage: [{ name: 'nas', used: 1200000000000 }, { name: 'pc', used: 300000000000 }] });
+      res.statusCode = 404;
+      res.end('{}');
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  return { url: `http://127.0.0.1:${srv.address().port}`, close: () => srv.close() };
+}
 
 /** A fake Minecraft server answering the status request (in two TCP chunks). */
 async function minecraftServer() {
@@ -149,6 +182,7 @@ const REQUIRED = {
   prometheusmetric: { metrics: [] },
   qnap: { username: 'dashboard', password: 'pw' },
   unifi_drive: { username: 'dashboard', password: 'pw' },
+  get urbackup() { return { url: urb.url, username: 'dashboard', password: 'pw' }; },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -196,7 +230,7 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
 });
 
 // blocks whose value is a name from the service (a host name, an operating system), not a key
-const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'], minecraft: ['version'], ntfy: ['title', 'message', 'tags'] };
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'], minecraft: ['version'], ntfy: ['title', 'message', 'tags'], wallos: ['nextRenewingSubscription'] };
 
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
@@ -1767,4 +1801,40 @@ test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi_drive, unmani
   assert.deepEqual({ ...u, lastDown: undefined }, { status: 'up', uptime: '4d 3h', lastDown: undefined, downDuration: '1h 0m' });
   assert.match(u.lastDown, /^2026-03-01 \d\d:00$/);
   assert.equal(new URLSearchParams(lastRequest('uptimerobot').body).get('api_key'), 'test-key');
+});
+
+test('urbackup, vikunja, wallos, wgeasy, xteve, yourspotify and zabbix', async () => {
+  const ub = await run('urbackup');
+  assert.deepEqual(values(ub), { ok: 2, errored: 1, noRecent: 1, totalUsed: '1.5 TB' });
+  assert.deepEqual(ub.blocks.slice(1, 3).map((b) => b.status), ['error', 'warn']);
+  await assert.rejects(run('urbackup', { password: 'wrong' }), (err) => /UrBackup login answered 401/.test(err.message) && !err.message.includes('wrong'));
+
+  const vk = await run('vikunja', { enableTaskList: true });
+  assert.deepEqual(values(vk), { projects: 2, tasks7d: 1, tasksOverdue: 1, tasksInProgress: 1 });
+  assert.deepEqual(vk.rows, [{ label: 'Renew certificate', value: '2026-01-10', status: 'warn' }, { label: 'Replace UPS battery', value: '2099-01-01' }, { label: 'Clean the attic' }]);
+  assert.equal(lastRequest('vikunja').query.filter, 'done=false');
+  await run('vikunja', { version: 2 });
+  assert.equal(lastRequest('vikunja').route, 'GET /api/v1/tasks');
+
+  assert.deepEqual(values(await run('wallos')), { activeSubscriptions: 3, nextRenewingSubscription: 'Domain renewal', previousMonthlyCost: '€41.97', thisMonthlyCost: '€41.97', nextMonthlyCost: '€41.97' });
+  const months = mock.requests.filter((r) => r.widget === 'wallos' && r.route.endsWith('get_monthly_cost.php')).slice(-3).map((r) => r.query.month);
+  assert.equal(new Set(months).size, 3, 'last, this and next month');
+
+  assert.deepEqual(values(await run('wgeasy', { password: 'pw' })), { connected: 1, enabled: 2, disabled: 1, total: 3 });
+  assert.equal(lastRequest('wgeasy').headers.authorization, 'pw');
+  assert.deepEqual(values(await run('wgeasy', { version: 2, username: 'admin', password: 'pw' })), { connected: 1, enabled: 1, disabled: 0, total: 1 });
+  assert.equal(lastRequest('wgeasy').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
+
+  assert.deepEqual(values(await run('xteve', { username: 'u', password: 'p' })), { streams_all: 412, streams_active: 120, streams_xepg: 98 });
+  assert.deepEqual(JSON.parse(lastRequest('xteve').body), { cmd: 'status', token: 'xt-token' });
+
+  const { startOf } = await import(path.join(WIDGETS, 'yourspotify', 'server.js'));
+  assert.deepEqual(values(await run('yourspotify', { interval: 'month' })), { songs: 842, time: '2d 4h', artists: 5 });
+  assert.deepEqual([lastRequest('yourspotify').query.token, lastRequest('yourspotify').query.timeSplit], ['test-key', 'all']);
+  assert.equal(startOf('week', new Date('2026-03-08T12:00:00Z')), '2026-03-01T12:00:00.000Z');
+
+  const zb = await run('zabbix');
+  assert.deepEqual(values(zb), { unclassified: 0, information: 1, warning: 2, average: 0, high: 1, disaster: 0 });
+  assert.deepEqual(zb.blocks.map((b) => b.status ?? null), [null, null, 'warn', null, 'error', null]);
+  assert.deepEqual([JSON.parse(lastRequest('zabbix').body).method, lastRequest('zabbix').headers.authorization], ['trigger.get', 'Bearer test-key']);
 });

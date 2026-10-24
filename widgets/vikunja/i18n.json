@@ -1,0 +1,104 @@
+{
+  "en": {
+    "projects": "Projects",
+    "tasks7d": "Due this week",
+    "tasksOverdue": "Overdue",
+    "tasksInProgress": "In progress"
+  },
+  "nl": {
+    "projects": "Projecten",
+    "tasks7d": "Deze week",
+    "tasksOverdue": "Te laat",
+    "tasksInProgress": "Bezig"
+  },
+  "fr": {
+    "projects": "Projets",
+    "tasks7d": "Cette semaine",
+    "tasksOverdue": "En retard",
+    "tasksInProgress": "En cours"
+  },
+  "de": {
+    "projects": "Projekte",
+    "tasks7d": "Diese Woche",
+    "tasksOverdue": "Überfällig",
+    "tasksInProgress": "Läuft"
+  },
+  "es": {
+    "projects": "Proyectos",
+    "tasks7d": "Esta semana",
+    "tasksOverdue": "Atrasadas",
+    "tasksInProgress": "En curso"
+  },
+  "ca": {
+    "projects": "Projectes",
+    "tasks7d": "Aquesta setmana",
+    "tasksOverdue": "Endarrerides",
+    "tasksInProgress": "En curs"
+  },
+  "he": {
+    "projects": "פרויקטים",
+    "tasks7d": "השבוע",
+    "tasksOverdue": "באיחור",
+    "tasksInProgress": "בתהליך"
+  },
+  "hr": {
+    "projects": "Projekti",
+    "tasks7d": "Ovaj tjedan",
+    "tasksOverdue": "Kasni",
+    "tasksInProgress": "U tijeku"
+  },
+  "hu": {
+    "projects": "Projektek",
+    "tasks7d": "Ezen a héten",
+    "tasksOverdue": "Lejárt",
+    "tasksInProgress": "Folyamatban"
+  },
+  "it": {
+    "projects": "Progetti",
+    "tasks7d": "Entro 7 giorni",
+    "tasksOverdue": "In ritardo",
+    "tasksInProgress": "In corso"
+  },
+  "nb-NO": {
+    "projects": "Prosjekter",
+    "tasks7d": "Denne uken",
+    "tasksOverdue": "Forfalt",
+    "tasksInProgress": "Pågår"
+  },
+  "pt": {
+    "projects": "Projetos",
+    "tasks7d": "Esta semana",
+    "tasksOverdue": "Atrasadas",
+    "tasksInProgress": "Em curso"
+  },
+  "ru": {
+    "projects": "Проекты",
+    "tasks7d": "На неделе",
+    "tasksOverdue": "Просрочено",
+    "tasksInProgress": "Выполняется"
+  },
+  "sv": {
+    "projects": "Projekt",
+    "tasks7d": "Denna vecka",
+    "tasksOverdue": "Försenade",
+    "tasksInProgress": "Pågår"
+  },
+  "vi": {
+    "projects": "Dự án",
+    "tasks7d": "Tuần này",
+    "tasksOverdue": "Quá hạn",
+    "tasksInProgress": "Đang chạy"
+  },
+  "zh-Hans": {
+    "projects": "项目",
+    "tasks7d": "本周到期",
+    "tasksOverdue": "逾期",
+    "tasksInProgress": "进行中"
+  },
+  "zh-Hant": {
+    "projects": "專案",
+    "tasks7d": "本週到期",
+    "tasksOverdue": "逾期",
+    "tasksInProgress": "進行中"
+  }
+}

@@ -1,0 +1,2 @@
+{ "_note": "Zabbix trigger.get: four problems.", "routes": {
+ "POST /api_jsonrpc.php": { "jsonrpc": "2.0", "id": 1, "result": [{ "triggerid": "1", "priority": "4" }, { "triggerid": "2", "priority": "2" }, { "triggerid": "3", "priority": "2" }, { "triggerid": "4", "priority": "1" }] } } }

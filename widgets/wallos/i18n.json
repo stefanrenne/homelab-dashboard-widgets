@@ -1,0 +1,121 @@
+{
+  "en": {
+    "activeSubscriptions": "Active",
+    "nextRenewingSubscription": "Next renewal",
+    "previousMonthlyCost": "Last month",
+    "thisMonthlyCost": "This month",
+    "nextMonthlyCost": "Next month"
+  },
+  "nl": {
+    "activeSubscriptions": "Actief",
+    "nextRenewingSubscription": "Volgende",
+    "previousMonthlyCost": "Vorige maand",
+    "thisMonthlyCost": "Deze maand",
+    "nextMonthlyCost": "Volgende maand"
+  },
+  "fr": {
+    "activeSubscriptions": "Actifs",
+    "nextRenewingSubscription": "Prochain",
+    "previousMonthlyCost": "Mois dernier",
+    "thisMonthlyCost": "Ce mois-ci",
+    "nextMonthlyCost": "Mois suivant"
+  },
+  "de": {
+    "activeSubscriptions": "Aktiv",
+    "nextRenewingSubscription": "Nächste",
+    "previousMonthlyCost": "Letzter Monat",
+    "thisMonthlyCost": "Dieser Monat",
+    "nextMonthlyCost": "Nächster Monat"
+  },
+  "es": {
+    "activeSubscriptions": "Activos",
+    "nextRenewingSubscription": "Próxima",
+    "previousMonthlyCost": "Mes pasado",
+    "thisMonthlyCost": "Este mes",
+    "nextMonthlyCost": "Próximo mes"
+  },
+  "ca": {
+    "activeSubscriptions": "Actius",
+    "nextRenewingSubscription": "Propera",
+    "previousMonthlyCost": "Mes passat",
+    "thisMonthlyCost": "Aquest mes",
+    "nextMonthlyCost": "Mes següent"
+  },
+  "he": {
+    "activeSubscriptions": "פעילים",
+    "nextRenewingSubscription": "החידוש הבא",
+    "previousMonthlyCost": "החודש שעבר",
+    "thisMonthlyCost": "החודש",
+    "nextMonthlyCost": "החודש הבא"
+  },
+  "hr": {
+    "activeSubscriptions": "Aktivni",
+    "nextRenewingSubscription": "Sljedeća",
+    "previousMonthlyCost": "Prošli mjesec",
+    "thisMonthlyCost": "Ovaj mjesec",
+    "nextMonthlyCost": "Sljedeći mjesec"
+  },
+  "hu": {
+    "activeSubscriptions": "Aktív",
+    "nextRenewingSubscription": "Következő",
+    "previousMonthlyCost": "Előző hónap",
+    "thisMonthlyCost": "Ez a hónap",
+    "nextMonthlyCost": "Következő hónap"
+  },
+  "it": {
+    "activeSubscriptions": "Attivi",
+    "nextRenewingSubscription": "Prossimo",
+    "previousMonthlyCost": "Mese scorso",
+    "thisMonthlyCost": "Questo mese",
+    "nextMonthlyCost": "Mese dopo"
+  },
+  "nb-NO": {
+    "activeSubscriptions": "Aktive",
+    "nextRenewingSubscription": "Neste",
+    "previousMonthlyCost": "Forrige måned",
+    "thisMonthlyCost": "Denne måneden",
+    "nextMonthlyCost": "Neste måned"
+  },
+  "pt": {
+    "activeSubscriptions": "Ativos",
+    "nextRenewingSubscription": "Próxima",
+    "previousMonthlyCost": "Mês passado",
+    "thisMonthlyCost": "Este mês",
+    "nextMonthlyCost": "Mês seguinte"
+  },
+  "ru": {
+    "activeSubscriptions": "Активные",
+    "nextRenewingSubscription": "Следующая",
+    "previousMonthlyCost": "Прошлый месяц",
+    "thisMonthlyCost": "Этот месяц",
+    "nextMonthlyCost": "Следующий месяц"
+  },
+  "sv": {
+    "activeSubscriptions": "Aktiva",
+    "nextRenewingSubscription": "Nästa",
+    "previousMonthlyCost": "Förra månaden",
+    "thisMonthlyCost": "Denna månad",
+    "nextMonthlyCost": "Nästa månad"
+  },
+  "vi": {
+    "activeSubscriptions": "Đang chạy",
+    "nextRenewingSubscription": "Gia hạn tới",
+    "previousMonthlyCost": "Tháng trước",
+    "thisMonthlyCost": "Tháng này",
+    "nextMonthlyCost": "Tháng sau"
+  },
+  "zh-Hans": {
+    "activeSubscriptions": "活动",
+    "nextRenewingSubscription": "下次续订",
+    "previousMonthlyCost": "上月",
+    "thisMonthlyCost": "本月",
+    "nextMonthlyCost": "下个月"
+  },
+  "zh-Hant": {
+    "activeSubscriptions": "活動",
+    "nextRenewingSubscription": "下次續訂",
+    "previousMonthlyCost": "上月",
+    "thisMonthlyCost": "本月",
+    "nextMonthlyCost": "下個月"
+  }
+}

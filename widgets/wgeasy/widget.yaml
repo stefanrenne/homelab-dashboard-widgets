@@ -1,0 +1,13 @@
+id: wgeasy
+name: wg-easy
+version: 0.1.0
+apiVersion: 1
+description: WireGuard clients connected, enabled, disabled and in total in wg-easy (homepage's wgeasy widget).
+refresh: 60s
+defaultFields: [connected, enabled, total]
+options:
+  url: { type: url, required: true }       # e.g. http://wg.lan:51821
+  version: { type: number, default: 1 }    # 2 for wg-easy 15 and later
+  username: { type: string }               # wg-easy 15 and later
+  password: { type: string, secret: true } # the web interface's password
+  threshold: { type: number, default: 2 }  # minutes since the last handshake that still count as connected

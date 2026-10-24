@@ -1,0 +1,104 @@
+{
+  "en": {
+    "connected": "Connected",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "total": "Total"
+  },
+  "nl": {
+    "connected": "Verbonden",
+    "enabled": "Aan",
+    "disabled": "Uit",
+    "total": "Totaal"
+  },
+  "fr": {
+    "connected": "Connectés",
+    "enabled": "Actifs",
+    "disabled": "Inactifs",
+    "total": "Total"
+  },
+  "de": {
+    "connected": "Verbunden",
+    "enabled": "Aktiv",
+    "disabled": "Inaktiv",
+    "total": "Gesamt"
+  },
+  "es": {
+    "connected": "Conectados",
+    "enabled": "Activos",
+    "disabled": "Inactivos",
+    "total": "Total"
+  },
+  "ca": {
+    "connected": "Connectats",
+    "enabled": "Actius",
+    "disabled": "Inactius",
+    "total": "Total"
+  },
+  "he": {
+    "connected": "מחוברים",
+    "enabled": "פעילים",
+    "disabled": "מושבתים",
+    "total": "סך הכול"
+  },
+  "hr": {
+    "connected": "Povezano",
+    "enabled": "Uključeno",
+    "disabled": "Isključeno",
+    "total": "Ukupno"
+  },
+  "hu": {
+    "connected": "Csatlakozva",
+    "enabled": "Engedélyezve",
+    "disabled": "Letiltva",
+    "total": "Összesen"
+  },
+  "it": {
+    "connected": "Connessi",
+    "enabled": "Attivi",
+    "disabled": "Disattivi",
+    "total": "Totale"
+  },
+  "nb-NO": {
+    "connected": "Tilkoblet",
+    "enabled": "Aktive",
+    "disabled": "Deaktivert",
+    "total": "Totalt"
+  },
+  "pt": {
+    "connected": "Ligados",
+    "enabled": "Ativos",
+    "disabled": "Inativos",
+    "total": "Total"
+  },
+  "ru": {
+    "connected": "Подключено",
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "total": "Всего"
+  },
+  "sv": {
+    "connected": "Anslutna",
+    "enabled": "Aktiva",
+    "disabled": "Inaktiva",
+    "total": "Totalt"
+  },
+  "vi": {
+    "connected": "Đã kết nối",
+    "enabled": "Đang bật",
+    "disabled": "Đã tắt",
+    "total": "Tổng"
+  },
+  "zh-Hans": {
+    "connected": "已连接",
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "total": "总计"
+  },
+  "zh-Hant": {
+    "connected": "已連線",
+    "enabled": "已啟用",
+    "disabled": "已停用",
+    "total": "總計"
+  }
+}

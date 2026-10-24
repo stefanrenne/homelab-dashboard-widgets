@@ -1,0 +1,104 @@
+{
+  "en": {
+    "ok": "Fine",
+    "errored": "Failed",
+    "noRecent": "Not recent",
+    "totalUsed": "Space used"
+  },
+  "nl": {
+    "ok": "Goed",
+    "errored": "Mislukt",
+    "noRecent": "Niet recent",
+    "totalUsed": "Ruimte gebruikt"
+  },
+  "fr": {
+    "ok": "OK",
+    "errored": "Échec",
+    "noRecent": "Pas récents",
+    "totalUsed": "Espace utilisé"
+  },
+  "de": {
+    "ok": "In Ordnung",
+    "errored": "Gescheitert",
+    "noRecent": "Nicht aktuell",
+    "totalUsed": "Belegt"
+  },
+  "es": {
+    "ok": "Correctos",
+    "errored": "Fallido",
+    "noRecent": "No recientes",
+    "totalUsed": "Espacio usado"
+  },
+  "ca": {
+    "ok": "Correctes",
+    "errored": "Fallit",
+    "noRecent": "No recents",
+    "totalUsed": "Espai usat"
+  },
+  "he": {
+    "ok": "תקינים",
+    "errored": "נכשל",
+    "noRecent": "לא עדכניים",
+    "totalUsed": "מקום בשימוש"
+  },
+  "hr": {
+    "ok": "U redu",
+    "errored": "Neuspjelo",
+    "noRecent": "Nisu nedavni",
+    "totalUsed": "Zauzeto"
+  },
+  "hu": {
+    "ok": "Rendben",
+    "errored": "Sikertelen",
+    "noRecent": "Nem friss",
+    "totalUsed": "Foglalt hely"
+  },
+  "it": {
+    "ok": "Regolari",
+    "errored": "Fallito",
+    "noRecent": "Non recenti",
+    "totalUsed": "Spazio usato"
+  },
+  "nb-NO": {
+    "ok": "OK",
+    "errored": "Mislyktes",
+    "noRecent": "Ikke nylig",
+    "totalUsed": "Plass brukt"
+  },
+  "pt": {
+    "ok": "Corretos",
+    "errored": "Falhou",
+    "noRecent": "Não recentes",
+    "totalUsed": "Espaço usado"
+  },
+  "ru": {
+    "ok": "В порядке",
+    "errored": "Ошибка",
+    "noRecent": "Не свежие",
+    "totalUsed": "Занято"
+  },
+  "sv": {
+    "ok": "OK",
+    "errored": "Misslyckades",
+    "noRecent": "Ej nyligen",
+    "totalUsed": "Använt"
+  },
+  "vi": {
+    "ok": "Ổn",
+    "errored": "Thất bại",
+    "noRecent": "Chưa gần đây",
+    "totalUsed": "Đã dùng"
+  },
+  "zh-Hans": {
+    "ok": "正常",
+    "errored": "失败",
+    "noRecent": "不是最近",
+    "totalUsed": "已用空间"
+  },
+  "zh-Hant": {
+    "ok": "正常",
+    "errored": "失敗",
+    "noRecent": "不是最近",
+    "totalUsed": "已用空間"
+  }
+}

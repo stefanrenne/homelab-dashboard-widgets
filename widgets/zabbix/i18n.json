@@ -1,0 +1,138 @@
+{
+  "en": {
+    "unclassified": "Unclassified",
+    "information": "Information",
+    "warning": "Warning",
+    "average": "Average",
+    "high": "High",
+    "disaster": "Disaster"
+  },
+  "nl": {
+    "unclassified": "Niet ingedeeld",
+    "information": "Informatie",
+    "warning": "Waarschuwing",
+    "average": "Gemiddeld",
+    "high": "Hoog",
+    "disaster": "Ramp"
+  },
+  "fr": {
+    "unclassified": "Non classé",
+    "information": "Information",
+    "warning": "Avertissement",
+    "average": "Moyen",
+    "high": "Haute",
+    "disaster": "Désastre"
+  },
+  "de": {
+    "unclassified": "Ohne Klasse",
+    "information": "Information",
+    "warning": "Warnung",
+    "average": "Mittel",
+    "high": "Hoch",
+    "disaster": "Katastrophe"
+  },
+  "es": {
+    "unclassified": "Sin clasificar",
+    "information": "Información",
+    "warning": "Aviso",
+    "average": "Media",
+    "high": "Alta",
+    "disaster": "Desastre"
+  },
+  "ca": {
+    "unclassified": "Sense classificar",
+    "information": "Informació",
+    "warning": "Avís",
+    "average": "Mitjana",
+    "high": "Alta",
+    "disaster": "Desastre"
+  },
+  "he": {
+    "unclassified": "לא מסווג",
+    "information": "מידע",
+    "warning": "אזהרה",
+    "average": "בינונית",
+    "high": "גבוהה",
+    "disaster": "אסון"
+  },
+  "hr": {
+    "unclassified": "Nerazvrstano",
+    "information": "Informacija",
+    "warning": "Upozorenje",
+    "average": "Prosječno",
+    "high": "Visok",
+    "disaster": "Katastrofa"
+  },
+  "hu": {
+    "unclassified": "Besorolatlan",
+    "information": "Információ",
+    "warning": "Figyelmeztetés",
+    "average": "Átlagos",
+    "high": "Magas",
+    "disaster": "Katasztrófa"
+  },
+  "it": {
+    "unclassified": "Non classificato",
+    "information": "Informazione",
+    "warning": "Avviso",
+    "average": "Media",
+    "high": "Alta",
+    "disaster": "Disastro"
+  },
+  "nb-NO": {
+    "unclassified": "Uten klasse",
+    "information": "Informasjon",
+    "warning": "Advarsel",
+    "average": "Middels",
+    "high": "Høy",
+    "disaster": "Katastrofe"
+  },
+  "pt": {
+    "unclassified": "Não classificado",
+    "information": "Informação",
+    "warning": "Aviso",
+    "average": "Média",
+    "high": "Alta",
+    "disaster": "Desastre"
+  },
+  "ru": {
+    "unclassified": "Без класса",
+    "information": "Информация",
+    "warning": "Предупреждение",
+    "average": "Средняя",
+    "high": "Высокий",
+    "disaster": "Катастрофа"
+  },
+  "sv": {
+    "unclassified": "Utan klass",
+    "information": "Information",
+    "warning": "Varning",
+    "average": "Medel",
+    "high": "Hög",
+    "disaster": "Katastrof"
+  },
+  "vi": {
+    "unclassified": "Chưa phân loại",
+    "information": "Thông tin",
+    "warning": "Cảnh báo",
+    "average": "Trung bình",
+    "high": "Cao",
+    "disaster": "Thảm họa"
+  },
+  "zh-Hans": {
+    "unclassified": "未分类",
+    "information": "信息",
+    "warning": "警告",
+    "average": "一般严重",
+    "high": "高",
+    "disaster": "灾难"
+  },
+  "zh-Hant": {
+    "unclassified": "未分類",
+    "information": "資訊",
+    "warning": "警告",
+    "average": "一般嚴重",
+    "high": "高",
+    "disaster": "災難"
+  }
+}

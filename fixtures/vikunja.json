@@ -1,0 +1,7 @@
+{ "_note": "Vikunja: two projects and a saved filter; four open tasks (one overdue, one in progress, one without a date, one far off).", "routes": {
+ "GET /api/v1/projects": [{ "id": 1, "title": "Home" }, { "id": 2, "title": "Homelab" }, { "id": -2, "title": "Saved filter" }],
+ "GET /api/v1/tasks/all": [
+  { "id": 11, "title": "Renew certificate", "due_date": "2026-01-10T00:00:00Z", "percent_done": 0 },
+  { "id": 12, "title": "Replace UPS battery", "due_date": "2099-01-01T00:00:00Z", "percent_done": 0.5 },
+  { "id": 13, "title": "Clean the attic", "due_date": "0001-01-01T00:00:00Z", "percent_done": 0 }],
+ "GET /api/v1/tasks": [{ "id": 11, "title": "Renew certificate", "due_date": "2026-01-10T00:00:00Z", "percent_done": 0 }] } }

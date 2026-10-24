@@ -1,0 +1,4 @@
+{ "_note": "Your Spotify per-period stats with timeSplit=all.", "routes": {
+ "GET /spotify/songs_per": [{ "count": 842 }],
+ "GET /spotify/time_per": [{ "count": 187320000 }],
+ "GET /spotify/different_artists_per": [{ "artists": [{}, {}, {}, {}, {}] }] } }

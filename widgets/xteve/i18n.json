@@ -1,0 +1,87 @@
+{
+  "en": {
+    "streams_all": "Streams",
+    "streams_active": "Active",
+    "streams_xepg": "In the EPG"
+  },
+  "nl": {
+    "streams_all": "Streams",
+    "streams_active": "Actief",
+    "streams_xepg": "In de gids"
+  },
+  "fr": {
+    "streams_all": "Flux",
+    "streams_active": "Actifs",
+    "streams_xepg": "Dans le guide"
+  },
+  "de": {
+    "streams_all": "Streams",
+    "streams_active": "Aktiv",
+    "streams_xepg": "Im EPG"
+  },
+  "es": {
+    "streams_all": "Streams",
+    "streams_active": "Activos",
+    "streams_xepg": "En la guía"
+  },
+  "ca": {
+    "streams_all": "Fluxos",
+    "streams_active": "Actius",
+    "streams_xepg": "A la guia"
+  },
+  "he": {
+    "streams_all": "הזרמות",
+    "streams_active": "פעילים",
+    "streams_xepg": "במדריך"
+  },
+  "hr": {
+    "streams_all": "Streamovi",
+    "streams_active": "Aktivni",
+    "streams_xepg": "U vodiču"
+  },
+  "hu": {
+    "streams_all": "Streamek",
+    "streams_active": "Aktív",
+    "streams_xepg": "A műsorban"
+  },
+  "it": {
+    "streams_all": "Stream",
+    "streams_active": "Attivi",
+    "streams_xepg": "Nella guida"
+  },
+  "nb-NO": {
+    "streams_all": "Strømmer",
+    "streams_active": "Aktive",
+    "streams_xepg": "I guiden"
+  },
+  "pt": {
+    "streams_all": "Streams",
+    "streams_active": "Ativos",
+    "streams_xepg": "No guia"
+  },
+  "ru": {
+    "streams_all": "Потоки",
+    "streams_active": "Активные",
+    "streams_xepg": "В телегиде"
+  },
+  "sv": {
+    "streams_all": "Strömmar",
+    "streams_active": "Aktiva",
+    "streams_xepg": "I guiden"
+  },
+  "vi": {
+    "streams_all": "Luồng phát",
+    "streams_active": "Đang chạy",
+    "streams_xepg": "Trong EPG"
+  },
+  "zh-Hans": {
+    "streams_all": "串流",
+    "streams_active": "活动",
+    "streams_xepg": "已映射 EPG"
+  },
+  "zh-Hant": {
+    "streams_all": "串流",
+    "streams_active": "活動",
+    "streams_xepg": "已對應 EPG"
+  }
+}

@@ -142,6 +142,13 @@ Every widget has its own page with setup, fields and options on the
 | `unifi_drive` | space and pool state of a UniFi NAS | `url`, `username`, `password` |
 | `unmanic` | busy and total workers, pending tasks | `url` |
 | `uptimerobot` | monitors up and down, or one monitor's state | `key` |
+| `urbackup` | clients fine, failed and not recent, space used | `url`, `username`, `password`, `maxDays` |
+| `vikunja` | projects, tasks due, overdue and in progress | `url`, `key`, `version`, `enableTaskList` |
+| `wallos` | subscriptions, the next renewal and monthly costs | `url`, `key` |
+| `wgeasy` | WireGuard clients connected, enabled and in total | `url`, `version`, `username`, `password`, `threshold` |
+| `xteve` | streams, active ones and those in the EPG | `url`, `username`, `password` |
+| `yourspotify` | songs, listening time and artists | `url`, `key`, `interval` |
+| `zabbix` | problems by severity | `url`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

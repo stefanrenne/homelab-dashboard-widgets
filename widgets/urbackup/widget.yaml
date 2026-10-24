@@ -1,0 +1,12 @@
+id: urbackup
+name: UrBackup
+version: 0.1.0
+apiVersion: 1
+description: Clients whose backups are fine, failed or not recent in UrBackup, and the space used (homepage's urbackup widget).
+refresh: 5m
+defaultFields: [ok, errored, noRecent]
+options:
+  url: { type: url, required: true }       # the web interface, e.g. http://urbackup.lan:55414
+  username: { type: string }               # without one the anonymous login is used
+  password: { type: string, secret: true }
+  maxDays: { type: number, default: 3 }    # days after which a client's last backup is not recent

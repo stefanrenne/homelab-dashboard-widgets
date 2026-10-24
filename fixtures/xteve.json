@@ -1,0 +1,2 @@
+{ "_note": "xTeVe: the mock answers login and status alike, so the answer holds both.", "routes": {
+ "POST /api/": { "status": true, "token": "xt-token", "streams.all": 412, "streams.active": 120, "streams.xepg": 98, "version.xteve": "2.2.0" } } }

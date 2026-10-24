@@ -1,0 +1,3 @@
+{ "_note": "wg-easy clients: three, two enabled; a handshake in 2099 stands for a fresh one.", "routes": {
+ "GET /api/wireguard/client": [{ "name": "phone", "enabled": true, "latestHandshakeAt": "2099-01-01T00:00:00Z" }, { "name": "laptop", "enabled": true, "latestHandshakeAt": "2026-01-01T00:00:00Z" }, { "name": "old", "enabled": false, "latestHandshakeAt": null }],
+ "GET /api/client": [{ "name": "phone", "enabled": true, "latestHandshakeAt": "2099-01-01T00:00:00Z" }] } }

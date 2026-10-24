@@ -1,0 +1,87 @@
+{
+  "en": {
+    "songs": "Songs",
+    "time": "Listening time",
+    "artists": "Artists"
+  },
+  "nl": {
+    "songs": "Nummers",
+    "time": "Luistertijd",
+    "artists": "Artiesten"
+  },
+  "fr": {
+    "songs": "Titres",
+    "time": "Écoute",
+    "artists": "Artistes"
+  },
+  "de": {
+    "songs": "Titel",
+    "time": "Hörzeit",
+    "artists": "Künstler"
+  },
+  "es": {
+    "songs": "Canciones",
+    "time": "Escucha",
+    "artists": "Artistas"
+  },
+  "ca": {
+    "songs": "Cançons",
+    "time": "Escolta",
+    "artists": "Artistes"
+  },
+  "he": {
+    "songs": "שירים",
+    "time": "זמן האזנה",
+    "artists": "אמנים"
+  },
+  "hr": {
+    "songs": "Pjesme",
+    "time": "Slušanje",
+    "artists": "Izvođači"
+  },
+  "hu": {
+    "songs": "Dalok",
+    "time": "Hallgatás",
+    "artists": "Előadók"
+  },
+  "it": {
+    "songs": "Brani",
+    "time": "Ascolto",
+    "artists": "Artisti"
+  },
+  "nb-NO": {
+    "songs": "Sanger",
+    "time": "Lyttetid",
+    "artists": "Artister"
+  },
+  "pt": {
+    "songs": "Músicas",
+    "time": "Audição",
+    "artists": "Artistas"
+  },
+  "ru": {
+    "songs": "Треки",
+    "time": "Прослушано",
+    "artists": "Исполнители"
+  },
+  "sv": {
+    "songs": "Låtar",
+    "time": "Lyssningstid",
+    "artists": "Artister"
+  },
+  "vi": {
+    "songs": "Bài hát",
+    "time": "Thời gian nghe",
+    "artists": "Nghệ sĩ"
+  },
+  "zh-Hans": {
+    "songs": "歌曲",
+    "time": "收听时长",
+    "artists": "艺人"
+  },
+  "zh-Hant": {
+    "songs": "歌曲",
+    "time": "收聽時長",
+    "artists": "藝人"
+  }
+}
