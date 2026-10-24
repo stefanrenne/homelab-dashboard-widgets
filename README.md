@@ -21,6 +21,7 @@ Every widget has its own page with setup, fields and options on the
 | `tdarr` | queue, processed, errored, saved | `url`, `key` (optional) |
 | `whatsupdocker` | monitoring, updates | `url`, `username`, `password` |
 | `portainer` | running, stopped, total | `url`, `key`, `env` |
+| `longhorn` | storage used, in total and per node | `url`, `username`, `password` (or `provider: longhorn`), `include`, `expanded` |
 | `glances` | cpu, memory, CPU temperature, uptime, disks | `url`, `username`, `password`, `version`, `cputemp`, `uptime`, `disk`, `expanded` |
 | `unraid` | memory %, cpu, array %, pool1 %; more via `fields` (homepage field names) | `url`, `key`, `pool1`–`pool4` |
 

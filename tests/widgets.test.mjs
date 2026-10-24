@@ -33,7 +33,7 @@ const values = (out) => Object.fromEntries(out.blocks.map((b) => [b.key, b.unit 
 const lastRequest = (id) => mock.requests.filter((r) => r.widget === id).at(-1);
 
 test('every folder is a valid package: manifest, i18n in all languages, only node: imports', () => {
-  assert.equal(IDS.length, 13);
+  assert.equal(IDS.length, 14);
   for (const id of IDS) {
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     assert.equal(m.id, id);
@@ -272,4 +272,18 @@ test('glances: CPU, memory, the hottest CPU sensor, uptime and disks; version 4;
   assert.deepEqual(values(await run('glances', { version: 4 })), { cpu: '11%', memory: '50%' });
   assert.equal(values(await run('glances', { cpu: false, mem: false, cputemp: true, unit: 'imperial', cpuSensorLabel: 'acpitz' })).cputemp, '123.8°F');
   assert.deepEqual(values(await run('glances', { cpu: false, mem: false, disk: ['/'], diskUnits: 'bbytes', expanded: true })), { disk: '40%', diskFree: '279 GiB' });
+});
+
+
+test('longhorn: total and per node over their disks, include, numbered labels and expanded rows', async () => {
+  const out = await run('longhorn', { expanded: true, username: 'admin', password: 'pw' });
+  assert.deepEqual(values(out), { total: '38.7%', node1: '40%', node2: '92%', node3: '25%' });
+  assert.deepEqual(out.blocks[1].vars, { name: 'node-a' });
+  assert.equal(out.blocks.find((b) => b.key === 'node2').status, 'warn');
+  assert.deepEqual(out.rows.map((r) => [r.vars?.name ?? r.label, r.value, r.progress]), [
+    ['total', '1.8 TB / 3 TB', 38.7], ['node-a', '300 GB / 500 GB', 40], ['node-b', '40 GB / 500 GB', 92], ['node-c', '1.5 TB / 2 TB', 25],
+  ]);
+  assert.equal(lastRequest('longhorn').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
+  const some = await run('longhorn', { include: ['node-c'], total: false, labels: false });
+  assert.deepEqual(some.blocks, [{ key: 'node1', label: 'nodeNumber', vars: { n: 1 }, value: 25, unit: '%' }]);
 });

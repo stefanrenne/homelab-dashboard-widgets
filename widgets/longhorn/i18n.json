@@ -1,0 +1,27 @@
+{
+  "en": {
+    "total": "Total",
+    "nodeNumber": "Node {n}",
+    "node": "{name}"
+  },
+  "nl": {
+    "total": "Totaal",
+    "nodeNumber": "Node {n}",
+    "node": "{name}"
+  },
+  "fr": {
+    "total": "Total",
+    "nodeNumber": "Nœud {n}",
+    "node": "{name}"
+  },
+  "de": {
+    "total": "Gesamt",
+    "nodeNumber": "Knoten {n}",
+    "node": "{name}"
+  },
+  "es": {
+    "total": "Total",
+    "nodeNumber": "Nodo {n}",
+    "node": "{name}"
+  }
+}

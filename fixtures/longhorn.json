@@ -1,0 +1,44 @@
+{
+ "_note": "Longhorn 1.x: three nodes; node-c has two disks.",
+ "routes": {
+  "GET /v1/nodes": {
+   "data": [
+    {
+     "name": "node-a",
+     "disks": {
+      "disk-1": {
+       "storageMaximum": 500000000000,
+       "storageAvailable": 300000000000,
+       "storageReserved": 50000000000
+      }
+     }
+    },
+    {
+     "name": "node-b",
+     "disks": {
+      "disk-1": {
+       "storageMaximum": 500000000000,
+       "storageAvailable": 40000000000,
+       "storageReserved": 50000000000
+      }
+     }
+    },
+    {
+     "name": "node-c",
+     "disks": {
+      "disk-1": {
+       "storageMaximum": 1000000000000,
+       "storageAvailable": 600000000000,
+       "storageReserved": 100000000000
+      },
+      "disk-2": {
+       "storageMaximum": 1000000000000,
+       "storageAvailable": 900000000000,
+       "storageReserved": 100000000000
+      }
+     }
+    }
+   ]
+  }
+ }
+}
