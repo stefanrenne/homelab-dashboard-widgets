@@ -1,0 +1,104 @@
+{
+  "en": {
+    "datastore_usage": "Datastore",
+    "failed_tasks_24h": "Failed tasks",
+    "cpu": "CPU",
+    "memory": "Memory"
+  },
+  "nl": {
+    "datastore_usage": "Datastore",
+    "failed_tasks_24h": "Mislukte taken",
+    "cpu": "CPU",
+    "memory": "Geheugen"
+  },
+  "fr": {
+    "datastore_usage": "Banque",
+    "failed_tasks_24h": "Tâches échouées",
+    "cpu": "CPU",
+    "memory": "Mémoire"
+  },
+  "de": {
+    "datastore_usage": "Datastore",
+    "failed_tasks_24h": "Fehler",
+    "cpu": "CPU",
+    "memory": "Speicher"
+  },
+  "es": {
+    "datastore_usage": "Almacén",
+    "failed_tasks_24h": "Tareas fallidas",
+    "cpu": "CPU",
+    "memory": "Memoria"
+  },
+  "ca": {
+    "datastore_usage": "Magatzem",
+    "failed_tasks_24h": "Tasques fallides",
+    "cpu": "CPU",
+    "memory": "Memòria"
+  },
+  "he": {
+    "datastore_usage": "מאגר",
+    "failed_tasks_24h": "משימות שנכשלו",
+    "cpu": "מעבד",
+    "memory": "זיכרון"
+  },
+  "hr": {
+    "datastore_usage": "Spremište",
+    "failed_tasks_24h": "Neuspjeli zadaci",
+    "cpu": "CPU",
+    "memory": "Memorija"
+  },
+  "hu": {
+    "datastore_usage": "Adattár",
+    "failed_tasks_24h": "Hibás munkák",
+    "cpu": "CPU",
+    "memory": "Memória"
+  },
+  "it": {
+    "datastore_usage": "Datastore",
+    "failed_tasks_24h": "Attività fallite",
+    "cpu": "CPU",
+    "memory": "Memoria"
+  },
+  "nb-NO": {
+    "datastore_usage": "Datalager",
+    "failed_tasks_24h": "Feilede jobber",
+    "cpu": "CPU",
+    "memory": "Minne"
+  },
+  "pt": {
+    "datastore_usage": "Armazém",
+    "failed_tasks_24h": "Tarefas falhadas",
+    "cpu": "CPU",
+    "memory": "Memória"
+  },
+  "ru": {
+    "datastore_usage": "Хранилище",
+    "failed_tasks_24h": "Ошибки задач",
+    "cpu": "ЦП",
+    "memory": "Память"
+  },
+  "sv": {
+    "datastore_usage": "Datalager",
+    "failed_tasks_24h": "Misslyckade jobb",
+    "cpu": "CPU",
+    "memory": "Minne"
+  },
+  "vi": {
+    "datastore_usage": "Kho dữ liệu",
+    "failed_tasks_24h": "Tác vụ lỗi",
+    "cpu": "CPU",
+    "memory": "Bộ nhớ"
+  },
+  "zh-Hans": {
+    "datastore_usage": "数据存储",
+    "failed_tasks_24h": "失败任务",
+    "cpu": "CPU",
+    "memory": "内存"
+  },
+  "zh-Hant": {
+    "datastore_usage": "資料存放區",
+    "failed_tasks_24h": "失敗任務",
+    "cpu": "CPU",
+    "memory": "記憶體"
+  }
+}

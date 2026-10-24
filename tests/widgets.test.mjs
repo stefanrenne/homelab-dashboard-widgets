@@ -560,3 +560,15 @@ test('proxmox: VMs and containers running of all (no templates), CPU and memory 
   assert.deepEqual(values(await run('proxmox', { node: 'pve-2' })), { vms: '1 / 1', lxc: '1 / 1', 'resources.cpu': '50%', 'resources.mem': '25%' });
   assert.deepEqual(values(await run('proxmox', { node: 'pve-3' })), { vms: '0 / 0', lxc: '0 / 0', 'resources.cpu': null, 'resources.mem': null }, 'an offline node');
 });
+
+test('proxmoxbackupserver: datastores, failed tasks of the last day (marked), CPU and memory', async () => {
+  const out = await run('proxmoxbackupserver', { username: 'api@pbs!dash', password: 's3cret' });
+  assert.deepEqual(values(out), { datastore_usage: '60%', failed_tasks_24h: 2, cpu_usage: '7.1%', memory_usage: '31.3%' });
+  assert.equal(out.blocks[1].status, 'warn');
+  const tasks = mock.requests.filter((r) => r.route === 'GET /api2/json/nodes/localhost/tasks').at(-1);
+  assert.equal(tasks.headers.authorization, 'PBSAPIToken=api@pbs!dash:s3cret');
+  assert.deepEqual([tasks.query.errors, tasks.query.limit], ['1', '100']);
+  assert.ok(Math.abs(Number(tasks.query.since) - (Date.now() / 1000 - 86400)) < 60);
+  assert.equal(values(await run('proxmoxbackupserver', { datastore: 'offsite' })).datastore_usage, '40%');
+  await assert.rejects(run('proxmoxbackupserver', { datastore: 'nope' }), /no datastore "nope"/);
+});

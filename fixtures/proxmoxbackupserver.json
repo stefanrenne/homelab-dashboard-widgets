@@ -1,0 +1,14 @@
+{
+ "_note": "Proxmox Backup Server: two datastores, two failed tasks in the last day, the host status.",
+ "routes": {
+  "GET /api2/json/status/datastore-usage": { "data": [
+   { "store": "backup", "total": 4000000000000, "used": 2600000000000, "avail": 1400000000000 },
+   { "store": "offsite", "total": 1000000000000, "used": 400000000000, "avail": 600000000000 }
+  ] },
+  "GET /api2/json/nodes/localhost/tasks": { "total": 2, "data": [
+   { "upid": "UPID:pbs:1", "worker_type": "backup", "status": "error: connection reset" },
+   { "upid": "UPID:pbs:2", "worker_type": "verify", "status": "error: chunk missing" }
+  ] },
+  "GET /api2/json/nodes/localhost/status": { "data": { "cpu": 0.0712, "memory": { "total": 16000000000, "used": 5000000000, "free": 11000000000 } } }
+ }
+}

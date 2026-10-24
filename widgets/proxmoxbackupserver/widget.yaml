@@ -1,0 +1,12 @@
+id: proxmoxbackupserver
+name: Proxmox Backup Server
+version: 0.1.0
+apiVersion: 1
+description: Datastore usage, failed tasks of the last 24 hours, CPU and memory of a Proxmox Backup Server (homepage's proxmoxbackupserver widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. https://pbs.lan:8007
+  username: { type: string, required: true }               # the API token id, e.g. api@pbs!dashboard
+  password: { type: string, secret: true, required: true } # the token's secret
+  datastore: { type: string }              # only this datastore; default all together
+  insecure: { type: boolean, default: true }   # accept the self-signed certificate (as homepage does)
