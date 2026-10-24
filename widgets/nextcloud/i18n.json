@@ -1,0 +1,138 @@
+{
+  "en": {
+    "cpuload": "CPU load",
+    "memory": "Memory",
+    "freespace": "Free space",
+    "activeusers": "Active users",
+    "numfiles": "Files",
+    "numshares": "Shares"
+  },
+  "nl": {
+    "cpuload": "CPU-belasting",
+    "memory": "Geheugen",
+    "freespace": "Vrije ruimte",
+    "activeusers": "Actief",
+    "numfiles": "Bestanden",
+    "numshares": "Gedeeld"
+  },
+  "fr": {
+    "cpuload": "Charge CPU",
+    "memory": "Mémoire",
+    "freespace": "Espace libre",
+    "activeusers": "Actifs",
+    "numfiles": "Fichiers",
+    "numshares": "Partages"
+  },
+  "de": {
+    "cpuload": "CPU-Last",
+    "memory": "Speicher",
+    "freespace": "Freier Platz",
+    "activeusers": "Aktive Nutzer",
+    "numfiles": "Dateien",
+    "numshares": "Freigaben"
+  },
+  "es": {
+    "cpuload": "Carga CPU",
+    "memory": "Memoria",
+    "freespace": "Espacio libre",
+    "activeusers": "Usuarios activos",
+    "numfiles": "Archivos",
+    "numshares": "Compartidos"
+  },
+  "ca": {
+    "cpuload": "Càrrega CPU",
+    "memory": "Memòria",
+    "freespace": "Espai lliure",
+    "activeusers": "Usuaris actius",
+    "numfiles": "Fitxers",
+    "numshares": "Compartits"
+  },
+  "he": {
+    "cpuload": "עומס מעבד",
+    "memory": "זיכרון",
+    "freespace": "שטח פנוי",
+    "activeusers": "משתמשים פעילים",
+    "numfiles": "קבצים",
+    "numshares": "שיתופים"
+  },
+  "hr": {
+    "cpuload": "Opterećenje CPU",
+    "memory": "Memorija",
+    "freespace": "Slobodno mjesto",
+    "activeusers": "Aktivni",
+    "numfiles": "Datoteke",
+    "numshares": "Dijeljenja"
+  },
+  "hu": {
+    "cpuload": "CPU terhelés",
+    "memory": "Memória",
+    "freespace": "Szabad hely",
+    "activeusers": "Aktívak",
+    "numfiles": "Fájlok",
+    "numshares": "Megosztások"
+  },
+  "it": {
+    "cpuload": "Carico CPU",
+    "memory": "Memoria",
+    "freespace": "Spazio libero",
+    "activeusers": "Utenti attivi",
+    "numfiles": "File",
+    "numshares": "Condivisioni"
+  },
+  "nb-NO": {
+    "cpuload": "CPU-last",
+    "memory": "Minne",
+    "freespace": "Ledig plass",
+    "activeusers": "Aktive brukere",
+    "numfiles": "Filer",
+    "numshares": "Delinger"
+  },
+  "pt": {
+    "cpuload": "Carga CPU",
+    "memory": "Memória",
+    "freespace": "Espaço livre",
+    "activeusers": "Ativos",
+    "numfiles": "Ficheiros",
+    "numshares": "Partilhas"
+  },
+  "ru": {
+    "cpuload": "Нагрузка ЦП",
+    "memory": "Память",
+    "freespace": "Свободно",
+    "activeusers": "Активные",
+    "numfiles": "Файлы",
+    "numshares": "Общие"
+  },
+  "sv": {
+    "cpuload": "CPU-last",
+    "memory": "Minne",
+    "freespace": "Ledigt utrymme",
+    "activeusers": "Aktiva",
+    "numfiles": "Filer",
+    "numshares": "Delningar"
+  },
+  "vi": {
+    "cpuload": "Tải CPU",
+    "memory": "Bộ nhớ",
+    "freespace": "Còn trống",
+    "activeusers": "Đang dùng",
+    "numfiles": "Tệp",
+    "numshares": "Chia sẻ"
+  },
+  "zh-Hans": {
+    "cpuload": "CPU 负载",
+    "memory": "内存",
+    "freespace": "可用空间",
+    "activeusers": "活跃用户",
+    "numfiles": "文件",
+    "numshares": "共享"
+  },
+  "zh-Hant": {
+    "cpuload": "CPU 負載",
+    "memory": "記憶體",
+    "freespace": "可用空間",
+    "activeusers": "活躍使用者",
+    "numfiles": "檔案",
+    "numshares": "共用"
+  }
+}

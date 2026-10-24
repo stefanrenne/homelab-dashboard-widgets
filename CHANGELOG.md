@@ -28,6 +28,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `nzbget`: download rate (paused is marked), remaining and downloaded, as homepage's nzbget widget.
 - `lidarr` and `readarr`: wanted and queued (marked with errors or warnings), artists and books, as homepage's widgets.
 - `jackett` (configured and errored indexers, also with an admin password) and `ombi` (pending, approved and available requests), as homepage's widgets.
+- `nextcloud`: free space, active users, files and shares (and the older cpuload and memoryusage through `fields`), as homepage's nextcloud widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

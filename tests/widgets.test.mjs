@@ -739,3 +739,12 @@ test('ombi: pending (marked), approved and available requests', async () => {
   assert.equal(out.blocks[0].status, 'warn');
   assert.equal(lastRequest('ombi').headers['x-api-key'], 'test-key');
 });
+
+test('nextcloud: free space, active users, files and shares, with the NC-Token or a login', async () => {
+  assert.deepEqual(values(await run('nextcloud')), { cpuload: 0.52, memoryusage: '62.5%', freespace: '412.3 GB', activeusers: 4, numfiles: 184233, numshares: 57 });
+  const req = lastRequest('nextcloud');
+  assert.equal(req.headers['nc-token'], 'test-key');
+  assert.equal(req.headers['ocs-apirequest'], 'true');
+  await run('nextcloud', { key: undefined, username: 'admin', password: 'app-pw' });
+  assert.equal(lastRequest('nextcloud').headers.authorization, `Basic ${Buffer.from('admin:app-pw').toString('base64')}`);
+});

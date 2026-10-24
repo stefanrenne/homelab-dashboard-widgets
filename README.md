@@ -21,6 +21,7 @@ Every widget has its own page with setup, fields and options on the
 | `transmission` | leech, download rate, seed, upload rate | `url`, `username`, `password`, `rpcUrl` |
 | `deluge` | leech, download rate, seed, upload rate; downloads per row with `enableLeechProgress` | `url`, `password`, `enableLeechProgress`, `queueLimit` (5) |
 | `nzbget` | rate, remaining, downloaded | `url`, `username`, `password` |
+| `nextcloud` | free space, active users, files, shares (also cpuload, memoryusage via `fields`) | `url`, `key` or `username`/`password` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
