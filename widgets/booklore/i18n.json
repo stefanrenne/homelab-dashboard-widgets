@@ -1,0 +1,104 @@
+{
+  "en": {
+    "libraries": "Libraries",
+    "books": "Books",
+    "reading": "Reading",
+    "finished": "Finished"
+  },
+  "nl": {
+    "libraries": "Bibliotheken",
+    "books": "Boeken",
+    "reading": "Aan het lezen",
+    "finished": "Uitgelezen"
+  },
+  "fr": {
+    "libraries": "Collections",
+    "books": "Livres",
+    "reading": "En lecture",
+    "finished": "Terminés"
+  },
+  "de": {
+    "libraries": "Bibliotheken",
+    "books": "Bücher",
+    "reading": "Am Lesen",
+    "finished": "Gelesen"
+  },
+  "es": {
+    "libraries": "Bibliotecas",
+    "books": "Libros",
+    "reading": "Leyendo",
+    "finished": "Terminados"
+  },
+  "ca": {
+    "libraries": "Biblioteques",
+    "books": "Llibres",
+    "reading": "Llegint",
+    "finished": "Acabats"
+  },
+  "he": {
+    "libraries": "ספריות",
+    "books": "ספרים",
+    "reading": "בקריאה",
+    "finished": "הושלמו"
+  },
+  "hr": {
+    "libraries": "Knjižnice",
+    "books": "Knjige",
+    "reading": "Čitam",
+    "finished": "Pročitano"
+  },
+  "hu": {
+    "libraries": "Könyvtárak",
+    "books": "Könyvek",
+    "reading": "Olvasás alatt",
+    "finished": "Befejezve"
+  },
+  "it": {
+    "libraries": "Librerie",
+    "books": "Libri",
+    "reading": "In lettura",
+    "finished": "Finiti"
+  },
+  "nb-NO": {
+    "libraries": "Biblioteker",
+    "books": "Bøker",
+    "reading": "Leser",
+    "finished": "Ferdig"
+  },
+  "pt": {
+    "libraries": "Bibliotecas",
+    "books": "Livros",
+    "reading": "A ler",
+    "finished": "Terminados"
+  },
+  "ru": {
+    "libraries": "Библиотеки",
+    "books": "Книги",
+    "reading": "Читаю",
+    "finished": "Прочитано"
+  },
+  "sv": {
+    "libraries": "Bibliotek",
+    "books": "Böcker",
+    "reading": "Läser",
+    "finished": "Utlästa"
+  },
+  "vi": {
+    "libraries": "Thư viện",
+    "books": "Sách",
+    "reading": "Đang đọc",
+    "finished": "Đã đọc"
+  },
+  "zh-Hans": {
+    "libraries": "书库",
+    "books": "图书",
+    "reading": "在读",
+    "finished": "已读完"
+  },
+  "zh-Hant": {
+    "libraries": "書庫",
+    "books": "書籍",
+    "reading": "閱讀中",
+    "finished": "已讀完"
+  }
+}

@@ -1,0 +1,8 @@
+{
+ "_note": "BookLore: a login, two libraries and four books.",
+ "routes": {
+  "POST /api/v1/auth/login": { "accessToken": "jwt", "refreshToken": "r" },
+  "GET /api/v1/libraries": [{ "id": 1, "name": "Fiction" }, { "id": 2, "name": "Comics" }],
+  "GET /api/v1/books": [{ "readStatus": "READING" }, { "readStatus": "READ" }, { "readStatus": "read" }, { "readStatus": "UNREAD" }]
+ }
+}

@@ -1163,3 +1163,12 @@ test('azuredevops: the last pipeline run (failed marked) and open pull requests,
   assert.equal(build.headers.authorization, `Basic ${Buffer.from(':test-key').toString('base64')}`);
   await assert.rejects(run('azuredevops', { definitionId: undefined, repositoryId: undefined }), /needs definitionId/);
 });
+
+test('backrest and booklore: backups (failures marked) and a reading list behind a login', async () => {
+  const backrest = await run('backrest', { username: 'admin', password: 'pw' });
+  assert.deepEqual(values(backrest), { num_plans: 3, num_success_latest: 2, num_failure_latest: 1, num_success_30: 62, num_failure_30: 2, bytes_added_30: '5 GB' });
+  assert.deepEqual(backrest.blocks.filter((b) => b.status).map((b) => b.key), ['num_failure_latest', 'num_failure_30']);
+  assert.equal(lastRequest('backrest').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
+  assert.deepEqual(values(await run('booklore', { username: 'anna', password: 'pw' })), { libraries: 2, books: 4, reading: 1, finished: 2 });
+  assert.equal(lastRequest('booklore').headers.authorization, 'Bearer jwt');
+});

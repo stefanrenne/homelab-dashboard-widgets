@@ -1,0 +1,138 @@
+{
+  "en": {
+    "num_plans": "Plans",
+    "num_success_latest": "Last OK",
+    "num_failure_latest": "Last failed",
+    "num_success_30": "OK in 30 days",
+    "num_failure_30": "Failed 30 days",
+    "bytes_added_30": "Added 30 days"
+  },
+  "nl": {
+    "num_plans": "Plannen",
+    "num_success_latest": "Laatste goed",
+    "num_failure_latest": "Laatste fout",
+    "num_success_30": "Goed in 30 dagen",
+    "num_failure_30": "Fout 30 dagen",
+    "bytes_added_30": "Erbij 30 dagen"
+  },
+  "fr": {
+    "num_plans": "Plans",
+    "num_success_latest": "Dernières OK",
+    "num_failure_latest": "Échec récent",
+    "num_success_30": "OK sur 30 jours",
+    "num_failure_30": "Échecs 30 jours",
+    "bytes_added_30": "Ajouté 30 jours"
+  },
+  "de": {
+    "num_plans": "Pläne",
+    "num_success_latest": "Zuletzt OK",
+    "num_failure_latest": "Zuletzt Fehler",
+    "num_success_30": "OK in 30 Tagen",
+    "num_failure_30": "Fehler 30 Tage",
+    "bytes_added_30": "Neu 30 Tage"
+  },
+  "es": {
+    "num_plans": "Planes",
+    "num_success_latest": "Últimas bien",
+    "num_failure_latest": "Últimas fallidas",
+    "num_success_30": "Bien en 30 días",
+    "num_failure_30": "Fallos 30 días",
+    "bytes_added_30": "Añadido 30 días"
+  },
+  "ca": {
+    "num_plans": "Plans",
+    "num_success_latest": "Últimes bé",
+    "num_failure_latest": "Últimes fallides",
+    "num_success_30": "Bé en 30 dies",
+    "num_failure_30": "Errors 30 dies",
+    "bytes_added_30": "Afegit 30 dies"
+  },
+  "he": {
+    "num_plans": "תוכניות",
+    "num_success_latest": "אחרונים תקינים",
+    "num_failure_latest": "אחרונים נכשלו",
+    "num_success_30": "תקינים ב־30 יום",
+    "num_failure_30": "כשלים ב־30 יום",
+    "bytes_added_30": "נוסף ב־30 יום"
+  },
+  "hr": {
+    "num_plans": "Planovi",
+    "num_success_latest": "Zadnje uspješno",
+    "num_failure_latest": "Zadnja greška",
+    "num_success_30": "Uspješno 30 dana",
+    "num_failure_30": "Greške 30 dana",
+    "bytes_added_30": "Dodano 30 dana"
+  },
+  "hu": {
+    "num_plans": "Tervek",
+    "num_success_latest": "Utolsó sikeres",
+    "num_failure_latest": "Utolsó hibás",
+    "num_success_30": "30 nap sikeres",
+    "num_failure_30": "30 nap hiba",
+    "bytes_added_30": "30 nap új"
+  },
+  "it": {
+    "num_plans": "Piani",
+    "num_success_latest": "Ultimi riusciti",
+    "num_failure_latest": "Ultimi falliti",
+    "num_success_30": "Riusciti 30 giorni",
+    "num_failure_30": "Mese: falliti",
+    "bytes_added_30": "Mese: aggiunti"
+  },
+  "nb-NO": {
+    "num_plans": "Planer",
+    "num_success_latest": "Siste OK",
+    "num_failure_latest": "Siste feilet",
+    "num_success_30": "OK siste 30 dager",
+    "num_failure_30": "Feil 30 dager",
+    "bytes_added_30": "Nytt 30 dager"
+  },
+  "pt": {
+    "num_plans": "Planos",
+    "num_success_latest": "Últimos OK",
+    "num_failure_latest": "Últimos falhados",
+    "num_success_30": "OK em 30 dias",
+    "num_failure_30": "Falhas 30 dias",
+    "bytes_added_30": "Novo 30 dias"
+  },
+  "ru": {
+    "num_plans": "Планы",
+    "num_success_latest": "Последние ОК",
+    "num_failure_latest": "Последние сбои",
+    "num_success_30": "ОК за 30 дней",
+    "num_failure_30": "Сбои 30 дней",
+    "bytes_added_30": "Новое 30 дней"
+  },
+  "sv": {
+    "num_plans": "Planer",
+    "num_success_latest": "Senast OK",
+    "num_failure_latest": "Senast fel",
+    "num_success_30": "OK på 30 dagar",
+    "num_failure_30": "Fel 30 dagar",
+    "bytes_added_30": "Nytt 30 dagar"
+  },
+  "vi": {
+    "num_plans": "Kế hoạch",
+    "num_success_latest": "Gần nhất ổn",
+    "num_failure_latest": "Gần nhất lỗi",
+    "num_success_30": "Ổn 30 ngày",
+    "num_failure_30": "Lỗi 30 ngày",
+    "bytes_added_30": "Thêm 30 ngày"
+  },
+  "zh-Hans": {
+    "num_plans": "计划",
+    "num_success_latest": "最近成功",
+    "num_failure_latest": "最近失败",
+    "num_success_30": "30 天成功",
+    "num_failure_30": "30 天失败",
+    "bytes_added_30": "30 天新增"
+  },
+  "zh-Hant": {
+    "num_plans": "計畫",
+    "num_success_latest": "最近成功",
+    "num_failure_latest": "最近失敗",
+    "num_success_30": "30 天成功",
+    "num_failure_30": "30 天失敗",
+    "bytes_added_30": "30 天新增"
+  }
+}

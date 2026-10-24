@@ -1,0 +1,8 @@
+{
+ "_note": "Backrest summary dashboard: three plans, one whose latest backup failed.",
+ "routes": { "POST /v1.Backrest/GetSummaryDashboard": { "planSummaries": [
+  { "id": "nas", "backupsSuccessLast30days": "30", "backupsFailed30days": "0", "bytesAddedLast30days": "4100000000", "recentBackups": { "status": ["STATUS_SUCCESS", "STATUS_SUCCESS"] } },
+  { "id": "photos", "backupsSuccessLast30days": "28", "backupsFailed30days": "2", "bytesAddedLast30days": "900000000", "recentBackups": { "status": ["STATUS_ERROR", "STATUS_SUCCESS"] } },
+  { "id": "docs", "backupsSuccessLast30days": "4", "bytesAddedLast30days": "1000000", "recentBackups": { "status": ["STATUS_SUCCESS"] } }
+ ] } }
+}
