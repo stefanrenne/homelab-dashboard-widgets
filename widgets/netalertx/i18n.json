@@ -1,0 +1,104 @@
+{
+  "en": {
+    "total": "Total",
+    "connected": "Connected",
+    "new_devices": "New devices",
+    "down_alerts": "Down alerts"
+  },
+  "nl": {
+    "total": "Totaal",
+    "connected": "Verbonden",
+    "new_devices": "Nieuw",
+    "down_alerts": "Uitval"
+  },
+  "fr": {
+    "total": "Total",
+    "connected": "Connectés",
+    "new_devices": "Nouveaux",
+    "down_alerts": "Alertes arrêt"
+  },
+  "de": {
+    "total": "Gesamt",
+    "connected": "Verbunden",
+    "new_devices": "Neue Geräte",
+    "down_alerts": "Ausfälle"
+  },
+  "es": {
+    "total": "Total",
+    "connected": "Conectados",
+    "new_devices": "Nuevos",
+    "down_alerts": "Caídas"
+  },
+  "ca": {
+    "total": "Total",
+    "connected": "Connectats",
+    "new_devices": "Nous",
+    "down_alerts": "Caigudes"
+  },
+  "he": {
+    "total": "סך הכול",
+    "connected": "מחוברים",
+    "new_devices": "מכשירים חדשים",
+    "down_alerts": "התראות נפילה"
+  },
+  "hr": {
+    "total": "Ukupno",
+    "connected": "Povezano",
+    "new_devices": "Novi uređaji",
+    "down_alerts": "Ispadi"
+  },
+  "hu": {
+    "total": "Összesen",
+    "connected": "Csatlakozva",
+    "new_devices": "Új eszközök",
+    "down_alerts": "Kiesések"
+  },
+  "it": {
+    "total": "Totale",
+    "connected": "Connessi",
+    "new_devices": "Nuovi",
+    "down_alerts": "Cadute"
+  },
+  "nb-NO": {
+    "total": "Totalt",
+    "connected": "Tilkoblet",
+    "new_devices": "Nye enheter",
+    "down_alerts": "Nedetid"
+  },
+  "pt": {
+    "total": "Total",
+    "connected": "Ligados",
+    "new_devices": "Novos",
+    "down_alerts": "Quedas"
+  },
+  "ru": {
+    "total": "Всего",
+    "connected": "Подключено",
+    "new_devices": "Новые",
+    "down_alerts": "Отключения"
+  },
+  "sv": {
+    "total": "Totalt",
+    "connected": "Anslutna",
+    "new_devices": "Nya enheter",
+    "down_alerts": "Avbrott"
+  },
+  "vi": {
+    "total": "Tổng",
+    "connected": "Đã kết nối",
+    "new_devices": "Thiết bị mới",
+    "down_alerts": "Mất kết nối"
+  },
+  "zh-Hans": {
+    "total": "总计",
+    "connected": "已连接",
+    "new_devices": "新设备",
+    "down_alerts": "离线警报"
+  },
+  "zh-Hant": {
+    "total": "總計",
+    "connected": "已連線",
+    "new_devices": "新裝置",
+    "down_alerts": "離線警示"
+  }
+}

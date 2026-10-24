@@ -138,6 +138,9 @@ const REQUIRED = {
   komodo: { secret: 's3cret' },
   get minecraft() { return { url: mc.url, timeout: 1 }; },
   mikrotik: { username: 'dashboard', password: 'pw' },
+  nextdns: { profile: 'abc123', get url() { return `${mock.url}/nextdns`; } },
+  ntfy: { topic: 'backups' },
+  omada: { username: 'dashboard', password: 'pw', site: 'Default' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -185,7 +188,7 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
 });
 
 // blocks whose value is a name from the service (a host name, an operating system), not a key
-const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'], minecraft: ['version'] };
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'], minecraft: ['version'], ntfy: ['title', 'message', 'tags'] };
 
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
@@ -1563,4 +1566,44 @@ test('mealie, medusa, mikrotik, minecraft, miniflux, mjpeg, moonraker and mylar'
   assert.deepEqual(values(mylar), { series: 2, issues: 116, wanted: 2 });
   assert.equal(mylar.blocks[2].status, 'warn');
   assert.equal(lastRequest('mylar').query.apikey, 'test-key');
+});
+
+test('myspeed, netalertx, netbird, netdata, nextdns, ntfy, octoprint and omada', async () => {
+  assert.deepEqual(values(await run('myspeed', { password: 'pw' })), { download: '487.2Mbit/s', upload: '41.9Mbit/s', ping: '11ms' });
+  assert.deepEqual([lastRequest('myspeed').headers.password, lastRequest('myspeed').query.limit], ['pw', '1']);
+
+  const na = await run('netalertx');
+  assert.deepEqual(values(na), { total: 48, connected: 31, new_devices: 2, down_alerts: 1 });
+  assert.deepEqual(na.blocks.map((b) => b.status ?? null), [null, null, 'warn', 'error']);
+  await run('netalertx', { version: 2 });
+  assert.deepEqual([lastRequest('netalertx').route, lastRequest('netalertx').headers.authorization], ['GET /devices/totals', 'Bearer test-key']);
+
+  const nb = await run('netbird');
+  assert.deepEqual(values(nb), { online: '2 / 3', users: 2, login_expired: 1 });
+  assert.equal(lastRequest('netbird').headers.authorization, 'Token test-key');
+
+  const nd = await run('netdata');
+  assert.deepEqual(values(nd), { warnings: 2, criticals: 0 });
+  assert.equal(nd.blocks[0].status, 'warn');
+
+  assert.deepEqual(values(await run('nextdns')), { default: 182340, blocked: 24120, allowed: 312, relayed: 0 });
+  assert.equal(lastRequest('nextdns').headers['x-api-key'], 'test-key');
+  await assert.rejects(run('nextdns', { profile: '../x' }), /profile/);
+
+  const n = await run('ntfy', { key: 'tk_abc' });
+  const nv = values(n);
+  assert.deepEqual({ ...nv, lastReceived: undefined }, { title: 'Backup failed', message: 'Disk full on nas', priority: 'high', lastReceived: undefined, tags: 'warning, nas' });
+  assert.match(nv.lastReceived, /^\d+d \d+h$/);
+  assert.equal(n.blocks[2].status, 'warn');
+  assert.deepEqual([lastRequest('ntfy').headers.authorization, lastRequest('ntfy').query.since], ['Bearer tk_abc', 'latest']);
+  assert.deepEqual(values(await run('ntfy', { topic: 'empty', key: undefined })), { title: 'none', message: 'none', priority: 'none', lastReceived: 'none', tags: 'none' });
+  await assert.rejects(run('ntfy', { topic: '../x' }), /topic/);
+
+  assert.deepEqual(values(await run('octoprint')), { printer_state: 'printing', temp_tool: '214.8°C', temp_bed: '59.9°C', job_completion: '37.4%' });
+  assert.equal(lastRequest('octoprint').headers['x-api-key'], 'test-key');
+
+  const om = await run('omada');
+  assert.deepEqual(values(om), { connectedAp: 3, activeUser: 37, alerts: 1, connectedGateways: 1, connectedSwitches: 2 });
+  assert.deepEqual([lastRequest('omada').headers['csrf-token'], lastRequest('omada').headers.cookie, lastRequest('omada').query.token], ['omada-token', 'TPOMADA_SESSIONID=s3ss', 'omada-token']);
+  await assert.rejects(run('omada', { site: 'Home' }), /no Omada site "Home" \(Default, Office\)/);
 });

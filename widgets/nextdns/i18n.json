@@ -1,0 +1,104 @@
+{
+  "en": {
+    "default": "Resolved",
+    "blocked": "Blocked",
+    "allowed": "Allowed",
+    "relayed": "Relayed"
+  },
+  "nl": {
+    "default": "Opgelost",
+    "blocked": "Geblokkeerd",
+    "allowed": "Toegestaan",
+    "relayed": "Doorgestuurd"
+  },
+  "fr": {
+    "default": "Résolues",
+    "blocked": "Bloquées",
+    "allowed": "Autorisées",
+    "relayed": "Relayées"
+  },
+  "de": {
+    "default": "Aufgelöst",
+    "blocked": "Blockiert",
+    "allowed": "Erlaubt",
+    "relayed": "Umgeleitet"
+  },
+  "es": {
+    "default": "Resueltas",
+    "blocked": "Bloqueadas",
+    "allowed": "Permitidas",
+    "relayed": "Reenviadas"
+  },
+  "ca": {
+    "default": "Resoltes",
+    "blocked": "Bloquejades",
+    "allowed": "Permeses",
+    "relayed": "Reenviades"
+  },
+  "he": {
+    "default": "נפתרו",
+    "blocked": "נחסמו",
+    "allowed": "מותרות",
+    "relayed": "הועברו"
+  },
+  "hr": {
+    "default": "Razriješeno",
+    "blocked": "Blokirano",
+    "allowed": "Dopušteno",
+    "relayed": "Proslijeđeno"
+  },
+  "hu": {
+    "default": "Feloldva",
+    "blocked": "Blokkolva",
+    "allowed": "Engedélyezve",
+    "relayed": "Továbbítva"
+  },
+  "it": {
+    "default": "Risolte",
+    "blocked": "Bloccate",
+    "allowed": "Consentite",
+    "relayed": "Inoltrate"
+  },
+  "nb-NO": {
+    "default": "Løst",
+    "blocked": "Blokkert",
+    "allowed": "Tillatt",
+    "relayed": "Videresendt"
+  },
+  "pt": {
+    "default": "Resolvidas",
+    "blocked": "Bloqueadas",
+    "allowed": "Permitidas",
+    "relayed": "Reenviadas"
+  },
+  "ru": {
+    "default": "Разрешено",
+    "blocked": "Блокировки",
+    "allowed": "Разрешено",
+    "relayed": "Переслано"
+  },
+  "sv": {
+    "default": "Lösta",
+    "blocked": "Blockerade",
+    "allowed": "Tillåtna",
+    "relayed": "Skickade"
+  },
+  "vi": {
+    "default": "Đã phân giải",
+    "blocked": "Đã chặn",
+    "allowed": "Cho phép",
+    "relayed": "Chuyển tiếp"
+  },
+  "zh-Hans": {
+    "default": "已解析",
+    "blocked": "已拦截",
+    "allowed": "已允许",
+    "relayed": "已转发"
+  },
+  "zh-Hant": {
+    "default": "已解析",
+    "blocked": "已封鎖",
+    "allowed": "已允許",
+    "relayed": "已轉送"
+  }
+}

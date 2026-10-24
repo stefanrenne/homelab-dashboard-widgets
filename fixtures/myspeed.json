@@ -1,0 +1,2 @@
+{ "_note": "MySpeed's latest test.", "routes": {
+ "GET /api/speedtests": [{ "id": 412, "ping": 11, "download": 487.23, "upload": 41.87, "error": null, "created": "2026-03-01T10:00:00.000Z" }] } }

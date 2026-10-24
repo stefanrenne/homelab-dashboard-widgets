@@ -1,0 +1,2 @@
+{ "_note": "Netdata: two warnings, no criticals.", "routes": {
+ "GET /api/v1/info": { "version": "v2.2.0", "alarms": { "normal": 120, "warning": 2, "critical": 0 } } } }

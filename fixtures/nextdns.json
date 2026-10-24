@@ -1,0 +1,2 @@
+{ "_note": "NextDNS analytics/status of profile abc123 (no relayed queries).", "routes": {
+ "GET /profiles/abc123/analytics/status": { "data": [{ "status": "default", "queries": 182340 }, { "status": "blocked", "queries": 24120 }, { "status": "allowed", "queries": 312 }] } } }

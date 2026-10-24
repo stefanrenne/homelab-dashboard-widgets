@@ -1,0 +1,13 @@
+id: omada
+name: TP-Link Omada
+version: 0.1.0
+apiVersion: 1
+description: Access points, clients, alerts, gateways and switches of an Omada site (homepage's omada widget).
+refresh: 60s
+defaultFields: [connectedAp, activeUser, alerts, connectedGateways]
+options:
+  url: { type: url, required: true }       # the controller, e.g. https://omada.lan:8043
+  username: { type: string, required: true }   # a viewer account is enough
+  password: { type: string, secret: true, required: true }
+  site: { type: string, required: true }   # the site's name, e.g. Default
+  insecure: { type: boolean, default: false }  # accept the controller's self-signed certificate

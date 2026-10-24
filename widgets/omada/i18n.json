@@ -1,0 +1,121 @@
+{
+  "en": {
+    "connectedAp": "Access points",
+    "activeUser": "Clients",
+    "alerts": "Alerts",
+    "connectedGateways": "Gateways",
+    "connectedSwitches": "Switches"
+  },
+  "nl": {
+    "connectedAp": "Access points",
+    "activeUser": "Clients",
+    "alerts": "Meldingen",
+    "connectedGateways": "Gateways",
+    "connectedSwitches": "Switches"
+  },
+  "fr": {
+    "connectedAp": "Points d’accès",
+    "activeUser": "Clients",
+    "alerts": "Alertes",
+    "connectedGateways": "Passerelles",
+    "connectedSwitches": "Commutateurs"
+  },
+  "de": {
+    "connectedAp": "Access Points",
+    "activeUser": "Clients",
+    "alerts": "Warnungen",
+    "connectedGateways": "Gateways",
+    "connectedSwitches": "Switches"
+  },
+  "es": {
+    "connectedAp": "Puntos WiFi",
+    "activeUser": "Clientes",
+    "alerts": "Alertas",
+    "connectedGateways": "Pasarelas",
+    "connectedSwitches": "Conmutadores"
+  },
+  "ca": {
+    "connectedAp": "Punts d’accés",
+    "activeUser": "Clients",
+    "alerts": "Alertes",
+    "connectedGateways": "Passarel·les",
+    "connectedSwitches": "Commutadors"
+  },
+  "he": {
+    "connectedAp": "נקודות גישה",
+    "activeUser": "לקוחות",
+    "alerts": "התראות",
+    "connectedGateways": "שערים",
+    "connectedSwitches": "מתגים"
+  },
+  "hr": {
+    "connectedAp": "Pristupne točke",
+    "activeUser": "Klijenti",
+    "alerts": "Upozorenja",
+    "connectedGateways": "Pristupnici",
+    "connectedSwitches": "Preklopnici"
+  },
+  "hu": {
+    "connectedAp": "WiFi pontok",
+    "activeUser": "Kliensek",
+    "alerts": "Riasztások",
+    "connectedGateways": "Átjárók",
+    "connectedSwitches": "Switchek"
+  },
+  "it": {
+    "connectedAp": "Access point",
+    "activeUser": "Client",
+    "alerts": "Avvisi",
+    "connectedGateways": "Gateway",
+    "connectedSwitches": "Switch"
+  },
+  "nb-NO": {
+    "connectedAp": "Trådløse punkter",
+    "activeUser": "Klienter",
+    "alerts": "Varsler",
+    "connectedGateways": "Gatewayer",
+    "connectedSwitches": "Svitsjer"
+  },
+  "pt": {
+    "connectedAp": "Pontos WiFi",
+    "activeUser": "Clientes",
+    "alerts": "Alertas",
+    "connectedGateways": "Gateways",
+    "connectedSwitches": "Switches"
+  },
+  "ru": {
+    "connectedAp": "Точки доступа",
+    "activeUser": "Клиенты",
+    "alerts": "Оповещения",
+    "connectedGateways": "Шлюзы",
+    "connectedSwitches": "Коммутаторы"
+  },
+  "sv": {
+    "connectedAp": "Trådlösa punkter",
+    "activeUser": "Klienter",
+    "alerts": "Larm",
+    "connectedGateways": "Gateways",
+    "connectedSwitches": "Switchar"
+  },
+  "vi": {
+    "connectedAp": "Điểm truy cập",
+    "activeUser": "Máy khách",
+    "alerts": "Cảnh báo",
+    "connectedGateways": "Cổng",
+    "connectedSwitches": "Bộ chuyển mạch"
+  },
+  "zh-Hans": {
+    "connectedAp": "接入点",
+    "activeUser": "客户端",
+    "alerts": "警报",
+    "connectedGateways": "网关",
+    "connectedSwitches": "交换机"
+  },
+  "zh-Hant": {
+    "connectedAp": "存取點",
+    "activeUser": "用戶端",
+    "alerts": "警示",
+    "connectedGateways": "閘道",
+    "connectedSwitches": "交換器"
+  }
+}

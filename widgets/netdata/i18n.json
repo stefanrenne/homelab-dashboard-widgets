@@ -1,0 +1,70 @@
+{
+  "en": {
+    "warnings": "Warnings",
+    "criticals": "Critical"
+  },
+  "nl": {
+    "warnings": "Waarschuwing",
+    "criticals": "Kritiek"
+  },
+  "fr": {
+    "warnings": "Alertes",
+    "criticals": "Critiques"
+  },
+  "de": {
+    "warnings": "Warnungen",
+    "criticals": "Kritisch"
+  },
+  "es": {
+    "warnings": "Avisos",
+    "criticals": "Críticas"
+  },
+  "ca": {
+    "warnings": "Avisos",
+    "criticals": "Crítiques"
+  },
+  "he": {
+    "warnings": "אזהרות",
+    "criticals": "קריטיות"
+  },
+  "hr": {
+    "warnings": "Upozorenja",
+    "criticals": "Kritično"
+  },
+  "hu": {
+    "warnings": "Riasztások",
+    "criticals": "Kritikus"
+  },
+  "it": {
+    "warnings": "Avvisi",
+    "criticals": "Critici"
+  },
+  "nb-NO": {
+    "warnings": "Advarsler",
+    "criticals": "Kritiske"
+  },
+  "pt": {
+    "warnings": "Avisos",
+    "criticals": "Críticos"
+  },
+  "ru": {
+    "warnings": "Замечания",
+    "criticals": "Критические"
+  },
+  "sv": {
+    "warnings": "Varningar",
+    "criticals": "Kritiska"
+  },
+  "vi": {
+    "warnings": "Cảnh báo",
+    "criticals": "Nghiêm trọng"
+  },
+  "zh-Hans": {
+    "warnings": "警告",
+    "criticals": "严重"
+  },
+  "zh-Hant": {
+    "warnings": "警告",
+    "criticals": "嚴重"
+  }
+}

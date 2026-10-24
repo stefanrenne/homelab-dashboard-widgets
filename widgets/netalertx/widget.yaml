@@ -1,0 +1,10 @@
+id: netalertx
+name: NetAlertX
+version: 0.1.0
+apiVersion: 1
+description: Devices, connected devices, new devices and down alerts in NetAlertX (homepage's netalertx widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # e.g. http://netalertx.lan:20211 (the backend port, 20212, for version 2)
+  key: { type: string, secret: true }      # Settings > API_TOKEN
+  version: { type: number, default: 1 }    # 2 for NetAlertX 26.1.17 and later

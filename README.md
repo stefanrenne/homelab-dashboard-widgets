@@ -102,6 +102,14 @@ Every widget has its own page with setup, fields and options on the
 | `mjpeg` | a camera's MJPEG stream | `stream`, `fit`, `height` |
 | `moonraker` | a Klipper printer's state, layers and progress | `url`, `key` |
 | `mylar` | comic series, issues and wanted issues | `url`, `key` |
+| `myspeed` | download, upload and ping of the latest speed test | `url`, `password` |
+| `netalertx` | devices, connected, new devices and down alerts | `url`, `key`, `version` |
+| `netbird` | peers online, users and expired logins | `url`, `key` |
+| `netdata` | warning and critical alarms | `url` |
+| `nextdns` | queries resolved, blocked, allowed and relayed | `profile`, `key` |
+| `ntfy` | the latest notification of a topic | `url`, `topic`, `key`, `username`, `password` |
+| `octoprint` | printer state, temperatures and job progress | `url`, `key` |
+| `omada` | access points, clients, alerts, gateways and switches of a site | `url`, `username`, `password`, `site` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

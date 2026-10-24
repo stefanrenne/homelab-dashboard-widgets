@@ -1,0 +1,6 @@
+{ "_note": "Omada controller 5: login, the sites, the overview and one alert.", "routes": {
+ "GET /api/info": { "errorCode": 0, "result": { "controllerVer": "5.15.8", "omadacId": "c0ffee" } },
+ "POST /c0ffee/api/v2/login": { "_headers": { "set-cookie": "TPOMADA_SESSIONID=s3ss; Path=/; HttpOnly" }, "_body": { "errorCode": 0, "result": { "token": "omada-token" } } },
+ "GET /c0ffee/api/v2/sites": { "errorCode": 0, "result": { "data": [{ "id": "site1", "key": "k1", "name": "Default" }, { "id": "site2", "name": "Office" }] } },
+ "GET /c0ffee/api/v2/sites/site1/dashboard/overviewDiagram": { "errorCode": 0, "result": { "totalClientNum": 37, "connectedApNum": 3, "connectedGatewayNum": 1, "connectedSwitchNum": 2 } },
+ "GET /c0ffee/api/v2/sites/site1/alerts/num": { "errorCode": 0, "result": { "alertNum": 1 } } } }

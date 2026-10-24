@@ -1,0 +1,87 @@
+{
+  "en": {
+    "online": "Online",
+    "users": "Users",
+    "login_expired": "Login expired"
+  },
+  "nl": {
+    "online": "Online",
+    "users": "Gebruikers",
+    "login_expired": "Login verlopen"
+  },
+  "fr": {
+    "online": "En ligne",
+    "users": "Utilisateurs",
+    "login_expired": "Connexion expirée"
+  },
+  "de": {
+    "online": "Online",
+    "users": "Nutzer",
+    "login_expired": "Anmeldung abgelaufen"
+  },
+  "es": {
+    "online": "En línea",
+    "users": "Usuarios",
+    "login_expired": "Sesión caducada"
+  },
+  "ca": {
+    "online": "En línia",
+    "users": "Usuaris",
+    "login_expired": "Sessió caducada"
+  },
+  "he": {
+    "online": "מחובר",
+    "users": "משתמשים",
+    "login_expired": "התחברות פגה"
+  },
+  "hr": {
+    "online": "Na mreži",
+    "users": "Korisnici",
+    "login_expired": "Prijava istekla"
+  },
+  "hu": {
+    "online": "Hálózaton",
+    "users": "Felhasználók",
+    "login_expired": "Lejárt belépés"
+  },
+  "it": {
+    "online": "In linea",
+    "users": "Utenti",
+    "login_expired": "Accesso scaduto"
+  },
+  "nb-NO": {
+    "online": "Tilkoblet",
+    "users": "Brukere",
+    "login_expired": "Innlogging utløpt"
+  },
+  "pt": {
+    "online": "Ligado",
+    "users": "Utilizadores",
+    "login_expired": "Sessão expirada"
+  },
+  "ru": {
+    "online": "В сети",
+    "users": "Пользователи",
+    "login_expired": "Вход истёк"
+  },
+  "sv": {
+    "online": "Ansluten",
+    "users": "Användare",
+    "login_expired": "Inloggning utgången"
+  },
+  "vi": {
+    "online": "Trực tuyến",
+    "users": "Người dùng",
+    "login_expired": "Hết hạn đăng nhập"
+  },
+  "zh-Hans": {
+    "online": "在线",
+    "users": "用户",
+    "login_expired": "登录已过期"
+  },
+  "zh-Hant": {
+    "online": "線上",
+    "users": "使用者",
+    "login_expired": "登入已過期"
+  }
+}

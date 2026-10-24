@@ -1,0 +1,9 @@
+id: octoprint
+name: OctoPrint
+version: 0.1.0
+apiVersion: 1
+description: A 3D printer's state, tool and bed temperatures and the job's progress in OctoPrint (homepage's octoprint widget).
+refresh: 10s
+options:
+  url: { type: url, required: true }       # e.g. http://octopi.lan
+  key: { type: string, secret: true, required: true }   # Settings > Application Keys (or the global API key)

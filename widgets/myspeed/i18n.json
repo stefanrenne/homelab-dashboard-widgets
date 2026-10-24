@@ -1,0 +1,87 @@
+{
+  "en": {
+    "download": "Download",
+    "upload": "Upload",
+    "ping": "Ping"
+  },
+  "nl": {
+    "download": "Download",
+    "upload": "Upload",
+    "ping": "Ping"
+  },
+  "fr": {
+    "download": "Réception",
+    "upload": "Envoi",
+    "ping": "Ping"
+  },
+  "de": {
+    "download": "Download",
+    "upload": "Upload",
+    "ping": "Ping"
+  },
+  "es": {
+    "download": "Descarga",
+    "upload": "Subida",
+    "ping": "Ping"
+  },
+  "ca": {
+    "download": "Baixada",
+    "upload": "Pujada",
+    "ping": "Ping"
+  },
+  "he": {
+    "download": "הורדה",
+    "upload": "העלאה",
+    "ping": "פינג"
+  },
+  "hr": {
+    "download": "Preuzimanje",
+    "upload": "Slanje",
+    "ping": "Ping"
+  },
+  "hu": {
+    "download": "Letöltés",
+    "upload": "Feltöltés",
+    "ping": "Ping"
+  },
+  "it": {
+    "download": "Download",
+    "upload": "Upload",
+    "ping": "Ping"
+  },
+  "nb-NO": {
+    "download": "Ned",
+    "upload": "Opp",
+    "ping": "Ping"
+  },
+  "pt": {
+    "download": "Download",
+    "upload": "Upload",
+    "ping": "Ping"
+  },
+  "ru": {
+    "download": "Загрузка",
+    "upload": "Отдача",
+    "ping": "Пинг"
+  },
+  "sv": {
+    "download": "Ned",
+    "upload": "Upp",
+    "ping": "Ping"
+  },
+  "vi": {
+    "download": "Tải xuống",
+    "upload": "Tải lên",
+    "ping": "Ping"
+  },
+  "zh-Hans": {
+    "download": "下载",
+    "upload": "上传",
+    "ping": "延迟"
+  },
+  "zh-Hant": {
+    "download": "下載",
+    "upload": "上傳",
+    "ping": "延遲"
+  }
+}
