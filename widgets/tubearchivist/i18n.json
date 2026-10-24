@@ -1,0 +1,104 @@
+{
+  "en": {
+    "downloads": "Downloads",
+    "videos": "Videos",
+    "channels": "Channels",
+    "playlists": "Playlists"
+  },
+  "nl": {
+    "downloads": "Downloads",
+    "videos": "Video's",
+    "channels": "Kanalen",
+    "playlists": "Lijsten"
+  },
+  "fr": {
+    "downloads": "Reçus",
+    "videos": "Vidéos",
+    "channels": "Chaînes",
+    "playlists": "Playlists"
+  },
+  "de": {
+    "downloads": "Downloads",
+    "videos": "Videos",
+    "channels": "Kanäle",
+    "playlists": "Playlists"
+  },
+  "es": {
+    "downloads": "Descargas",
+    "videos": "Vídeos",
+    "channels": "Canales",
+    "playlists": "Listas"
+  },
+  "ca": {
+    "downloads": "Baixades",
+    "videos": "Vídeos",
+    "channels": "Canals",
+    "playlists": "Llistes"
+  },
+  "he": {
+    "downloads": "הורדות",
+    "videos": "סרטונים",
+    "channels": "ערוצים",
+    "playlists": "רשימות השמעה"
+  },
+  "hr": {
+    "downloads": "Preuzimanja",
+    "videos": "Videozapisi",
+    "channels": "Kanali",
+    "playlists": "Popisi"
+  },
+  "hu": {
+    "downloads": "Letöltések",
+    "videos": "Videók",
+    "channels": "Csatornák",
+    "playlists": "Listák"
+  },
+  "it": {
+    "downloads": "Download",
+    "videos": "Video",
+    "channels": "Canali",
+    "playlists": "Playlist"
+  },
+  "nb-NO": {
+    "downloads": "Nedlastinger",
+    "videos": "Videoer",
+    "channels": "Kanaler",
+    "playlists": "Spillelister"
+  },
+  "pt": {
+    "downloads": "Recebidos",
+    "videos": "Vídeos",
+    "channels": "Canais",
+    "playlists": "Listas"
+  },
+  "ru": {
+    "downloads": "Загрузки",
+    "videos": "Видео",
+    "channels": "Каналы",
+    "playlists": "Плейлисты"
+  },
+  "sv": {
+    "downloads": "Hämtningar",
+    "videos": "Videor",
+    "channels": "Kanaler",
+    "playlists": "Spellistor"
+  },
+  "vi": {
+    "downloads": "Tải xuống",
+    "videos": "Video",
+    "channels": "Kênh",
+    "playlists": "Danh sách"
+  },
+  "zh-Hans": {
+    "downloads": "下载",
+    "videos": "视频",
+    "channels": "频道",
+    "playlists": "播放列表"
+  },
+  "zh-Hant": {
+    "downloads": "下載",
+    "videos": "影片",
+    "channels": "頻道",
+    "playlists": "播放清單"
+  }
+}

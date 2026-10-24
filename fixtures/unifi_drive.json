@@ -1,0 +1,3 @@
+{ "_note": "UniFi OS login and UniFi Drive's storage: one pool.", "routes": {
+ "POST /api/auth/login": { "_headers": { "set-cookie": "TOKEN=unas-jwt; Path=/; HttpOnly", "x-csrf-token": "csrf-1" }, "_body": { "username": "dashboard" } },
+ "GET /proxy/drive/api/v2/storage": { "pools": [{ "id": 1, "capacity": 16000000000000, "usage": 5200000000000, "status": "fullyOperational" }] } } }

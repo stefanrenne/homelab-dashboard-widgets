@@ -1,0 +1,104 @@
+{
+  "en": {
+    "version": "Version",
+    "notesCount": "Notes",
+    "dbSize": "Database",
+    "unknown": "Unknown"
+  },
+  "nl": {
+    "version": "Versie",
+    "notesCount": "Notities",
+    "dbSize": "Database",
+    "unknown": "Onbekend"
+  },
+  "fr": {
+    "version": "Version",
+    "notesCount": "Notes",
+    "dbSize": "Base",
+    "unknown": "Inconnu"
+  },
+  "de": {
+    "version": "Version",
+    "notesCount": "Notizen",
+    "dbSize": "Datenbank",
+    "unknown": "Unbekannt"
+  },
+  "es": {
+    "version": "Versión",
+    "notesCount": "Notas",
+    "dbSize": "Base de datos",
+    "unknown": "Desconocido"
+  },
+  "ca": {
+    "version": "Versió",
+    "notesCount": "Notes",
+    "dbSize": "Base de dades",
+    "unknown": "Desconegut"
+  },
+  "he": {
+    "version": "גרסה",
+    "notesCount": "פתקים",
+    "dbSize": "מסד נתונים",
+    "unknown": "לא ידוע"
+  },
+  "hr": {
+    "version": "Verzija",
+    "notesCount": "Bilješke",
+    "dbSize": "Baza",
+    "unknown": "Nepoznato"
+  },
+  "hu": {
+    "version": "Verzió",
+    "notesCount": "Jegyzetek",
+    "dbSize": "Adatbázis",
+    "unknown": "Ismeretlen"
+  },
+  "it": {
+    "version": "Versione",
+    "notesCount": "Note",
+    "dbSize": "Database",
+    "unknown": "Sconosciuto"
+  },
+  "nb-NO": {
+    "version": "Versjon",
+    "notesCount": "Notater",
+    "dbSize": "Database",
+    "unknown": "Ukjent"
+  },
+  "pt": {
+    "version": "Versão",
+    "notesCount": "Notas",
+    "dbSize": "Base de dados",
+    "unknown": "Desconhecido"
+  },
+  "ru": {
+    "version": "Версия",
+    "notesCount": "Заметки",
+    "dbSize": "База",
+    "unknown": "Неизвестно"
+  },
+  "sv": {
+    "version": "Version",
+    "notesCount": "Anteckningar",
+    "dbSize": "Databas",
+    "unknown": "Okänt"
+  },
+  "vi": {
+    "version": "Phiên bản",
+    "notesCount": "Ghi chú",
+    "dbSize": "Cơ sở dữ liệu",
+    "unknown": "Không rõ"
+  },
+  "zh-Hans": {
+    "version": "版本",
+    "notesCount": "笔记",
+    "dbSize": "数据库",
+    "unknown": "未知"
+  },
+  "zh-Hant": {
+    "version": "版本",
+    "notesCount": "筆記",
+    "dbSize": "資料庫",
+    "unknown": "未知"
+  }
+}

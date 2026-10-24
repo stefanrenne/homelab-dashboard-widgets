@@ -1,0 +1,2 @@
+{ "_note": "UptimeRobot getMonitors with one monitor (a monitor-specific key), up, with logs.", "routes": {
+ "POST /v2/getMonitors": { "stat": "ok", "pagination": { "offset": 0, "limit": 50, "total": 1 }, "monitors": [{ "id": 777, "friendly_name": "Website", "status": 2, "logs": [{ "type": 2, "datetime": 1772359200, "duration": 356400 }, { "type": 1, "datetime": 1772355600, "duration": 3600 }] }] } } }

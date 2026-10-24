@@ -1,0 +1,2 @@
+{ "_note": "Trilium ETAPI metrics.", "routes": {
+ "GET /etapi/metrics": { "version": { "app": "0.97.2", "db": 232 }, "database": { "activeNotes": 3412, "totalNotes": 3600 }, "statistics": { "databaseSizeBytes": 84200000 } } } }

@@ -1,0 +1,87 @@
+{
+  "en": {
+    "active_workers": "Busy workers",
+    "total_workers": "Workers",
+    "records_total": "Pending"
+  },
+  "nl": {
+    "active_workers": "Bezig",
+    "total_workers": "Workers",
+    "records_total": "Wachtend"
+  },
+  "fr": {
+    "active_workers": "Actifs",
+    "total_workers": "Workers",
+    "records_total": "En attente"
+  },
+  "de": {
+    "active_workers": "Aktiv",
+    "total_workers": "Worker",
+    "records_total": "Wartend"
+  },
+  "es": {
+    "active_workers": "Activos",
+    "total_workers": "Trabajadores",
+    "records_total": "Pendiente"
+  },
+  "ca": {
+    "active_workers": "Actius",
+    "total_workers": "Treballadors",
+    "records_total": "Pendent"
+  },
+  "he": {
+    "active_workers": "פעילים",
+    "total_workers": "עובדים",
+    "records_total": "ממתין"
+  },
+  "hr": {
+    "active_workers": "Aktivni",
+    "total_workers": "Radnici",
+    "records_total": "Na čekanju"
+  },
+  "hu": {
+    "active_workers": "Aktív",
+    "total_workers": "Munkások",
+    "records_total": "Függőben"
+  },
+  "it": {
+    "active_workers": "Attivi",
+    "total_workers": "Worker",
+    "records_total": "In attesa"
+  },
+  "nb-NO": {
+    "active_workers": "Aktive",
+    "total_workers": "Arbeidere",
+    "records_total": "Venter"
+  },
+  "pt": {
+    "active_workers": "Ativos",
+    "total_workers": "Workers",
+    "records_total": "Pendente"
+  },
+  "ru": {
+    "active_workers": "Заняты",
+    "total_workers": "Воркеры",
+    "records_total": "Ожидает"
+  },
+  "sv": {
+    "active_workers": "Aktiva",
+    "total_workers": "Arbetare",
+    "records_total": "Väntar"
+  },
+  "vi": {
+    "active_workers": "Đang làm",
+    "total_workers": "Tiến trình",
+    "records_total": "Đang chờ"
+  },
+  "zh-Hans": {
+    "active_workers": "忙碌",
+    "total_workers": "工作进程",
+    "records_total": "待定"
+  },
+  "zh-Hant": {
+    "active_workers": "忙碌",
+    "total_workers": "工作程序",
+    "records_total": "待定"
+  }
+}

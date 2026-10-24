@@ -1,0 +1,5 @@
+{ "_note": "Tube Archivist stats.", "routes": {
+ "GET /api/stats/download/": { "pending": 14, "pending_videos": 12, "pending_shorts": 2 },
+ "GET /api/stats/video/": { "doc_count": 3120, "media_size": 4120000000000 },
+ "GET /api/stats/channel/": { "doc_count": 48, "active_true": 40 },
+ "GET /api/stats/playlist/": { "doc_count": 17 } } }

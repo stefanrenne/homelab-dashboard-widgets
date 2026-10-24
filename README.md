@@ -134,6 +134,14 @@ Every widget has its own page with setup, fields and options on the
 | `strelaysrv` | sessions, connections, data relayed and rate of a Syncthing relay | `url` |
 | `suwayomi` | manga chapters downloaded and read | `url`, `username`, `password`, `category` |
 | `swagdashboard` | proxied and protected hosts, outdated configs, banned IPs | `url` |
+| `tandoor` | users, recipes and keywords | `url`, `key` |
+| `technitium` | DNS queries by outcome, clients | `url`, `key`, `node`, `range` |
+| `tracearr` | streams playing across media servers, or a summary | `url`, `key`, `view`, `enableUser`, `showEpisodeNumber` |
+| `trilium` | version, notes and database size | `url`, `key` |
+| `tubearchivist` | downloads waiting, videos, channels and playlists | `url`, `key` |
+| `unifi_drive` | space and pool state of a UniFi NAS | `url`, `username`, `password` |
+| `unmanic` | busy and total workers, pending tasks | `url` |
+| `uptimerobot` | monitors up and down, or one monitor's state | `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

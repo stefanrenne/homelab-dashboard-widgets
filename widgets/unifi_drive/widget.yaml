@@ -1,0 +1,11 @@
+id: unifi_drive
+name: UniFi Drive
+version: 0.1.0
+apiVersion: 1
+description: Total, used and free space and the state of the storage pools of a UniFi NAS (homepage's unifi_drive widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # the UNAS, e.g. https://unas.lan
+  username: { type: string, required: true }   # a local UniFi account with read access
+  password: { type: string, secret: true, required: true }
+  insecure: { type: boolean, default: false }  # accept the device's self-signed certificate

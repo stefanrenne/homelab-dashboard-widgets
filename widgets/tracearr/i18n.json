@@ -1,0 +1,121 @@
+{
+  "en": {
+    "streams": "Streams",
+    "transcodes": "Transcodes",
+    "directplay": "Direct play",
+    "bitrate": "Bitrate",
+    "noActiveStreams": "No active streams"
+  },
+  "nl": {
+    "streams": "Streams",
+    "transcodes": "Transcodes",
+    "directplay": "Direct afspelen",
+    "bitrate": "Bitrate",
+    "noActiveStreams": "Geen actieve streams"
+  },
+  "fr": {
+    "streams": "Flux",
+    "transcodes": "Transcodages",
+    "directplay": "Lecture directe",
+    "bitrate": "Débit",
+    "noActiveStreams": "Aucun flux actif"
+  },
+  "de": {
+    "streams": "Streams",
+    "transcodes": "Transkodiert",
+    "directplay": "Direkt",
+    "bitrate": "Bitrate",
+    "noActiveStreams": "Keine aktiven Streams"
+  },
+  "es": {
+    "streams": "Streams",
+    "transcodes": "Conversiones",
+    "directplay": "Reproducción directa",
+    "bitrate": "Tasa de bits",
+    "noActiveStreams": "Sin transmisiones activas"
+  },
+  "ca": {
+    "streams": "Fluxos",
+    "transcodes": "Conversions",
+    "directplay": "Reproducció directa",
+    "bitrate": "Taxa de bits",
+    "noActiveStreams": "Cap reproducció activa"
+  },
+  "he": {
+    "streams": "הזרמות",
+    "transcodes": "המרות",
+    "directplay": "ניגון ישיר",
+    "bitrate": "קצב סיביות",
+    "noActiveStreams": "אין הזרמות פעילות"
+  },
+  "hr": {
+    "streams": "Streamovi",
+    "transcodes": "Pretvorbe",
+    "directplay": "Izravno",
+    "bitrate": "Brzina",
+    "noActiveStreams": "Nema aktivnih streamova"
+  },
+  "hu": {
+    "streams": "Streamek",
+    "transcodes": "Átkódolások",
+    "directplay": "Közvetlen",
+    "bitrate": "Bitráta",
+    "noActiveStreams": "Nincs aktív lejátszás"
+  },
+  "it": {
+    "streams": "Stream",
+    "transcodes": "Conversioni",
+    "directplay": "Diretta",
+    "bitrate": "Bitrate",
+    "noActiveStreams": "Nessuna riproduzione attiva"
+  },
+  "nb-NO": {
+    "streams": "Strømmer",
+    "transcodes": "Omkodinger",
+    "directplay": "Direkte",
+    "bitrate": "Bithastighet",
+    "noActiveStreams": "Ingen aktive strømmer"
+  },
+  "pt": {
+    "streams": "Streams",
+    "transcodes": "Conversões",
+    "directplay": "Reprodução direta",
+    "bitrate": "Taxa de bits",
+    "noActiveStreams": "Sem transmissões ativas"
+  },
+  "ru": {
+    "streams": "Потоки",
+    "transcodes": "Транскоды",
+    "directplay": "Напрямую",
+    "bitrate": "Битрейт",
+    "noActiveStreams": "Нет активных потоков"
+  },
+  "sv": {
+    "streams": "Strömmar",
+    "transcodes": "Omkodningar",
+    "directplay": "Direkt",
+    "bitrate": "Bithastighet",
+    "noActiveStreams": "Inga aktiva strömmar"
+  },
+  "vi": {
+    "streams": "Luồng phát",
+    "transcodes": "Chuyển mã",
+    "directplay": "Phát trực tiếp",
+    "bitrate": "Tốc độ bit",
+    "noActiveStreams": "Không có luồng phát"
+  },
+  "zh-Hans": {
+    "streams": "串流",
+    "transcodes": "转码",
+    "directplay": "直接播放",
+    "bitrate": "码率",
+    "noActiveStreams": "无活动串流"
+  },
+  "zh-Hant": {
+    "streams": "串流",
+    "transcodes": "轉碼",
+    "directplay": "直接播放",
+    "bitrate": "位元率",
+    "noActiveStreams": "無播放中串流"
+  }
+}

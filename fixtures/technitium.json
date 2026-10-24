@@ -1,0 +1,2 @@
+{ "_note": "Technitium dashboard stats.", "routes": {
+ "GET /api/dashboard/stats/get": { "status": "ok", "response": { "stats": { "totalQueries": 14320, "totalNoError": 13100, "totalServerFailure": 12, "totalNxDomain": 980, "totalRefused": 0, "totalAuthoritative": 2210, "totalRecursive": 4100, "totalCached": 7200, "totalBlocked": 810, "totalDropped": 0, "totalClients": 23 } } } } }

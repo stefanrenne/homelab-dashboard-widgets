@@ -1,0 +1,155 @@
+{
+  "en": {
+    "total": "Total",
+    "used": "Used",
+    "available": "Available",
+    "status": "Status",
+    "healthy": "Healthy",
+    "degraded": "Degraded",
+    "unknown": "Unknown"
+  },
+  "nl": {
+    "total": "Totaal",
+    "used": "Gebruikt",
+    "available": "Beschikbaar",
+    "status": "Status",
+    "healthy": "Gezond",
+    "degraded": "Verminderd",
+    "unknown": "Onbekend"
+  },
+  "fr": {
+    "total": "Total",
+    "used": "Utilisé",
+    "available": "Disponibles",
+    "status": "État",
+    "healthy": "Sains",
+    "degraded": "Dégradés",
+    "unknown": "Inconnu"
+  },
+  "de": {
+    "total": "Gesamt",
+    "used": "Belegt",
+    "available": "Verfügbar",
+    "status": "Status",
+    "healthy": "Gesund",
+    "degraded": "Gestört",
+    "unknown": "Unbekannt"
+  },
+  "es": {
+    "total": "Total",
+    "used": "Usado",
+    "available": "Disponibles",
+    "status": "Estado",
+    "healthy": "Saludables",
+    "degraded": "Degradados",
+    "unknown": "Desconocido"
+  },
+  "ca": {
+    "total": "Total",
+    "used": "Usat",
+    "available": "Disponibles",
+    "status": "Estat",
+    "healthy": "Saludables",
+    "degraded": "Degradats",
+    "unknown": "Desconegut"
+  },
+  "he": {
+    "total": "סך הכול",
+    "used": "בשימוש",
+    "available": "זמינים",
+    "status": "מצב",
+    "healthy": "תקינים",
+    "degraded": "פגועים",
+    "unknown": "לא ידוע"
+  },
+  "hr": {
+    "total": "Ukupno",
+    "used": "Zauzeto",
+    "available": "Dostupno",
+    "status": "Stanje",
+    "healthy": "Zdravo",
+    "degraded": "Degradirano",
+    "unknown": "Nepoznato"
+  },
+  "hu": {
+    "total": "Összesen",
+    "used": "Foglalt",
+    "available": "Elérhető",
+    "status": "Állapot",
+    "healthy": "Egészséges",
+    "degraded": "Romlott",
+    "unknown": "Ismeretlen"
+  },
+  "it": {
+    "total": "Totale",
+    "used": "Usato",
+    "available": "Disponibili",
+    "status": "Stato",
+    "healthy": "Integri",
+    "degraded": "Degradati",
+    "unknown": "Sconosciuto"
+  },
+  "nb-NO": {
+    "total": "Totalt",
+    "used": "Brukt",
+    "available": "Tilgjengelig",
+    "status": "Status",
+    "healthy": "Sunne",
+    "degraded": "Redusert",
+    "unknown": "Ukjent"
+  },
+  "pt": {
+    "total": "Total",
+    "used": "Usado",
+    "available": "Disponíveis",
+    "status": "Estado",
+    "healthy": "Saudáveis",
+    "degraded": "Degradados",
+    "unknown": "Desconhecido"
+  },
+  "ru": {
+    "total": "Всего",
+    "used": "Занято",
+    "available": "Доступно",
+    "status": "Состояние",
+    "healthy": "Исправны",
+    "degraded": "Деградация",
+    "unknown": "Неизвестно"
+  },
+  "sv": {
+    "total": "Totalt",
+    "used": "Använt",
+    "available": "Tillgängliga",
+    "status": "Status",
+    "healthy": "Friska",
+    "degraded": "Försämrade",
+    "unknown": "Okänt"
+  },
+  "vi": {
+    "total": "Tổng",
+    "used": "Đã dùng",
+    "available": "Có sẵn",
+    "status": "Trạng thái",
+    "healthy": "Khỏe mạnh",
+    "degraded": "Suy giảm",
+    "unknown": "Không rõ"
+  },
+  "zh-Hans": {
+    "total": "总计",
+    "used": "已用",
+    "available": "可用",
+    "status": "状态",
+    "healthy": "健康",
+    "degraded": "降级",
+    "unknown": "未知"
+  },
+  "zh-Hant": {
+    "total": "總計",
+    "used": "已用",
+    "available": "可用",
+    "status": "狀態",
+    "healthy": "健康",
+    "degraded": "降級",
+    "unknown": "未知"
+  }
+}

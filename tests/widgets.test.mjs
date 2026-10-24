@@ -148,6 +148,7 @@ const REQUIRED = {
   pfsense: { wan: 'igb0' },
   prometheusmetric: { metrics: [] },
   qnap: { username: 'dashboard', password: 'pw' },
+  unifi_drive: { username: 'dashboard', password: 'pw' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -1731,4 +1732,39 @@ test('rutorrent, slskd, sparkyfitness, spoolman, sportarr, strelaysrv, suwayomi 
   assert.deepEqual(values(swag), { proxied: 24, auth: 9, outdated: 1, banned: 17 });
   assert.equal(swag.blocks[2].status, 'warn');
   assert.equal(lastRequest('swagdashboard').query.stats, 'true');
+});
+
+test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi_drive, unmanic and uptimerobot', async () => {
+  assert.deepEqual(values(await run('tandoor')), { users: 3, recipes: 248, keywords: 57 });
+  assert.equal(lastRequest('tandoor').headers.authorization, 'Bearer test-key');
+
+  const tech = await run('technitium', { range: 'LastDay' });
+  assert.deepEqual(values(tech), { totalQueries: 14320, totalNoError: '13100 (91.5%)', totalServerFailure: '12 (0.1%)', totalNxDomain: '980 (6.8%)', totalRefused: '0 (0%)',
+    totalAuthoritative: '2210 (15.4%)', totalRecursive: '4100 (28.6%)', totalCached: '7200 (50.3%)', totalBlocked: '810 (5.7%)', totalDropped: '0 (0%)', totalClients: 23 });
+  assert.equal(tech.blocks[2].status, 'warn');
+  assert.deepEqual([lastRequest('technitium').query.type, lastRequest('technitium').query.token], ['LastDay', 'test-key']);
+
+  const tr = await run('tracearr', { view: 'both', enableUser: true, showEpisodeNumber: true });
+  assert.deepEqual(values(tr), { streams: 2, transcodes: 1, directplay: 1, bitrate: '28.4 Mbps' });
+  assert.deepEqual(tr.rows, [
+    { label: 'Severance: S02 · E01 - Hello, Ms. Cobel (ben)', icon: 'pause', value: '12:14 / 57:00', progress: 734000 / 3420000 * 100 },
+    { label: 'Dune: Part Two (anna)', icon: 'play', value: '1:15:34 / 2:46:00', progress: 4534000 / 9960000 * 100 }]);
+  assert.equal((await run('tracearr')).blocks, undefined, 'details: rows only');
+
+  assert.deepEqual(values(await run('trilium')), { version: 'v0.97.2', notesCount: 3412, dbSize: '84.2 MB' });
+  assert.equal(lastRequest('trilium').headers.authorization, 'test-key');
+
+  assert.deepEqual(values(await run('tubearchivist')), { downloads: 14, videos: 3120, channels: 48, playlists: 17 });
+  assert.equal(lastRequest('tubearchivist').headers.authorization, 'Token test-key');
+
+  assert.deepEqual(values(await run('unifi_drive')), { total: '16 TB', used: '5.2 TB', available: '10.8 TB', status: 'healthy' });
+  assert.deepEqual([lastRequest('unifi_drive').headers.cookie, lastRequest('unifi_drive').headers['x-csrf-token']], ['TOKEN=unas-jwt', 'csrf-1']);
+
+  assert.deepEqual(values(await run('unmanic')), { active_workers: 1, total_workers: 3, records_total: 42 });
+
+  const ur = await run('uptimerobot');
+  const u = values(ur);
+  assert.deepEqual({ ...u, lastDown: undefined }, { status: 'up', uptime: '4d 3h', lastDown: undefined, downDuration: '1h 0m' });
+  assert.match(u.lastDown, /^2026-03-01 \d\d:00$/);
+  assert.equal(new URLSearchParams(lastRequest('uptimerobot').body).get('api_key'), 'test-key');
 });

@@ -1,0 +1,87 @@
+{
+  "en": {
+    "users": "Users",
+    "recipes": "Recipes",
+    "keywords": "Keywords"
+  },
+  "nl": {
+    "users": "Gebruikers",
+    "recipes": "Recepten",
+    "keywords": "Trefwoorden"
+  },
+  "fr": {
+    "users": "Utilisateurs",
+    "recipes": "Recettes",
+    "keywords": "Mots-clés"
+  },
+  "de": {
+    "users": "Nutzer",
+    "recipes": "Rezepte",
+    "keywords": "Schlagwörter"
+  },
+  "es": {
+    "users": "Usuarios",
+    "recipes": "Recetas",
+    "keywords": "Palabras clave"
+  },
+  "ca": {
+    "users": "Usuaris",
+    "recipes": "Receptes",
+    "keywords": "Paraules clau"
+  },
+  "he": {
+    "users": "משתמשים",
+    "recipes": "מתכונים",
+    "keywords": "מילות מפתח"
+  },
+  "hr": {
+    "users": "Korisnici",
+    "recipes": "Recepti",
+    "keywords": "Ključne riječi"
+  },
+  "hu": {
+    "users": "Felhasználók",
+    "recipes": "Receptek",
+    "keywords": "Kulcsszavak"
+  },
+  "it": {
+    "users": "Utenti",
+    "recipes": "Ricette",
+    "keywords": "Parole chiave"
+  },
+  "nb-NO": {
+    "users": "Brukere",
+    "recipes": "Oppskrifter",
+    "keywords": "Nøkkelord"
+  },
+  "pt": {
+    "users": "Utilizadores",
+    "recipes": "Receitas",
+    "keywords": "Palavras-chave"
+  },
+  "ru": {
+    "users": "Пользователи",
+    "recipes": "Рецепты",
+    "keywords": "Ключевые слова"
+  },
+  "sv": {
+    "users": "Användare",
+    "recipes": "Recept",
+    "keywords": "Nyckelord"
+  },
+  "vi": {
+    "users": "Người dùng",
+    "recipes": "Công thức",
+    "keywords": "Từ khóa"
+  },
+  "zh-Hans": {
+    "users": "用户",
+    "recipes": "食谱",
+    "keywords": "关键词"
+  },
+  "zh-Hant": {
+    "users": "使用者",
+    "recipes": "食譜",
+    "keywords": "關鍵字"
+  }
+}

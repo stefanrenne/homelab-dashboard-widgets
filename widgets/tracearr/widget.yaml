@@ -1,0 +1,12 @@
+id: tracearr
+name: Tracearr
+version: 0.1.0
+apiVersion: 1
+description: The streams playing now across your media servers, with their progress, or a summary, from Tracearr (homepage's tracearr widget).
+refresh: 15s
+options:
+  url: { type: url, required: true }       # e.g. http://tracearr.lan:3000
+  key: { type: string, secret: true, required: true }   # Settings > API, a public API key
+  view: { type: enum, values: [details, summary, both], default: details }   # rows per stream, blocks with totals, or both
+  enableUser: { type: boolean, default: false }       # the user after the title
+  showEpisodeNumber: { type: boolean, default: false }

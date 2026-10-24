@@ -56,6 +56,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - Widgets for OpenDTU, OPNsense, OpenWrt, Pangolin, PeaNUT (Network UPS Tools), pfSense, PhotoPrism and Plant-it.
 - Widgets for Prometheus, Prometheus Metric (PromQL queries), Pterodactyl, Pulse, pyLoad, QNAP, qui and RomM.
 - Widgets for ruTorrent, slskd, SparkyFitness, Spoolman, Sportarr, the Syncthing Relay Server, Suwayomi and SWAG Dashboard.
+- Widgets for Tandoor, Technitium DNS Server, Tracearr, Trilium, Tube Archivist, UniFi Drive, Unmanic and UptimeRobot.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

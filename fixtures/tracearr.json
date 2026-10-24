@@ -1,0 +1,5 @@
+{ "_note": "Tracearr: an episode paused and a movie playing.", "routes": {
+ "GET /api/v1/public/streams": { "data": [
+  { "id": "1", "mediaType": "movie", "mediaTitle": "Dune: Part Two", "username": "anna", "state": "playing", "progressMs": 4534000, "durationMs": 9960000, "videoDecision": "directplay", "audioDecision": "directplay" },
+  { "id": "2", "mediaType": "episode", "showTitle": "Severance", "mediaTitle": "Hello, Ms. Cobel", "seasonNumber": 2, "episodeNumber": 1, "username": "ben", "state": "paused", "progressMs": 734000, "durationMs": 3420000, "videoDecision": "transcode", "audioDecision": "copy" }],
+  "summary": { "total": 2, "transcodes": 1, "directPlays": 1, "totalBitrate": "28.4 Mbps" } } } }
