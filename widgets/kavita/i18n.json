@@ -1,0 +1,70 @@
+{
+  "en": {
+    "seriesCount": "Series",
+    "totalFiles": "Files"
+  },
+  "nl": {
+    "seriesCount": "Series",
+    "totalFiles": "Bestanden"
+  },
+  "fr": {
+    "seriesCount": "Séries",
+    "totalFiles": "Fichiers"
+  },
+  "de": {
+    "seriesCount": "Serien",
+    "totalFiles": "Dateien"
+  },
+  "es": {
+    "seriesCount": "Series",
+    "totalFiles": "Archivos"
+  },
+  "ca": {
+    "seriesCount": "Sèries",
+    "totalFiles": "Fitxers"
+  },
+  "he": {
+    "seriesCount": "סדרות",
+    "totalFiles": "קבצים"
+  },
+  "hr": {
+    "seriesCount": "Serije",
+    "totalFiles": "Datoteke"
+  },
+  "hu": {
+    "seriesCount": "Sorozatok",
+    "totalFiles": "Fájlok"
+  },
+  "it": {
+    "seriesCount": "Serie",
+    "totalFiles": "File"
+  },
+  "nb-NO": {
+    "seriesCount": "Serier",
+    "totalFiles": "Filer"
+  },
+  "pt": {
+    "seriesCount": "Séries",
+    "totalFiles": "Ficheiros"
+  },
+  "ru": {
+    "seriesCount": "Сериалы",
+    "totalFiles": "Файлы"
+  },
+  "sv": {
+    "seriesCount": "Serier",
+    "totalFiles": "Filer"
+  },
+  "vi": {
+    "seriesCount": "Phim bộ",
+    "totalFiles": "Tệp"
+  },
+  "zh-Hans": {
+    "seriesCount": "剧集",
+    "totalFiles": "文件"
+  },
+  "zh-Hant": {
+    "seriesCount": "影集",
+    "totalFiles": "檔案"
+  }
+}

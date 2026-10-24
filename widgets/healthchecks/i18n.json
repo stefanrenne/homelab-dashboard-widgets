@@ -1,0 +1,189 @@
+{
+  "en": {
+    "up": "Up",
+    "down": "Down",
+    "status": "Status",
+    "last_ping": "Last ping",
+    "never": "Never",
+    "grace": "Grace period",
+    "paused": "Paused",
+    "new": "New",
+    "started": "Started"
+  },
+  "nl": {
+    "up": "Actief",
+    "down": "Offline",
+    "status": "Status",
+    "last_ping": "Laatste ping",
+    "never": "Nooit",
+    "grace": "Respijt",
+    "paused": "Gepauzeerd",
+    "new": "Nieuw",
+    "started": "Gestart"
+  },
+  "fr": {
+    "up": "Actif",
+    "down": "Hors ligne",
+    "status": "État",
+    "last_ping": "Dernier ping",
+    "never": "Jamais",
+    "grace": "En sursis",
+    "paused": "En pause",
+    "new": "Nouveau",
+    "started": "Démarré"
+  },
+  "de": {
+    "up": "Aktiv",
+    "down": "Ausgefallen",
+    "status": "Status",
+    "last_ping": "Letzter Ping",
+    "never": "Nie",
+    "grace": "Karenzzeit",
+    "paused": "Pausiert",
+    "new": "Neu",
+    "started": "Gestartet"
+  },
+  "es": {
+    "up": "Activa",
+    "down": "Caída",
+    "status": "Estado",
+    "last_ping": "Último ping",
+    "never": "Nunca",
+    "grace": "En gracia",
+    "paused": "En pausa",
+    "new": "Nuevo",
+    "started": "Iniciado"
+  },
+  "ca": {
+    "up": "Actiu",
+    "down": "Caigut",
+    "status": "Estat",
+    "last_ping": "Últim ping",
+    "never": "Mai",
+    "grace": "En gràcia",
+    "paused": "En pausa",
+    "new": "Nou",
+    "started": "Iniciat"
+  },
+  "he": {
+    "up": "פעיל",
+    "down": "נפל",
+    "status": "מצב",
+    "last_ping": "פינג אחרון",
+    "never": "אף פעם",
+    "grace": "תקופת חסד",
+    "paused": "מושהה",
+    "new": "חדש",
+    "started": "פועל"
+  },
+  "hr": {
+    "up": "Radi",
+    "down": "Ne radi",
+    "status": "Stanje",
+    "last_ping": "Zadnji ping",
+    "never": "Nikad",
+    "grace": "Odgoda",
+    "paused": "Pauzirano",
+    "new": "Novo",
+    "started": "Pokrenuto"
+  },
+  "hu": {
+    "up": "Működik",
+    "down": "Leállt",
+    "status": "Állapot",
+    "last_ping": "Utolsó ping",
+    "never": "Soha",
+    "grace": "Türelmi idő",
+    "paused": "Szüneteltetve",
+    "new": "Új",
+    "started": "Elindítva"
+  },
+  "it": {
+    "up": "Attivo",
+    "down": "Giù",
+    "status": "Stato",
+    "last_ping": "Ultimo ping",
+    "never": "Mai",
+    "grace": "In tolleranza",
+    "paused": "In pausa",
+    "new": "Nuovo",
+    "started": "Avviato"
+  },
+  "nb-NO": {
+    "up": "Oppe",
+    "down": "Nede",
+    "status": "Status",
+    "last_ping": "Siste ping",
+    "never": "Aldri",
+    "grace": "Frist",
+    "paused": "Pauset",
+    "new": "Ny",
+    "started": "Startet"
+  },
+  "pt": {
+    "up": "Ativo",
+    "down": "Em baixo",
+    "status": "Estado",
+    "last_ping": "Último ping",
+    "never": "Nunca",
+    "grace": "Em tolerância",
+    "paused": "Em pausa",
+    "new": "Novo",
+    "started": "Iniciado"
+  },
+  "ru": {
+    "up": "Работает",
+    "down": "Недоступен",
+    "status": "Состояние",
+    "last_ping": "Последний пинг",
+    "never": "Никогда",
+    "grace": "Отсрочка",
+    "paused": "Пауза",
+    "new": "Новый",
+    "started": "Запущен"
+  },
+  "sv": {
+    "up": "Uppe",
+    "down": "Nere",
+    "status": "Status",
+    "last_ping": "Senaste ping",
+    "never": "Aldrig",
+    "grace": "Respit",
+    "paused": "Pausad",
+    "new": "Ny",
+    "started": "Startad"
+  },
+  "vi": {
+    "up": "Hoạt động",
+    "down": "Ngừng",
+    "status": "Trạng thái",
+    "last_ping": "Ping gần nhất",
+    "never": "Không bao giờ",
+    "grace": "Ân hạn",
+    "paused": "Tạm dừng",
+    "new": "Mới",
+    "started": "Đã khởi động"
+  },
+  "zh-Hans": {
+    "up": "正常",
+    "down": "宕机",
+    "status": "状态",
+    "last_ping": "上次 ping",
+    "never": "永不",
+    "grace": "宽限期",
+    "paused": "已暂停",
+    "new": "新建",
+    "started": "已启动"
+  },
+  "zh-Hant": {
+    "up": "正常",
+    "down": "停止",
+    "status": "狀態",
+    "last_ping": "上次 ping",
+    "never": "永不",
+    "grace": "寬限期",
+    "paused": "已暫停",
+    "new": "新建",
+    "started": "已啟動"
+  }
+}

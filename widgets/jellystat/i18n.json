@@ -1,0 +1,104 @@
+{
+  "en": {
+    "songs": "Songs",
+    "movies": "Movies",
+    "episodes": "Episodes",
+    "other": "Other"
+  },
+  "nl": {
+    "songs": "Nummers",
+    "movies": "Films",
+    "episodes": "Afleveringen",
+    "other": "Overig"
+  },
+  "fr": {
+    "songs": "Titres",
+    "movies": "Films",
+    "episodes": "Épisodes",
+    "other": "Autres"
+  },
+  "de": {
+    "songs": "Titel",
+    "movies": "Filme",
+    "episodes": "Episoden",
+    "other": "Sonstiges"
+  },
+  "es": {
+    "songs": "Canciones",
+    "movies": "Películas",
+    "episodes": "Episodios",
+    "other": "Otros"
+  },
+  "ca": {
+    "songs": "Cançons",
+    "movies": "Pel·lícules",
+    "episodes": "Episodis",
+    "other": "Altres"
+  },
+  "he": {
+    "songs": "שירים",
+    "movies": "סרטים",
+    "episodes": "פרקים",
+    "other": "אחר"
+  },
+  "hr": {
+    "songs": "Pjesme",
+    "movies": "Filmovi",
+    "episodes": "Epizode",
+    "other": "Ostalo"
+  },
+  "hu": {
+    "songs": "Dalok",
+    "movies": "Filmek",
+    "episodes": "Epizódok",
+    "other": "Egyéb"
+  },
+  "it": {
+    "songs": "Brani",
+    "movies": "Film",
+    "episodes": "Episodi",
+    "other": "Altro"
+  },
+  "nb-NO": {
+    "songs": "Sanger",
+    "movies": "Filmer",
+    "episodes": "Episoder",
+    "other": "Annet"
+  },
+  "pt": {
+    "songs": "Músicas",
+    "movies": "Filmes",
+    "episodes": "Episódios",
+    "other": "Outros"
+  },
+  "ru": {
+    "songs": "Треки",
+    "movies": "Фильмы",
+    "episodes": "Серии",
+    "other": "Другое"
+  },
+  "sv": {
+    "songs": "Låtar",
+    "movies": "Filmer",
+    "episodes": "Avsnitt",
+    "other": "Övrigt"
+  },
+  "vi": {
+    "songs": "Bài hát",
+    "movies": "Phim",
+    "episodes": "Tập",
+    "other": "Khác"
+  },
+  "zh-Hans": {
+    "songs": "歌曲",
+    "movies": "电影",
+    "episodes": "剧集数",
+    "other": "其他"
+  },
+  "zh-Hant": {
+    "songs": "歌曲",
+    "movies": "電影",
+    "episodes": "集數",
+    "other": "其他"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "en": {
+    "status": "Status",
+    "updates": "Updates",
+    "child_bridges": "Child bridges",
+    "up": "Up",
+    "down": "Down",
+    "pending": "Pending",
+    "updateAvailable": "Update available",
+    "upToDate": "Up to date"
+  },
+  "nl": {
+    "status": "Status",
+    "updates": "Updates",
+    "child_bridges": "Child bridges",
+    "up": "Actief",
+    "down": "Offline",
+    "pending": "Wachtend",
+    "updateAvailable": "Update beschikbaar",
+    "upToDate": "Bijgewerkt"
+  },
+  "fr": {
+    "status": "État",
+    "updates": "Mises à jour",
+    "child_bridges": "Ponts enfants",
+    "up": "Actif",
+    "down": "Hors ligne",
+    "pending": "En attente",
+    "updateAvailable": "Mise à jour",
+    "upToDate": "À jour"
+  },
+  "de": {
+    "status": "Status",
+    "updates": "Updates",
+    "child_bridges": "Kind-Bridges",
+    "up": "Aktiv",
+    "down": "Ausgefallen",
+    "pending": "Wartend",
+    "updateAvailable": "Update verfügbar",
+    "upToDate": "Aktuell"
+  },
+  "es": {
+    "status": "Estado",
+    "updates": "Pendientes",
+    "child_bridges": "Puentes hijos",
+    "up": "Activa",
+    "down": "Caída",
+    "pending": "Pendiente",
+    "updateAvailable": "Versión nueva",
+    "upToDate": "Al día"
+  },
+  "ca": {
+    "status": "Estat",
+    "updates": "Noves versions",
+    "child_bridges": "Ponts fills",
+    "up": "Actiu",
+    "down": "Caigut",
+    "pending": "Pendent",
+    "updateAvailable": "Versió nova",
+    "upToDate": "Al dia"
+  },
+  "he": {
+    "status": "מצב",
+    "updates": "עדכונים",
+    "child_bridges": "גשרי משנה",
+    "up": "פעיל",
+    "down": "נפל",
+    "pending": "ממתין",
+    "updateAvailable": "עדכון זמין",
+    "upToDate": "מעודכן"
+  },
+  "hr": {
+    "status": "Stanje",
+    "updates": "Ažuriranja",
+    "child_bridges": "Podmostovi",
+    "up": "Radi",
+    "down": "Ne radi",
+    "pending": "Na čekanju",
+    "updateAvailable": "Ima ažuriranja",
+    "upToDate": "Ažurno"
+  },
+  "hu": {
+    "status": "Állapot",
+    "updates": "Frissítések",
+    "child_bridges": "Gyermekhidak",
+    "up": "Működik",
+    "down": "Leállt",
+    "pending": "Függőben",
+    "updateAvailable": "Frissítés van",
+    "upToDate": "Naprakész"
+  },
+  "it": {
+    "status": "Stato",
+    "updates": "Novità",
+    "child_bridges": "Bridge figli",
+    "up": "Attivo",
+    "down": "Giù",
+    "pending": "In attesa",
+    "updateAvailable": "Nuova versione",
+    "upToDate": "Aggiornato"
+  },
+  "nb-NO": {
+    "status": "Status",
+    "updates": "Oppdatering",
+    "child_bridges": "Underbroer",
+    "up": "Oppe",
+    "down": "Nede",
+    "pending": "Venter",
+    "updateAvailable": "Oppdatering",
+    "upToDate": "Oppdatert"
+  },
+  "pt": {
+    "status": "Estado",
+    "updates": "Atualizações",
+    "child_bridges": "Pontes filhas",
+    "up": "Ativo",
+    "down": "Em baixo",
+    "pending": "Pendente",
+    "updateAvailable": "Atualização",
+    "upToDate": "Atualizado"
+  },
+  "ru": {
+    "status": "Состояние",
+    "updates": "Обновления",
+    "child_bridges": "Дочерние мосты",
+    "up": "Работает",
+    "down": "Недоступен",
+    "pending": "Ожидает",
+    "updateAvailable": "Есть обновление",
+    "upToDate": "Актуально"
+  },
+  "sv": {
+    "status": "Status",
+    "updates": "Uppdatering",
+    "child_bridges": "Underbryggor",
+    "up": "Uppe",
+    "down": "Nere",
+    "pending": "Väntar",
+    "updateAvailable": "Uppdatering finns",
+    "upToDate": "Aktuell"
+  },
+  "vi": {
+    "status": "Trạng thái",
+    "updates": "Cập nhật",
+    "child_bridges": "Cầu con",
+    "up": "Hoạt động",
+    "down": "Ngừng",
+    "pending": "Đang chờ",
+    "updateAvailable": "Có cập nhật",
+    "upToDate": "Mới nhất"
+  },
+  "zh-Hans": {
+    "status": "状态",
+    "updates": "更新",
+    "child_bridges": "子桥",
+    "up": "正常",
+    "down": "宕机",
+    "pending": "待定",
+    "updateAvailable": "有更新",
+    "upToDate": "已是最新"
+  },
+  "zh-Hant": {
+    "status": "狀態",
+    "updates": "更新",
+    "child_bridges": "子橋接",
+    "up": "正常",
+    "down": "停止",
+    "pending": "待定",
+    "updateAvailable": "有更新",
+    "upToDate": "已是最新"
+  }
+}

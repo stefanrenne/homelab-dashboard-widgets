@@ -1,0 +1,2 @@
+{ "_note": "Karakeep stats of the key's user.", "routes": {
+ "GET /api/v1/users/me/stats": { "numBookmarks": 412, "numFavorites": 37, "numArchived": 120, "numHighlights": 58, "numLists": 9, "numTags": 64 } } }

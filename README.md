@@ -79,6 +79,13 @@ Every widget has its own page with setup, fields and options on the
 | `gotify` | applications, clients and messages | `url`, `key` |
 | `hdhomerun` | channels, tuners in use, a tuner's channel and signal | `url`, `tuner` |
 | `headscale` | a node's name, address, last seen and online state | `url`, `nodeId`, `key` |
+| `healthchecks` | checks up and down, or one check's state and last ping | `url`, `key`, `uuid` |
+| `homebox` | items, locations, labels and the inventory's value | `url`, `username`, `password` |
+| `homebridge` | status, updates and child bridges | `url`, `username`, `password` |
+| `jdownloader` | packages, size, remaining and download rate (My.JDownloader) | `username`, `password`, `client` |
+| `jellystat` | songs, movies, episodes and other items played | `url`, `key`, `days` |
+| `karakeep` | bookmarks, favorites, archived items, highlights, lists and tags | `url`, `key` |
+| `kavita` | series and files | `url`, `username`, `password`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

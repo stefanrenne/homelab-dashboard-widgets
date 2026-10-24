@@ -1,0 +1,10 @@
+id: homebridge
+name: Homebridge
+version: 0.1.0
+apiVersion: 1
+description: Whether Homebridge runs, updates for it and its plugins, and the child bridges running (homepage's homebridge widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # Homebridge UI, e.g. http://homebridge.lan:8581
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }

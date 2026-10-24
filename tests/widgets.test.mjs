@@ -14,16 +14,61 @@ const LANGS = ['en', 'nl', 'fr', 'de', 'es', 'ca', 'he', 'hr', 'hu', 'it', 'nb-N
 let mock;
 let apcupsd; // apcups speaks apcupsd's TCP protocol, not HTTP
 let a2s; // gamedig speaks Valve's server query over UDP
+let myjd; // jdownloader's My.JDownloader answers encrypted
 before(async () => {
   mock = await startMock();
   apcupsd = await nis(['STATUS   : ONLINE', 'LOADPCT  : 10.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 60.0 Minutes']);
   a2s = await gameServer();
+  myjd = await myJDownloader();
 });
 after(() => {
   mock.close();
   apcupsd.close();
   a2s.close();
+  myjd.close();
 });
+
+/** A fake My.JDownloader: login, the device list and a device's packages, with its crypto. */
+async function myJDownloader() {
+  const http = await import('node:http');
+  const { secrets, derive, encrypt, decrypt } = await import(path.join(WIDGETS, 'jdownloader', 'server.js'));
+  const crypto = await import('node:crypto');
+  const s = secrets('Anna@example.com', 'pw');
+  const session = 'a1b2c3d4';
+  const calls = [];
+  const srv = http.createServer((req, res) => {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', () => {
+      const u = new URL(req.url, 'http://x');
+      calls.push(u.pathname);
+      const signedBy = (key) => {
+        const query = req.url.slice(0, req.url.indexOf('&signature='));
+        return u.searchParams.get('signature') === crypto.createHmac('sha256', key).update(query).digest('hex');
+      };
+      const rid = Number(u.searchParams.get('rid'));
+      if (u.pathname === '/my/connect') {
+        if (!signedBy(s.login) || u.searchParams.get('email') !== 'anna@example.com') return res.writeHead(403).end('{}');
+        return res.end(encrypt(JSON.stringify({ sessiontoken: session, regaintoken: 'ff', rid }), s.login));
+      }
+      if (u.pathname === '/my/listdevices') {
+        const server = derive(s.login, session);
+        if (!signedBy(server)) return res.writeHead(403).end('{}');
+        return res.end(encrypt(JSON.stringify({ list: [{ id: 'dev1', name: 'JDownloader@nas', type: 'jd' }], rid }), server));
+      }
+      if (u.pathname === `/t_${session}_dev1/downloadsV2/queryPackages`) {
+        const key = derive(s.device, session);
+        const q = JSON.parse(decrypt(body, key));
+        return res.end(encrypt(JSON.stringify({ rid: q.rid, data: [
+          { name: 'debian', bytesTotal: 4000000000, bytesLoaded: 1000000000, speed: 2500000, finished: false },
+          { name: 'photos', bytesTotal: 1000000000, bytesLoaded: 1000000000, speed: 0, finished: true }] }), key));
+      }
+      res.writeHead(404).end('{}');
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  return { url: `http://127.0.0.1:${srv.address().port}`, calls, close: () => srv.close() };
+}
 
 /** A fake game server answering A2S_INFO, after a challenge as newer servers do. */
 async function gameServer() {
@@ -65,6 +110,9 @@ const REQUIRED = {
   get gamedig() { return { url: a2s.url, serverType: 'csgo', timeout: 1 }; },
   gitlab: { user_id: '42' },
   headscale: { nodeId: '3' },
+  get jdownloader() { return { url: myjd.url, username: 'Anna@example.com', password: 'pw', client: 'JDownloader@nas' }; },
+  homebox: { username: 'anna@example.com', password: 'pw' },
+  homebridge: { username: 'admin', password: 'pw' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -1371,4 +1419,43 @@ test('gamedig, gatus, ghostfolio, gitlab, gluetun, gotify, hdhomerun and headsca
   assert.match(h.last_seen, /^\d+d \d+h$/);
   assert.equal(hs.blocks[3].status, 'warn');
   await assert.rejects(run('headscale', { nodeId: '3/../x' }), /nodeId/);
+});
+
+test('healthchecks, homebox, homebridge, jdownloader, jellystat, karakeep and kavita', async () => {
+  const hc = await run('healthchecks');
+  assert.deepEqual(values(hc), { up: 2, down: 1 });
+  assert.equal(hc.blocks[1].status, 'error');
+  assert.equal(lastRequest('healthchecks').headers['x-api-key'], 'test-key');
+  const one = await run('healthchecks', { uuid: '5f1c3a2e-8b7d-4e6f-9a0b-1c2d3e4f5a6b' });
+  assert.deepEqual([one.blocks[0].value, one.blocks[0].status], ['grace', 'warn']);
+  assert.match(one.blocks[1].value, /^\d+d \d+h$/);
+  await assert.rejects(run('healthchecks', { uuid: '../../x' }), /uuid/);
+
+  assert.deepEqual(values(await run('homebox')), { items: 214, totalWithWarranty: 31, locations: 12, labels: 18, users: 2, totalValue: '18350.50 EUR' });
+  assert.equal(lastRequest('homebox').headers.authorization, 'Bearer hb-token');
+
+  const hb = await run('homebridge');
+  assert.deepEqual(values(hb), { status: 'up', updates: 'updateAvailable', child_bridges: '1 / 2' });
+  assert.deepEqual(hb.blocks.map((b) => b.status ?? null), [null, 'warn', 'warn']);
+  assert.equal(lastRequest('homebridge').headers.authorization, 'Bearer hb-jwt');
+
+  const ctx = { options: { ...REQUIRED.jdownloader }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) };
+  const { default: jd } = await import(path.join(WIDGETS, 'jdownloader', 'server.js'));
+  assert.deepEqual(values(await jd.fetch(ctx)), { downloadCount: 2, downloadTotalBytes: '5 GB', downloadBytesRemaining: '3 GB', downloadSpeed: '2.5 MB/s' });
+  const before = myjd.calls.length;
+  await jd.fetch(ctx);
+  assert.deepEqual(myjd.calls.slice(before), ['/t_a1b2c3d4_dev1/downloadsV2/queryPackages'], 'the session is kept');
+  ctx.cache.set('session', { ...ctx.cache.get('session'), device: 'gone' });
+  assert.equal(values(await jd.fetch(ctx)).downloadCount, 2, 'a failing session is made anew');
+  await assert.rejects(run('jdownloader', { client: 'other' }), /no JDownloader named "other".*JDownloader@nas/);
+  await assert.rejects(run('jdownloader', { password: 'wrong' }), (err) => /My.JDownloader login answered 403/.test(err.message) && !err.message.includes('wrong'));
+
+  assert.deepEqual(values(await run('jellystat', { days: 7 })), { songs: 312, movies: 14, episodes: 58, other: 2 });
+  assert.deepEqual([lastRequest('jellystat').query.days, lastRequest('jellystat').headers['x-api-token']], ['7', 'test-key']);
+
+  assert.deepEqual(values(await run('karakeep')), { bookmarks: 412, favorites: 37, archived: 120, highlights: 58, lists: 9, tags: 64 });
+
+  assert.deepEqual(values(await run('kavita')), { seriesCount: 186, totalFiles: 2421 });
+  assert.deepEqual(JSON.parse(mock.requests.filter((r) => r.widget === 'kavita' && r.route.startsWith('POST')).at(-1).body), { username: '', password: '', apiKey: 'test-key' });
+  assert.equal(lastRequest('kavita').headers.authorization, 'Bearer kv-jwt');
 });

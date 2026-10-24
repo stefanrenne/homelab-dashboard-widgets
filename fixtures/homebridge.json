@@ -1,0 +1,6 @@
+{ "_note": "Homebridge up, a plugin update, one of two child bridges stopped.", "routes": {
+ "POST /api/auth/login": { "access_token": "hb-jwt", "token_type": "Bearer", "expires_in": 28800 },
+ "GET /api/status/homebridge": { "status": "up" },
+ "GET /api/status/homebridge-version": { "name": "homebridge", "installedVersion": "1.8.4", "latestVersion": "1.8.4", "updateAvailable": false },
+ "GET /api/status/homebridge/child-bridges": [{ "name": "Hue", "status": "ok" }, { "name": "Ring", "status": "down" }],
+ "GET /api/plugins": [{ "name": "homebridge-hue", "updateAvailable": true }, { "name": "homebridge-ring", "updateAvailable": false }] } }

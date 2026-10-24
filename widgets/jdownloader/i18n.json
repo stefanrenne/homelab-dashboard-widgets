@@ -1,0 +1,104 @@
+{
+  "en": {
+    "downloadCount": "Packages",
+    "downloadTotalBytes": "Total size",
+    "downloadBytesRemaining": "Remaining",
+    "downloadSpeed": "Download rate"
+  },
+  "nl": {
+    "downloadCount": "Pakketten",
+    "downloadTotalBytes": "Totale grootte",
+    "downloadBytesRemaining": "Resterend",
+    "downloadSpeed": "Snelheid"
+  },
+  "fr": {
+    "downloadCount": "Paquets",
+    "downloadTotalBytes": "Taille totale",
+    "downloadBytesRemaining": "Restant",
+    "downloadSpeed": "Débit"
+  },
+  "de": {
+    "downloadCount": "Pakete",
+    "downloadTotalBytes": "Gesamtgröße",
+    "downloadBytesRemaining": "Verbleibend",
+    "downloadSpeed": "Downloadrate"
+  },
+  "es": {
+    "downloadCount": "Paquetes",
+    "downloadTotalBytes": "Tamaño total",
+    "downloadBytesRemaining": "Restante",
+    "downloadSpeed": "Velocidad"
+  },
+  "ca": {
+    "downloadCount": "Paquets",
+    "downloadTotalBytes": "Mida total",
+    "downloadBytesRemaining": "Restant",
+    "downloadSpeed": "Velocitat"
+  },
+  "he": {
+    "downloadCount": "חבילות",
+    "downloadTotalBytes": "גודל כולל",
+    "downloadBytesRemaining": "נותר",
+    "downloadSpeed": "קצב הורדה"
+  },
+  "hr": {
+    "downloadCount": "Paketi",
+    "downloadTotalBytes": "Ukupna veličina",
+    "downloadBytesRemaining": "Preostalo",
+    "downloadSpeed": "Brzina"
+  },
+  "hu": {
+    "downloadCount": "Csomagok",
+    "downloadTotalBytes": "Teljes méret",
+    "downloadBytesRemaining": "Hátralévő",
+    "downloadSpeed": "Sebesség"
+  },
+  "it": {
+    "downloadCount": "Pacchetti",
+    "downloadTotalBytes": "Totale",
+    "downloadBytesRemaining": "Rimanente",
+    "downloadSpeed": "Velocità"
+  },
+  "nb-NO": {
+    "downloadCount": "Pakker",
+    "downloadTotalBytes": "Størrelse",
+    "downloadBytesRemaining": "Gjenstår",
+    "downloadSpeed": "Hastighet"
+  },
+  "pt": {
+    "downloadCount": "Pacotes",
+    "downloadTotalBytes": "Tamanho total",
+    "downloadBytesRemaining": "Restante",
+    "downloadSpeed": "Velocidade"
+  },
+  "ru": {
+    "downloadCount": "Пакеты",
+    "downloadTotalBytes": "Общий размер",
+    "downloadBytesRemaining": "Осталось",
+    "downloadSpeed": "Скорость"
+  },
+  "sv": {
+    "downloadCount": "Paket",
+    "downloadTotalBytes": "Total storlek",
+    "downloadBytesRemaining": "Kvar",
+    "downloadSpeed": "Hastighet"
+  },
+  "vi": {
+    "downloadCount": "Gói",
+    "downloadTotalBytes": "Dung lượng",
+    "downloadBytesRemaining": "Còn lại",
+    "downloadSpeed": "Tốc độ tải"
+  },
+  "zh-Hans": {
+    "downloadCount": "包",
+    "downloadTotalBytes": "总大小",
+    "downloadBytesRemaining": "剩余",
+    "downloadSpeed": "下载速度"
+  },
+  "zh-Hant": {
+    "downloadCount": "封包",
+    "downloadTotalBytes": "總大小",
+    "downloadBytesRemaining": "剩餘",
+    "downloadSpeed": "下載速度"
+  }
+}

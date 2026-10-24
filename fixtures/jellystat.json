@@ -1,0 +1,2 @@
+{ "_note": "Jellystat views per library type.", "routes": {
+ "GET /stats/getViewsByLibraryType": { "Audio": 312, "Movie": 14, "Series": 58, "Other": 2 } } }

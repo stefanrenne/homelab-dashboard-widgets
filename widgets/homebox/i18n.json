@@ -1,0 +1,138 @@
+{
+  "en": {
+    "items": "Items",
+    "totalWithWarranty": "Under warranty",
+    "locations": "Locations",
+    "labels": "Labels",
+    "users": "Users",
+    "totalValue": "Total value"
+  },
+  "nl": {
+    "items": "Items",
+    "totalWithWarranty": "Met garantie",
+    "locations": "Locaties",
+    "labels": "Labels",
+    "users": "Gebruikers",
+    "totalValue": "Totale waarde"
+  },
+  "fr": {
+    "items": "Objets",
+    "totalWithWarranty": "Sous garantie",
+    "locations": "Lieux",
+    "labels": "Étiquettes",
+    "users": "Utilisateurs",
+    "totalValue": "Valeur totale"
+  },
+  "de": {
+    "items": "Gegenstände",
+    "totalWithWarranty": "Mit Garantie",
+    "locations": "Orte",
+    "labels": "Etiketten",
+    "users": "Nutzer",
+    "totalValue": "Gesamtwert"
+  },
+  "es": {
+    "items": "Artículos",
+    "totalWithWarranty": "Con garantía",
+    "locations": "Ubicaciones",
+    "labels": "Etiquetas",
+    "users": "Usuarios",
+    "totalValue": "Valor total"
+  },
+  "ca": {
+    "items": "Articles",
+    "totalWithWarranty": "Amb garantia",
+    "locations": "Ubicacions",
+    "labels": "Etiquetes",
+    "users": "Usuaris",
+    "totalValue": "Valor total"
+  },
+  "he": {
+    "items": "פריטים",
+    "totalWithWarranty": "באחריות",
+    "locations": "מיקומים",
+    "labels": "תוויות",
+    "users": "משתמשים",
+    "totalValue": "שווי כולל"
+  },
+  "hr": {
+    "items": "Stavke",
+    "totalWithWarranty": "Pod jamstvom",
+    "locations": "Lokacije",
+    "labels": "Oznake",
+    "users": "Korisnici",
+    "totalValue": "Ukupna vrijednost"
+  },
+  "hu": {
+    "items": "Tárgyak",
+    "totalWithWarranty": "Garanciális",
+    "locations": "Helyek",
+    "labels": "Címkék",
+    "users": "Felhasználók",
+    "totalValue": "Összérték"
+  },
+  "it": {
+    "items": "Oggetti",
+    "totalWithWarranty": "In garanzia",
+    "locations": "Luoghi",
+    "labels": "Etichette",
+    "users": "Utenti",
+    "totalValue": "Valore totale"
+  },
+  "nb-NO": {
+    "items": "Ting",
+    "totalWithWarranty": "Med garanti",
+    "locations": "Steder",
+    "labels": "Etiketter",
+    "users": "Brukere",
+    "totalValue": "Total verdi"
+  },
+  "pt": {
+    "items": "Itens",
+    "totalWithWarranty": "Com garantia",
+    "locations": "Locais",
+    "labels": "Etiquetas",
+    "users": "Utilizadores",
+    "totalValue": "Valor total"
+  },
+  "ru": {
+    "items": "Предметы",
+    "totalWithWarranty": "На гарантии",
+    "locations": "Места",
+    "labels": "Метки",
+    "users": "Пользователи",
+    "totalValue": "Общая стоимость"
+  },
+  "sv": {
+    "items": "Saker",
+    "totalWithWarranty": "Med garanti",
+    "locations": "Platser",
+    "labels": "Etiketter",
+    "users": "Användare",
+    "totalValue": "Totalt värde"
+  },
+  "vi": {
+    "items": "Đồ vật",
+    "totalWithWarranty": "Còn bảo hành",
+    "locations": "Vị trí",
+    "labels": "Nhãn",
+    "users": "Người dùng",
+    "totalValue": "Tổng giá trị"
+  },
+  "zh-Hans": {
+    "items": "物品",
+    "totalWithWarranty": "保修中",
+    "locations": "位置",
+    "labels": "标签",
+    "users": "用户",
+    "totalValue": "总价值"
+  },
+  "zh-Hant": {
+    "items": "物品",
+    "totalWithWarranty": "保固中",
+    "locations": "位置",
+    "labels": "標籤",
+    "users": "使用者",
+    "totalValue": "總價值"
+  }
+}

@@ -1,0 +1,4 @@
+{ "_note": "Homebox: a logged-in group with 214 items worth 18,350.5 EUR.", "routes": {
+ "POST /api/v1/users/login": { "token": "Bearer hb-token", "expiresAt": "2099-01-01T00:00:00Z" },
+ "GET /api/v1/groups/statistics": { "totalItems": 214, "totalWithWarranty": 31, "totalLocations": 12, "totalLabels": 18, "totalUsers": 2, "totalItemPrice": 18350.5 },
+ "GET /api/v1/groups": { "name": "Home", "currency": "EUR" } } }

@@ -1,0 +1,11 @@
+id: homebox
+name: Homebox
+version: 0.1.0
+apiVersion: 1
+description: Items, locations, labels, users and the total value of your inventory in Homebox (homepage's homebox widget).
+refresh: 5m
+defaultFields: [items, locations, totalValue]
+options:
+  url: { type: url, required: true }       # e.g. http://homebox.lan:7745
+  username: { type: string, required: true }   # the e-mail address you log in with
+  password: { type: string, secret: true, required: true }

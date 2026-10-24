@@ -1,0 +1,10 @@
+id: healthchecks
+name: Health checks
+version: 0.1.0
+apiVersion: 1
+description: Checks up and down in Healthchecks.io, or one check's state and last ping (homepage's healthchecks widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # e.g. https://healthchecks.lan (or https://healthchecks.io)
+  key: { type: string, secret: true, required: true }   # Project Settings > API Keys (read-only is enough)
+  uuid: { type: string }                   # one check; without it the totals of all checks

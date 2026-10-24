@@ -1,0 +1,138 @@
+{
+  "en": {
+    "bookmarks": "Bookmarks",
+    "favorites": "Favorites",
+    "archived": "Archived",
+    "highlights": "Highlights",
+    "lists": "Lists",
+    "tags": "Tags"
+  },
+  "nl": {
+    "bookmarks": "Bladwijzers",
+    "favorites": "Favorieten",
+    "archived": "Gearchiveerd",
+    "highlights": "Markeringen",
+    "lists": "Lijsten",
+    "tags": "Labels"
+  },
+  "fr": {
+    "bookmarks": "Signets",
+    "favorites": "Favoris",
+    "archived": "Archivés",
+    "highlights": "Surlignages",
+    "lists": "Listes",
+    "tags": "Étiquettes"
+  },
+  "de": {
+    "bookmarks": "Lesezeichen",
+    "favorites": "Favoriten",
+    "archived": "Archiviert",
+    "highlights": "Markierungen",
+    "lists": "Listen",
+    "tags": "Tags"
+  },
+  "es": {
+    "bookmarks": "Marcadores",
+    "favorites": "Favoritos",
+    "archived": "Archivados",
+    "highlights": "Resaltados",
+    "lists": "Listas",
+    "tags": "Etiquetas"
+  },
+  "ca": {
+    "bookmarks": "Marcadors",
+    "favorites": "Preferits",
+    "archived": "Arxivats",
+    "highlights": "Destacats",
+    "lists": "Llistes",
+    "tags": "Etiquetes"
+  },
+  "he": {
+    "bookmarks": "סימניות",
+    "favorites": "מועדפים",
+    "archived": "בארכיון",
+    "highlights": "הדגשות",
+    "lists": "רשימות",
+    "tags": "תגיות"
+  },
+  "hr": {
+    "bookmarks": "Oznake",
+    "favorites": "Favoriti",
+    "archived": "Arhivirano",
+    "highlights": "Istaknuto",
+    "lists": "Popisi",
+    "tags": "Oznake"
+  },
+  "hu": {
+    "bookmarks": "Könyvjelzők",
+    "favorites": "Kedvencek",
+    "archived": "Archivált",
+    "highlights": "Kiemelések",
+    "lists": "Listák",
+    "tags": "Címkék"
+  },
+  "it": {
+    "bookmarks": "Segnalibri",
+    "favorites": "Preferiti",
+    "archived": "Archiviati",
+    "highlights": "Evidenziati",
+    "lists": "Elenchi",
+    "tags": "Tag"
+  },
+  "nb-NO": {
+    "bookmarks": "Bokmerker",
+    "favorites": "Favoritter",
+    "archived": "Arkivert",
+    "highlights": "Uthevinger",
+    "lists": "Lister",
+    "tags": "Tagger"
+  },
+  "pt": {
+    "bookmarks": "Marcadores",
+    "favorites": "Favoritos",
+    "archived": "Arquivados",
+    "highlights": "Destaques",
+    "lists": "Listas",
+    "tags": "Etiquetas"
+  },
+  "ru": {
+    "bookmarks": "Закладки",
+    "favorites": "Избранное",
+    "archived": "В архиве",
+    "highlights": "Выделения",
+    "lists": "Списки",
+    "tags": "Теги"
+  },
+  "sv": {
+    "bookmarks": "Bokmärken",
+    "favorites": "Favoriter",
+    "archived": "Arkiverade",
+    "highlights": "Markeringar",
+    "lists": "Listor",
+    "tags": "Taggar"
+  },
+  "vi": {
+    "bookmarks": "Dấu trang",
+    "favorites": "Yêu thích",
+    "archived": "Đã lưu trữ",
+    "highlights": "Đánh dấu",
+    "lists": "Danh sách",
+    "tags": "Thẻ"
+  },
+  "zh-Hans": {
+    "bookmarks": "书签",
+    "favorites": "收藏",
+    "archived": "已归档",
+    "highlights": "高亮",
+    "lists": "列表",
+    "tags": "标签"
+  },
+  "zh-Hant": {
+    "bookmarks": "書籤",
+    "favorites": "最愛",
+    "archived": "已封存",
+    "highlights": "標記",
+    "lists": "清單",
+    "tags": "標籤"
+  }
+}
