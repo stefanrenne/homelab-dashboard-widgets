@@ -49,6 +49,7 @@ Every widget has its own page with setup, fields and options on the
 | `openmeteo` | the current weather, no account needed (a header widget) | `latitude`, `longitude` (else the viewer's location), `label`, `units`, `timezone`, `cache` |
 | `openweathermap` | the current weather (a header widget) | `apiKey` (or `provider: openweathermap`), `latitude`, `longitude`, `label`, `units`, `cache` |
 | `stocks` | price and day change of up to eight symbols, from Finnhub (a header widget) | `watchlist`, `apiKey` (or `provider: finnhub`), `color`, `cache` |
+| `truenas` | load, uptime, alerts; pools per row with `enablePools` | `url`, `key` or `username`/`password`, `version` (1 or 2), `enablePools`, `insecure` |
 | `unraid` | memory %, cpu, array %, pool1 %; more via `fields` (homepage field names) | `url`, `key`, `pool1`–`pool4` |
 
 Pick blocks with the dashboard's `fields`, e.g. `fields: [cpu, memoryPercent, pool1UsedPercent]`.

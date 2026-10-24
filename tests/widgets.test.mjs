@@ -792,3 +792,59 @@ test('npm: enabled, disabled and total proxy hosts, with a token that is kept', 
   await npm.fetch(ctx);
   assert.deepEqual(mock.requests.slice(before).map((r) => r.route), ['GET /api/nginx/proxy-hosts'], 'the token is kept');
 });
+
+test('truenas: load, uptime and alerts (marked) over REST, pools per row, unhealthy first', async () => {
+  const out = await run('truenas', { enablePools: true });
+  assert.deepEqual(values(out), { load: 0.47, uptime: '12d 4h', alerts: 1 });
+  assert.equal(out.blocks[2].status, 'warn');
+  assert.deepEqual(out.rows, [
+    { label: 'fast', value: '300 GB / 1 TB', progress: 30, status: 'error' },
+    { label: 'tank', value: '6 TB / 8 TB', progress: 75 },
+  ]);
+  assert.equal(lastRequest('truenas').headers.authorization, 'Bearer test-key');
+});
+
+test('truenas version 2: the same over the JSON-RPC WebSocket API, with an API key login', async () => {
+  const http = await import('node:http');
+  const crypto = await import('node:crypto');
+  const calls = [];
+  const answers = {
+    'auth.login_with_api_key': (p) => p[0] === 'k3y',
+    'alert.list': () => [{ dismissed: false }, { dismissed: false }],
+    'system.info': () => ({ loadavg: [1.5, 1, 1], uptime_seconds: 3700 }),
+  };
+  const srv = http.createServer();
+  srv.on('upgrade', (req, sock) => {
+    const accept = crypto.createHash('sha1').update(`${req.headers['sec-websocket-key']}258EAFA5-E914-47DA-95CA-C5AB0DC85B11`).digest('base64');
+    sock.write(`HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: ${accept}\r\n\r\n`);
+    let buf = Buffer.alloc(0);
+    sock.on('data', (c) => {
+      buf = Buffer.concat([buf, c]);
+      while (buf.length >= 6) {
+        let len = buf[1] & 0x7f;
+        let at = 2;
+        if (len === 126) { len = buf.readUInt16BE(2); at = 4; }
+        if (buf.length < at + 4 + len) return;
+        const mask = buf.subarray(at, at + 4);
+        const data = Buffer.from(buf.subarray(at + 4, at + 4 + len).map((b, i) => b ^ mask[i % 4]));
+        const op = buf[0] & 0x0f;
+        buf = buf.subarray(at + 4 + len);
+        if (op === 8) { sock.end(); return; }
+        const msg = JSON.parse(data.toString());
+        calls.push(msg.method);
+        const text = Buffer.from(JSON.stringify({ jsonrpc: '2.0', id: msg.id, result: answers[msg.method](msg.params) }));
+        sock.write(Buffer.concat([Buffer.from(text.length < 126 ? [0x81, text.length] : [0x81, 126, text.length >> 8, text.length & 255]), text]));
+      }
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: truenas } = await import(path.join(WIDGETS, 'truenas', 'server.js'));
+  const ctx = (key) => ({ options: { url: `http://127.0.0.1:${srv.address().port}`, key, version: 2 }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) });
+  try {
+    assert.deepEqual(values(await truenas.fetch(ctx('k3y'))), { load: 1.5, uptime: '1h 1m', alerts: 2 });
+    assert.deepEqual(calls, ['auth.login_with_api_key', 'alert.list', 'system.info']);
+    await assert.rejects(truenas.fetch(ctx('wrong')), /TrueNAS login answered 401/);
+  } finally {
+    srv.close();
+  }
+});

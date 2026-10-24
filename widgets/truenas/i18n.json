@@ -1,0 +1,87 @@
+{
+  "en": {
+    "load": "Load",
+    "uptime": "Uptime",
+    "alerts": "Alerts"
+  },
+  "nl": {
+    "load": "Belasting",
+    "uptime": "Uptime",
+    "alerts": "Meldingen"
+  },
+  "fr": {
+    "load": "Charge",
+    "uptime": "Temps actif",
+    "alerts": "Alertes"
+  },
+  "de": {
+    "load": "Last",
+    "uptime": "Laufzeit",
+    "alerts": "Warnungen"
+  },
+  "es": {
+    "load": "Carga",
+    "uptime": "Tiempo activo",
+    "alerts": "Alertas"
+  },
+  "ca": {
+    "load": "Càrrega",
+    "uptime": "Temps actiu",
+    "alerts": "Alertes"
+  },
+  "he": {
+    "load": "עומס",
+    "uptime": "זמן פעולה",
+    "alerts": "התראות"
+  },
+  "hr": {
+    "load": "Opterećenje",
+    "uptime": "Vrijeme rada",
+    "alerts": "Upozorenja"
+  },
+  "hu": {
+    "load": "Terhelés",
+    "uptime": "Üzemidő",
+    "alerts": "Riasztások"
+  },
+  "it": {
+    "load": "Carico",
+    "uptime": "Tempo attivo",
+    "alerts": "Avvisi"
+  },
+  "nb-NO": {
+    "load": "Last",
+    "uptime": "Oppetid",
+    "alerts": "Varsler"
+  },
+  "pt": {
+    "load": "Carga",
+    "uptime": "Tempo ativo",
+    "alerts": "Alertas"
+  },
+  "ru": {
+    "load": "Нагрузка",
+    "uptime": "Время работы",
+    "alerts": "Оповещения"
+  },
+  "sv": {
+    "load": "Last",
+    "uptime": "Drifttid",
+    "alerts": "Larm"
+  },
+  "vi": {
+    "load": "Tải",
+    "uptime": "Hoạt động",
+    "alerts": "Cảnh báo"
+  },
+  "zh-Hans": {
+    "load": "负载",
+    "uptime": "运行时间",
+    "alerts": "警报"
+  },
+  "zh-Hant": {
+    "load": "負載",
+    "uptime": "運作時間",
+    "alerts": "警示"
+  }
+}

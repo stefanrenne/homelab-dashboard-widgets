@@ -1,0 +1,13 @@
+{
+ "_note": "TrueNAS REST API v2.0: two alerts (one dismissed), system info, two pools (one degraded) and their root datasets.",
+ "routes": {
+  "GET /api/v2.0/alert/list": [{ "id": "a", "dismissed": false, "level": "WARNING" }, { "id": "b", "dismissed": true, "level": "INFO" }],
+  "GET /api/v2.0/system/info": { "version": "TrueNAS-SCALE-24.10.2", "loadavg": [0.4721, 0.51, 0.6], "uptime_seconds": 1051200 },
+  "GET /api/v2.0/pool": [{ "id": 1, "name": "tank", "healthy": true }, { "id": 2, "name": "fast", "healthy": false }],
+  "GET /api/v2.0/pool/dataset": [
+   { "id": "tank", "name": "tank", "pool": "tank", "used": { "parsed": 6000000000000 }, "available": { "parsed": 2000000000000 } },
+   { "id": "tank/media", "name": "tank/media", "pool": "tank", "used": { "parsed": 5000000000000 }, "available": { "parsed": 2000000000000 } },
+   { "id": "fast", "name": "fast", "pool": "fast", "used": { "parsed": 300000000000 }, "available": { "parsed": 700000000000 } }
+  ]
+ }
+}

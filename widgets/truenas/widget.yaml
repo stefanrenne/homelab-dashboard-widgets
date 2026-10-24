@@ -1,0 +1,15 @@
+id: truenas
+name: TrueNAS
+version: 0.1.0
+apiVersion: 1
+description: Load, uptime and alerts of TrueNAS, and optionally its pools (homepage's truenas widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. https://truenas.lan
+  key: { type: string, secret: true }      # an API key: your user (top right) > API Keys
+  username: { type: string }               # instead of key
+  password: { type: string, secret: true }
+  version: { type: number, default: 1 }    # 2 for TrueNAS 25.04 or later (the WebSocket API), as in homepage
+  enablePools: { type: boolean, default: false }   # a row per pool with its use; unhealthy ones marked
+  nasType: { type: enum, values: [scale, core], default: scale }   # homepage's option; both work the same here
+  insecure: { type: boolean, default: false }      # accept a self-signed certificate
