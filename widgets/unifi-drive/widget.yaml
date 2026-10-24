@@ -1,9 +1,10 @@
-id: unifi_drive
+id: unifi-drive
 name: UniFi Drive
 version: 0.1.0
 apiVersion: 1
 description: Total, used and free space and the state of the storage pools of a UniFi NAS (homepage's unifi_drive widget).
 refresh: 5m
+aliases: [unifi_drive]   # homepage's name
 options:
   url: { type: url, required: true }       # the UNAS, e.g. https://unas.lan
   username: { type: string, required: true }   # a local UniFi account with read access

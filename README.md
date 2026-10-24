@@ -139,7 +139,7 @@ Every widget has its own page with setup, fields and options on the
 | `tracearr` | streams playing across media servers, or a summary | `url`, `key`, `view`, `enableUser`, `showEpisodeNumber` |
 | `trilium` | version, notes and database size | `url`, `key` |
 | `tubearchivist` | downloads waiting, videos, channels and playlists | `url`, `key` |
-| `unifi_drive` | space and pool state of a UniFi NAS | `url`, `username`, `password` |
+| `unifi-drive` | space and pool state of a UniFi NAS | `url`, `username`, `password` |
 | `unmanic` | busy and total workers, pending tasks | `url` |
 | `uptimerobot` | monitors up and down, or one monitor's state | `key` |
 | `urbackup` | clients fine, failed and not recent, space used | `url`, `username`, `password`, `maxDays` |

@@ -181,7 +181,7 @@ const REQUIRED = {
   pfsense: { wan: 'igb0' },
   prometheusmetric: { metrics: [] },
   qnap: { username: 'dashboard', password: 'pw' },
-  unifi_drive: { username: 'dashboard', password: 'pw' },
+  'unifi-drive': { username: 'dashboard', password: 'pw' },
   get urbackup() { return { url: urb.url, username: 'dashboard', password: 'pw' }; },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
@@ -215,6 +215,7 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
   for (const id of IDS) {
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     assert.equal(m.id, id);
+    assert.match(id, /^[a-z0-9][a-z0-9-]{0,62}$/, `${id}: the dashboard's id format (homepage's names with _ go in aliases)`);
     assert.equal(m.apiVersion, 1);
     assert.match(m.version, /^\d+\.\d+\.\d+$/);
     for (const [name, def] of Object.entries(m.options)) {
@@ -1768,7 +1769,7 @@ test('rutorrent, slskd, sparkyfitness, spoolman, sportarr, strelaysrv, suwayomi 
   assert.equal(lastRequest('swagdashboard').query.stats, 'true');
 });
 
-test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi_drive, unmanic and uptimerobot', async () => {
+test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi-drive, unmanic and uptimerobot', async () => {
   assert.deepEqual(values(await run('tandoor')), { users: 3, recipes: 248, keywords: 57 });
   assert.equal(lastRequest('tandoor').headers.authorization, 'Bearer test-key');
 
@@ -1791,8 +1792,8 @@ test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi_drive, unmani
   assert.deepEqual(values(await run('tubearchivist')), { downloads: 14, videos: 3120, channels: 48, playlists: 17 });
   assert.equal(lastRequest('tubearchivist').headers.authorization, 'Token test-key');
 
-  assert.deepEqual(values(await run('unifi_drive')), { total: '16 TB', used: '5.2 TB', available: '10.8 TB', status: 'healthy' });
-  assert.deepEqual([lastRequest('unifi_drive').headers.cookie, lastRequest('unifi_drive').headers['x-csrf-token']], ['TOKEN=unas-jwt', 'csrf-1']);
+  assert.deepEqual(values(await run('unifi-drive')), { total: '16 TB', used: '5.2 TB', available: '10.8 TB', status: 'healthy' });
+  assert.deepEqual([lastRequest('unifi-drive').headers.cookie, lastRequest('unifi-drive').headers['x-csrf-token']], ['TOKEN=unas-jwt', 'csrf-1']);
 
   assert.deepEqual(values(await run('unmanic')), { active_workers: 1, total_workers: 3, records_total: 42 });
 
