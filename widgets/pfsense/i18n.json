@@ -1,0 +1,172 @@
+{
+  "en": {
+    "load": "Load",
+    "memory": "Memory",
+    "temp": "Temperature",
+    "wanStatus": "WAN",
+    "wanIP": "WAN IP",
+    "disk": "Disk",
+    "up": "Up",
+    "down": "Down"
+  },
+  "nl": {
+    "load": "Belasting",
+    "memory": "Geheugen",
+    "temp": "Temperatuur",
+    "wanStatus": "WAN",
+    "wanIP": "WAN-IP",
+    "disk": "Schijf",
+    "up": "Actief",
+    "down": "Offline"
+  },
+  "fr": {
+    "load": "Charge",
+    "memory": "Mémoire",
+    "temp": "Température",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Disque",
+    "up": "Actif",
+    "down": "Hors ligne"
+  },
+  "de": {
+    "load": "Last",
+    "memory": "Speicher",
+    "temp": "Temperatur",
+    "wanStatus": "WAN",
+    "wanIP": "WAN-IP",
+    "disk": "Platte",
+    "up": "Aktiv",
+    "down": "Ausgefallen"
+  },
+  "es": {
+    "load": "Carga",
+    "memory": "Memoria",
+    "temp": "Temperatura",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Disco",
+    "up": "Activa",
+    "down": "Caída"
+  },
+  "ca": {
+    "load": "Càrrega",
+    "memory": "Memòria",
+    "temp": "Temperatura",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Disc",
+    "up": "Actiu",
+    "down": "Caigut"
+  },
+  "he": {
+    "load": "עומס",
+    "memory": "זיכרון",
+    "temp": "טמפרטורה",
+    "wanStatus": "WAN",
+    "wanIP": "IP של WAN",
+    "disk": "דיסק",
+    "up": "פעיל",
+    "down": "נפל"
+  },
+  "hr": {
+    "load": "Opterećenje",
+    "memory": "Memorija",
+    "temp": "Temperatura",
+    "wanStatus": "WAN",
+    "wanIP": "WAN IP",
+    "disk": "Disk",
+    "up": "Radi",
+    "down": "Ne radi"
+  },
+  "hu": {
+    "load": "Terhelés",
+    "memory": "Memória",
+    "temp": "Hőmérséklet",
+    "wanStatus": "WAN",
+    "wanIP": "WAN IP",
+    "disk": "Lemez",
+    "up": "Működik",
+    "down": "Leállt"
+  },
+  "it": {
+    "load": "Carico",
+    "memory": "Memoria",
+    "temp": "Temperatura",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Disco",
+    "up": "Attivo",
+    "down": "Giù"
+  },
+  "nb-NO": {
+    "load": "Last",
+    "memory": "Minne",
+    "temp": "Temperatur",
+    "wanStatus": "WAN",
+    "wanIP": "WAN-IP",
+    "disk": "Disk",
+    "up": "Oppe",
+    "down": "Nede"
+  },
+  "pt": {
+    "load": "Carga",
+    "memory": "Memória",
+    "temp": "Temperatura",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Disco",
+    "up": "Ativo",
+    "down": "Em baixo"
+  },
+  "ru": {
+    "load": "Нагрузка",
+    "memory": "Память",
+    "temp": "Температура",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Диск",
+    "up": "Работает",
+    "down": "Недоступен"
+  },
+  "sv": {
+    "load": "Last",
+    "memory": "Minne",
+    "temp": "Temperatur",
+    "wanStatus": "WAN",
+    "wanIP": "WAN-IP",
+    "disk": "Disk",
+    "up": "Uppe",
+    "down": "Nere"
+  },
+  "vi": {
+    "load": "Tải",
+    "memory": "Bộ nhớ",
+    "temp": "Nhiệt độ",
+    "wanStatus": "WAN",
+    "wanIP": "IP WAN",
+    "disk": "Ổ đĩa",
+    "up": "Hoạt động",
+    "down": "Ngừng"
+  },
+  "zh-Hans": {
+    "load": "负载",
+    "memory": "内存",
+    "temp": "温度",
+    "wanStatus": "WAN",
+    "wanIP": "WAN IP",
+    "disk": "磁盘",
+    "up": "正常",
+    "down": "宕机"
+  },
+  "zh-Hant": {
+    "load": "負載",
+    "memory": "記憶體",
+    "temp": "溫度",
+    "wanStatus": "WAN",
+    "wanIP": "WAN IP",
+    "disk": "磁碟",
+    "up": "正常",
+    "down": "停止"
+  }
+}

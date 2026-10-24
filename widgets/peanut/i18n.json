@@ -1,0 +1,155 @@
+{
+  "en": {
+    "battery_charge": "Battery",
+    "ups_load": "UPS load",
+    "ups_status": "Status",
+    "online": "Online",
+    "on_battery": "On battery",
+    "low_battery": "Low battery",
+    "unknown": "Unknown"
+  },
+  "nl": {
+    "battery_charge": "Batterij",
+    "ups_load": "UPS-belasting",
+    "ups_status": "Status",
+    "online": "Online",
+    "on_battery": "Op batterij",
+    "low_battery": "Accu bijna leeg",
+    "unknown": "Onbekend"
+  },
+  "fr": {
+    "battery_charge": "Batterie",
+    "ups_load": "Charge onduleur",
+    "ups_status": "État",
+    "online": "En ligne",
+    "on_battery": "Sur batterie",
+    "low_battery": "Batterie faible",
+    "unknown": "Inconnu"
+  },
+  "de": {
+    "battery_charge": "Akku",
+    "ups_load": "USV-Last",
+    "ups_status": "Status",
+    "online": "Online",
+    "on_battery": "Auf Akku",
+    "low_battery": "Akku schwach",
+    "unknown": "Unbekannt"
+  },
+  "es": {
+    "battery_charge": "Batería",
+    "ups_load": "Carga del SAI",
+    "ups_status": "Estado",
+    "online": "En línea",
+    "on_battery": "Con batería",
+    "low_battery": "Batería baja",
+    "unknown": "Desconocido"
+  },
+  "ca": {
+    "battery_charge": "Bateria",
+    "ups_load": "Càrrega del SAI",
+    "ups_status": "Estat",
+    "online": "En línia",
+    "on_battery": "Amb bateria",
+    "low_battery": "Bateria baixa",
+    "unknown": "Desconegut"
+  },
+  "he": {
+    "battery_charge": "סוללה",
+    "ups_load": "עומס אל־פסק",
+    "ups_status": "מצב",
+    "online": "מחובר",
+    "on_battery": "על סוללה",
+    "low_battery": "סוללה חלשה",
+    "unknown": "לא ידוע"
+  },
+  "hr": {
+    "battery_charge": "Baterija",
+    "ups_load": "Opterećenje",
+    "ups_status": "Stanje",
+    "online": "Na mreži",
+    "on_battery": "Na bateriji",
+    "low_battery": "Baterija slaba",
+    "unknown": "Nepoznato"
+  },
+  "hu": {
+    "battery_charge": "Akkumulátor",
+    "ups_load": "UPS terhelés",
+    "ups_status": "Állapot",
+    "online": "Hálózaton",
+    "on_battery": "Akkuról",
+    "low_battery": "Gyenge akku",
+    "unknown": "Ismeretlen"
+  },
+  "it": {
+    "battery_charge": "Batteria",
+    "ups_load": "Carico UPS",
+    "ups_status": "Stato",
+    "online": "In linea",
+    "on_battery": "A batteria",
+    "low_battery": "Batteria scarica",
+    "unknown": "Sconosciuto"
+  },
+  "nb-NO": {
+    "battery_charge": "Batteri",
+    "ups_load": "UPS-last",
+    "ups_status": "Status",
+    "online": "Tilkoblet",
+    "on_battery": "På batteri",
+    "low_battery": "Lavt batteri",
+    "unknown": "Ukjent"
+  },
+  "pt": {
+    "battery_charge": "Bateria",
+    "ups_load": "Carga da UPS",
+    "ups_status": "Estado",
+    "online": "Ligado",
+    "on_battery": "Na bateria",
+    "low_battery": "Bateria fraca",
+    "unknown": "Desconhecido"
+  },
+  "ru": {
+    "battery_charge": "Батарея",
+    "ups_load": "Нагрузка ИБП",
+    "ups_status": "Состояние",
+    "online": "В сети",
+    "on_battery": "От батареи",
+    "low_battery": "Батарея садится",
+    "unknown": "Неизвестно"
+  },
+  "sv": {
+    "battery_charge": "Batteri",
+    "ups_load": "UPS-last",
+    "ups_status": "Status",
+    "online": "Ansluten",
+    "on_battery": "På batteri",
+    "low_battery": "Lågt batteri",
+    "unknown": "Okänt"
+  },
+  "vi": {
+    "battery_charge": "Pin",
+    "ups_load": "Tải UPS",
+    "ups_status": "Trạng thái",
+    "online": "Trực tuyến",
+    "on_battery": "Dùng pin",
+    "low_battery": "Pin yếu",
+    "unknown": "Không rõ"
+  },
+  "zh-Hans": {
+    "battery_charge": "电池",
+    "ups_load": "UPS 负载",
+    "ups_status": "状态",
+    "online": "在线",
+    "on_battery": "电池供电",
+    "low_battery": "电量低",
+    "unknown": "未知"
+  },
+  "zh-Hant": {
+    "battery_charge": "電池",
+    "ups_load": "UPS 負載",
+    "ups_status": "狀態",
+    "online": "線上",
+    "on_battery": "電池供電",
+    "low_battery": "電量低",
+    "unknown": "未知"
+  }
+}

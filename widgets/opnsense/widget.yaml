@@ -1,0 +1,12 @@
+id: opnsense
+name: OPNsense
+version: 0.1.0
+apiVersion: 1
+description: CPU use, active memory and the traffic sent and received on the WAN of an OPNsense firewall (homepage's opnsense widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # e.g. https://opnsense.lan
+  username: { type: string, required: true }   # the API key (key= in apikey.txt)
+  password: { type: string, secret: true, required: true }   # the API secret (secret= in apikey.txt)
+  wan: { type: string, default: wan }      # the interface, as named under Interfaces > Assignments (e.g. opt1)
+  insecure: { type: boolean, default: false }  # accept the firewall's self-signed certificate

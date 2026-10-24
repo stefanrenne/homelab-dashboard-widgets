@@ -1,0 +1,2 @@
+{ "_note": "OpenDTU with two inverters (800 W limit together).", "routes": {
+ "GET /api/livedata/status": { "inverters": [{ "serial": "1161", "limit_absolute": 600 }, { "serial": "1162", "limit_absolute": 200 }], "total": { "Power": { "v": 412.6, "u": "W", "d": 1 }, "YieldDay": { "v": 2318.4, "u": "Wh", "d": 0 }, "YieldTotal": { "v": 1520.3, "u": "kWh", "d": 3 } } } } }

@@ -1,0 +1,2 @@
+{ "_note": "Plant-it stats.", "routes": {
+ "GET /api/stats": { "diaryEntryCount": 214, "plantCount": 37, "imageCount": 152, "botanicalInfoCount": 29 } } }

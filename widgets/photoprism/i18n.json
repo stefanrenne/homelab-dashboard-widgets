@@ -1,0 +1,104 @@
+{
+  "en": {
+    "albums": "Albums",
+    "photos": "Photos",
+    "videos": "Videos",
+    "people": "People"
+  },
+  "nl": {
+    "albums": "Albums",
+    "photos": "Foto's",
+    "videos": "Video's",
+    "people": "Personen"
+  },
+  "fr": {
+    "albums": "Albums",
+    "photos": "Photos",
+    "videos": "Vidéos",
+    "people": "Personnes"
+  },
+  "de": {
+    "albums": "Alben",
+    "photos": "Fotos",
+    "videos": "Videos",
+    "people": "Personen"
+  },
+  "es": {
+    "albums": "Álbumes",
+    "photos": "Fotos",
+    "videos": "Vídeos",
+    "people": "Personas"
+  },
+  "ca": {
+    "albums": "Àlbums",
+    "photos": "Fotos",
+    "videos": "Vídeos",
+    "people": "Persones"
+  },
+  "he": {
+    "albums": "אלבומים",
+    "photos": "תמונות",
+    "videos": "סרטונים",
+    "people": "אנשים"
+  },
+  "hr": {
+    "albums": "Albumi",
+    "photos": "Fotografije",
+    "videos": "Videozapisi",
+    "people": "Osobe"
+  },
+  "hu": {
+    "albums": "Albumok",
+    "photos": "Fényképek",
+    "videos": "Videók",
+    "people": "Személyek"
+  },
+  "it": {
+    "albums": "Album",
+    "photos": "Foto",
+    "videos": "Video",
+    "people": "Persone"
+  },
+  "nb-NO": {
+    "albums": "Album",
+    "photos": "Bilder",
+    "videos": "Videoer",
+    "people": "Personer"
+  },
+  "pt": {
+    "albums": "Álbuns",
+    "photos": "Fotos",
+    "videos": "Vídeos",
+    "people": "Pessoas"
+  },
+  "ru": {
+    "albums": "Альбомы",
+    "photos": "Фото",
+    "videos": "Видео",
+    "people": "Люди"
+  },
+  "sv": {
+    "albums": "Album",
+    "photos": "Foton",
+    "videos": "Videor",
+    "people": "Personer"
+  },
+  "vi": {
+    "albums": "Album",
+    "photos": "Ảnh",
+    "videos": "Video",
+    "people": "Người"
+  },
+  "zh-Hans": {
+    "albums": "专辑",
+    "photos": "照片",
+    "videos": "视频",
+    "people": "人物"
+  },
+  "zh-Hant": {
+    "albums": "專輯",
+    "photos": "照片",
+    "videos": "影片",
+    "people": "人物"
+  }
+}

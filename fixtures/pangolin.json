@@ -1,0 +1,6 @@
+{ "_note": "Pangolin org homelab: two sites (one offline), three resources (one with all targets unhealthy).", "routes": {
+ "GET /v1/org/homelab/sites": { "data": { "sites": [{ "name": "home", "online": true, "megabytesIn": 1200.5, "megabytesOut": 340.25 }, { "name": "cabin", "online": false, "megabytesIn": 10, "megabytesOut": 2 }] } },
+ "GET /v1/org/homelab/resources": { "data": { "resources": [
+  { "name": "jellyfin", "targets": [{ "healthStatus": "healthy" }, { "healthStatus": "unhealthy" }] },
+  { "name": "wiki", "targets": [{ "healthStatus": "unhealthy" }] },
+  { "name": "ssh", "targets": [] }] } } } }

@@ -1,0 +1,104 @@
+{
+  "en": {
+    "yieldDay": "Yield today",
+    "relativePower": "Power share",
+    "absolutePower": "Power",
+    "limit": "Limit"
+  },
+  "nl": {
+    "yieldDay": "Opgewekt vandaag",
+    "relativePower": "Van limiet",
+    "absolutePower": "Vermogen",
+    "limit": "Limiet"
+  },
+  "fr": {
+    "yieldDay": "Produit ce jour",
+    "relativePower": "De la limite",
+    "absolutePower": "Puissance",
+    "limit": "Limite"
+  },
+  "de": {
+    "yieldDay": "Ertrag heute",
+    "relativePower": "Anteil am Limit",
+    "absolutePower": "Leistung",
+    "limit": "Limit"
+  },
+  "es": {
+    "yieldDay": "Producción hoy",
+    "relativePower": "Del límite",
+    "absolutePower": "Potencia",
+    "limit": "Límite"
+  },
+  "ca": {
+    "yieldDay": "Producció avui",
+    "relativePower": "Part del límit",
+    "absolutePower": "Potència",
+    "limit": "Límit"
+  },
+  "he": {
+    "yieldDay": "תפוקה היום",
+    "relativePower": "חלק מהמגבלה",
+    "absolutePower": "הספק",
+    "limit": "מגבלה"
+  },
+  "hr": {
+    "yieldDay": "Prinos danas",
+    "relativePower": "Udio granice",
+    "absolutePower": "Snaga",
+    "limit": "Granica"
+  },
+  "hu": {
+    "yieldDay": "Mai hozam",
+    "relativePower": "Korlát része",
+    "absolutePower": "Teljesítmény",
+    "limit": "Korlát"
+  },
+  "it": {
+    "yieldDay": "Resa di oggi",
+    "relativePower": "Del limite",
+    "absolutePower": "Potenza",
+    "limit": "Limite"
+  },
+  "nb-NO": {
+    "yieldDay": "Produksjon i dag",
+    "relativePower": "Andel av grense",
+    "absolutePower": "Effekt",
+    "limit": "Grense"
+  },
+  "pt": {
+    "yieldDay": "Produção hoje",
+    "relativePower": "Parte do limite",
+    "absolutePower": "Potência",
+    "limit": "Limite"
+  },
+  "ru": {
+    "yieldDay": "За сегодня",
+    "relativePower": "Доля лимита",
+    "absolutePower": "Мощность",
+    "limit": "Лимит"
+  },
+  "sv": {
+    "yieldDay": "Produktion idag",
+    "relativePower": "Andel av gräns",
+    "absolutePower": "Effekt",
+    "limit": "Gräns"
+  },
+  "vi": {
+    "yieldDay": "Hôm nay",
+    "relativePower": "Tỷ lệ giới hạn",
+    "absolutePower": "Công suất",
+    "limit": "Giới hạn"
+  },
+  "zh-Hans": {
+    "yieldDay": "今日发电",
+    "relativePower": "功率占比",
+    "absolutePower": "功率",
+    "limit": "限制"
+  },
+  "zh-Hant": {
+    "yieldDay": "今日發電",
+    "relativePower": "功率占比",
+    "absolutePower": "功率",
+    "limit": "限制"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "en": {
+    "sites": "Sites",
+    "resources": "Resources",
+    "targets": "Targets",
+    "traffic": "Traffic",
+    "in": "In",
+    "out": "Out"
+  },
+  "nl": {
+    "sites": "Sites",
+    "resources": "Bronnen",
+    "targets": "Doelen",
+    "traffic": "Verkeer",
+    "in": "In",
+    "out": "Uit"
+  },
+  "fr": {
+    "sites": "Sites",
+    "resources": "Ressources",
+    "targets": "Cibles",
+    "traffic": "Trafic",
+    "in": "Entrant",
+    "out": "Sortant"
+  },
+  "de": {
+    "sites": "Standorte",
+    "resources": "Ressourcen",
+    "targets": "Ziele",
+    "traffic": "Datenverkehr",
+    "in": "Eingehend",
+    "out": "Ausgehend"
+  },
+  "es": {
+    "sites": "Sitios",
+    "resources": "Recursos",
+    "targets": "Destinos",
+    "traffic": "Tráfico",
+    "in": "Entrante",
+    "out": "Saliente"
+  },
+  "ca": {
+    "sites": "Llocs",
+    "resources": "Recursos",
+    "targets": "Destinacions",
+    "traffic": "Trànsit",
+    "in": "Entrant",
+    "out": "Sortint"
+  },
+  "he": {
+    "sites": "אתרים",
+    "resources": "משאבים",
+    "targets": "יעדים",
+    "traffic": "תעבורה",
+    "in": "נכנס",
+    "out": "יוצא"
+  },
+  "hr": {
+    "sites": "Lokacije",
+    "resources": "Resursi",
+    "targets": "Ciljevi",
+    "traffic": "Promet",
+    "in": "Ulaz",
+    "out": "Izlaz"
+  },
+  "hu": {
+    "sites": "Helyszínek",
+    "resources": "Erőforrások",
+    "targets": "Célok",
+    "traffic": "Forgalom",
+    "in": "Be",
+    "out": "Ki"
+  },
+  "it": {
+    "sites": "Siti",
+    "resources": "Risorse",
+    "targets": "Destinazioni",
+    "traffic": "Traffico",
+    "in": "In entrata",
+    "out": "In uscita"
+  },
+  "nb-NO": {
+    "sites": "Steder",
+    "resources": "Ressurser",
+    "targets": "Mål",
+    "traffic": "Trafikk",
+    "in": "Inn",
+    "out": "Ut"
+  },
+  "pt": {
+    "sites": "Locais",
+    "resources": "Recursos",
+    "targets": "Destinos",
+    "traffic": "Tráfego",
+    "in": "Entrada",
+    "out": "Saída"
+  },
+  "ru": {
+    "sites": "Площадки",
+    "resources": "Ресурсы",
+    "targets": "Цели",
+    "traffic": "Трафик",
+    "in": "Входящий",
+    "out": "Исходящий"
+  },
+  "sv": {
+    "sites": "Platser",
+    "resources": "Resurser",
+    "targets": "Mål",
+    "traffic": "Trafik",
+    "in": "In",
+    "out": "Ut"
+  },
+  "vi": {
+    "sites": "Địa điểm",
+    "resources": "Tài nguyên",
+    "targets": "Đích",
+    "traffic": "Lưu lượng",
+    "in": "Vào",
+    "out": "Ra"
+  },
+  "zh-Hans": {
+    "sites": "站点",
+    "resources": "资源",
+    "targets": "目标",
+    "traffic": "流量",
+    "in": "入站",
+    "out": "出站"
+  },
+  "zh-Hant": {
+    "sites": "站台",
+    "resources": "資源",
+    "targets": "目標",
+    "traffic": "流量",
+    "in": "傳入",
+    "out": "傳出"
+  }
+}

@@ -1,0 +1,3 @@
+{ "_note": "OPNsense: top's header lines and the traffic per interface.", "routes": {
+ "GET /api/diagnostics/activity/getActivity": { "headers": ["last pid: 1234;  load averages:  0.20,  0.25,  0.22  up 12+03:04:05", "182 processes: 2 running, 180 sleeping", "CPU:  2.1% user,  0.0% nice,  3.4% system,  0.2% interrupt, 94.3% idle", "Mem: 1188M Active, 1504M Inact, 812M Wired, 3200M Free", "Swap: 8192M Total, 8192M Free"], "details": [] },
+ "GET /api/diagnostics/traffic/interface": { "interfaces": { "wan": { "name": "igc0", "bytes received": "1452000000000", "bytes transmitted": "98100000000" }, "lan": { "name": "igc1", "bytes received": "1", "bytes transmitted": "2" } } } } }

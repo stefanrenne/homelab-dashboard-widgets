@@ -141,6 +141,11 @@ const REQUIRED = {
   nextdns: { profile: 'abc123', get url() { return `${mock.url}/nextdns`; } },
   ntfy: { topic: 'backups' },
   omada: { username: 'dashboard', password: 'pw', site: 'Default' },
+  opnsense: { username: 'k', password: 's' },
+  openwrt: { username: 'dashboard', password: 'pw' },
+  pangolin: { org: 'homelab' },
+  peanut: { key: 'ups' },
+  pfsense: { wan: 'igb0' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -1606,4 +1611,44 @@ test('myspeed, netalertx, netbird, netdata, nextdns, ntfy, octoprint and omada',
   assert.deepEqual(values(om), { connectedAp: 3, activeUser: 37, alerts: 1, connectedGateways: 1, connectedSwitches: 2 });
   assert.deepEqual([lastRequest('omada').headers['csrf-token'], lastRequest('omada').headers.cookie, lastRequest('omada').query.token], ['omada-token', 'TPOMADA_SESSIONID=s3ss', 'omada-token']);
   await assert.rejects(run('omada', { site: 'Home' }), /no Omada site "Home" \(Default, Office\)/);
+});
+
+test('opendtu, opnsense, openwrt, pangolin, peanut, pfsense, photoprism and plantit', async () => {
+  assert.deepEqual(values(await run('opendtu')), { yieldDay: '2318Wh', relativePower: '52%', absolutePower: '413W', limit: '800W' });
+
+  assert.deepEqual(values(await run('opnsense')), { cpu: '5.7%', memory: '1.2 GB', wanUpload: '98.1 GB', wanDownload: '1.5 TB' });
+  assert.equal(lastRequest('opnsense').headers.authorization, `Basic ${Buffer.from('k:s').toString('base64')}`);
+  assert.equal(values(await run('opnsense', { wan: 'opt9' })).wanUpload, null);
+
+  const sys = await run('openwrt');
+  assert.deepEqual(values(sys), { uptime: '4d 3h', cpuLoad: 0.24 });
+  const calls = mock.requests.filter((r) => r.widget === 'openwrt').map((r) => JSON.parse(r.body).params.slice(1, 3).join('.'));
+  assert.deepEqual(calls.slice(-2), ['session.login', 'system.info']);
+  const eth = await run('openwrt', { interfaceName: 'eth0' });
+  assert.deepEqual(values(eth), { status: 'up', bytesTx: '98 GB', bytesRx: '1.5 TB' });
+  assert.equal((await run('openwrt', { interfaceName: 'wan' })).blocks[0].status, 'error');
+  await assert.rejects(run('openwrt', { interfaceName: 'eth9' }), /no OpenWrt device "eth9"/);
+
+  const pg = await run('pangolin');
+  assert.deepEqual(values(pg), { sites: '1 / 2', resources: '2 / 3', targets: '1 / 3', traffic: '1.6 GB', in: '1.2 GB', out: '342.3 MB' });
+  assert.deepEqual(pg.blocks.slice(0, 3).map((b) => b.status), ['warn', 'warn', 'warn']);
+  assert.equal(lastRequest('pangolin').headers.authorization, 'Bearer test-key');
+
+  assert.deepEqual(values(await run('peanut')), { battery_charge: '100%', ups_load: '23%', ups_status: 'online' });
+  const old = await run('peanut', { key: 'old' });
+  assert.deepEqual(values(old), { battery_charge: '35%', ups_load: '41%', ups_status: 'on_battery' });
+  assert.equal(old.blocks[2].status, 'warn');
+
+  assert.deepEqual(values(await run('pfsense', { username: 'admin', password: 'pw' })), { load: 0.21, memory: '23.4%', temp: '48.5°C', wanStatus: 'up', wanIP: '203.0.113.9', disk: '12%' });
+  const v2 = await run('pfsense', { version: 2, headers: { 'X-API-Key': 'pf-key' } });
+  assert.deepEqual(values(v2), { load: 0.21, memory: '23.4%', temp: '48.5°C', wanStatus: 'down', wanIP: null, disk: '12%' });
+  assert.equal(v2.blocks[3].status, 'error');
+  assert.equal(lastRequest('pfsense').headers['x-api-key'], 'pf-key');
+  await assert.rejects(run('pfsense', { wan: 'em9' }), /no pfSense interface "em9"/);
+
+  assert.deepEqual(values(await run('photoprism')), { albums: 24, photos: 18420, videos: 312, people: 41 });
+  assert.deepEqual([lastRequest('photoprism').headers.authorization, JSON.parse(lastRequest('photoprism').body)], ['Bearer test-key', { authToken: 'test-key' }]);
+
+  assert.deepEqual(values(await run('plantit')), { events: 214, plants: 37, photos: 152, species: 29 });
+  assert.equal(lastRequest('plantit').headers.key, 'test-key');
 });

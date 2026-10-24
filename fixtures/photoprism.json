@@ -1,0 +1,2 @@
+{ "_note": "PhotoPrism's session answer with the client config's counts.", "routes": {
+ "POST /api/v1/session": { "id": "s1", "config": { "count": { "albums": 24, "photos": 18420, "videos": 312, "people": 41 } } } } }

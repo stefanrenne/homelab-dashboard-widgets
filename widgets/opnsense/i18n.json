@@ -1,0 +1,104 @@
+{
+  "en": {
+    "cpu": "CPU",
+    "memory": "Memory",
+    "wanUpload": "WAN upload",
+    "wanDownload": "WAN download"
+  },
+  "nl": {
+    "cpu": "CPU",
+    "memory": "Geheugen",
+    "wanUpload": "WAN uit",
+    "wanDownload": "WAN in"
+  },
+  "fr": {
+    "cpu": "CPU",
+    "memory": "Mémoire",
+    "wanUpload": "WAN envoyé",
+    "wanDownload": "WAN reçu"
+  },
+  "de": {
+    "cpu": "CPU",
+    "memory": "Speicher",
+    "wanUpload": "WAN gesendet",
+    "wanDownload": "WAN Empfang"
+  },
+  "es": {
+    "cpu": "CPU",
+    "memory": "Memoria",
+    "wanUpload": "WAN enviado",
+    "wanDownload": "WAN recibido"
+  },
+  "ca": {
+    "cpu": "CPU",
+    "memory": "Memòria",
+    "wanUpload": "WAN enviat",
+    "wanDownload": "WAN rebut"
+  },
+  "he": {
+    "cpu": "מעבד",
+    "memory": "זיכרון",
+    "wanUpload": "WAN נשלח",
+    "wanDownload": "WAN התקבל"
+  },
+  "hr": {
+    "cpu": "CPU",
+    "memory": "Memorija",
+    "wanUpload": "WAN izlaz",
+    "wanDownload": "WAN ulaz"
+  },
+  "hu": {
+    "cpu": "CPU",
+    "memory": "Memória",
+    "wanUpload": "WAN küldött",
+    "wanDownload": "WAN fogadott"
+  },
+  "it": {
+    "cpu": "CPU",
+    "memory": "Memoria",
+    "wanUpload": "WAN inviati",
+    "wanDownload": "WAN ricevuti"
+  },
+  "nb-NO": {
+    "cpu": "CPU",
+    "memory": "Minne",
+    "wanUpload": "WAN sendt",
+    "wanDownload": "WAN mottatt"
+  },
+  "pt": {
+    "cpu": "CPU",
+    "memory": "Memória",
+    "wanUpload": "WAN enviado",
+    "wanDownload": "WAN recebido"
+  },
+  "ru": {
+    "cpu": "ЦП",
+    "memory": "Память",
+    "wanUpload": "WAN отдано",
+    "wanDownload": "WAN получено"
+  },
+  "sv": {
+    "cpu": "CPU",
+    "memory": "Minne",
+    "wanUpload": "WAN skickat",
+    "wanDownload": "WAN mottaget"
+  },
+  "vi": {
+    "cpu": "CPU",
+    "memory": "Bộ nhớ",
+    "wanUpload": "WAN đã gửi",
+    "wanDownload": "WAN đã nhận"
+  },
+  "zh-Hans": {
+    "cpu": "CPU",
+    "memory": "内存",
+    "wanUpload": "WAN 上传",
+    "wanDownload": "WAN 下载"
+  },
+  "zh-Hant": {
+    "cpu": "CPU",
+    "memory": "記憶體",
+    "wanUpload": "WAN 上傳",
+    "wanDownload": "WAN 下載"
+  }
+}

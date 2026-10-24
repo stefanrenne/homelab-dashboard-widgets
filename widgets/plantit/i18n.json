@@ -1,0 +1,104 @@
+{
+  "en": {
+    "events": "Events",
+    "plants": "Plants",
+    "photos": "Photos",
+    "species": "Species"
+  },
+  "nl": {
+    "events": "Dagboek",
+    "plants": "Planten",
+    "photos": "Foto's",
+    "species": "Soorten"
+  },
+  "fr": {
+    "events": "Événements",
+    "plants": "Plantes",
+    "photos": "Photos",
+    "species": "Espèces"
+  },
+  "de": {
+    "events": "Ereignisse",
+    "plants": "Pflanzen",
+    "photos": "Fotos",
+    "species": "Arten"
+  },
+  "es": {
+    "events": "Eventos",
+    "plants": "Plantas",
+    "photos": "Fotos",
+    "species": "Especies"
+  },
+  "ca": {
+    "events": "Entrades",
+    "plants": "Plantes",
+    "photos": "Fotos",
+    "species": "Espècies"
+  },
+  "he": {
+    "events": "אירועים",
+    "plants": "צמחים",
+    "photos": "תמונות",
+    "species": "מינים"
+  },
+  "hr": {
+    "events": "Događaji",
+    "plants": "Biljke",
+    "photos": "Fotografije",
+    "species": "Vrste"
+  },
+  "hu": {
+    "events": "Események",
+    "plants": "Növények",
+    "photos": "Fényképek",
+    "species": "Fajok"
+  },
+  "it": {
+    "events": "Eventi",
+    "plants": "Piante",
+    "photos": "Foto",
+    "species": "Specie"
+  },
+  "nb-NO": {
+    "events": "Hendelser",
+    "plants": "Planter",
+    "photos": "Bilder",
+    "species": "Arter"
+  },
+  "pt": {
+    "events": "Eventos",
+    "plants": "Plantas",
+    "photos": "Fotos",
+    "species": "Espécies"
+  },
+  "ru": {
+    "events": "События",
+    "plants": "Растения",
+    "photos": "Фото",
+    "species": "Виды"
+  },
+  "sv": {
+    "events": "Händelser",
+    "plants": "Växter",
+    "photos": "Foton",
+    "species": "Arter"
+  },
+  "vi": {
+    "events": "Sự kiện",
+    "plants": "Cây",
+    "photos": "Ảnh",
+    "species": "Loài"
+  },
+  "zh-Hans": {
+    "events": "事件",
+    "plants": "植物",
+    "photos": "照片",
+    "species": "物种"
+  },
+  "zh-Hant": {
+    "events": "事件",
+    "plants": "植物",
+    "photos": "照片",
+    "species": "物種"
+  }
+}

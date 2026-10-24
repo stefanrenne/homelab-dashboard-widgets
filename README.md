@@ -110,6 +110,14 @@ Every widget has its own page with setup, fields and options on the
 | `ntfy` | the latest notification of a topic | `url`, `topic`, `key`, `username`, `password` |
 | `octoprint` | printer state, temperatures and job progress | `url`, `key` |
 | `omada` | access points, clients, alerts, gateways and switches of a site | `url`, `username`, `password`, `site` |
+| `opendtu` | today's yield, power and limit of solar inverters | `url`, `username`, `password` |
+| `opnsense` | CPU, memory and WAN traffic of a firewall | `url`, `username`, `password`, `wan` |
+| `openwrt` | a router's uptime and load, or an interface's state and traffic | `url`, `username`, `password`, `interfaceName` |
+| `pangolin` | sites, resources, targets and traffic of an organization | `url`, `key`, `org` |
+| `peanut` | a UPS's charge, load and state (Network UPS Tools) | `url`, `key`, `username`, `password` |
+| `pfsense` | load, memory, temperature, disk and the WAN of a firewall | `url`, `wan`, `version`, `username`, `password`, `headers` |
+| `photoprism` | albums, photos, videos and people | `url`, `username`, `password`, `key` |
+| `plantit` | diary events, plants, photos and species | `url`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

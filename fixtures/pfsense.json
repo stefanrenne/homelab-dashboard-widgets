@@ -1,0 +1,5 @@
+{ "_note": "pfSense REST API v1 and v2 (v1 gives fractions).", "routes": {
+ "GET /api/v1/status/system": { "data": { "load_avg": [0.21, 0.3, 0.28], "mem_usage": 0.234, "disk_usage": 0.12, "temp_c": 48.5 } },
+ "GET /api/v1/status/interface": { "data": [{ "name": "wan", "hwif": "igb0", "status": "up", "ipaddr": "203.0.113.9" }, { "name": "lan", "hwif": "igb1", "status": "up", "ipaddr": "192.0.2.1" }] },
+ "GET /api/v2/status/system": { "data": { "cpu_load_avg": [0.21, 0.3, 0.28], "mem_usage": 23.4, "disk_usage": 12, "temp_c": 48.5 } },
+ "GET /api/v2/status/interfaces": { "data": [{ "name": "wan", "hwif": "igb0", "status": "no carrier", "ipaddr": "" }] } } }

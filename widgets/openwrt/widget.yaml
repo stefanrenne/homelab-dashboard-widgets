@@ -1,0 +1,11 @@
+id: openwrt
+name: OpenWrt
+version: 0.1.0
+apiVersion: 1
+description: An OpenWrt router's uptime and load, or with interfaceName an interface's state and traffic (homepage's openwrt widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # the router, e.g. http://router.lan
+  username: { type: string, required: true }   # an rpcd user with a read ACL (see the README)
+  password: { type: string, secret: true, required: true }
+  interfaceName: { type: string }          # a device, e.g. eth0; without it the system's uptime and load

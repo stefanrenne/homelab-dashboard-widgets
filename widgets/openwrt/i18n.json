@@ -1,0 +1,155 @@
+{
+  "en": {
+    "uptime": "Uptime",
+    "cpuLoad": "Load",
+    "status": "Status",
+    "bytesTx": "Sent",
+    "bytesRx": "Received",
+    "up": "Up",
+    "down": "Down"
+  },
+  "nl": {
+    "uptime": "Uptime",
+    "cpuLoad": "Belasting",
+    "status": "Status",
+    "bytesTx": "Verzonden",
+    "bytesRx": "Ontvangen",
+    "up": "Actief",
+    "down": "Offline"
+  },
+  "fr": {
+    "uptime": "Temps actif",
+    "cpuLoad": "Charge",
+    "status": "État",
+    "bytesTx": "Envoyé",
+    "bytesRx": "Reçu",
+    "up": "Actif",
+    "down": "Hors ligne"
+  },
+  "de": {
+    "uptime": "Laufzeit",
+    "cpuLoad": "Last",
+    "status": "Status",
+    "bytesTx": "Gesendet",
+    "bytesRx": "Empfangen",
+    "up": "Aktiv",
+    "down": "Ausgefallen"
+  },
+  "es": {
+    "uptime": "Tiempo activo",
+    "cpuLoad": "Carga",
+    "status": "Estado",
+    "bytesTx": "Enviado",
+    "bytesRx": "Recibido",
+    "up": "Activa",
+    "down": "Caída"
+  },
+  "ca": {
+    "uptime": "Temps actiu",
+    "cpuLoad": "Càrrega",
+    "status": "Estat",
+    "bytesTx": "Enviat",
+    "bytesRx": "Rebut",
+    "up": "Actiu",
+    "down": "Caigut"
+  },
+  "he": {
+    "uptime": "זמן פעולה",
+    "cpuLoad": "עומס",
+    "status": "מצב",
+    "bytesTx": "נשלח",
+    "bytesRx": "התקבל",
+    "up": "פעיל",
+    "down": "נפל"
+  },
+  "hr": {
+    "uptime": "Vrijeme rada",
+    "cpuLoad": "Opterećenje",
+    "status": "Stanje",
+    "bytesTx": "Poslano",
+    "bytesRx": "Primljeno",
+    "up": "Radi",
+    "down": "Ne radi"
+  },
+  "hu": {
+    "uptime": "Üzemidő",
+    "cpuLoad": "Terhelés",
+    "status": "Állapot",
+    "bytesTx": "Küldött",
+    "bytesRx": "Fogadott",
+    "up": "Működik",
+    "down": "Leállt"
+  },
+  "it": {
+    "uptime": "Tempo attivo",
+    "cpuLoad": "Carico",
+    "status": "Stato",
+    "bytesTx": "Inviati",
+    "bytesRx": "Ricevuti",
+    "up": "Attivo",
+    "down": "Giù"
+  },
+  "nb-NO": {
+    "uptime": "Oppetid",
+    "cpuLoad": "Last",
+    "status": "Status",
+    "bytesTx": "Sendt",
+    "bytesRx": "Mottatt",
+    "up": "Oppe",
+    "down": "Nede"
+  },
+  "pt": {
+    "uptime": "Tempo ativo",
+    "cpuLoad": "Carga",
+    "status": "Estado",
+    "bytesTx": "Enviado",
+    "bytesRx": "Recebido",
+    "up": "Ativo",
+    "down": "Em baixo"
+  },
+  "ru": {
+    "uptime": "Время работы",
+    "cpuLoad": "Нагрузка",
+    "status": "Состояние",
+    "bytesTx": "Отправлено",
+    "bytesRx": "Получено",
+    "up": "Работает",
+    "down": "Недоступен"
+  },
+  "sv": {
+    "uptime": "Drifttid",
+    "cpuLoad": "Last",
+    "status": "Status",
+    "bytesTx": "Skickat",
+    "bytesRx": "Mottaget",
+    "up": "Uppe",
+    "down": "Nere"
+  },
+  "vi": {
+    "uptime": "Hoạt động",
+    "cpuLoad": "Tải",
+    "status": "Trạng thái",
+    "bytesTx": "Đã gửi",
+    "bytesRx": "Đã nhận",
+    "up": "Hoạt động",
+    "down": "Ngừng"
+  },
+  "zh-Hans": {
+    "uptime": "运行时间",
+    "cpuLoad": "负载",
+    "status": "状态",
+    "bytesTx": "已发送",
+    "bytesRx": "已接收",
+    "up": "正常",
+    "down": "宕机"
+  },
+  "zh-Hant": {
+    "uptime": "運作時間",
+    "cpuLoad": "負載",
+    "status": "狀態",
+    "bytesTx": "已傳送",
+    "bytesRx": "已接收",
+    "up": "正常",
+    "down": "停止"
+  }
+}

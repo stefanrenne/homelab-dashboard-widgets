@@ -1,0 +1,2 @@
+{ "_note": "ubus over JSON-RPC: the mock answers every call alike, so the result holds the session, system.info and network.device.status together.", "routes": {
+ "POST /ubus": { "jsonrpc": "2.0", "id": 1, "result": [0, { "ubus_rpc_session": "sess-1", "uptime": 356400, "load": [10240, 15729, 9830], "memory": {}, "eth0": { "up": true, "statistics": { "rx_bytes": 1450000000000, "tx_bytes": 98000000000 } }, "wan": { "up": false, "statistics": { "rx_bytes": 0, "tx_bytes": 0 } } }] } } }
