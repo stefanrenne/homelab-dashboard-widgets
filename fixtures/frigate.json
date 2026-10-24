@@ -1,0 +1,10 @@
+{
+ "_note": "Frigate: stats with three cameras, and two events.",
+ "routes": {
+  "GET /api/stats": { "cameras": { "front": {}, "garden": {}, "garage": {} }, "service": { "uptime": 191400, "version": "0.16.2-4d58206" } },
+  "GET /api/events": [
+   { "id": "1", "camera": "front", "label": "person", "top_score": 0.86, "start_time": 1761300000 },
+   { "id": "2", "camera": "garden", "label": "cat", "top_score": 0.71, "start_time": 1761290000 }
+  ]
+ }
+}

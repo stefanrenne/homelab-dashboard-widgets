@@ -1,0 +1,87 @@
+{
+  "en": {
+    "cameras": "Cameras",
+    "uptime": "Uptime",
+    "version": "Version"
+  },
+  "nl": {
+    "cameras": "Camera's",
+    "uptime": "Uptime",
+    "version": "Versie"
+  },
+  "fr": {
+    "cameras": "Caméras",
+    "uptime": "Temps actif",
+    "version": "Version"
+  },
+  "de": {
+    "cameras": "Kameras",
+    "uptime": "Laufzeit",
+    "version": "Version"
+  },
+  "es": {
+    "cameras": "Cámaras",
+    "uptime": "Tiempo activo",
+    "version": "Versión"
+  },
+  "ca": {
+    "cameras": "Càmeres",
+    "uptime": "Temps actiu",
+    "version": "Versió"
+  },
+  "he": {
+    "cameras": "מצלמות",
+    "uptime": "זמן פעולה",
+    "version": "גרסה"
+  },
+  "hr": {
+    "cameras": "Kamere",
+    "uptime": "Vrijeme rada",
+    "version": "Verzija"
+  },
+  "hu": {
+    "cameras": "Kamerák",
+    "uptime": "Üzemidő",
+    "version": "Verzió"
+  },
+  "it": {
+    "cameras": "Telecamere",
+    "uptime": "Tempo attivo",
+    "version": "Versione"
+  },
+  "nb-NO": {
+    "cameras": "Kameraer",
+    "uptime": "Oppetid",
+    "version": "Versjon"
+  },
+  "pt": {
+    "cameras": "Câmaras",
+    "uptime": "Tempo ativo",
+    "version": "Versão"
+  },
+  "ru": {
+    "cameras": "Камеры",
+    "uptime": "Время работы",
+    "version": "Версия"
+  },
+  "sv": {
+    "cameras": "Kameror",
+    "uptime": "Drifttid",
+    "version": "Version"
+  },
+  "vi": {
+    "cameras": "Camera",
+    "uptime": "Hoạt động",
+    "version": "Phiên bản"
+  },
+  "zh-Hans": {
+    "cameras": "摄像头",
+    "uptime": "运行时间",
+    "version": "版本"
+  },
+  "zh-Hant": {
+    "cameras": "攝影機",
+    "uptime": "運作時間",
+    "version": "版本"
+  }
+}

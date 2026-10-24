@@ -1,0 +1,87 @@
+{
+  "en": {
+    "containers_scanned": "Scanned",
+    "containers_updated": "Updated",
+    "containers_failed": "Failed"
+  },
+  "nl": {
+    "containers_scanned": "Gescand",
+    "containers_updated": "Bijgewerkt",
+    "containers_failed": "Mislukt"
+  },
+  "fr": {
+    "containers_scanned": "Analysés",
+    "containers_updated": "Mis à jour",
+    "containers_failed": "Échec"
+  },
+  "de": {
+    "containers_scanned": "Geprüft",
+    "containers_updated": "Aktualisiert",
+    "containers_failed": "Gescheitert"
+  },
+  "es": {
+    "containers_scanned": "Revisados",
+    "containers_updated": "Actualizados",
+    "containers_failed": "Fallido"
+  },
+  "ca": {
+    "containers_scanned": "Revisats",
+    "containers_updated": "Actualitzats",
+    "containers_failed": "Fallit"
+  },
+  "he": {
+    "containers_scanned": "נסרקו",
+    "containers_updated": "עודכנו",
+    "containers_failed": "נכשל"
+  },
+  "hr": {
+    "containers_scanned": "Provjereno",
+    "containers_updated": "Ažurirano",
+    "containers_failed": "Neuspjelo"
+  },
+  "hu": {
+    "containers_scanned": "Ellenőrizve",
+    "containers_updated": "Frissítve",
+    "containers_failed": "Sikertelen"
+  },
+  "it": {
+    "containers_scanned": "Controllati",
+    "containers_updated": "Aggiornati",
+    "containers_failed": "Fallito"
+  },
+  "nb-NO": {
+    "containers_scanned": "Sjekket",
+    "containers_updated": "Oppdatert",
+    "containers_failed": "Mislyktes"
+  },
+  "pt": {
+    "containers_scanned": "Verificados",
+    "containers_updated": "Atualizados",
+    "containers_failed": "Falhou"
+  },
+  "ru": {
+    "containers_scanned": "Проверено",
+    "containers_updated": "Обновлено",
+    "containers_failed": "Ошибка"
+  },
+  "sv": {
+    "containers_scanned": "Skannade",
+    "containers_updated": "Uppdaterade",
+    "containers_failed": "Misslyckades"
+  },
+  "vi": {
+    "containers_scanned": "Đã quét",
+    "containers_updated": "Đã cập nhật",
+    "containers_failed": "Thất bại"
+  },
+  "zh-Hans": {
+    "containers_scanned": "已扫描",
+    "containers_updated": "已更新",
+    "containers_failed": "失败"
+  },
+  "zh-Hant": {
+    "containers_scanned": "已掃描",
+    "containers_updated": "已更新",
+    "containers_failed": "失敗"
+  }
+}

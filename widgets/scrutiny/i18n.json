@@ -1,0 +1,87 @@
+{
+  "en": {
+    "passed": "Passed",
+    "failed": "Failed",
+    "unknown": "Unknown"
+  },
+  "nl": {
+    "passed": "Geslaagd",
+    "failed": "Mislukt",
+    "unknown": "Onbekend"
+  },
+  "fr": {
+    "passed": "Réussis",
+    "failed": "Échec",
+    "unknown": "Inconnu"
+  },
+  "de": {
+    "passed": "Bestanden",
+    "failed": "Gescheitert",
+    "unknown": "Unbekannt"
+  },
+  "es": {
+    "passed": "Correctos",
+    "failed": "Fallido",
+    "unknown": "Desconocido"
+  },
+  "ca": {
+    "passed": "Correctes",
+    "failed": "Fallit",
+    "unknown": "Desconegut"
+  },
+  "he": {
+    "passed": "עברו",
+    "failed": "נכשל",
+    "unknown": "לא ידוע"
+  },
+  "hr": {
+    "passed": "Prošlo",
+    "failed": "Neuspjelo",
+    "unknown": "Nepoznato"
+  },
+  "hu": {
+    "passed": "Megfelelt",
+    "failed": "Sikertelen",
+    "unknown": "Ismeretlen"
+  },
+  "it": {
+    "passed": "Superati",
+    "failed": "Fallito",
+    "unknown": "Sconosciuto"
+  },
+  "nb-NO": {
+    "passed": "Bestått",
+    "failed": "Mislyktes",
+    "unknown": "Ukjent"
+  },
+  "pt": {
+    "passed": "Aprovados",
+    "failed": "Falhou",
+    "unknown": "Desconhecido"
+  },
+  "ru": {
+    "passed": "Пройдено",
+    "failed": "Ошибка",
+    "unknown": "Неизвестно"
+  },
+  "sv": {
+    "passed": "Godkända",
+    "failed": "Misslyckades",
+    "unknown": "Okänt"
+  },
+  "vi": {
+    "passed": "Đạt",
+    "failed": "Thất bại",
+    "unknown": "Không rõ"
+  },
+  "zh-Hans": {
+    "passed": "通过",
+    "failed": "失败",
+    "unknown": "未知"
+  },
+  "zh-Hant": {
+    "passed": "通過",
+    "failed": "失敗",
+    "unknown": "未知"
+  }
+}

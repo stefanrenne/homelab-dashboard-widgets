@@ -984,3 +984,41 @@ test('navidrome: a row per listener; nothing playing; a wrong token', async () =
   assert.deepEqual((await ask({ status: 'ok', nowPlaying: {} })).rows, [{ label: 'nothingPlaying' }]);
   await assert.rejects(ask({ status: 'failed', error: { code: 40 } }), /Navidrome answered 401/);
 });
+
+test('frigate: cameras, uptime and version; recent events per row; a login on the authenticated port', async () => {
+  const out = await run('frigate', { enableRecentEvents: true });
+  assert.deepEqual(values(out), { cameras: 3, uptime: '2d 5h', version: '0.16.2' });
+  assert.deepEqual(out.rows.map((r) => r.label), ['front · person 86%', 'garden · cat 71%']);
+  assert.match(out.rows[0].value, /^\d+d \d+h$/);
+  const http = await import('node:http');
+  const seen = [];
+  const srv = http.createServer((q, res) => {
+    seen.push(`${q.method} ${q.url} ${q.headers.cookie ?? '-'}`);
+    if (q.url === '/api/login') { res.setHeader('set-cookie', 'frigate_token=jwt; Path=/; HttpOnly'); return res.end('{}'); }
+    if (q.headers.cookie !== 'frigate_token=jwt') { res.statusCode = 401; return res.end('{}'); }
+    res.end(JSON.stringify({ cameras: {}, service: { uptime: 60, version: '0.16.0' } }));
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: frigate } = await import(path.join(WIDGETS, 'frigate', 'server.js'));
+  try {
+    const ctx = { options: { url: `http://127.0.0.1:${srv.address().port}`, username: 'admin', password: 'pw' }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) };
+    await frigate.fetch(ctx);
+    await frigate.fetch(ctx);
+    assert.deepEqual(seen, ['POST /api/login -', 'GET /api/stats frigate_token=jwt', 'GET /api/stats frigate_token=jwt']);
+  } finally {
+    srv.close();
+  }
+});
+
+test('scrutiny: passed, failed (marked) and unknown disks, archived ones left out', async () => {
+  const out = await run('scrutiny');
+  assert.deepEqual(values(out), { passed: 2, failed: 1, unknown: 1 });
+  assert.equal(out.blocks[1].status, 'error');
+});
+
+test('watchtower: scanned, updated and failed (marked) from the Prometheus metrics', async () => {
+  const out = await run('watchtower');
+  assert.deepEqual(values(out), { containers_scanned: 33, containers_updated: 2, containers_failed: 1 });
+  assert.equal(out.blocks[2].status, 'error');
+  assert.equal(lastRequest('watchtower').headers.authorization, 'Bearer test-key');
+});

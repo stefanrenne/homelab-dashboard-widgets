@@ -1,0 +1,6 @@
+{
+ "_note": "Watchtower Prometheus metrics.",
+ "routes": {
+  "GET /v1/metrics": { "_headers": { "content-type": "text/plain; version=0.0.4" }, "_text": "# HELP watchtower_containers_scanned Number of containers scanned for changes by watchtower during the last scan\n# TYPE watchtower_containers_scanned gauge\nwatchtower_containers_scanned 33\nwatchtower_containers_updated 2\nwatchtower_containers_failed 1\nwatchtower_scans_total 120\n" }
+ }
+}

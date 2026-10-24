@@ -1,0 +1,13 @@
+{
+ "_note": "Scrutiny: four disks (one archived), one failed S.M.A.R.T., threshold both.",
+ "routes": {
+  "GET /api/summary": { "success": true, "data": { "summary": {
+   "wwn-1": { "device": { "device_status": 0, "archived": false } },
+   "wwn-2": { "device": { "device_status": 1, "archived": false } },
+   "wwn-3": { "device": { "device_status": 0, "archived": false } },
+   "wwn-4": { "device": { "device_status": 2, "archived": true } },
+   "wwn-5": { "device": { "device_status": 9, "archived": false } }
+  } } },
+  "GET /api/settings": { "success": true, "settings": { "metrics": { "status_threshold": 3, "notify_level": 2 } } }
+ }
+}

@@ -34,6 +34,9 @@ Every widget has its own page with setup, fields and options on the
 | `authentik` | users, logins, failed logins, authorizations (24 hours) | `url`, `key`, `version` |
 | `audiobookshelf` | podcasts, books and their length | `url`, `key` |
 | `navidrome` | a row per listener | `url`, `user`, `token`, `salt` |
+| `frigate` | cameras, uptime, version; recent events with `enableRecentEvents` | `url`, `username`, `password`, `enableRecentEvents`, `insecure` |
+| `scrutiny` | disks passed, failed, unknown | `url` |
+| `watchtower` | containers scanned, updated, failed | `url`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

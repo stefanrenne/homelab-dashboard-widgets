@@ -33,10 +33,11 @@ export async function startMock({ port = 0, fixtures = loadFixtures() } = {}) {
         res.statusCode = 404;
         return res.end(JSON.stringify({ error: `no fixture for ${widget} ${route}` }));
       }
-      // { "_headers": {...}, "_body": ... } answers with headers too (e.g. Gitea's X-Total-Count)
+      // { "_headers": {...}, "_body": ... } answers with headers too (e.g. Gitea's X-Total-Count);
+      // "_text" instead of "_body" answers plain text (e.g. Prometheus metrics)
       if (answer && typeof answer === 'object' && '_headers' in answer) {
         for (const [k, v] of Object.entries(answer._headers)) res.setHeader(k, v);
-        return res.end(JSON.stringify(answer._body ?? null));
+        return res.end(typeof answer._text === 'string' ? answer._text : JSON.stringify(answer._body ?? null));
       }
       res.end(JSON.stringify(answer));
     });
