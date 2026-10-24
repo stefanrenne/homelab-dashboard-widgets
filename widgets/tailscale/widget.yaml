@@ -1,0 +1,11 @@
+id: tailscale
+name: Tailscale
+version: 0.1.0
+apiVersion: 1
+description: Address, last seen and key expiry of one device in your tailnet, and more through fields (homepage's tailscale widget).
+refresh: 5m
+defaultFields: [address, last_seen, expires]
+options:
+  deviceid: { type: string, required: true }   # the device's ID from the admin console (ends in CNTRL)
+  key: { type: string, secret: true, required: true }   # an API access token: Settings > Keys
+  url: { type: url, default: https://api.tailscale.com }   # the Tailscale API

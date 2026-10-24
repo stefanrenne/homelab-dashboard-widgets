@@ -1,0 +1,9 @@
+{
+ "_note": "Navidrome getNowPlaying: two listeners.",
+ "routes": {
+  "GET /rest/getNowPlaying": { "subsonic-response": { "status": "ok", "version": "1.16.1", "nowPlaying": { "entry": [
+   { "id": "1", "title": "Breathe", "album": "The Dark Side of the Moon", "artist": "Pink Floyd", "username": "anna" },
+   { "id": "2", "title": "Teardrop", "album": "Mezzanine", "artist": "Massive Attack", "username": "bob" }
+  ] } } }
+ }
+}

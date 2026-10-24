@@ -1,0 +1,104 @@
+{
+  "en": {
+    "users": "Users",
+    "loginsLast24H": "Logins",
+    "failedLoginsLast24H": "Failed logins",
+    "authorizationsLast24H": "App access"
+  },
+  "nl": {
+    "users": "Gebruikers",
+    "loginsLast24H": "Aanmeldingen",
+    "failedLoginsLast24H": "Mislukte logins",
+    "authorizationsLast24H": "App-toegang"
+  },
+  "fr": {
+    "users": "Utilisateurs",
+    "loginsLast24H": "Connexions",
+    "failedLoginsLast24H": "Échecs",
+    "authorizationsLast24H": "Accès apps"
+  },
+  "de": {
+    "users": "Nutzer",
+    "loginsLast24H": "Anmeldungen",
+    "failedLoginsLast24H": "Fehlversuche",
+    "authorizationsLast24H": "App-Zugriffe"
+  },
+  "es": {
+    "users": "Usuarios",
+    "loginsLast24H": "Accesos",
+    "failedLoginsLast24H": "Accesos fallidos",
+    "authorizationsLast24H": "Acceso a apps"
+  },
+  "ca": {
+    "users": "Usuaris",
+    "loginsLast24H": "Inicis",
+    "failedLoginsLast24H": "Inicis fallits",
+    "authorizationsLast24H": "Accés a apps"
+  },
+  "he": {
+    "users": "משתמשים",
+    "loginsLast24H": "כניסות",
+    "failedLoginsLast24H": "כניסות שנכשלו",
+    "authorizationsLast24H": "גישה לאפליקציות"
+  },
+  "hr": {
+    "users": "Korisnici",
+    "loginsLast24H": "Prijave",
+    "failedLoginsLast24H": "Neuspjele prijave",
+    "authorizationsLast24H": "Pristup aplikacijama"
+  },
+  "hu": {
+    "users": "Felhasználók",
+    "loginsLast24H": "Belépések",
+    "failedLoginsLast24H": "Hibás belépések",
+    "authorizationsLast24H": "Alkalmazások"
+  },
+  "it": {
+    "users": "Utenti",
+    "loginsLast24H": "Accessi",
+    "failedLoginsLast24H": "Accessi falliti",
+    "authorizationsLast24H": "Accesso app"
+  },
+  "nb-NO": {
+    "users": "Brukere",
+    "loginsLast24H": "Pålogginger",
+    "failedLoginsLast24H": "Feilede",
+    "authorizationsLast24H": "Apptilgang"
+  },
+  "pt": {
+    "users": "Utilizadores",
+    "loginsLast24H": "Acessos",
+    "failedLoginsLast24H": "Acessos falhados",
+    "authorizationsLast24H": "Acesso a apps"
+  },
+  "ru": {
+    "users": "Пользователи",
+    "loginsLast24H": "Входы",
+    "failedLoginsLast24H": "Ошибки входа",
+    "authorizationsLast24H": "Доступ к приложениям"
+  },
+  "sv": {
+    "users": "Användare",
+    "loginsLast24H": "Inloggningar",
+    "failedLoginsLast24H": "Misslyckade",
+    "authorizationsLast24H": "Appåtkomst"
+  },
+  "vi": {
+    "users": "Người dùng",
+    "loginsLast24H": "Đăng nhập",
+    "failedLoginsLast24H": "Đăng nhập lỗi",
+    "authorizationsLast24H": "Truy cập ứng dụng"
+  },
+  "zh-Hans": {
+    "users": "用户",
+    "loginsLast24H": "登录",
+    "failedLoginsLast24H": "登录失败",
+    "authorizationsLast24H": "应用授权"
+  },
+  "zh-Hant": {
+    "users": "使用者",
+    "loginsLast24H": "登入",
+    "failedLoginsLast24H": "登入失敗",
+    "authorizationsLast24H": "應用授權"
+  }
+}

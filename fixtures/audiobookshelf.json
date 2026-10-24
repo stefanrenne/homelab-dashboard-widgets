@@ -1,0 +1,8 @@
+{
+ "_note": "Audiobookshelf: one book and one podcast library; the mock answers every stats call alike.",
+ "routes": {
+  "GET /api/libraries": { "libraries": [{ "id": "lib_books", "name": "Books", "mediaType": "book" }, { "id": "lib_pods", "name": "Podcasts", "mediaType": "podcast" }] },
+  "GET /api/libraries/lib_books/stats": { "totalItems": 214, "totalDuration": 5486400, "totalAuthors": 120 },
+  "GET /api/libraries/lib_pods/stats": { "totalItems": 18, "totalDuration": 1812600 }
+ }
+}

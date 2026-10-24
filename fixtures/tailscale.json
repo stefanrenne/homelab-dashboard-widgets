@@ -1,0 +1,6 @@
+{
+ "_note": "Tailscale device: an update available (the test sets the times).",
+ "routes": {
+  "GET /api/v2/device/n1234567CNTRL": { "addresses": ["100.101.102.103", "fd7a:115c:a1e0::1"], "id": "n1234567CNTRL", "user": "anna@example.com", "name": "nas.tail1234.ts.net", "hostname": "nas", "clientVersion": "1.88.3-t1234abcd-g5678", "updateAvailable": true, "os": "linux", "created": "2025-03-01T10:00:00Z", "lastSeen": "2026-10-24T06:00:00Z", "keyExpiryDisabled": false, "expires": "2027-01-20T00:00:00Z", "authorized": true, "isExternal": false, "tags": ["tag:server"], "connectedToControl": false }
+ }
+}

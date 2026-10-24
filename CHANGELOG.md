@@ -36,6 +36,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `diskstation`: uptime, free space on a volume (marked below 10%), CPU and memory of a Synology NAS, as homepage's diskstation widget.
 - `openmediavault`: services, S.M.A.R.T. results or Downloader downloads, chosen with `method`, as homepage's openmediavault widget.
 - `speedtest` (Speedtest Tracker), `gitea` (also Forgejo) and `grafana`, as homepage's widgets; the mock can answer with headers.
+- `tailscale`, `authentik`, `audiobookshelf` and `navidrome`, as homepage's widgets.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

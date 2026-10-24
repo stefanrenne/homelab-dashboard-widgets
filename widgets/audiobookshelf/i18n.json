@@ -1,0 +1,104 @@
+{
+  "en": {
+    "podcasts": "Podcasts",
+    "podcastsDuration": "Podcast hours",
+    "books": "Books",
+    "booksDuration": "Book hours"
+  },
+  "nl": {
+    "podcasts": "Podcasts",
+    "podcastsDuration": "Podcastduur",
+    "books": "Boeken",
+    "booksDuration": "Boekduur"
+  },
+  "fr": {
+    "podcasts": "Podcasts",
+    "podcastsDuration": "Durée podcasts",
+    "books": "Livres",
+    "booksDuration": "Durée livres"
+  },
+  "de": {
+    "podcasts": "Podcasts",
+    "podcastsDuration": "Podcastdauer",
+    "books": "Bücher",
+    "booksDuration": "Buchdauer"
+  },
+  "es": {
+    "podcasts": "Pódcasts",
+    "podcastsDuration": "Duración pódcasts",
+    "books": "Libros",
+    "booksDuration": "Duración libros"
+  },
+  "ca": {
+    "podcasts": "Pòdcasts",
+    "podcastsDuration": "Durada pòdcasts",
+    "books": "Llibres",
+    "booksDuration": "Durada llibres"
+  },
+  "he": {
+    "podcasts": "פודקאסטים",
+    "podcastsDuration": "זמן פודקאסט",
+    "books": "ספרים",
+    "booksDuration": "משך ספרים"
+  },
+  "hr": {
+    "podcasts": "Podcasti",
+    "podcastsDuration": "Trajanje podcasta",
+    "books": "Knjige",
+    "booksDuration": "Trajanje knjiga"
+  },
+  "hu": {
+    "podcasts": "Podcastok",
+    "podcastsDuration": "Podcastidő",
+    "books": "Könyvek",
+    "booksDuration": "Könyvidő"
+  },
+  "it": {
+    "podcasts": "Podcast",
+    "podcastsDuration": "Durata podcast",
+    "books": "Libri",
+    "booksDuration": "Durata libri"
+  },
+  "nb-NO": {
+    "podcasts": "Podkaster",
+    "podcastsDuration": "Podkasttid",
+    "books": "Bøker",
+    "booksDuration": "Boktid"
+  },
+  "pt": {
+    "podcasts": "Podcasts",
+    "podcastsDuration": "Duração podcasts",
+    "books": "Livros",
+    "booksDuration": "Duração livros"
+  },
+  "ru": {
+    "podcasts": "Подкасты",
+    "podcastsDuration": "Подкасты: время",
+    "books": "Книги",
+    "booksDuration": "Время книг"
+  },
+  "sv": {
+    "podcasts": "Poddar",
+    "podcastsDuration": "Poddtid",
+    "books": "Böcker",
+    "booksDuration": "Boktid"
+  },
+  "vi": {
+    "podcasts": "Podcast",
+    "podcastsDuration": "Giờ podcast",
+    "books": "Sách",
+    "booksDuration": "Giờ sách"
+  },
+  "zh-Hans": {
+    "podcasts": "播客",
+    "podcastsDuration": "播客时长",
+    "books": "图书",
+    "booksDuration": "图书时长"
+  },
+  "zh-Hant": {
+    "podcasts": "Podcast",
+    "podcastsDuration": "Podcast 時長",
+    "books": "書籍",
+    "booksDuration": "書籍時長"
+  }
+}

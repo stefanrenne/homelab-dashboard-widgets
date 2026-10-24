@@ -1,0 +1,53 @@
+{
+  "en": {
+    "nothingPlaying": "Nothing playing"
+  },
+  "nl": {
+    "nothingPlaying": "Er speelt niets"
+  },
+  "fr": {
+    "nothingPlaying": "Rien en lecture"
+  },
+  "de": {
+    "nothingPlaying": "Nichts läuft"
+  },
+  "es": {
+    "nothingPlaying": "Nada en reproducción"
+  },
+  "ca": {
+    "nothingPlaying": "No sona res"
+  },
+  "he": {
+    "nothingPlaying": "שום דבר לא מתנגן"
+  },
+  "hr": {
+    "nothingPlaying": "Ništa se ne reproducira"
+  },
+  "hu": {
+    "nothingPlaying": "Semmi nem szól"
+  },
+  "it": {
+    "nothingPlaying": "Niente in riproduzione"
+  },
+  "nb-NO": {
+    "nothingPlaying": "Ingenting spilles"
+  },
+  "pt": {
+    "nothingPlaying": "Nada a tocar"
+  },
+  "ru": {
+    "nothingPlaying": "Ничего не играет"
+  },
+  "sv": {
+    "nothingPlaying": "Inget spelas"
+  },
+  "vi": {
+    "nothingPlaying": "Không phát gì"
+  },
+  "zh-Hans": {
+    "nothingPlaying": "未在播放"
+  },
+  "zh-Hant": {
+    "nothingPlaying": "未在播放"
+  }
+}

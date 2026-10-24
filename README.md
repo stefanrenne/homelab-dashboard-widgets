@@ -30,6 +30,10 @@ Every widget has its own page with setup, fields and options on the
 | `speedtest` | download, upload, ping (Speedtest Tracker) | `url`, `version` (1 or 2), `key`, `bitratePrecision` |
 | `gitea` | notifications, issues, pull requests, repositories (also Forgejo) | `url`, `key` |
 | `grafana` | dashboards, data sources, alert rules, alerts firing | `url`, `username`, `password`, `version`, `alerts` |
+| `tailscale` | address, last seen, key expiry of a device; more via `fields` | `deviceid`, `key` |
+| `authentik` | users, logins, failed logins, authorizations (24 hours) | `url`, `key`, `version` |
+| `audiobookshelf` | podcasts, books and their length | `url`, `key` |
+| `navidrome` | a row per listener | `url`, `user`, `token`, `salt` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

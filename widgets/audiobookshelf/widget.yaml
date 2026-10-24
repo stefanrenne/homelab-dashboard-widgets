@@ -1,0 +1,9 @@
+id: audiobookshelf
+name: Audiobookshelf
+version: 0.1.0
+apiVersion: 1
+description: Podcasts and books in Audiobookshelf, with their total length (homepage's audiobookshelf widget).
+refresh: 10m
+options:
+  url: { type: url, required: true }       # e.g. http://audiobookshelf.lan:13378
+  key: { type: string, secret: true, required: true }   # an admin's API token: Settings > Users > your account

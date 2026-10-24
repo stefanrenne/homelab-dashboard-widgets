@@ -23,6 +23,8 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  tailscale: { deviceid: 'n1234567CNTRL' },
+  navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
   grafana: { username: 'admin', password: 'pw' },
   openmediavault: { method: 'services.getStatus', username: 'admin', password: 'pw' },
 };
@@ -64,13 +66,16 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
   }
 });
 
+// blocks whose value is a name from the service (a host name, an operating system), not a key
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'] };
+
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
     const i18n = JSON.parse(fs.readFileSync(path.join(WIDGETS, id, 'i18n.json'), 'utf8'));
     const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
     for (const b of out.blocks ?? []) {
       assert.ok(b.label in i18n.en, `${id}: label ${b.label}`);
-      if (typeof b.value === 'string' && /^[a-z]+$/.test(b.value)) assert.ok(b.value in i18n.en, `${id}: value ${b.value}`);
+      if (typeof b.value === 'string' && /^[a-z]+$/.test(b.value) && !(NAMES[id] ?? []).includes(b.key)) assert.ok(b.value in i18n.en, `${id}: value ${b.value}`);
     }
     for (const r of out.rows ?? []) {
       if (/^[a-z][A-Za-z]+$/.test(r.label)) assert.ok(r.label in i18n.en, `${id}: row ${r.label}`);
@@ -926,4 +931,56 @@ test('grafana: stats and firing alerts (marked), from the legacy API or an alert
   assert.equal(out.blocks[3].status, 'warn');
   assert.equal(lastRequest('grafana').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
   assert.equal(values(await run('grafana', { version: 2, alerts: 'alertmanager' })).alertstriggered, 1);
+});
+
+test('tailscale: address, last seen and key expiry as spans, expiry soon and updates marked', async () => {
+  const out = await run('tailscale');
+  assert.equal(values(out).address, '100.101.102.103');
+  assert.equal(lastRequest('tailscale').headers.authorization, 'Bearer test-key');
+  const { default: tailscale } = await import(path.join(WIDGETS, 'tailscale', 'server.js'));
+  const now = Date.now();
+  const device = { addresses: ['100.1.2.3'], lastSeen: new Date(now - (3 * 3600 + 5 * 60) * 1000).toISOString(), expires: new Date(now + 3 * 86400_000 + 3600_000 + 60_000).toISOString(), updateAvailable: true, authorized: true, clientVersion: '1.88.3-t1234', created: '2025-03-01T10:00:00Z' };
+  const ask = (d) => tailscale.fetch({ options: { deviceid: 'n1CNTRL', key: 'k', url: 'http://x' }, fetch: async () => new Response(JSON.stringify(d)) });
+  const v = values(await ask(device));
+  assert.deepEqual([v.last_seen, v.expires, v.client_version, v.created, v.update_available], ['3h 5m', '3d 1h', '1.88.3', '2025-03-01', 'yes']);
+  const marks = Object.fromEntries((await ask(device)).blocks.map((b) => [b.key, b.status ?? null]));
+  assert.deepEqual([marks.expires, marks.update_available, marks.authorized], ['warn', 'warn', null]);
+  assert.equal(values(await ask({ ...device, keyExpiryDisabled: true, connectedToControl: true })).expires, 'never');
+  assert.equal(values(await ask({ ...device, connectedToControl: true })).last_seen, 'now');
+  assert.deepEqual((await ask({ ...device, expires: '2020-01-01T00:00:00Z' })).blocks[2], { key: 'expires', label: 'expires', value: 'expired', status: 'error' });
+  await assert.rejects(ask({}).then(() => tailscale.fetch({ options: { deviceid: '../x', key: 'k', url: 'http://x' } })), /deviceid/);
+});
+
+test('authentik: users, and logins, failed logins (marked) and authorizations of the last day', async () => {
+  const v2 = await run('authentik', { version: 2 });
+  assert.deepEqual(values(v2), { users: 12, loginsLast24H: 40, failedLoginsLast24H: 2, authorizationsLast24H: 17 });
+  assert.equal(v2.blocks[2].status, 'warn');
+  assert.equal(lastRequest('authentik').headers.authorization, 'Bearer test-key');
+  const { default: authentik } = await import(path.join(WIDGETS, 'authentik', 'server.js'));
+  const now = Date.now();
+  const v1 = await authentik.fetch({ options: { url: 'http://x', key: 'k', version: 1 }, fetch: async (u) => {
+    const s = String(u);
+    if (s.includes('core/users')) return new Response(JSON.stringify({ pagination: { count: 3 } }));
+    const failed = s.includes('login_failed');
+    return new Response(JSON.stringify([{ x_cord: now - 2 * 86400_000, y_cord: 100 }, { x_cord: now - 3600_000, y_cord: failed ? 1 : 7 }]));
+  } });
+  assert.deepEqual(values(v1), { users: 3, loginsLast24H: 7, failedLoginsLast24H: 1 });
+});
+
+test('audiobookshelf: podcasts and books with their length, summed over libraries', async () => {
+  assert.deepEqual(values(await run('audiobookshelf')), { podcasts: 18, podcastsDuration: '20d 23h', books: 214, booksDuration: '63d 12h' });
+  assert.equal(lastRequest('audiobookshelf').headers.authorization, 'Bearer test-key');
+});
+
+test('navidrome: a row per listener; nothing playing; a wrong token', async () => {
+  const out = await run('navidrome');
+  assert.deepEqual(out.rows, [
+    { label: 'Pink Floyd - Breathe (anna)', value: 'The Dark Side of the Moon', icon: 'play' },
+    { label: 'Massive Attack - Teardrop (bob)', value: 'Mezzanine', icon: 'play' },
+  ]);
+  assert.deepEqual([lastRequest('navidrome').query.u, lastRequest('navidrome').query.t, lastRequest('navidrome').query.s], ['anna', 't0k', 's4lt']);
+  const { default: navidrome } = await import(path.join(WIDGETS, 'navidrome', 'server.js'));
+  const ask = (body) => navidrome.fetch({ options: { url: 'http://x', user: 'u', token: 't', salt: 's' }, fetch: async () => new Response(JSON.stringify({ 'subsonic-response': body })) });
+  assert.deepEqual((await ask({ status: 'ok', nowPlaying: {} })).rows, [{ label: 'nothingPlaying' }]);
+  await assert.rejects(ask({ status: 'failed', error: { code: 40 } }), /Navidrome answered 401/);
 });
