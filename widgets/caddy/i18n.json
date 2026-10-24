@@ -1,0 +1,87 @@
+{
+  "en": {
+    "upstreams": "Upstreams",
+    "requests": "Requests",
+    "requests_failed": "Failed requests"
+  },
+  "nl": {
+    "upstreams": "Upstreams",
+    "requests": "Verzoeken",
+    "requests_failed": "Mislukt"
+  },
+  "fr": {
+    "upstreams": "Amonts",
+    "requests": "Requêtes",
+    "requests_failed": "Échecs"
+  },
+  "de": {
+    "upstreams": "Upstreams",
+    "requests": "Anfragen",
+    "requests_failed": "Fehlschläge"
+  },
+  "es": {
+    "upstreams": "Upstreams",
+    "requests": "Peticiones",
+    "requests_failed": "Fallidas"
+  },
+  "ca": {
+    "upstreams": "Upstreams",
+    "requests": "Peticions",
+    "requests_failed": "Fallides"
+  },
+  "he": {
+    "upstreams": "שרתי יעד",
+    "requests": "בקשות",
+    "requests_failed": "נכשלו"
+  },
+  "hr": {
+    "upstreams": "Odredišta",
+    "requests": "Zahtjevi",
+    "requests_failed": "Neuspjeli"
+  },
+  "hu": {
+    "upstreams": "Célszerverek",
+    "requests": "Kérések",
+    "requests_failed": "Sikertelen"
+  },
+  "it": {
+    "upstreams": "Upstream",
+    "requests": "Richieste",
+    "requests_failed": "Fallite"
+  },
+  "nb-NO": {
+    "upstreams": "Oppstrøms",
+    "requests": "Forespørsler",
+    "requests_failed": "Feilet"
+  },
+  "pt": {
+    "upstreams": "Upstreams",
+    "requests": "Pedidos",
+    "requests_failed": "Falhados"
+  },
+  "ru": {
+    "upstreams": "Апстримы",
+    "requests": "Запросы",
+    "requests_failed": "Ошибки"
+  },
+  "sv": {
+    "upstreams": "Uppströms",
+    "requests": "Anrop",
+    "requests_failed": "Misslyckade"
+  },
+  "vi": {
+    "upstreams": "Máy đích",
+    "requests": "Yêu cầu",
+    "requests_failed": "Thất bại"
+  },
+  "zh-Hans": {
+    "upstreams": "上游",
+    "requests": "请求",
+    "requests_failed": "失败"
+  },
+  "zh-Hant": {
+    "upstreams": "上游",
+    "requests": "請求",
+    "requests_failed": "失敗"
+  }
+}

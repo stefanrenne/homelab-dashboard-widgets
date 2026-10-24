@@ -1,0 +1,8 @@
+id: caddy
+name: Caddy
+version: 0.1.0
+apiVersion: 1
+description: Reverse proxy upstreams, their requests and failed requests from Caddy's admin API (homepage's caddy widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # Caddy's admin API, e.g. http://caddy.lan:2019 (see the page)

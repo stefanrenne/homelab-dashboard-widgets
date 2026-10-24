@@ -1,0 +1,138 @@
+{
+  "en": {
+    "books": "Books",
+    "authors": "Authors",
+    "series": "Series",
+    "storage": "Storage",
+    "reading": "Reading",
+    "finished": "Finished"
+  },
+  "nl": {
+    "books": "Boeken",
+    "authors": "Auteurs",
+    "series": "Series",
+    "storage": "Opslag",
+    "reading": "Aan het lezen",
+    "finished": "Uitgelezen"
+  },
+  "fr": {
+    "books": "Livres",
+    "authors": "Auteurs",
+    "series": "Séries",
+    "storage": "Stockage",
+    "reading": "En lecture",
+    "finished": "Terminés"
+  },
+  "de": {
+    "books": "Bücher",
+    "authors": "Autoren",
+    "series": "Serien",
+    "storage": "Speicher",
+    "reading": "Am Lesen",
+    "finished": "Gelesen"
+  },
+  "es": {
+    "books": "Libros",
+    "authors": "Autores",
+    "series": "Series",
+    "storage": "Espacio",
+    "reading": "Leyendo",
+    "finished": "Terminados"
+  },
+  "ca": {
+    "books": "Llibres",
+    "authors": "Autors",
+    "series": "Sèries",
+    "storage": "Espai",
+    "reading": "Llegint",
+    "finished": "Acabats"
+  },
+  "he": {
+    "books": "ספרים",
+    "authors": "מחברים",
+    "series": "סדרות",
+    "storage": "אחסון",
+    "reading": "בקריאה",
+    "finished": "הושלמו"
+  },
+  "hr": {
+    "books": "Knjige",
+    "authors": "Autori",
+    "series": "Serije",
+    "storage": "Pohrana",
+    "reading": "Čitam",
+    "finished": "Pročitano"
+  },
+  "hu": {
+    "books": "Könyvek",
+    "authors": "Szerzők",
+    "series": "Sorozatok",
+    "storage": "Tárhely",
+    "reading": "Olvasás alatt",
+    "finished": "Befejezve"
+  },
+  "it": {
+    "books": "Libri",
+    "authors": "Autori",
+    "series": "Serie",
+    "storage": "Spazio",
+    "reading": "In lettura",
+    "finished": "Finiti"
+  },
+  "nb-NO": {
+    "books": "Bøker",
+    "authors": "Forfattere",
+    "series": "Serier",
+    "storage": "Lagring",
+    "reading": "Leser",
+    "finished": "Ferdig"
+  },
+  "pt": {
+    "books": "Livros",
+    "authors": "Autores",
+    "series": "Séries",
+    "storage": "Espaço",
+    "reading": "A ler",
+    "finished": "Terminados"
+  },
+  "ru": {
+    "books": "Книги",
+    "authors": "Авторы",
+    "series": "Сериалы",
+    "storage": "Хранилище",
+    "reading": "Читаю",
+    "finished": "Прочитано"
+  },
+  "sv": {
+    "books": "Böcker",
+    "authors": "Författare",
+    "series": "Serier",
+    "storage": "Lagring",
+    "reading": "Läser",
+    "finished": "Utlästa"
+  },
+  "vi": {
+    "books": "Sách",
+    "authors": "Tác giả",
+    "series": "Phim bộ",
+    "storage": "Lưu trữ",
+    "reading": "Đang đọc",
+    "finished": "Đã đọc"
+  },
+  "zh-Hans": {
+    "books": "图书",
+    "authors": "作者",
+    "series": "剧集",
+    "storage": "存储",
+    "reading": "在读",
+    "finished": "已读完"
+  },
+  "zh-Hant": {
+    "books": "書籍",
+    "authors": "作者",
+    "series": "影集",
+    "storage": "儲存空間",
+    "reading": "閱讀中",
+    "finished": "已讀完"
+  }
+}

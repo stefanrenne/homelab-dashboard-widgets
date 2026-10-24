@@ -30,6 +30,7 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  beszel: { version: 2, username: 'admin@example.com', password: 'pw' },
   get azuredevops() { return { organization: 'example', project: 'homelab', definitionId: '12', repositoryId: 'homelab', userEmail: 'anna@example.com' }; },
   arcane: { env: '1' },
   get apcups() { return { url: apcupsd.url }; },
@@ -77,7 +78,7 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
 });
 
 // blocks whose value is a name from the service (a host name, an operating system), not a key
-const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'] };
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'] };
 
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
@@ -1171,4 +1172,31 @@ test('backrest and booklore: backups (failures marked) and a reading list behind
   assert.equal(lastRequest('backrest').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
   assert.deepEqual(values(await run('booklore', { username: 'anna', password: 'pw' })), { libraries: 2, books: 4, reading: 1, finished: 2 });
   assert.equal(lastRequest('booklore').headers.authorization, 'Bearer jwt');
+});
+
+test('beszel: systems up of all (marked when not all), or one system in detail', async () => {
+  const all = await run('beszel');
+  assert.deepEqual(values(all), { systems: 3, up: '2 / 3' });
+  assert.equal(all.blocks[1].status, 'warn');
+  assert.equal(lastRequest('beszel').headers.authorization, 'pb-token');
+  const one = await run('beszel', { systemId: 'nas' });
+  const v = values(one);
+  assert.deepEqual([v.name, v.status, v.cpu, v.memory, v.disk, v.network], ['nas', 'up', '12.3%', '61.2%', '70.1%', '1.5 MB/s']);
+  assert.match(v.updated, /^\d+d \d+h$|^\d+h \d+m$|^\d+m$/);
+  assert.equal((await run('beszel', { systemId: 'c3' })).blocks[1].status, 'error');
+  await assert.rejects(run('beszel', { systemId: 'nope' }), /no system "nope"/);
+  await run('beszel', { version: 1 });
+  assert.ok(mock.requests.some((r) => r.route === 'POST /api/admins/auth-with-password'));
+});
+
+test('bookorbit, caddy and calibreweb', async () => {
+  assert.deepEqual(values(await run('bookorbit', { username: 'anna', password: 'pw' })), { books: 812, authors: 301, series: 77, storage: '41.2 GB', reading: 3, finished: 128 });
+  assert.equal(lastRequest('bookorbit').headers.authorization, 'Bearer access-1');
+  const login = mock.requests.filter((r) => r.route === 'POST /api/v1/auth/login').at(-1);
+  assert.equal(JSON.parse(login.body).clientKind, 'native');
+  const caddy = await run('caddy');
+  assert.deepEqual(values(caddy), { upstreams: 3, requests: 5, requests_failed: 2 });
+  assert.equal(caddy.blocks[2].status, 'warn');
+  assert.deepEqual(values(await run('calibreweb', { username: 'u', password: 'p' })), { books: 1543, authors: 702, categories: 48, series: 211 });
+  assert.equal(lastRequest('calibreweb').headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
 });

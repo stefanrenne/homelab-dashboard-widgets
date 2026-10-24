@@ -1,0 +1,9 @@
+{
+ "_note": "BookOrbit: a native login, library and reading statistics.",
+ "routes": {
+  "POST /api/v1/auth/login": { "accessToken": "access-1", "refreshToken": "refresh-1" },
+  "POST /api/v1/auth/refresh": { "accessToken": "access-2" },
+  "GET /api/v1/statistics/summary": { "totalBooks": 812, "totalAuthors": 301, "totalSeries": 77, "totalSize": 41200000000 },
+  "GET /api/v1/user-statistics/summary": { "inProgressBooks": 3, "completedBooks": 128 }
+ }
+}

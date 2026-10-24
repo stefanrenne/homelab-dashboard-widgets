@@ -1,0 +1,13 @@
+id: beszel
+name: Beszel
+version: 0.1.0
+apiVersion: 1
+description: Systems up of all in Beszel, or the status, CPU, memory, disk and network of one system (homepage's beszel widget).
+refresh: 1m
+defaultFields: [systems, up, name, status, cpu, memory]
+options:
+  url: { type: url, required: true }       # e.g. http://beszel.lan:8090
+  username: { type: string, required: true }               # a superuser's e-mail address
+  password: { type: string, secret: true, required: true }
+  systemId: { type: string }               # one system: its id or its name; default all systems
+  version: { type: number, default: 1 }    # 2 for Beszel 0.9 or later, as in homepage

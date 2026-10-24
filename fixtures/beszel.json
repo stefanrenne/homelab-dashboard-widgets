@@ -1,0 +1,12 @@
+{
+ "_note": "Beszel 0.9+: a superuser token and three systems, one down.",
+ "routes": {
+  "POST /api/collections/_superusers/auth-with-password": { "token": "pb-token", "record": { "email": "admin@example.com" } },
+  "POST /api/admins/auth-with-password": { "token": "pb-token-v1" },
+  "GET /api/collections/systems/records": { "page": 1, "perPage": 500, "totalItems": 3, "items": [
+   { "id": "a1", "name": "nas", "status": "up", "updated": "2026-10-24 06:00:00.000Z", "info": { "cpu": 12.34, "mp": 61.2, "dp": 70.05, "b": 1.5 } },
+   { "id": "b2", "name": "pi", "status": "up", "updated": "2026-10-24 06:00:00.000Z", "info": { "cpu": 3.1, "mp": 40, "dp": 22 } },
+   { "id": "c3", "name": "old", "status": "down", "updated": "2026-10-20 06:00:00.000Z", "info": {} }
+  ] }
+ }
+}

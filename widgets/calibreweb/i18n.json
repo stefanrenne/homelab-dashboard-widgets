@@ -1,0 +1,104 @@
+{
+  "en": {
+    "books": "Books",
+    "authors": "Authors",
+    "categories": "Categories",
+    "series": "Series"
+  },
+  "nl": {
+    "books": "Boeken",
+    "authors": "Auteurs",
+    "categories": "Categorieën",
+    "series": "Series"
+  },
+  "fr": {
+    "books": "Livres",
+    "authors": "Auteurs",
+    "categories": "Catégories",
+    "series": "Séries"
+  },
+  "de": {
+    "books": "Bücher",
+    "authors": "Autoren",
+    "categories": "Kategorien",
+    "series": "Serien"
+  },
+  "es": {
+    "books": "Libros",
+    "authors": "Autores",
+    "categories": "Categorías",
+    "series": "Series"
+  },
+  "ca": {
+    "books": "Llibres",
+    "authors": "Autors",
+    "categories": "Categories",
+    "series": "Sèries"
+  },
+  "he": {
+    "books": "ספרים",
+    "authors": "מחברים",
+    "categories": "קטגוריות",
+    "series": "סדרות"
+  },
+  "hr": {
+    "books": "Knjige",
+    "authors": "Autori",
+    "categories": "Kategorije",
+    "series": "Serije"
+  },
+  "hu": {
+    "books": "Könyvek",
+    "authors": "Szerzők",
+    "categories": "Kategóriák",
+    "series": "Sorozatok"
+  },
+  "it": {
+    "books": "Libri",
+    "authors": "Autori",
+    "categories": "Categorie",
+    "series": "Serie"
+  },
+  "nb-NO": {
+    "books": "Bøker",
+    "authors": "Forfattere",
+    "categories": "Kategorier",
+    "series": "Serier"
+  },
+  "pt": {
+    "books": "Livros",
+    "authors": "Autores",
+    "categories": "Categorias",
+    "series": "Séries"
+  },
+  "ru": {
+    "books": "Книги",
+    "authors": "Авторы",
+    "categories": "Категории",
+    "series": "Сериалы"
+  },
+  "sv": {
+    "books": "Böcker",
+    "authors": "Författare",
+    "categories": "Kategorier",
+    "series": "Serier"
+  },
+  "vi": {
+    "books": "Sách",
+    "authors": "Tác giả",
+    "categories": "Danh mục",
+    "series": "Phim bộ"
+  },
+  "zh-Hans": {
+    "books": "图书",
+    "authors": "作者",
+    "categories": "分类",
+    "series": "剧集"
+  },
+  "zh-Hant": {
+    "books": "書籍",
+    "authors": "作者",
+    "categories": "分類",
+    "series": "影集"
+  }
+}

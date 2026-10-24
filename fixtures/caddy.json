@@ -1,0 +1,8 @@
+{
+ "_note": "Caddy admin API reverse_proxy/upstreams.",
+ "routes": { "GET /reverse_proxy/upstreams": [
+  { "address": "10.0.0.5:8096", "num_requests": 4, "fails": 0 },
+  { "address": "10.0.0.6:3000", "num_requests": 1, "fails": 2 },
+  { "address": "10.0.0.7:8080", "num_requests": 0, "fails": 0 }
+ ] }
+}

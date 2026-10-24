@@ -1,0 +1,4 @@
+{
+ "_note": "Calibre-Web OPDS stats.",
+ "routes": { "GET /opds/stats": { "books": 1543, "authors": 702, "categories": 48, "series": 211 } }
+}

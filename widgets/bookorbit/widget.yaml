@@ -1,0 +1,11 @@
+id: bookorbit
+name: BookOrbit
+version: 0.1.0
+apiVersion: 1
+description: Books, authors, and books you are reading and finished in BookOrbit (homepage's bookorbit widget).
+refresh: 10m
+defaultFields: [books, authors, reading, finished]
+options:
+  url: { type: url, required: true }       # e.g. http://bookorbit.lan:3000
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }
