@@ -248,3 +248,15 @@ test('unraid: a server without array disks (pools only) gets no array blocks', a
   assert.equal(keys.some((k) => k.startsWith('array')), false);
   assert.ok(keys.includes('pool1UsedPercent'));
 });
+
+test('every widget has a README for its docs page: title, every field, an example', async () => {
+  for (const id of IDS) {
+    const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
+    const readme = fs.readFileSync(path.join(WIDGETS, id, 'README.md'), 'utf8');
+    assert.equal(readme.split('\n')[0], `# ${m.name}`, `${id}: the title is the manifest name`);
+    assert.match(readme.split(/^## Example$/m)[1] ?? '', new RegExp(`type: ${id}\\b`), `${id}: an example that uses it`);
+    const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9]+)`/g)].map((x) => x[1]));
+    const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
+    for (const b of out.blocks ?? []) assert.ok(fields.has(b.key ?? b.label), `${id}: field ${b.key ?? b.label} missing from README`);
+  }
+});

@@ -4,6 +4,10 @@ Widgets for [homelab-dashboard](https://github.com/stefanrenne/homelab-dashboard
 same fields as the matching [homepage](https://gethomepage.dev) widgets. They live outside the
 dashboard on purpose: this repository is an ordinary widget collection, installed like any third-party one.
 
+Every widget has its own page with setup, fields and options on the
+[documentation site](https://stefanrenne.github.io/homelab-dashboard/widgets/collection/)
+(and as `widgets/<id>/README.md` here).
+
 | Widget | Shows | Options |
 |---|---|---|
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
