@@ -1,0 +1,52 @@
+{
+  "en": {
+    "cpu": "CPU",
+    "memory": "Memory",
+    "memoryUsed": "Memory used",
+    "memoryTotal": "Memory total",
+    "cputemp": "CPU temp",
+    "uptime": "Uptime",
+    "disk": "Disk",
+    "free": "Free"
+  },
+  "nl": {
+    "cpu": "CPU",
+    "memory": "Geheugen",
+    "memoryUsed": "Geheugen gebruikt",
+    "memoryTotal": "Geheugen totaal",
+    "cputemp": "CPU-temp",
+    "uptime": "Uptime",
+    "disk": "Schijf",
+    "free": "Vrij"
+  },
+  "fr": {
+    "cpu": "CPU",
+    "memory": "Mémoire",
+    "memoryUsed": "Mémoire utilisée",
+    "memoryTotal": "Mémoire totale",
+    "cputemp": "Température CPU",
+    "uptime": "Temps actif",
+    "disk": "Disque",
+    "free": "Libre"
+  },
+  "de": {
+    "cpu": "CPU",
+    "memory": "Speicher",
+    "memoryUsed": "Speicher belegt",
+    "memoryTotal": "Speicher gesamt",
+    "cputemp": "CPU-Temp",
+    "uptime": "Laufzeit",
+    "disk": "Platte",
+    "free": "Frei"
+  },
+  "es": {
+    "cpu": "CPU",
+    "memory": "Memoria",
+    "memoryUsed": "Memoria usada",
+    "memoryTotal": "Memoria total",
+    "cputemp": "Temperatura CPU",
+    "uptime": "Tiempo activo",
+    "disk": "Disco",
+    "free": "Libre"
+  }
+}

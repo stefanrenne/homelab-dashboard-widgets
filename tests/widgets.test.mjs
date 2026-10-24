@@ -33,7 +33,7 @@ const values = (out) => Object.fromEntries(out.blocks.map((b) => [b.key, b.unit 
 const lastRequest = (id) => mock.requests.filter((r) => r.widget === id).at(-1);
 
 test('every folder is a valid package: manifest, i18n in all languages, only node: imports', () => {
-  assert.equal(IDS.length, 12);
+  assert.equal(IDS.length, 13);
   for (const id of IDS) {
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     assert.equal(m.id, id);
@@ -259,4 +259,17 @@ test('every widget has a README for its docs page: title, every field, an exampl
     const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
     for (const b of out.blocks ?? []) assert.ok(fields.has(b.key ?? b.label), `${id}: field ${b.key ?? b.label} missing from README`);
   }
+});
+
+
+test('glances: CPU, memory, the hottest CPU sensor, uptime and disks; version 4; basic auth', async () => {
+  const out = await run('glances', { cputemp: true, uptime: true, disk: ['/', '/mnt/data'], expanded: true, username: 'g', password: 'p' });
+  assert.deepEqual(values(out), {
+    cpu: '23.4%', memory: '62.5%', memoryUsed: '10 GB', memoryTotal: '16 GB', cputemp: '51°C', uptime: '12d 4h',
+    '/': '40%', '/Free': '300 GB', '/mnt/data': '75%', '/mnt/dataFree': '1 TB',
+  });
+  assert.equal(lastRequest('glances').headers.authorization, `Basic ${Buffer.from('g:p').toString('base64')}`);
+  assert.deepEqual(values(await run('glances', { version: 4 })), { cpu: '11%', memory: '50%' });
+  assert.equal(values(await run('glances', { cpu: false, mem: false, cputemp: true, unit: 'imperial', cpuSensorLabel: 'acpitz' })).cputemp, '123.8°F');
+  assert.deepEqual(values(await run('glances', { cpu: false, mem: false, disk: ['/'], diskUnits: 'bbytes', expanded: true })), { disk: '40%', diskFree: '279 GiB' });
 });

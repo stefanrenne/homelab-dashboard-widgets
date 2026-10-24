@@ -1,0 +1,21 @@
+id: glances
+name: Glances
+version: 0.1.0
+apiVersion: 1
+description: CPU, memory, CPU temperature, uptime and disks of a machine running Glances (homepage's glances info widget).
+refresh: 10s
+defaultFields: [cpu, memory, cputemp, uptime]
+options:
+  url: { type: url, required: true }                         # e.g. http://server.lan:61208
+  username: { type: string }                                  # only when Glances has a password
+  password: { type: string, secret: true }
+  version: { type: enum, values: [3, 4], default: 3 }         # 4 for Glances 4 or later
+  cpu: { type: boolean, default: true }
+  mem: { type: boolean, default: true }
+  cputemp: { type: boolean, default: false }
+  cpuSensorLabel: { type: string }                            # an extra sensor label prefix to look for
+  unit: { type: enum, values: [metric, imperial], default: metric }   # for the temperature
+  uptime: { type: boolean, default: false }
+  disk: { type: list, default: [] }                           # mount points as Glances names them, e.g. [/, /boot]
+  diskUnits: { type: enum, values: [bytes, bbytes], default: bytes }  # bbytes: KiB, MiB, GiB (1024)
+  expanded: { type: boolean, default: false }                 # also memory used and total, and free space per disk

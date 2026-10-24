@@ -4,6 +4,10 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+### Added
+- `glances`: CPU, memory, CPU temperature, uptime and disks from Glances (API 3 or 4), as
+  homepage's glances info widget.
+
 ## [0.2.1] - 2026-10-24
 
 ### Added
