@@ -1,0 +1,87 @@
+{
+  "en": {
+    "people_home": "People home",
+    "lights_on": "Lights on",
+    "switches_on": "Switches on"
+  },
+  "nl": {
+    "people_home": "Mensen thuis",
+    "lights_on": "Lampen aan",
+    "switches_on": "Schakelaars aan"
+  },
+  "fr": {
+    "people_home": "Personnes présentes",
+    "lights_on": "Lumières allumées",
+    "switches_on": "Commutateurs actifs"
+  },
+  "de": {
+    "people_home": "Personen daheim",
+    "lights_on": "Lichter an",
+    "switches_on": "Schalter an"
+  },
+  "es": {
+    "people_home": "Personas en casa",
+    "lights_on": "Luces encendidas",
+    "switches_on": "Conmutadores activos"
+  },
+  "ca": {
+    "people_home": "Persones a casa",
+    "lights_on": "Llums enceses",
+    "switches_on": "Interruptors actius"
+  },
+  "he": {
+    "people_home": "אנשים בבית",
+    "lights_on": "אורות דולקים",
+    "switches_on": "מתגים פעילים"
+  },
+  "hr": {
+    "people_home": "Ljudi kod kuće",
+    "lights_on": "Upaljena svjetla",
+    "switches_on": "Uključene sklopke"
+  },
+  "hu": {
+    "people_home": "Otthon lévők",
+    "lights_on": "Égő lámpák",
+    "switches_on": "Bekapcsolt kapcsolók"
+  },
+  "it": {
+    "people_home": "Persone a casa",
+    "lights_on": "Luci accese",
+    "switches_on": "Interruttori accesi"
+  },
+  "nb-NO": {
+    "people_home": "Folk hjemme",
+    "lights_on": "Lys på",
+    "switches_on": "Brytere på"
+  },
+  "pt": {
+    "people_home": "Pessoas em casa",
+    "lights_on": "Luzes acesas",
+    "switches_on": "Comutadores ligados"
+  },
+  "ru": {
+    "people_home": "Люди дома",
+    "lights_on": "Свет включен",
+    "switches_on": "Выключатели вкл"
+  },
+  "sv": {
+    "people_home": "Personer hemma",
+    "lights_on": "Lampor tända",
+    "switches_on": "Brytare på"
+  },
+  "vi": {
+    "people_home": "Người ở nhà",
+    "lights_on": "Đèn đang bật",
+    "switches_on": "Công tắc đang bật"
+  },
+  "zh-Hans": {
+    "people_home": "在家人数",
+    "lights_on": "开着的灯",
+    "switches_on": "开着的开关"
+  },
+  "zh-Hant": {
+    "people_home": "在家人數",
+    "lights_on": "開著的燈",
+    "switches_on": "開著的開關"
+  }
+}

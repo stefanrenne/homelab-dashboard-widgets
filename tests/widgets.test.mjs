@@ -535,3 +535,20 @@ test('jellyfin and emby: a row per stream with position and progress, library co
   const idle = await jellyfin.fetch({ options: { url: 'http://x', key: 'k' }, fetch: async () => new Response('[]') });
   assert.deepEqual(idle.rows, [{ label: 'noActiveStreams' }]);
 });
+
+test('homeassistant: people, lights and switches from one states call; custom states and templates', async () => {
+  assert.deepEqual(values(await run('homeassistant')), { people_home: '2 / 3', lights_on: '2 / 4', switches_on: '1 / 2' });
+  assert.equal(lastRequest('homeassistant').headers.authorization, 'Bearer test-key');
+  const out = await run('homeassistant', { custom: [
+    { state: 'sensor.total_power' },
+    { state: 'weather.home', label: 'Wind', value: '{attributes.wind_speed} {attributes.wind_speed_unit}' },
+    { template: "{{ states.switch | list | count }}", label: 'Switches' },
+  ] });
+  assert.deepEqual(out.blocks, [
+    { key: 'custom1', label: 'Total power', value: '412 W' },
+    { key: 'custom2', label: 'Wind', value: '14.4 km/h' },
+    { key: 'custom3', label: 'Switches', value: '1' },
+  ]);
+  assert.deepEqual(JSON.parse(lastRequest('homeassistant').body), { template: '{{ states.switch | list | count }}' });
+  await assert.rejects(run('homeassistant', { custom: [{ state: '../config' }] }), /entity id/);
+});

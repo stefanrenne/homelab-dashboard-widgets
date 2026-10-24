@@ -1,0 +1,20 @@
+{
+ "_note": "Home Assistant REST API: three people (two home), lights, switches and a few sensors; a template renders as text.",
+ "routes": {
+  "GET /api/states": [
+   { "entity_id": "person.anna", "state": "home" },
+   { "entity_id": "person.bob", "state": "not_home" },
+   { "entity_id": "person.carl", "state": "home" },
+   { "entity_id": "light.kitchen", "state": "on" },
+   { "entity_id": "light.hall", "state": "off" },
+   { "entity_id": "light.living_room", "state": "on" },
+   { "entity_id": "light.garden", "state": "unavailable" },
+   { "entity_id": "switch.coffee", "state": "off" },
+   { "entity_id": "switch.heater", "state": "on" },
+   { "entity_id": "sensor.total_power", "state": "412", "attributes": { "unit_of_measurement": "W", "friendly_name": "Total power" } }
+  ],
+  "GET /api/states/sensor.total_power": { "entity_id": "sensor.total_power", "state": "412", "attributes": { "unit_of_measurement": "W", "friendly_name": "Total power" } },
+  "GET /api/states/weather.home": { "entity_id": "weather.home", "state": "cloudy", "attributes": { "friendly_name": "Home", "wind_speed": 14.4, "wind_speed_unit": "km/h" } },
+  "POST /api/template": 1
+ }
+}
