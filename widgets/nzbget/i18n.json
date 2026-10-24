@@ -1,0 +1,104 @@
+{
+  "en": {
+    "rate": "Rate",
+    "remaining": "Remaining",
+    "downloaded": "Downloaded",
+    "paused": "Paused"
+  },
+  "nl": {
+    "rate": "Snelheid",
+    "remaining": "Resterend",
+    "downloaded": "Gedownload",
+    "paused": "Gepauzeerd"
+  },
+  "fr": {
+    "rate": "Débit",
+    "remaining": "Restant",
+    "downloaded": "Téléchargé",
+    "paused": "En pause"
+  },
+  "de": {
+    "rate": "Rate",
+    "remaining": "Verbleibend",
+    "downloaded": "Geladen",
+    "paused": "Pausiert"
+  },
+  "es": {
+    "rate": "Velocidad",
+    "remaining": "Restante",
+    "downloaded": "Descargado",
+    "paused": "En pausa"
+  },
+  "ca": {
+    "rate": "Velocitat",
+    "remaining": "Restant",
+    "downloaded": "Baixat",
+    "paused": "En pausa"
+  },
+  "he": {
+    "rate": "קצב",
+    "remaining": "נותר",
+    "downloaded": "הורד",
+    "paused": "מושהה"
+  },
+  "hr": {
+    "rate": "Brzina",
+    "remaining": "Preostalo",
+    "downloaded": "Preuzeto",
+    "paused": "Pauzirano"
+  },
+  "hu": {
+    "rate": "Sebesség",
+    "remaining": "Hátralévő",
+    "downloaded": "Letöltve",
+    "paused": "Szüneteltetve"
+  },
+  "it": {
+    "rate": "Velocità",
+    "remaining": "Rimanente",
+    "downloaded": "Scaricato",
+    "paused": "In pausa"
+  },
+  "nb-NO": {
+    "rate": "Hastighet",
+    "remaining": "Gjenstår",
+    "downloaded": "Lastet ned",
+    "paused": "Pauset"
+  },
+  "pt": {
+    "rate": "Velocidade",
+    "remaining": "Restante",
+    "downloaded": "Transferido",
+    "paused": "Em pausa"
+  },
+  "ru": {
+    "rate": "Скорость",
+    "remaining": "Осталось",
+    "downloaded": "Загружено",
+    "paused": "Пауза"
+  },
+  "sv": {
+    "rate": "Hastighet",
+    "remaining": "Kvar",
+    "downloaded": "Nedladdat",
+    "paused": "Pausad"
+  },
+  "vi": {
+    "rate": "Tốc độ",
+    "remaining": "Còn lại",
+    "downloaded": "Đã tải",
+    "paused": "Tạm dừng"
+  },
+  "zh-Hans": {
+    "rate": "速率",
+    "remaining": "剩余",
+    "downloaded": "已下载",
+    "paused": "已暂停"
+  },
+  "zh-Hant": {
+    "rate": "速率",
+    "remaining": "剩餘",
+    "downloaded": "已下載",
+    "paused": "已暫停"
+  }
+}

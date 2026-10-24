@@ -676,3 +676,13 @@ test('deluge: leech, seed and rates over JSON-RPC, downloads per row, a login wh
     srv.close();
   }
 });
+
+test('nzbget: rate, remaining and downloaded in decimal units; paused is marked', async () => {
+  assert.deepEqual(values(await run('nzbget', { username: 'nzbget', password: 'pw' })), { rate: '12.5 MB/s', remaining: '4 GB', downloaded: '949.1 GB' });
+  const req = lastRequest('nzbget');
+  assert.equal(req.headers.authorization, `Basic ${Buffer.from('nzbget:pw').toString('base64')}`);
+  assert.equal(JSON.parse(req.body).method, 'status');
+  const { default: nzbget } = await import(path.join(WIDGETS, 'nzbget', 'server.js'));
+  const paused = await nzbget.fetch({ options: { url: 'http://x' }, fetch: async () => new Response(JSON.stringify({ result: { DownloadPaused: true } })) });
+  assert.deepEqual(paused.blocks[0], { key: 'rate', label: 'rate', value: 'paused', status: 'warn' });
+});

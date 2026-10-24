@@ -25,6 +25,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `qbittorrent`: torrents downloading and seeding with their rates, downloads per row with `enableLeechProgress` (problems first), a login or an API key, as homepage's qbittorrent widget.
 - `transmission`: torrents downloading and seeding with their rates, as homepage's transmission widget.
 - `deluge`: torrents downloading and seeding with their rates, downloads per row with `enableLeechProgress`, as homepage's deluge widget.
+- `nzbget`: download rate (paused is marked), remaining and downloaded, as homepage's nzbget widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

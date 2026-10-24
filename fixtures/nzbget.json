@@ -1,0 +1,6 @@
+{
+ "_note": "NZBGet JSON-RPC status: downloading at 12.5 MB/s.",
+ "routes": {
+  "POST /jsonrpc": { "version": "1.1", "id": 1, "result": { "DownloadRate": 12500000, "RemainingSizeMB": 3812, "DownloadedSizeMB": 905123, "DownloadPaused": false, "ServerStandBy": false } }
+ }
+}
