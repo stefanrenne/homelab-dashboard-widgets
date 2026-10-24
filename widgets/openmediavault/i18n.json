@@ -1,0 +1,138 @@
+{
+  "en": {
+    "running": "Running",
+    "stopped": "Stopped",
+    "total": "Total",
+    "passed": "Passed",
+    "failed": "Failed",
+    "downloading": "Downloading"
+  },
+  "nl": {
+    "running": "Actief",
+    "stopped": "Gestopt",
+    "total": "Totaal",
+    "passed": "Geslaagd",
+    "failed": "Mislukt",
+    "downloading": "Downloaden"
+  },
+  "fr": {
+    "running": "En cours",
+    "stopped": "Arrêtés",
+    "total": "Total",
+    "passed": "Réussis",
+    "failed": "Échec",
+    "downloading": "Téléchargement"
+  },
+  "de": {
+    "running": "Läuft",
+    "stopped": "Gestoppt",
+    "total": "Gesamt",
+    "passed": "Bestanden",
+    "failed": "Fehlgeschlagen",
+    "downloading": "Lädt herunter"
+  },
+  "es": {
+    "running": "En marcha",
+    "stopped": "Detenidos",
+    "total": "Total",
+    "passed": "Correctos",
+    "failed": "Fallido",
+    "downloading": "Descargando"
+  },
+  "ca": {
+    "running": "En marxa",
+    "stopped": "Aturat",
+    "total": "Total",
+    "passed": "Correctes",
+    "failed": "Fallit",
+    "downloading": "Baixant"
+  },
+  "he": {
+    "running": "פועלים",
+    "stopped": "נעצר",
+    "total": "סך הכול",
+    "passed": "עברו",
+    "failed": "נכשל",
+    "downloading": "מוריד"
+  },
+  "hr": {
+    "running": "Radi",
+    "stopped": "Zaustavljeno",
+    "total": "Ukupno",
+    "passed": "Prošlo",
+    "failed": "Neuspjelo",
+    "downloading": "Preuzimanje"
+  },
+  "hu": {
+    "running": "Fut",
+    "stopped": "Leállítva",
+    "total": "Összesen",
+    "passed": "Megfelelt",
+    "failed": "Sikertelen",
+    "downloading": "Letöltés"
+  },
+  "it": {
+    "running": "In esecuzione",
+    "stopped": "Fermato",
+    "total": "Totale",
+    "passed": "Superati",
+    "failed": "Fallito",
+    "downloading": "Download"
+  },
+  "nb-NO": {
+    "running": "Kjører",
+    "stopped": "Stoppet",
+    "total": "Totalt",
+    "passed": "Bestått",
+    "failed": "Mislyktes",
+    "downloading": "Laster ned"
+  },
+  "pt": {
+    "running": "Em execução",
+    "stopped": "Parado",
+    "total": "Total",
+    "passed": "Aprovados",
+    "failed": "Falhou",
+    "downloading": "A transferir"
+  },
+  "ru": {
+    "running": "Работает",
+    "stopped": "Остановлен",
+    "total": "Всего",
+    "passed": "Пройдено",
+    "failed": "Ошибка",
+    "downloading": "Загрузка"
+  },
+  "sv": {
+    "running": "Körs",
+    "stopped": "Stoppad",
+    "total": "Totalt",
+    "passed": "Godkända",
+    "failed": "Misslyckades",
+    "downloading": "Laddar ned"
+  },
+  "vi": {
+    "running": "Đang chạy",
+    "stopped": "Đã dừng",
+    "total": "Tổng",
+    "passed": "Đạt",
+    "failed": "Thất bại",
+    "downloading": "Đang tải"
+  },
+  "zh-Hans": {
+    "running": "运行中",
+    "stopped": "已停止",
+    "total": "总计",
+    "passed": "通过",
+    "failed": "失败",
+    "downloading": "下载中"
+  },
+  "zh-Hant": {
+    "running": "執行中",
+    "stopped": "已停止",
+    "total": "總計",
+    "passed": "通過",
+    "failed": "失敗",
+    "downloading": "下載中"
+  }
+}

@@ -34,6 +34,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `traefik` (routers, services and middlewares, marked with errors or warnings) and `npm` (Nginx Proxy Manager proxy hosts), as homepage's widgets.
 - `truenas`: load, uptime and alerts, and pools per row with `enablePools`, over the REST API or (`version: 2`, TrueNAS 25.04 and later) the WebSocket API, as homepage's truenas widget.
 - `diskstation`: uptime, free space on a volume (marked below 10%), CPU and memory of a Synology NAS, as homepage's diskstation widget.
+- `openmediavault`: services, S.M.A.R.T. results or Downloader downloads, chosen with `method`, as homepage's openmediavault widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

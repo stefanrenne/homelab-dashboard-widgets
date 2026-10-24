@@ -1,0 +1,11 @@
+{
+ "_note": "OpenMediaVault RPC: the mock answers by path only, so this is services.getStatus with an authenticated session.",
+ "routes": {
+  "POST /rpc.php": { "response": { "total": 4, "data": [
+   { "name": "ssh", "title": "SSH", "enabled": true, "running": true },
+   { "name": "smb", "title": "SMB/CIFS", "enabled": true, "running": true },
+   { "name": "nfs", "title": "NFS", "enabled": true, "running": false },
+   { "name": "rsync", "title": "Rsync", "enabled": false, "running": false }
+  ], "authenticated": true }, "error": null }
+ }
+}

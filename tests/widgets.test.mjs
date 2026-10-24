@@ -23,6 +23,7 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  openmediavault: { method: 'services.getStatus', username: 'admin', password: 'pw' },
 };
 
 async function run(id, options = {}, { params } = {}) {
@@ -858,4 +859,49 @@ test('diskstation: uptime, free space on a volume (marked below 10%), CPU and me
   assert.equal(lastRequest('diskstation').query._sid, 'sid-abc');
   assert.equal(values(await run('diskstation', { volume: 'volume_2' })).volumeAvailable, '1.5 TB');
   await assert.rejects(run('diskstation', { volume: 'volume_9' }), /no volume "volume_9"/);
+});
+
+test('openmediavault: services, S.M.A.R.T. in the background and downloads, with a session cookie', async () => {
+  const out = await run('openmediavault');
+  assert.deepEqual(values(out), { running: 2, stopped: 2, total: 4 });
+  assert.equal(out.blocks[1].status, 'warn');
+  const http = await import('node:http');
+  const seen = [];
+  let polls = 0;
+  const srv = http.createServer((q, res) => {
+    let body = '';
+    q.on('data', (c) => (body += c));
+    q.on('end', () => {
+      const { service, method, params } = JSON.parse(body);
+      seen.push(`${service}.${method} ${q.headers.cookie ?? '-'}`);
+      const send = (response) => res.end(JSON.stringify({ response, error: null }));
+      if (service === 'session') {
+        if (params.password !== 'pw') return send({ authenticated: false });
+        res.setHeader('set-cookie', ['X-OPENMEDIAVAULT-SESSIONID=s1; path=/', 'X-OPENMEDIAVAULT-LOGIN=admin; path=/']);
+        return send({ authenticated: true, username: 'admin' });
+      }
+      if (!q.headers.cookie?.includes('SESSIONID=s1')) { res.statusCode = 401; return res.end('{}'); }
+      if (method === 'getListBg') return send('/tmp/bgfile');
+      if (method === 'getOutput') {
+        polls++;
+        const disks = JSON.stringify({ total: 3, data: [{ monitor: true, overallstatus: 'GOOD' }, { monitor: true, overallstatus: 'BAD_SECTOR' }, { monitor: false, overallstatus: 'GOOD' }] });
+        return send(polls === 1 ? { output: disks.slice(0, 20), pos: 20, running: true } : { output: disks.slice(20), pos: disks.length, running: false });
+      }
+      send([{ downloading: true }, { downloading: false }]);
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: omv } = await import(path.join(WIDGETS, 'openmediavault', 'server.js'));
+  const ctx = (method, password = 'pw') => ({ options: { url: `http://127.0.0.1:${srv.address().port}`, username: 'admin', password, method }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) });
+  try {
+    const smart = await omv.fetch(ctx('smart.getListBg'));
+    assert.deepEqual(values(smart), { passed: 1, failed: 1 });
+    assert.equal(smart.blocks[1].status, 'error');
+    assert.equal(polls, 2, 'the background output is read until it is done');
+    assert.ok(seen[1].includes('X-OPENMEDIAVAULT-SESSIONID=s1'));
+    assert.deepEqual(values(await omv.fetch(ctx('downloader.getDownloadList'))), { downloading: 1, total: 2 });
+    await assert.rejects(omv.fetch(ctx('services.getStatus', 'wrong')), /OpenMediaVault login answered 401/);
+  } finally {
+    srv.close();
+  }
 });

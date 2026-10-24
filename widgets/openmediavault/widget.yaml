@@ -1,0 +1,12 @@
+id: openmediavault
+name: OpenMediaVault
+version: 0.1.0
+apiVersion: 1
+description: Services running and stopped, S.M.A.R.T. results or downloads of OpenMediaVault, one per `method` (homepage's openmediavault widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. http://omv.lan
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }
+  # services.getStatus (running, stopped, total), smart.getListBg (passed, failed) or downloader.getDownloadList (downloading, total)
+  method: { type: enum, values: [services.getStatus, smart.getListBg, downloader.getDownloadList], required: true }
