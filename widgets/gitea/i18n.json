@@ -1,0 +1,104 @@
+{
+  "en": {
+    "notifications": "Unread",
+    "issues": "Issues",
+    "pulls": "Pull requests",
+    "repositories": "Repositories"
+  },
+  "nl": {
+    "notifications": "Ongelezen",
+    "issues": "Issues",
+    "pulls": "Pull requests",
+    "repositories": "Repositories"
+  },
+  "fr": {
+    "notifications": "Non lues",
+    "issues": "Tickets",
+    "pulls": "Pull requests",
+    "repositories": "Dépôts"
+  },
+  "de": {
+    "notifications": "Ungelesen",
+    "issues": "Issues",
+    "pulls": "Pull Requests",
+    "repositories": "Repositorys"
+  },
+  "es": {
+    "notifications": "Sin leer",
+    "issues": "Incidencias",
+    "pulls": "Pull requests",
+    "repositories": "Repositorios"
+  },
+  "ca": {
+    "notifications": "No llegides",
+    "issues": "Incidències",
+    "pulls": "Pull requests",
+    "repositories": "Repositoris"
+  },
+  "he": {
+    "notifications": "לא נקראו",
+    "issues": "בעיות",
+    "pulls": "בקשות משיכה",
+    "repositories": "מאגרים"
+  },
+  "hr": {
+    "notifications": "Nepročitano",
+    "issues": "Problemi",
+    "pulls": "Zahtjevi",
+    "repositories": "Repozitoriji"
+  },
+  "hu": {
+    "notifications": "Olvasatlan",
+    "issues": "Hibajegyek",
+    "pulls": "Kérések",
+    "repositories": "Tárolók"
+  },
+  "it": {
+    "notifications": "Non lette",
+    "issues": "Issue",
+    "pulls": "Pull request",
+    "repositories": "Repository"
+  },
+  "nb-NO": {
+    "notifications": "Uleste",
+    "issues": "Saker",
+    "pulls": "Pull requests",
+    "repositories": "Repoer"
+  },
+  "pt": {
+    "notifications": "Não lidas",
+    "issues": "Issues",
+    "pulls": "Pull requests",
+    "repositories": "Repositórios"
+  },
+  "ru": {
+    "notifications": "Непрочитано",
+    "issues": "Задачи",
+    "pulls": "Пул-реквесты",
+    "repositories": "Репозитории"
+  },
+  "sv": {
+    "notifications": "Olästa",
+    "issues": "Ärenden",
+    "pulls": "Pull requests",
+    "repositories": "Förråd"
+  },
+  "vi": {
+    "notifications": "Chưa đọc",
+    "issues": "Vấn đề",
+    "pulls": "Yêu cầu kéo",
+    "repositories": "Kho mã"
+  },
+  "zh-Hans": {
+    "notifications": "未读",
+    "issues": "问题",
+    "pulls": "合并请求",
+    "repositories": "仓库"
+  },
+  "zh-Hant": {
+    "notifications": "未讀",
+    "issues": "問題",
+    "pulls": "合併請求",
+    "repositories": "儲存庫"
+  }
+}

@@ -9,7 +9,7 @@ one widget package following the dashboard's widget API 1
 | Path | What |
 |---|---|
 | `widgets/<id>/` | `widget.yaml`, `server.js`, `i18n.json`, `README.md` (its docs page, rule 13), optionally `client.js` (its own look). Folder name = widget id. |
-| `fixtures/<id>.json` | API answers per route (`"GET /api/v3/movie": ...`), used by tests and the mock. |
+| `fixtures/<id>.json` | API answers per route (`"GET /api/v3/movie": ...`; `{ "_headers": {...}, "_body": ... }` for headers), used by tests and the mock. |
 | `scripts/mock-homelab.mjs` | Serves the fixtures at `/<id>/...`; the tests start it, `npm run mock` too. |
 | `tests/widgets.test.mjs` | Every widget through the public `ctx` against the mock, plus package checks. |
 

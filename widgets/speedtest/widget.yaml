@@ -1,0 +1,11 @@
+id: speedtest
+name: Speedtest Tracker
+version: 0.1.0
+apiVersion: 1
+description: Download, upload and ping of the latest Speedtest Tracker result (homepage's speedtest widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://speedtest.lan:8080
+  version: { type: number, default: 1 }    # 2 for alexjustesen's Speedtest Tracker 1.2.1 or later, as in homepage
+  key: { type: string, secret: true }      # version 2: an API token (Settings > API Tokens)
+  bitratePrecision: { type: number, default: 0 }   # decimals in the rates

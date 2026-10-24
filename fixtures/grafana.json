@@ -1,0 +1,9 @@
+{
+ "_note": "Grafana: admin stats, no legacy alerts, two alerts firing in Grafana's alertmanager.",
+ "routes": {
+  "GET /api/admin/stats": { "dashboards": 23, "datasources": 4, "alerts": 11, "users": 3 },
+  "GET /api/alerts": [],
+  "GET /api/alertmanager/grafana/api/v2/alerts": [{ "labels": { "alertname": "DiskFull" } }, { "labels": { "alertname": "HighLoad" } }],
+  "GET /api/alertmanager/alertmanager/api/v2/alerts": [{ "labels": { "alertname": "NodeDown" } }]
+ }
+}

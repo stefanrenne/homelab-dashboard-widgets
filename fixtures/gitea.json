@@ -1,0 +1,8 @@
+{
+ "_note": "Gitea API v1: the counts are in X-Total-Count; the mock answers both issue searches alike.",
+ "routes": {
+  "GET /api/v1/notifications": { "_headers": { "x-total-count": "3" }, "_body": [{}] },
+  "GET /api/v1/repos/issues/search": { "_headers": { "x-total-count": "17" }, "_body": [{}] },
+  "GET /api/v1/repos/search": { "_headers": { "x-total-count": "42" }, "_body": { "ok": true, "data": [{}] } }
+ }
+}

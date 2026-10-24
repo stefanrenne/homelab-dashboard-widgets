@@ -1,0 +1,104 @@
+{
+  "en": {
+    "dashboards": "Dashboards",
+    "datasources": "Data sources",
+    "totalalerts": "Alert rules",
+    "alertstriggered": "Alerts firing"
+  },
+  "nl": {
+    "dashboards": "Dashboards",
+    "datasources": "Bronnen",
+    "totalalerts": "Alertregels",
+    "alertstriggered": "Actieve alerts"
+  },
+  "fr": {
+    "dashboards": "Tableaux de bord",
+    "datasources": "Sources",
+    "totalalerts": "Règles d’alerte",
+    "alertstriggered": "Alertes actives"
+  },
+  "de": {
+    "dashboards": "Dashboards",
+    "datasources": "Datenquellen",
+    "totalalerts": "Alarmregeln",
+    "alertstriggered": "Aktive Alarme"
+  },
+  "es": {
+    "dashboards": "Paneles",
+    "datasources": "Fuentes de datos",
+    "totalalerts": "Reglas",
+    "alertstriggered": "Alertas activas"
+  },
+  "ca": {
+    "dashboards": "Taulers",
+    "datasources": "Fonts de dades",
+    "totalalerts": "Regles d’alerta",
+    "alertstriggered": "Alertes actives"
+  },
+  "he": {
+    "dashboards": "לוחות מחוונים",
+    "datasources": "מקורות נתונים",
+    "totalalerts": "כללי התראה",
+    "alertstriggered": "התראות פעילות"
+  },
+  "hr": {
+    "dashboards": "Nadzorne ploče",
+    "datasources": "Izvori podataka",
+    "totalalerts": "Pravila",
+    "alertstriggered": "Aktivni alarmi"
+  },
+  "hu": {
+    "dashboards": "Műszerfalak",
+    "datasources": "Adatforrások",
+    "totalalerts": "Szabályok",
+    "alertstriggered": "Riasztások"
+  },
+  "it": {
+    "dashboards": "Dashboard",
+    "datasources": "Fonti dati",
+    "totalalerts": "Regole",
+    "alertstriggered": "Avvisi attivi"
+  },
+  "nb-NO": {
+    "dashboards": "Dashbord",
+    "datasources": "Datakilder",
+    "totalalerts": "Varselregler",
+    "alertstriggered": "Aktive varsler"
+  },
+  "pt": {
+    "dashboards": "Painéis",
+    "datasources": "Fontes de dados",
+    "totalalerts": "Regras",
+    "alertstriggered": "Alertas ativos"
+  },
+  "ru": {
+    "dashboards": "Дашборды",
+    "datasources": "Источники",
+    "totalalerts": "Правила",
+    "alertstriggered": "Активные"
+  },
+  "sv": {
+    "dashboards": "Paneler",
+    "datasources": "Datakällor",
+    "totalalerts": "Larmregler",
+    "alertstriggered": "Aktiva larm"
+  },
+  "vi": {
+    "dashboards": "Dashboard",
+    "datasources": "Nguồn dữ liệu",
+    "totalalerts": "Quy tắc cảnh báo",
+    "alertstriggered": "Cảnh báo bật"
+  },
+  "zh-Hans": {
+    "dashboards": "仪表板",
+    "datasources": "数据源",
+    "totalalerts": "告警规则",
+    "alertstriggered": "触发的告警"
+  },
+  "zh-Hant": {
+    "dashboards": "儀表板",
+    "datasources": "資料來源",
+    "totalalerts": "警示規則",
+    "alertstriggered": "觸發的警示"
+  }
+}

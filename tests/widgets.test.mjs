@@ -23,6 +23,7 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  grafana: { username: 'admin', password: 'pw' },
   openmediavault: { method: 'services.getStatus', username: 'admin', password: 'pw' },
 };
 
@@ -904,4 +905,25 @@ test('openmediavault: services, S.M.A.R.T. in the background and downloads, with
   } finally {
     srv.close();
   }
+});
+
+test('speedtest: version 1 in Mbit/s, version 2 in bytes/s with a token, as decimal bit rates', async () => {
+  assert.deepEqual(values(await run('speedtest')), { download: '912 Mbit/s', upload: '41 Mbit/s', ping: '12.3ms' });
+  assert.deepEqual(values(await run('speedtest', { version: 2, key: 'tok', bitratePrecision: 1 })), { download: '912.4 Mbit/s', upload: '41.2 Mbit/s', ping: '8.2ms' });
+  assert.equal(lastRequest('speedtest').headers.authorization, 'Bearer tok');
+});
+
+test('gitea: notifications (marked), issues, pull requests and repositories from X-Total-Count', async () => {
+  const out = await run('gitea');
+  assert.deepEqual(values(out), { notifications: 3, issues: 17, pulls: 17, repositories: 42 });
+  assert.equal(out.blocks[0].status, 'warn');
+  assert.equal(lastRequest('gitea').headers.authorization, 'Bearer test-key');
+});
+
+test('grafana: stats and firing alerts (marked), from the legacy API or an alertmanager', async () => {
+  const out = await run('grafana');
+  assert.deepEqual(values(out), { dashboards: 23, datasources: 4, totalalerts: 11, alertstriggered: 2 });
+  assert.equal(out.blocks[3].status, 'warn');
+  assert.equal(lastRequest('grafana').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
+  assert.equal(values(await run('grafana', { version: 2, alerts: 'alertmanager' })).alertstriggered, 1);
 });

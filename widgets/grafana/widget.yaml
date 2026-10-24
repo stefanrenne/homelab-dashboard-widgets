@@ -1,0 +1,12 @@
+id: grafana
+name: Grafana
+version: 0.1.0
+apiVersion: 1
+description: Dashboards, data sources, alert rules and alerts firing in Grafana (homepage's grafana widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. http://grafana.lan:3000
+  username: { type: string, required: true }               # an admin: the counts come from /api/admin/stats
+  password: { type: string, secret: true, required: true }
+  version: { type: number, default: 1 }    # 2 for Grafana 11 or later (after 10.4), as in homepage
+  alerts: { type: enum, values: [grafana, alertmanager], default: grafana }   # version 2: which alertmanager to ask

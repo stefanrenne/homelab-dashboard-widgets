@@ -27,6 +27,9 @@ Every widget has its own page with setup, fields and options on the
 | `uptimekuma` | up, down, uptime, incident of a status page | `url`, `slug` |
 | `traefik` | routers, services, middlewares (marked with errors or warnings) | `url`, `username`, `password` |
 | `npm` | proxy hosts enabled, disabled, total (Nginx Proxy Manager) | `url`, `username`, `password` |
+| `speedtest` | download, upload, ping (Speedtest Tracker) | `url`, `version` (1 or 2), `key`, `bitratePrecision` |
+| `gitea` | notifications, issues, pull requests, repositories (also Forgejo) | `url`, `key` |
+| `grafana` | dashboards, data sources, alert rules, alerts firing | `url`, `username`, `password`, `version`, `alerts` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
