@@ -696,3 +696,46 @@ test('lidarr and readarr: wanted, queued (marked with warnings or errors), artis
   assert.deepEqual(values(readarr), { wanted: 12, queued: 0, books: 3 });
   assert.equal(readarr.blocks[1].status, undefined);
 });
+
+test('jackett: configured and errored indexers (marked), with the admin password\'s cookie', async () => {
+  const out = await run('jackett');
+  assert.deepEqual(values(out), { configured: 4, errored: 1 });
+  assert.equal(out.blocks[1].status, 'warn');
+  assert.deepEqual(lastRequest('jackett').query, { apikey: 'test-key', configured: 'true' });
+  const http = await import('node:http');
+  const seen = [];
+  const srv = http.createServer((q, res) => {
+    let body = '';
+    q.on('data', (c) => (body += c));
+    q.on('end', () => {
+      seen.push(`${q.method} ${q.url.split('?')[0]} ${q.headers.cookie ?? '-'}`);
+      if (q.url === '/UI/Dashboard') {
+        res.statusCode = 302;
+        res.setHeader('location', '/UI/Dashboard');
+        if (body === 'password=pw') res.setHeader('set-cookie', 'Jackett=c1; path=/; HttpOnly');
+        return res.end();
+      }
+      if (q.headers.cookie !== 'Jackett=c1') { res.statusCode = 302; res.setHeader('location', '/UI/Login'); return res.end(); }
+      res.end('[]');
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: jackett } = await import(path.join(WIDGETS, 'jackett', 'server.js'));
+  const ctx = (password) => ({ options: { url: `http://127.0.0.1:${srv.address().port}`, key: 'k', password }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) });
+  try {
+    const c = ctx('pw');
+    assert.deepEqual(values(await jackett.fetch(c)), { configured: 0, errored: 0 });
+    await jackett.fetch(c);
+    assert.deepEqual(seen, ['POST /UI/Dashboard -', 'GET /api/v2.0/indexers Jackett=c1', 'GET /api/v2.0/indexers Jackett=c1']);
+    await assert.rejects(jackett.fetch(ctx('wrong')), /Jackett login answered 401/);
+  } finally {
+    srv.close();
+  }
+});
+
+test('ombi: pending (marked), approved and available requests', async () => {
+  const out = await run('ombi');
+  assert.deepEqual(values(out), { pending: 3, approved: 12, available: 140 });
+  assert.equal(out.blocks[0].status, 'warn');
+  assert.equal(lastRequest('ombi').headers['x-api-key'], 'test-key');
+});

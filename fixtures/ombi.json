@@ -1,0 +1,4 @@
+{
+ "_note": "Ombi Request/count.",
+ "routes": { "GET /api/v1/Request/count": { "pending": 3, "approved": 12, "available": 140 } }
+}

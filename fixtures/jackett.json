@@ -1,0 +1,11 @@
+{
+ "_note": "Jackett configured indexers: four, one with a last error.",
+ "routes": {
+  "GET /api/v2.0/indexers": [
+   { "id": "1337x", "name": "1337x", "configured": true, "last_error": null },
+   { "id": "eztv", "name": "EZTV", "configured": true, "last_error": "" },
+   { "id": "limetorrents", "name": "LimeTorrents", "configured": true, "last_error": "Request to LimeTorrents timed out" },
+   { "id": "nyaasi", "name": "Nyaa.si", "configured": true }
+  ]
+ }
+}

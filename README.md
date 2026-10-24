@@ -26,6 +26,8 @@ Every widget has its own page with setup, fields and options on the
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `lidarr` | wanted, queued, artists | `url`, `key` |
 | `readarr` | wanted, queued, books | `url`, `key` |
+| `jackett` | configured, errored indexers | `url`, `key`, `password` |
+| `ombi` | pending, approved, available | `url`, `key` |
 | `bazarr` | missing episodes, missing movies | `url`, `key` |
 | `prowlarr` | grabs, queries, failed grabs, failed queries | `url`, `key` |
 | `sabnzbd` | rate, queue, time left | `url`, `key` |

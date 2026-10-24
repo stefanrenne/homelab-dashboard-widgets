@@ -1,0 +1,70 @@
+{
+  "en": {
+    "configured": "Configured",
+    "errored": "Errored"
+  },
+  "nl": {
+    "configured": "Ingesteld",
+    "errored": "Mislukt"
+  },
+  "fr": {
+    "configured": "Configurés",
+    "errored": "En erreur"
+  },
+  "de": {
+    "configured": "Eingerichtet",
+    "errored": "Fehlerhaft"
+  },
+  "es": {
+    "configured": "Configurados",
+    "errored": "Con error"
+  },
+  "ca": {
+    "configured": "Configurats",
+    "errored": "Amb errors"
+  },
+  "he": {
+    "configured": "מוגדרים",
+    "errored": "שגיאות"
+  },
+  "hr": {
+    "configured": "Postavljeno",
+    "errored": "Pogreške"
+  },
+  "hu": {
+    "configured": "Beállítva",
+    "errored": "Hibás"
+  },
+  "it": {
+    "configured": "Configurati",
+    "errored": "Con errori"
+  },
+  "nb-NO": {
+    "configured": "Satt opp",
+    "errored": "Med feil"
+  },
+  "pt": {
+    "configured": "Configurados",
+    "errored": "Com erro"
+  },
+  "ru": {
+    "configured": "Настроено",
+    "errored": "С ошибкой"
+  },
+  "sv": {
+    "configured": "Inställda",
+    "errored": "Med fel"
+  },
+  "vi": {
+    "configured": "Đã cấu hình",
+    "errored": "Bị lỗi"
+  },
+  "zh-Hans": {
+    "configured": "已配置",
+    "errored": "出错"
+  },
+  "zh-Hant": {
+    "configured": "已設定",
+    "errored": "出錯"
+  }
+}

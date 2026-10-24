@@ -1,0 +1,87 @@
+{
+  "en": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "available": "Available"
+  },
+  "nl": {
+    "pending": "In afwachting",
+    "approved": "Goedgekeurd",
+    "available": "Beschikbaar"
+  },
+  "fr": {
+    "pending": "En attente",
+    "approved": "Approuvées",
+    "available": "Disponibles"
+  },
+  "de": {
+    "pending": "Ausstehend",
+    "approved": "Genehmigt",
+    "available": "Verfügbar"
+  },
+  "es": {
+    "pending": "Pendientes",
+    "approved": "Aprobadas",
+    "available": "Disponibles"
+  },
+  "ca": {
+    "pending": "Pendents",
+    "approved": "Aprovades",
+    "available": "Disponibles"
+  },
+  "he": {
+    "pending": "ממתינים",
+    "approved": "אושרו",
+    "available": "זמינים"
+  },
+  "hr": {
+    "pending": "Na čekanju",
+    "approved": "Odobreno",
+    "available": "Dostupno"
+  },
+  "hu": {
+    "pending": "Függőben",
+    "approved": "Jóváhagyva",
+    "available": "Elérhető"
+  },
+  "it": {
+    "pending": "In attesa",
+    "approved": "Approvate",
+    "available": "Disponibili"
+  },
+  "nb-NO": {
+    "pending": "Venter",
+    "approved": "Godkjent",
+    "available": "Tilgjengelig"
+  },
+  "pt": {
+    "pending": "Pendentes",
+    "approved": "Aprovados",
+    "available": "Disponíveis"
+  },
+  "ru": {
+    "pending": "Ожидают",
+    "approved": "Одобрено",
+    "available": "Доступно"
+  },
+  "sv": {
+    "pending": "Väntar",
+    "approved": "Godkända",
+    "available": "Tillgängliga"
+  },
+  "vi": {
+    "pending": "Đang chờ",
+    "approved": "Đã duyệt",
+    "available": "Có sẵn"
+  },
+  "zh-Hans": {
+    "pending": "待处理",
+    "approved": "已批准",
+    "available": "可用"
+  },
+  "zh-Hant": {
+    "pending": "待處理",
+    "approved": "已核准",
+    "available": "可用"
+  }
+}

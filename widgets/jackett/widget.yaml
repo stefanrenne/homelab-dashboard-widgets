@@ -1,0 +1,10 @@
+id: jackett
+name: Jackett
+version: 0.1.0
+apiVersion: 1
+description: Configured indexers and how many of them failed (homepage's jackett widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://jackett.lan:9117
+  key: { type: string, secret: true, required: true }   # the API Key at the top of Jackett's page
+  password: { type: string, secret: true } # the admin password, when one is set
