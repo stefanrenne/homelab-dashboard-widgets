@@ -1,0 +1,15 @@
+id: azuredevops
+name: Azure DevOps
+version: 0.1.0
+apiVersion: 1
+description: The last run of a pipeline, and open pull requests in a repository (homepage's azuredevops widget).
+refresh: 5m
+options:
+  organization: { type: string, required: true }
+  project: { type: string, required: true }
+  key: { type: string, secret: true, required: true }   # a personal access token with Build (read) and Code (read)
+  definitionId: { type: string }    # the pipeline's definition id (in its address: definitionId=12)
+  branchName: { type: string }      # only runs of this branch, e.g. refs/heads/main
+  repositoryId: { type: string }    # pull requests: the repository's id or name
+  userEmail: { type: string }       # pull requests: whose are "mine"
+  url: { type: url, default: https://dev.azure.com }   # Azure DevOps Server: your collection's address

@@ -44,6 +44,7 @@ Every widget has its own page with setup, fields and options on the
 | `argocd` | applications by sync and health status | `url`, `key` |
 | `atsumeru` | series, archives, chapters, categories | `url`, `username`, `password` |
 | `autobrr` | approved and rejected pushes, filters, indexers | `url`, `key` |
+| `azuredevops` | last pipeline run; open, your and approved pull requests | `organization`, `project`, `key`, `definitionId`, `branchName`, `repositoryId`, `userEmail` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

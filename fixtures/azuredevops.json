@@ -1,0 +1,11 @@
+{
+ "_note": "Azure DevOps (organization example, project homelab): the latest build failed; three active pull requests, two by anna, one of them approved.",
+ "routes": {
+  "GET /example/homelab/_apis/build/builds": { "count": 1, "value": [{ "id": 812, "status": "completed", "result": "failed" }] },
+  "GET /example/homelab/_apis/git/repositories/homelab/pullrequests": { "count": 3, "value": [
+   { "pullRequestId": 1, "createdBy": { "uniqueName": "Anna@example.com" }, "reviewers": [{ "vote": 10 }] },
+   { "pullRequestId": 2, "createdBy": { "uniqueName": "anna@example.com" }, "reviewers": [{ "vote": 0 }, { "vote": -5 }] },
+   { "pullRequestId": 3, "createdBy": { "uniqueName": "bob@example.com" }, "reviewers": [{ "vote": 10 }] }
+  ] }
+ }
+}

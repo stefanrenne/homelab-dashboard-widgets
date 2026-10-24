@@ -30,6 +30,7 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  get azuredevops() { return { organization: 'example', project: 'homelab', definitionId: '12', repositoryId: 'homelab', userEmail: 'anna@example.com' }; },
   arcane: { env: '1' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
@@ -1151,4 +1152,14 @@ test('arcane, argocd, atsumeru and autobrr: their counts, with what needs you ma
   assert.equal(lastRequest('atsumeru').headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
   assert.deepEqual(values(await run('autobrr')), { approvedPushes: 180, rejectedPushes: 30, filters: 2, indexers: 3 });
   assert.equal(lastRequest('autobrr').headers['x-api-token'], 'test-key');
+});
+
+test('azuredevops: the last pipeline run (failed marked) and open pull requests, with a token', async () => {
+  const out = await run('azuredevops');
+  assert.deepEqual(values(out), { result: 'failed', totalPrs: 3, myPrs: 2, approved: 1 });
+  assert.equal(out.blocks[0].status, 'error');
+  const build = mock.requests.filter((r) => r.route.endsWith('/build/builds')).at(-1);
+  assert.deepEqual([build.query.definitions, build.query.$top], ['12', '1']);
+  assert.equal(build.headers.authorization, `Basic ${Buffer.from(':test-key').toString('base64')}`);
+  await assert.rejects(run('azuredevops', { definitionId: undefined, repositoryId: undefined }), /needs definitionId/);
 });
