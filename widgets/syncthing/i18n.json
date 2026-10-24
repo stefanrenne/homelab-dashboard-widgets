@@ -1,0 +1,104 @@
+{
+  "en": {
+    "connected": "Connected",
+    "synced": "Synced",
+    "errors": "Errors",
+    "storage": "Storage"
+  },
+  "nl": {
+    "connected": "Verbonden",
+    "synced": "In sync",
+    "errors": "Fouten",
+    "storage": "Opslag"
+  },
+  "fr": {
+    "connected": "Connectés",
+    "synced": "Synchronisé",
+    "errors": "Erreurs",
+    "storage": "Stockage"
+  },
+  "de": {
+    "connected": "Verbunden",
+    "synced": "Synchron",
+    "errors": "Fehler",
+    "storage": "Speicher"
+  },
+  "es": {
+    "connected": "Conectados",
+    "synced": "Sincronizado",
+    "errors": "Errores",
+    "storage": "Espacio"
+  },
+  "ca": {
+    "connected": "Connectats",
+    "synced": "Sincronitzat",
+    "errors": "Errors",
+    "storage": "Espai"
+  },
+  "he": {
+    "connected": "מחוברים",
+    "synced": "מסונכרן",
+    "errors": "שגיאות",
+    "storage": "אחסון"
+  },
+  "hr": {
+    "connected": "Povezano",
+    "synced": "Usklađeno",
+    "errors": "Pogreške",
+    "storage": "Pohrana"
+  },
+  "hu": {
+    "connected": "Csatlakozva",
+    "synced": "Szinkronban",
+    "errors": "Hibák",
+    "storage": "Tárhely"
+  },
+  "it": {
+    "connected": "Connessi",
+    "synced": "In sync",
+    "errors": "Errori",
+    "storage": "Spazio"
+  },
+  "nb-NO": {
+    "connected": "Tilkoblet",
+    "synced": "Synkronisert",
+    "errors": "Feil",
+    "storage": "Lagring"
+  },
+  "pt": {
+    "connected": "Ligados",
+    "synced": "Sincronizado",
+    "errors": "Erros",
+    "storage": "Espaço"
+  },
+  "ru": {
+    "connected": "Подключено",
+    "synced": "Синхронно",
+    "errors": "Ошибки",
+    "storage": "Хранилище"
+  },
+  "sv": {
+    "connected": "Anslutna",
+    "synced": "Synkat",
+    "errors": "Fel",
+    "storage": "Lagring"
+  },
+  "vi": {
+    "connected": "Đã kết nối",
+    "synced": "Đã đồng bộ",
+    "errors": "Lỗi",
+    "storage": "Lưu trữ"
+  },
+  "zh-Hans": {
+    "connected": "已连接",
+    "synced": "已同步",
+    "errors": "错误",
+    "storage": "存储"
+  },
+  "zh-Hant": {
+    "connected": "已連線",
+    "synced": "已同步",
+    "errors": "錯誤",
+    "storage": "儲存空間"
+  }
+}

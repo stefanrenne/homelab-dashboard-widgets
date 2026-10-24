@@ -1,0 +1,9 @@
+id: syncthing
+name: Syncthing
+version: 0.1.0
+apiVersion: 1
+description: Devices connected, how far in sync, errors and the data shared in Syncthing (homepage's syncthing widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. http://syncthing.lan:8384
+  key: { type: string, secret: true, required: true }   # Actions > Settings > General > API Key

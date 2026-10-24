@@ -1022,3 +1022,10 @@ test('watchtower: scanned, updated and failed (marked) from the Prometheus metri
   assert.equal(out.blocks[2].status, 'error');
   assert.equal(lastRequest('watchtower').headers.authorization, 'Bearer test-key');
 });
+
+test('syncthing: devices connected, in sync (marked below 100%), errors (marked) and storage', async () => {
+  const out = await run('syncthing');
+  assert.deepEqual(values(out), { connected: '2 / 3', synced: '97.4%', errors: 1, storage: '412.3 GB' });
+  assert.deepEqual(out.blocks.map((b) => b.status ?? null), [null, 'warn', 'error', null]);
+  assert.equal(lastRequest('syncthing').headers['x-api-key'], 'test-key');
+});

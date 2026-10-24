@@ -38,6 +38,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `speedtest` (Speedtest Tracker), `gitea` (also Forgejo) and `grafana`, as homepage's widgets; the mock can answer with headers.
 - `tailscale`, `authentik`, `audiobookshelf` and `navidrome`, as homepage's widgets.
 - `frigate`, `scrutiny` and `watchtower`, as homepage's widgets; the mock can answer plain text.
+- `syncthing`: devices connected, how far in sync, errors and the shared data, as homepage's syncthing widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

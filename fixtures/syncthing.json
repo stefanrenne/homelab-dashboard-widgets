@@ -1,0 +1,8 @@
+{
+ "_note": "Syncthing REST: three devices (two connected), 97.45% in sync, one error.",
+ "routes": {
+  "GET /rest/system/connections": { "total": {}, "connections": { "DEV1": { "connected": true }, "DEV2": { "connected": true }, "DEV3": { "connected": false } } },
+  "GET /rest/db/completion": { "completion": 97.45, "globalBytes": 412300000000, "needBytes": 10500000000, "globalItems": 182000, "needItems": 30 },
+  "GET /rest/system/error": { "errors": [{ "when": "2026-10-24T06:00:00Z", "message": "Folder \"photos\" isn't making sync progress" }] }
+ }
+}
