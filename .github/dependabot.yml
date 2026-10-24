@@ -1,0 +1,18 @@
+# Weekly update PRs for the CI actions and the test tools, one PR per ecosystem (grouped).
+# CI runs the tests on every PR; dependabot-automerge.yml merges it when they pass.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      npm:
+        patterns: ["*"]

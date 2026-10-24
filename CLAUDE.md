@@ -33,6 +33,12 @@ one widget package following the dashboard's widget API 1
     problem rows first.
 12. Show at most a handful of blocks by default; offer the rest through `defaultFields` + `fields`.
 
+## Releasing
+
+Bump the changed widgets' `version`, add a CHANGELOG section, set `package.json`'s version, tag
+`vX.Y.Z`, push with tags. CI checks the tag against package.json and the CHANGELOG and publishes a
+GitHub release with a zip per widget.
+
 ## Commands
 
 ```bash

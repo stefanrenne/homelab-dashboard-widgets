@@ -1,17 +1,74 @@
 name: CI
+
 on:
   push:
     branches: [main]
-    tags: ['v*']
+    tags: ["v*"]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: "22"
           cache: npm
-      - run: npm ci
+      - run: npm ci --no-audit --no-fund
       - run: npm test
+
+  # A tag vX.Y.Z becomes a GitHub release: the CHANGELOG section as notes, a zip of the whole
+  # collection and one zip per widget (<id>-<widget version>.zip) for installing a single widget.
+  release:
+    needs: test
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check the tag against package.json
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          pkg=$(node -p "require('./package.json').version")
+          if [ "$version" != "$pkg" ]; then echo "::error::tag $GITHUB_REF_NAME but package.json says $pkg"; exit 1; fi
+      - name: Notes and assets
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { on = 1; next }
+            on && /^## \[/ { exit }
+            on { print }
+          ' CHANGELOG.md > notes.md
+          if [ ! -s notes.md ]; then echo "::error::CHANGELOG.md has no section for $version"; exit 1; fi
+          {
+            echo
+            echo "| Widget | Version |"
+            echo "|---|---|"
+            for dir in widgets/*/; do
+              id=$(basename "$dir")
+              v=$(sed -n 's/^version: *//p' "$dir/widget.yaml")
+              echo "| \`$id\` | $v |"
+            done
+            echo
+            echo '```yaml'
+            echo "plugins:"
+            echo "  - source: git+https://github.com/$GITHUB_REPOSITORY#$GITHUB_REF_NAME"
+            echo '```'
+          } >> notes.md
+          mkdir dist
+          zip -qr "dist/homelab-dashboard-widgets-$version.zip" widgets README.md LICENSE 2>/dev/null || zip -qr "dist/homelab-dashboard-widgets-$version.zip" widgets README.md
+          for dir in widgets/*/; do
+            id=$(basename "$dir")
+            v=$(sed -n 's/^version: *//p' "$dir/widget.yaml")
+            (cd widgets && zip -qr "../dist/$id-$v.zip" "$id")
+          done
+          ls dist
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --title "$GITHUB_REF_NAME" --notes-file notes.md --verify-tag

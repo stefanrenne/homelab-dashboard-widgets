@@ -1,6 +1,6 @@
 # homelab-dashboard widgets
 
-Widgets for [homelab-dashboard](../homelab-dashboard) for the usual homelab services, with the
+Widgets for [homelab-dashboard](https://github.com/stefanrenne/homelab-dashboard) for the usual homelab services, with the
 same fields as the matching [homepage](https://gethomepage.dev) widgets. They live outside the
 dashboard on purpose: this repository is an ordinary widget collection, installed like any third-party one.
 
@@ -34,7 +34,7 @@ What the widgets have in common:
 ```yaml
 # settings.yaml of the dashboard
 plugins:
-  - source: git+https://github.com/<you>/homelab-dashboard-widgets#v0.1.0
+  - source: git+https://github.com/stefanrenne/homelab-dashboard-widgets#v0.2.0
     only: [radarr, sonarr]        # optional: just these
   # while developing:
   - path: ~/git/homelab-dashboard-widgets
@@ -57,6 +57,9 @@ Containers with homepage labels (`homepage.widget.type: radarr`, ...) work as th
 
 ## Development
 
+Every release on GitHub also has a zip per widget (`radarr-0.2.0.zip`) and one of the whole
+collection, for installing without git.
+
 ```bash
 npm ci && npm test        # every widget against fixtures/, through a mock server
 npm run mock              # the mock on http://127.0.0.1:4100/<widget>/... for trying things by hand
@@ -65,3 +68,7 @@ npm run mock              # the mock on http://127.0.0.1:4100/<widget>/... for t
 The fixtures in `fixtures/` are API answers in the shape the real services give. All widgets
 except tdarr and whatsupdocker were checked against live services (Radarr, Sonarr, Bazarr,
 Prowlarr, SABnzbd, Seerr, Tautulli, Portainer CE, Unraid 7, Stash) on 2026-10-24.
+
+## License
+
+[MIT](LICENSE)
