@@ -748,3 +748,9 @@ test('nextcloud: free space, active users, files and shares, with the NC-Token o
   await run('nextcloud', { key: undefined, username: 'admin', password: 'app-pw' });
   assert.equal(lastRequest('nextcloud').headers.authorization, `Basic ${Buffer.from('admin:app-pw').toString('base64')}`);
 });
+
+test('immich: users, photos, videos and storage, on the version 1 or 2 path', async () => {
+  assert.deepEqual(values(await run('immich', { version: 2 })), { users: 3, photos: 48210, videos: 1834, storage: '612.4 GB' });
+  assert.equal(lastRequest('immich').headers['x-api-key'], 'test-key');
+  assert.deepEqual(values(await run('immich')), { users: 1, photos: 30000, videos: 1000, storage: '400 GB' });
+});

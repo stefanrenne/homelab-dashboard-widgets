@@ -1,0 +1,104 @@
+{
+  "en": {
+    "users": "Users",
+    "photos": "Photos",
+    "videos": "Videos",
+    "storage": "Storage"
+  },
+  "nl": {
+    "users": "Gebruikers",
+    "photos": "Foto's",
+    "videos": "Video's",
+    "storage": "Opslag"
+  },
+  "fr": {
+    "users": "Utilisateurs",
+    "photos": "Photos",
+    "videos": "Vidéos",
+    "storage": "Stockage"
+  },
+  "de": {
+    "users": "Nutzer",
+    "photos": "Fotos",
+    "videos": "Videos",
+    "storage": "Speicher"
+  },
+  "es": {
+    "users": "Usuarios",
+    "photos": "Fotos",
+    "videos": "Vídeos",
+    "storage": "Espacio"
+  },
+  "ca": {
+    "users": "Usuaris",
+    "photos": "Fotos",
+    "videos": "Vídeos",
+    "storage": "Espai"
+  },
+  "he": {
+    "users": "משתמשים",
+    "photos": "תמונות",
+    "videos": "סרטונים",
+    "storage": "אחסון"
+  },
+  "hr": {
+    "users": "Korisnici",
+    "photos": "Fotografije",
+    "videos": "Videozapisi",
+    "storage": "Pohrana"
+  },
+  "hu": {
+    "users": "Felhasználók",
+    "photos": "Fényképek",
+    "videos": "Videók",
+    "storage": "Tárhely"
+  },
+  "it": {
+    "users": "Utenti",
+    "photos": "Foto",
+    "videos": "Video",
+    "storage": "Spazio"
+  },
+  "nb-NO": {
+    "users": "Brukere",
+    "photos": "Bilder",
+    "videos": "Videoer",
+    "storage": "Lagring"
+  },
+  "pt": {
+    "users": "Utilizadores",
+    "photos": "Fotos",
+    "videos": "Vídeos",
+    "storage": "Espaço"
+  },
+  "ru": {
+    "users": "Пользователи",
+    "photos": "Фото",
+    "videos": "Видео",
+    "storage": "Хранилище"
+  },
+  "sv": {
+    "users": "Användare",
+    "photos": "Foton",
+    "videos": "Videor",
+    "storage": "Lagring"
+  },
+  "vi": {
+    "users": "Người dùng",
+    "photos": "Ảnh",
+    "videos": "Video",
+    "storage": "Lưu trữ"
+  },
+  "zh-Hans": {
+    "users": "用户",
+    "photos": "照片",
+    "videos": "视频",
+    "storage": "存储"
+  },
+  "zh-Hant": {
+    "users": "使用者",
+    "photos": "照片",
+    "videos": "影片",
+    "storage": "儲存空間"
+  }
+}

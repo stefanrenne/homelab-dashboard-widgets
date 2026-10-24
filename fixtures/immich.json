@@ -1,0 +1,7 @@
+{
+ "_note": "Immich server statistics, the same answer on the version 1 and version 2 paths.",
+ "routes": {
+  "GET /api/server/statistics": { "photos": 48210, "videos": 1834, "usage": 612400000000, "usageByUser": [{ "userName": "anna" }, { "userName": "bob" }, { "userName": "carl" }] },
+  "GET /api/server-info/statistics": { "photos": 30000, "videos": 1000, "usage": 400000000000, "usageByUser": [{ "userName": "anna" }] }
+ }
+}
