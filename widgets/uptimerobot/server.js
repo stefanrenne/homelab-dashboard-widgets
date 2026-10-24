@@ -1,7 +1,7 @@
 // UptimeRobot: POST /v2/getMonitors (form: api_key, format=json, logs=1). A read-only key gives
 // every monitor (up and down counted), a monitor-specific key one: its state, how long it is up
-// (the last up log), and when and how long it was last down. Times are spans ("2d 3h"); the
-// date of the last downtime is YYYY-MM-DD HH:MM. Down is marked.
+// (the last up log), and how long ago and how long it was last down. Times are spans ("2d 3h").
+// Down is marked.
 
 /** Seconds as "2d 3h", "3h 5m" or "5m". */
 export function span(seconds) {
@@ -11,7 +11,6 @@ export function span(seconds) {
   const m = Math.floor((s % 3600) / 60);
   return d ? `${d}d ${h}h` : h ? `${h}h ${m}m` : `${m}m`;
 }
-const pad = (n) => String(n).padStart(2, '0');
 const STATES = { 0: 'paused', 1: 'notyetchecked', 2: 'up', 8: 'seemsdown', 9: 'down' };
 
 export default {
@@ -38,8 +37,7 @@ export default {
       { key: 'uptime', label: 'uptime', value: state === 'up' ? span(lastUp?.duration) : null },
     ];
     if (lastDown) {
-      const d = new Date(lastDown.datetime * 1000);
-      blocks.push({ key: 'lastDown', label: 'lastDown', value: `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}` });
+      blocks.push({ key: 'lastDown', label: 'lastDown', value: span(Date.now() / 1000 - lastDown.datetime) });
       blocks.push({ key: 'downDuration', label: 'downDuration', value: span(lastDown.duration) });
     }
     return { blocks };

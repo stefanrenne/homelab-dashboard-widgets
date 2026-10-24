@@ -1,6 +1,6 @@
 id: slskd
 name: slskd
-version: 0.1.0
+version: 0.1.1
 apiVersion: 1
 description: Soulseek connection, updates, downloads, uploads and shared files in slskd (homepage's slskd widget).
 refresh: 60s

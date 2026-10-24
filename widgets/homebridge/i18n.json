@@ -6,7 +6,7 @@
     "up": "Up",
     "down": "Down",
     "pending": "Pending",
-    "updateAvailable": "Update available",
+    "updateAvailable": "Available",
     "upToDate": "Up to date"
   },
   "nl": {
@@ -16,7 +16,7 @@
     "up": "Actief",
     "down": "Offline",
     "pending": "Wachtend",
-    "updateAvailable": "Update beschikbaar",
+    "updateAvailable": "Beschikbaar",
     "upToDate": "Bijgewerkt"
   },
   "fr": {
@@ -26,7 +26,7 @@
     "up": "Actif",
     "down": "Hors ligne",
     "pending": "En attente",
-    "updateAvailable": "Mise à jour",
+    "updateAvailable": "Disponibles",
     "upToDate": "À jour"
   },
   "de": {
@@ -36,7 +36,7 @@
     "up": "Aktiv",
     "down": "Ausgefallen",
     "pending": "Wartend",
-    "updateAvailable": "Update verfügbar",
+    "updateAvailable": "Verfügbar",
     "upToDate": "Aktuell"
   },
   "es": {
@@ -46,7 +46,7 @@
     "up": "Activa",
     "down": "Caída",
     "pending": "Pendiente",
-    "updateAvailable": "Versión nueva",
+    "updateAvailable": "Disponibles",
     "upToDate": "Al día"
   },
   "ca": {
@@ -56,7 +56,7 @@
     "up": "Actiu",
     "down": "Caigut",
     "pending": "Pendent",
-    "updateAvailable": "Versió nova",
+    "updateAvailable": "Disponibles",
     "upToDate": "Al dia"
   },
   "he": {
@@ -66,7 +66,7 @@
     "up": "פעיל",
     "down": "נפל",
     "pending": "ממתין",
-    "updateAvailable": "עדכון זמין",
+    "updateAvailable": "זמינים",
     "upToDate": "מעודכן"
   },
   "hr": {
@@ -76,7 +76,7 @@
     "up": "Radi",
     "down": "Ne radi",
     "pending": "Na čekanju",
-    "updateAvailable": "Ima ažuriranja",
+    "updateAvailable": "Dostupno",
     "upToDate": "Ažurno"
   },
   "hu": {
@@ -86,7 +86,7 @@
     "up": "Működik",
     "down": "Leállt",
     "pending": "Függőben",
-    "updateAvailable": "Frissítés van",
+    "updateAvailable": "Elérhető",
     "upToDate": "Naprakész"
   },
   "it": {
@@ -96,7 +96,7 @@
     "up": "Attivo",
     "down": "Giù",
     "pending": "In attesa",
-    "updateAvailable": "Nuova versione",
+    "updateAvailable": "Disponibili",
     "upToDate": "Aggiornato"
   },
   "nb-NO": {
@@ -106,7 +106,7 @@
     "up": "Oppe",
     "down": "Nede",
     "pending": "Venter",
-    "updateAvailable": "Oppdatering",
+    "updateAvailable": "Tilgjengelig",
     "upToDate": "Oppdatert"
   },
   "pt": {
@@ -116,7 +116,7 @@
     "up": "Ativo",
     "down": "Em baixo",
     "pending": "Pendente",
-    "updateAvailable": "Atualização",
+    "updateAvailable": "Disponíveis",
     "upToDate": "Atualizado"
   },
   "ru": {
@@ -126,7 +126,7 @@
     "up": "Работает",
     "down": "Недоступен",
     "pending": "Ожидает",
-    "updateAvailable": "Есть обновление",
+    "updateAvailable": "Доступно",
     "upToDate": "Актуально"
   },
   "sv": {
@@ -136,7 +136,7 @@
     "up": "Uppe",
     "down": "Nere",
     "pending": "Väntar",
-    "updateAvailable": "Uppdatering finns",
+    "updateAvailable": "Tillgängliga",
     "upToDate": "Aktuell"
   },
   "vi": {
@@ -146,7 +146,7 @@
     "up": "Hoạt động",
     "down": "Ngừng",
     "pending": "Đang chờ",
-    "updateAvailable": "Có cập nhật",
+    "updateAvailable": "Có sẵn",
     "upToDate": "Mới nhất"
   },
   "zh-Hans": {
@@ -156,7 +156,7 @@
     "up": "正常",
     "down": "宕机",
     "pending": "待定",
-    "updateAvailable": "有更新",
+    "updateAvailable": "可用",
     "upToDate": "已是最新"
   },
   "zh-Hant": {
@@ -166,7 +166,7 @@
     "up": "正常",
     "down": "停止",
     "pending": "待定",
-    "updateAvailable": "有更新",
+    "updateAvailable": "可用",
     "upToDate": "已是最新"
   }
 }

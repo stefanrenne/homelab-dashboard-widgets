@@ -13,7 +13,7 @@ const rate = (kbps) => {
   let n = Number(kbps) || 0;
   let i = 0;
   while (n >= 1000 && i < BITS.length - 1) { n /= 1000; i++; }
-  return `${Math.round(n * 10) / 10} ${BITS[i]}`;
+  return `${n >= 100 ? Math.round(n) : Math.round(n * 10) / 10} ${BITS[i]}`;
 };
 
 export default {

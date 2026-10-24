@@ -21,7 +21,7 @@ export default {
     if (b) {
       const amount = parseFloat(b.amount) || 0;
       const spent = -(parseFloat(b.spent_in_budgets?.[0]?.sum ?? '0') || 0);
-      const money = (n) => `${b.currency_symbol} ${n.toFixed(2)}`;
+      const money = (n) => `${b.currency_symbol}${Math.round(n)}`; // whole amounts: it must fit a block
       blocks.push({ key: 'budget', label: 'budget', value: `${money(spent)} / ${money(amount)}`, ...(spent > amount ? { status: 'warn' } : {}) });
     } else {
       blocks.push({ key: 'budget', label: 'budget', value: null });

@@ -7,7 +7,7 @@
     "sharedFiles": "Shared",
     "connected": "Connected",
     "disconnected": "Disconnected",
-    "updateAvailable": "Update available",
+    "updateAvailable": "Available",
     "upToDate": "Up to date"
   },
   "nl": {
@@ -18,7 +18,7 @@
     "sharedFiles": "Gedeeld",
     "connected": "Verbonden",
     "disconnected": "Verbroken",
-    "updateAvailable": "Update beschikbaar",
+    "updateAvailable": "Beschikbaar",
     "upToDate": "Bijgewerkt"
   },
   "fr": {
@@ -29,7 +29,7 @@
     "sharedFiles": "Partagés",
     "connected": "Connectés",
     "disconnected": "Déconnecté",
-    "updateAvailable": "Mise à jour",
+    "updateAvailable": "Disponibles",
     "upToDate": "À jour"
   },
   "de": {
@@ -40,7 +40,7 @@
     "sharedFiles": "Geteilt",
     "connected": "Verbunden",
     "disconnected": "Getrennt",
-    "updateAvailable": "Update verfügbar",
+    "updateAvailable": "Verfügbar",
     "upToDate": "Aktuell"
   },
   "es": {
@@ -51,7 +51,7 @@
     "sharedFiles": "Compartidos",
     "connected": "Conectados",
     "disconnected": "Desconectado",
-    "updateAvailable": "Versión nueva",
+    "updateAvailable": "Disponibles",
     "upToDate": "Al día"
   },
   "ca": {
@@ -62,7 +62,7 @@
     "sharedFiles": "Compartits",
     "connected": "Connectats",
     "disconnected": "Desconnectat",
-    "updateAvailable": "Versió nova",
+    "updateAvailable": "Disponibles",
     "upToDate": "Al dia"
   },
   "he": {
@@ -73,7 +73,7 @@
     "sharedFiles": "משותפים",
     "connected": "מחוברים",
     "disconnected": "מנותק",
-    "updateAvailable": "עדכון זמין",
+    "updateAvailable": "זמינים",
     "upToDate": "מעודכן"
   },
   "hr": {
@@ -84,7 +84,7 @@
     "sharedFiles": "Dijeljeno",
     "connected": "Povezano",
     "disconnected": "Prekinuto",
-    "updateAvailable": "Ima ažuriranja",
+    "updateAvailable": "Dostupno",
     "upToDate": "Ažurno"
   },
   "hu": {
@@ -95,7 +95,7 @@
     "sharedFiles": "Megosztva",
     "connected": "Csatlakozva",
     "disconnected": "Bontva",
-    "updateAvailable": "Frissítés van",
+    "updateAvailable": "Elérhető",
     "upToDate": "Naprakész"
   },
   "it": {
@@ -106,7 +106,7 @@
     "sharedFiles": "Condivisi",
     "connected": "Connessi",
     "disconnected": "Disconnesso",
-    "updateAvailable": "Nuova versione",
+    "updateAvailable": "Disponibili",
     "upToDate": "Aggiornato"
   },
   "nb-NO": {
@@ -117,7 +117,7 @@
     "sharedFiles": "Delt",
     "connected": "Tilkoblet",
     "disconnected": "Frakoblet",
-    "updateAvailable": "Oppdatering",
+    "updateAvailable": "Tilgjengelig",
     "upToDate": "Oppdatert"
   },
   "pt": {
@@ -128,7 +128,7 @@
     "sharedFiles": "Partilhados",
     "connected": "Ligados",
     "disconnected": "Desligado",
-    "updateAvailable": "Atualização",
+    "updateAvailable": "Disponíveis",
     "upToDate": "Atualizado"
   },
   "ru": {
@@ -139,7 +139,7 @@
     "sharedFiles": "Общие",
     "connected": "Подключено",
     "disconnected": "Отключено",
-    "updateAvailable": "Есть обновление",
+    "updateAvailable": "Доступно",
     "upToDate": "Актуально"
   },
   "sv": {
@@ -150,7 +150,7 @@
     "sharedFiles": "Delade",
     "connected": "Anslutna",
     "disconnected": "Frånkopplad",
-    "updateAvailable": "Uppdatering finns",
+    "updateAvailable": "Tillgängliga",
     "upToDate": "Aktuell"
   },
   "vi": {
@@ -161,7 +161,7 @@
     "sharedFiles": "Chia sẻ",
     "connected": "Đã kết nối",
     "disconnected": "Mất kết nối",
-    "updateAvailable": "Có cập nhật",
+    "updateAvailable": "Có sẵn",
     "upToDate": "Mới nhất"
   },
   "zh-Hans": {
@@ -172,7 +172,7 @@
     "sharedFiles": "共享",
     "connected": "已连接",
     "disconnected": "已断开",
-    "updateAvailable": "有更新",
+    "updateAvailable": "可用",
     "upToDate": "已是最新"
   },
   "zh-Hant": {
@@ -183,7 +183,7 @@
     "sharedFiles": "共享",
     "connected": "已連線",
     "disconnected": "已中斷",
-    "updateAvailable": "有更新",
+    "updateAvailable": "可用",
     "upToDate": "已是最新"
   }
 }

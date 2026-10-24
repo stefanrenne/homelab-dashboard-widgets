@@ -1435,7 +1435,7 @@ test('duplicati, feed, filebrowser, fileflows, firefly, flood, freshrss and frit
   assert.equal(ff2.blocks[3].status, 'warn');
   assert.equal(lastRequest('fileflows').headers['x-webhook-token'], 'tok');
 
-  assert.deepEqual(values(await run('firefly')), { networth: '€24,150.50', budget: '€ 312.40 / € 1500.00' });
+  assert.deepEqual(values(await run('firefly')), { networth: '€24,150.50', budget: '€312 / €1500' });
   assert.equal(lastRequest('firefly').headers.authorization, 'Bearer test-key');
   assert.match(lastRequest('firefly').query.start, /^\d{4}-\d\d-01$/);
 
@@ -1755,7 +1755,7 @@ test('rutorrent, slskd, sparkyfitness, spoolman, sportarr, strelaysrv, suwayomi 
   assert.deepEqual(values(await run('sportarr')), { wanted: 9, queued: 2, leagues: 3 });
   assert.equal(lastRequest('sportarr').query.apikey, 'test-key');
 
-  assert.deepEqual(values(await run('strelaysrv')), { numActiveSessions: 12, numConnections: 31, dataRelayed: '48.2 GB', transferRate: '812.6 kbit/s' });
+  assert.deepEqual(values(await run('strelaysrv')), { numActiveSessions: 12, numConnections: 31, dataRelayed: '48.2 GB', transferRate: '813 kbit/s' });
 
   assert.deepEqual(values(await run('suwayomi')), { download: 120, nondownload: 880, read: 400, unread: 600, downloadedread: 70, downloadedunread: 50, nondownloadedread: 330, nondownloadedunread: 550 });
   assert.equal(JSON.parse(lastRequest('suwayomi').body).operationName, 'Counts');
@@ -1800,7 +1800,7 @@ test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi-drive, unmani
   const ur = await run('uptimerobot');
   const u = values(ur);
   assert.deepEqual({ ...u, lastDown: undefined }, { status: 'up', uptime: '4d 3h', lastDown: undefined, downDuration: '1h 0m' });
-  assert.match(u.lastDown, /^2026-03-01 \d\d:00$/);
+  assert.match(u.lastDown, /^\d+d \d+h$/);
   assert.equal(new URLSearchParams(lastRequest('uptimerobot').body).get('api_key'), 'test-key');
 });
 
