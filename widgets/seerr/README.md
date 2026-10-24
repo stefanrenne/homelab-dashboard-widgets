@@ -1,6 +1,6 @@
 # Seerr
 
-Pending, approved and completed requests. Works with Seerr, Overseerr and Jellyseerr; the API key is under **Settings › General** there.
+Pending, approved and completed requests. Works with Seerr, Overseerr and Jellyseerr; the API key is under **Settings › General** there. homepage's `type: overseerr` (and `jellyseerr`) is this widget too.
 
 Learn more about [Seerr](https://github.com/seerr-team/seerr).
 
