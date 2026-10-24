@@ -1774,8 +1774,8 @@ test('tandoor, technitium, tracearr, trilium, tubearchivist, unifi-drive, unmani
   assert.equal(lastRequest('tandoor').headers.authorization, 'Bearer test-key');
 
   const tech = await run('technitium', { range: 'LastDay' });
-  assert.deepEqual(values(tech), { totalQueries: 14320, totalNoError: '13100 (91.5%)', totalServerFailure: '12 (0.1%)', totalNxDomain: '980 (6.8%)', totalRefused: '0 (0%)',
-    totalAuthoritative: '2210 (15.4%)', totalRecursive: '4100 (28.6%)', totalCached: '7200 (50.3%)', totalBlocked: '810 (5.7%)', totalDropped: '0 (0%)', totalClients: 23 });
+  assert.deepEqual(values(tech), { totalQueries: 14320, totalNoError: 13100, totalServerFailure: 12, totalNxDomain: 980, totalRefused: 0,
+    totalAuthoritative: 2210, totalRecursive: 4100, totalCached: 7200, totalBlocked: 810, totalDropped: 0, totalClients: 23 });
   assert.equal(tech.blocks[2].status, 'warn');
   assert.deepEqual([lastRequest('technitium').query.type, lastRequest('technitium').query.token], ['LastDay', 'test-key']);
 

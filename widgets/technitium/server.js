@@ -1,5 +1,5 @@
 // Technitium DNS Server: GET /api/dashboard/stats/get?token=...&type=<range>&utc=true (and
-// node). Counts with their share of all queries ("1204 (8.4%)"). Server failures are marked.
+// node). Server failures are marked.
 
 const FIELDS = ['totalNoError', 'totalServerFailure', 'totalNxDomain', 'totalRefused', 'totalAuthoritative', 'totalRecursive', 'totalCached', 'totalBlocked', 'totalDropped'];
 
@@ -13,11 +13,10 @@ export default {
     if (body.status !== 'ok') throw new Error(`Technitium answered ${body.status === 'invalid-token' ? 401 : 500} (${body.status})`);
     const s = body.response?.stats ?? {};
     const total = Number(s.totalQueries) || 0;
-    const share = (n) => `${n} (${total ? Math.round((n / total) * 1000) / 10 : 0}%)`;
     return {
       blocks: [
         { key: 'totalQueries', label: 'totalQueries', value: total },
-        ...FIELDS.map((k) => ({ key: k, label: k, value: share(Number(s[k]) || 0), ...(k === 'totalServerFailure' && s[k] > 0 ? { status: 'warn' } : {}) })),
+        ...FIELDS.map((k) => ({ key: k, label: k, value: Number(s[k]) || 0, ...(k === 'totalServerFailure' && s[k] > 0 ? { status: 'warn' } : {}) })),
         { key: 'totalClients', label: 'totalClients', value: Number(s.totalClients) || 0 },
       ],
     };

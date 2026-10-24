@@ -8,8 +8,8 @@ class HdFeed extends HTMLElement {
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
       :host { display: block; font-size: .875rem; }
       ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
-      li a { display: flex; align-items: center; gap: 8px; min-height: 28px; padding: 3px 6px; border-radius: 4px; color: inherit; text-decoration: none; background: color-mix(in srgb, var(--hd-text) 6%, transparent); }
-      li a:hover { background: color-mix(in srgb, var(--hd-text) 12%, transparent); }
+      li .item { display: flex; align-items: center; gap: 8px; min-height: 28px; padding: 3px 6px; border-radius: 4px; color: inherit; text-decoration: none; background: color-mix(in srgb, var(--hd-text) 6%, transparent); }
+      li a.item:hover { background: color-mix(in srgb, var(--hd-text) 12%, transparent); }
       a:focus-visible { outline: 2px solid var(--hd-accent); outline-offset: 1px; }
       .thumb { width: 40px; height: 40px; flex: none; border-radius: 4px; object-fit: cover; }
       .t { flex: 1; min-width: 0; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
