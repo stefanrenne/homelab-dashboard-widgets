@@ -1,0 +1,10 @@
+id: fritzbox
+name: FRITZ!Box
+version: 0.1.0
+apiVersion: 1
+description: Internet connection, uptime, line speed and traffic of a FRITZ!Box (homepage's fritzbox widget).
+refresh: 30s
+defaultFields: [connectionStatus, uptime, maxDown, maxUp]
+options:
+  url: { type: url, required: true }       # the box, e.g. http://fritz.box (port 49000, or 49443 with https)
+  insecure: { type: boolean, default: false }   # accept the box's self-signed certificate (https)

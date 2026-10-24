@@ -1,0 +1,4 @@
+{ "_note": "FreshRSS Google Reader API: three subscriptions, 57 unread.", "routes": {
+ "POST /api/greader.php/accounts/ClientLogin": { "_headers": { "content-type": "text/plain" }, "_text": "SID=anna/abc\nLSID=null\nAuth=anna/abc123\n" },
+ "GET /api/greader.php/reader/api/0/subscription/list": { "subscriptions": [{ "id": "feed/1" }, { "id": "feed/2" }, { "id": "feed/3" }] },
+ "GET /api/greader.php/reader/api/0/unread-count": { "max": 57, "unreadcounts": [] } } }

@@ -39,6 +39,9 @@ const REQUIRED = {
   beszel: { version: 2, username: 'admin@example.com', password: 'pw' },
   get azuredevops() { return { organization: 'example', project: 'homelab', definitionId: '12', repositoryId: 'homelab', userEmail: 'anna@example.com' }; },
   arcane: { env: '1' },
+  duplicati: { password: 'pw' },
+  filebrowser: { username: 'dashboard', password: 'pw' },
+  freshrss: { username: 'anna', password: 'pw' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -103,7 +106,7 @@ test('every label, string value and row state has a translation', async () => {
 
 // row texts and client.js messages have the full card width
 const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'previousMonth', 'nextMonth', 'today', 'noEvents', 'inCinemas', 'physicalRelease', 'digitalRelease', 'notAnswered', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
-  'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable']);
+  'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable', 'noItems']);
 const BLOCK_LABELS = { radarr: ['wanted', 'missing', 'queued', 'movies'], sonarr: ['wanted', 'queued', 'series'] };
 
 test('block labels fit a narrow block: no abbreviations, words of 12 letters or less, 24 in all', () => {
@@ -1244,4 +1247,61 @@ test('develancacheui, dispatcharr, dockhand, downloadstation, esphome and evcc',
   const esp = await run('esphome', { username: 'u', password: 'p' });
   assert.deepEqual(values(esp), { online: 2, offline: 1, offline_alt: 2, unknown: 1, total: 4 });
   assert.deepEqual(values(await run('evcc')), { pv_power: '5.2kW', grid_power: '-1.2kW', home_power: '0.6kW', charge_power: '3.4kW' });
+});
+
+test('duplicati, feed, filebrowser, fileflows, firefly, flood, freshrss and fritzbox', async () => {
+  const dup = await run('duplicati');
+  const d = values(dup);
+  assert.deepEqual({ ...d, lastBackup: undefined, nextRun: undefined }, { jobs: 2, stored: '425 GB', lastBackup: undefined, nextRun: undefined, running: 0, warnings: 0, errors: 1 });
+  assert.match(d.lastBackup, /^\d+d \d+h$/);
+  assert.match(d.nextRun, /^\d+d \d+h$/);
+  assert.equal(dup.blocks.find((b) => b.key === 'errors').status, 'error');
+  assert.equal(lastRequest('duplicati').headers.authorization, 'Bearer dup-token');
+  assert.equal(JSON.parse(mock.requests.find((r) => r.widget === 'duplicati' && r.route.startsWith('POST')).body).Password, 'pw');
+
+  const { parseFeed } = await import(path.join(WIDGETS, 'feed', 'server.js'));
+  const feed = await run('feed', { maxItems: 3 });
+  assert.deepEqual(feed.feed, { layout: 'list', items: [
+    { title: 'Proxmox 9.1 & more', link: 'https://news.example.com/proxmox', date: '2026-03-02T09:00:00.000Z', image: 'https://img.example.com/pve.jpg' },
+    { title: 'Unraid 7 released', link: `${mock.url}/unraid`, date: '2026-03-01T18:30:00.000Z', image: 'https://img.example.com/unraid.png' },
+    { title: 'Self-hosting tips', link: 'https://news.example.com/tips', date: null, image: 'https://img.example.com/tips.webp' }] });
+  assert.equal((await run('feed', { maxItems: 10 })).feed.items[3].link, null, 'a javascript: link is dropped');
+  assert.ok((await run('feed', { images: false, layout: 'grid' })).feed.items.every((i) => i.image === null));
+  const atom = parseFeed('<feed xmlns="http://www.w3.org/2005/Atom"><entry><title type="html">A &lt;i&gt;b&lt;/i&gt;</title><link rel="alternate" href="https://example.com/a"/><link rel="enclosure" type="image/jpeg" href="https://example.com/a.jpg"/><updated>2026-03-01T10:00:00Z</updated></entry></feed>', 'https://example.com/');
+  assert.deepEqual(atom, [{ title: 'A <i>b</i>', link: 'https://example.com/a', date: '2026-03-01T10:00:00.000Z', image: 'https://example.com/a.jpg' }]);
+  const { el } = await renderClient('feed');
+  el.data = feed;
+  const links = [...el.shadowRoot.querySelectorAll('a')];
+  assert.deepEqual(links.map((a) => [a.href, a.target, a.querySelector('.t').textContent]), [
+    ['https://news.example.com/proxmox', '_blank', 'Proxmox 9.1 & more'], [`${mock.url}/unraid`, '_blank', 'Unraid 7 released'], ['https://news.example.com/tips', '_blank', 'Self-hosting tips']]);
+  assert.equal(el.shadowRoot.querySelectorAll('img.thumb').length, 3);
+  el.data = { ...feed, feed: { ...feed.feed, layout: 'grid' } };
+  assert.equal(el.shadowRoot.querySelectorAll('.grid .tile img').length, 3);
+  el.data = { blocks: [], feed: { layout: 'list', items: [] } };
+  assert.equal(el.shadowRoot.querySelector('.empty').textContent, 'noItems');
+
+  assert.deepEqual(values(await run('filebrowser')), { available: '2.8 TB', used: '1.2 TB', total: '4 TB' });
+  assert.equal(lastRequest('filebrowser').headers['x-auth'], 'jwt-fb');
+  await run('filebrowser', { authHeader: 'X-Forwarded-User' });
+  assert.equal(mock.requests.filter((r) => r.widget === 'filebrowser' && r.route === 'POST /api/login').at(-1).headers['x-forwarded-user'], 'dashboard');
+
+  assert.deepEqual(values(await run('fileflows')), { queue: 12, processing: 1, processed: 340, time: '1:23:45' });
+  const ff2 = await run('fileflows', { version: 2, key: 'tok' });
+  assert.deepEqual(values(ff2), { queue: 12, processing: 1, processed: 340, failed: 2 });
+  assert.equal(ff2.blocks[3].status, 'warn');
+  assert.equal(lastRequest('fileflows').headers['x-webhook-token'], 'tok');
+
+  assert.deepEqual(values(await run('firefly')), { networth: '€24,150.50', budget: '€ 312.40 / € 1500.00' });
+  assert.equal(lastRequest('firefly').headers.authorization, 'Bearer test-key');
+  assert.match(lastRequest('firefly').query.start, /^\d{4}-\d\d-01$/);
+
+  assert.deepEqual(values(await run('flood')), { leech: 2, download: '3 MB/s', seed: 1, upload: '150 kB/s' });
+
+  assert.deepEqual(values(await run('freshrss')), { unread: 57, subscriptions: 3 });
+  assert.equal(lastRequest('freshrss').headers.authorization, 'GoogleLogin auth=anna/abc123');
+
+  const fritz = await run('fritzbox');
+  assert.deepEqual(values(fritz), { connectionStatus: 'connected', uptime: '4d 3h', maxDown: '31.3 MB/s', maxUp: '5 MB/s', down: '1.3 MB/s', up: '12.5 kB/s', received: '1.5 TB', sent: '98 GB',
+    externalIPAddress: '203.0.113.24', externalIPv6Address: '2001:db8:1::1', externalIPv6Prefix: null });
+  assert.equal(lastRequest('fritzbox').headers.soapaction.split('#')[0], 'urn:schemas-upnp-org:service:WANIPConnection:1');
 });

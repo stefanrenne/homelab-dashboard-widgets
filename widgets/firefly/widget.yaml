@@ -1,0 +1,9 @@
+id: firefly
+name: Firefly III
+version: 0.1.0
+apiVersion: 1
+description: Net worth and this month's budget in Firefly III (homepage's firefly widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. https://firefly.lan
+  key: { type: string, secret: true, required: true }   # Options > Profile > OAuth > Personal Access Tokens

@@ -1,0 +1,11 @@
+id: filebrowser
+name: File Browser
+version: 0.1.0
+apiVersion: 1
+description: Free, used and total disk space in File Browser (homepage's filebrowser widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # e.g. http://files.lan:8080
+  username: { type: string, required: true }
+  password: { type: string, secret: true }
+  authHeader: { type: string }             # the header of proxy header authentication, e.g. X-Forwarded-User

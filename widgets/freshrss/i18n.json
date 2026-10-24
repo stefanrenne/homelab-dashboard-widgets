@@ -1,0 +1,70 @@
+{
+  "en": {
+    "unread": "Unread",
+    "subscriptions": "Feeds"
+  },
+  "nl": {
+    "unread": "Ongelezen",
+    "subscriptions": "Feeds"
+  },
+  "fr": {
+    "unread": "Non lues",
+    "subscriptions": "Flux"
+  },
+  "de": {
+    "unread": "Ungelesen",
+    "subscriptions": "Feeds"
+  },
+  "es": {
+    "unread": "Sin leer",
+    "subscriptions": "Fuentes"
+  },
+  "ca": {
+    "unread": "No llegides",
+    "subscriptions": "Fonts"
+  },
+  "he": {
+    "unread": "לא נקראו",
+    "subscriptions": "הזנות"
+  },
+  "hr": {
+    "unread": "Nepročitano",
+    "subscriptions": "Izvori"
+  },
+  "hu": {
+    "unread": "Olvasatlan",
+    "subscriptions": "Hírcsatornák"
+  },
+  "it": {
+    "unread": "Non lette",
+    "subscriptions": "Feed"
+  },
+  "nb-NO": {
+    "unread": "Uleste",
+    "subscriptions": "Feeder"
+  },
+  "pt": {
+    "unread": "Não lidas",
+    "subscriptions": "Feeds"
+  },
+  "ru": {
+    "unread": "Непрочитано",
+    "subscriptions": "Ленты"
+  },
+  "sv": {
+    "unread": "Olästa",
+    "subscriptions": "Flöden"
+  },
+  "vi": {
+    "unread": "Chưa đọc",
+    "subscriptions": "Nguồn tin"
+  },
+  "zh-Hans": {
+    "unread": "未读",
+    "subscriptions": "订阅源"
+  },
+  "zh-Hant": {
+    "unread": "未讀",
+    "subscriptions": "訂閱源"
+  }
+}

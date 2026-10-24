@@ -1,0 +1,53 @@
+{
+  "en": {
+    "noItems": "No items"
+  },
+  "nl": {
+    "noItems": "Geen berichten"
+  },
+  "fr": {
+    "noItems": "Aucun article"
+  },
+  "de": {
+    "noItems": "Keine Einträge"
+  },
+  "es": {
+    "noItems": "Sin artículos"
+  },
+  "ca": {
+    "noItems": "Cap article"
+  },
+  "he": {
+    "noItems": "אין פריטים"
+  },
+  "hr": {
+    "noItems": "Nema stavki"
+  },
+  "hu": {
+    "noItems": "Nincs elem"
+  },
+  "it": {
+    "noItems": "Nessun elemento"
+  },
+  "nb-NO": {
+    "noItems": "Ingen saker"
+  },
+  "pt": {
+    "noItems": "Sem artigos"
+  },
+  "ru": {
+    "noItems": "Нет записей"
+  },
+  "sv": {
+    "noItems": "Inga artiklar"
+  },
+  "vi": {
+    "noItems": "Không có mục"
+  },
+  "zh-Hans": {
+    "noItems": "没有条目"
+  },
+  "zh-Hant": {
+    "noItems": "沒有項目"
+  }
+}

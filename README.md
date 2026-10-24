@@ -63,6 +63,14 @@ Every widget has its own page with setup, fields and options on the
 | `downloadstation` | leech, download rate, seed, upload rate (Synology) | `url`, `username`, `password` |
 | `esphome` | devices online, offline, not online, total | `url`, `username`, `password` |
 | `evcc` | solar, grid, home and charging power | `url` |
+| `duplicati` | backup jobs, last and next run, warnings and errors | `url`, `password` |
+| `feed` | the latest items of an RSS or Atom feed, as a list or a grid | `url`, `maxItems`, `layout`, `images` |
+| `filebrowser` | free, used and total disk space | `url`, `username`, `password`, `authHeader` |
+| `fileflows` | files waiting, processing, processed and failed | `url`, `version`, `key` |
+| `firefly` | net worth and this month's budget | `url`, `key` |
+| `flood` | torrents downloading and seeding, with rates | `url`, `username`, `password` |
+| `freshrss` | unread articles and subscriptions | `url`, `username`, `password` |
+| `fritzbox` | connection, uptime, line speed and traffic | `url`, `insecure` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

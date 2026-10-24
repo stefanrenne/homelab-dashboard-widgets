@@ -1,0 +1,11 @@
+id: feed
+name: Feed
+version: 0.1.0
+apiVersion: 1
+description: The latest items of an RSS or Atom feed, as a list or a grid of images (homepage's feed widget).
+refresh: 10m
+options:
+  url: { type: url, required: true }       # the feed, e.g. https://example.com/rss.xml
+  maxItems: { type: number, default: 5 }
+  layout: { type: string, default: list }  # list, or grid for image tiles
+  images: { type: boolean, default: true } # false hides the images

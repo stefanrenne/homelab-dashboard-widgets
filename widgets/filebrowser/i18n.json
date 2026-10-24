@@ -1,0 +1,87 @@
+{
+  "en": {
+    "available": "Available",
+    "used": "Used",
+    "total": "Total"
+  },
+  "nl": {
+    "available": "Beschikbaar",
+    "used": "Gebruikt",
+    "total": "Totaal"
+  },
+  "fr": {
+    "available": "Disponibles",
+    "used": "Utilisé",
+    "total": "Total"
+  },
+  "de": {
+    "available": "Verfügbar",
+    "used": "Belegt",
+    "total": "Gesamt"
+  },
+  "es": {
+    "available": "Disponibles",
+    "used": "Usado",
+    "total": "Total"
+  },
+  "ca": {
+    "available": "Disponibles",
+    "used": "Usat",
+    "total": "Total"
+  },
+  "he": {
+    "available": "זמינים",
+    "used": "בשימוש",
+    "total": "סך הכול"
+  },
+  "hr": {
+    "available": "Dostupno",
+    "used": "Zauzeto",
+    "total": "Ukupno"
+  },
+  "hu": {
+    "available": "Elérhető",
+    "used": "Foglalt",
+    "total": "Összesen"
+  },
+  "it": {
+    "available": "Disponibili",
+    "used": "Usato",
+    "total": "Totale"
+  },
+  "nb-NO": {
+    "available": "Tilgjengelig",
+    "used": "Brukt",
+    "total": "Totalt"
+  },
+  "pt": {
+    "available": "Disponíveis",
+    "used": "Usado",
+    "total": "Total"
+  },
+  "ru": {
+    "available": "Доступно",
+    "used": "Занято",
+    "total": "Всего"
+  },
+  "sv": {
+    "available": "Tillgängliga",
+    "used": "Använt",
+    "total": "Totalt"
+  },
+  "vi": {
+    "available": "Có sẵn",
+    "used": "Đã dùng",
+    "total": "Tổng"
+  },
+  "zh-Hans": {
+    "available": "可用",
+    "used": "已用",
+    "total": "总计"
+  },
+  "zh-Hant": {
+    "available": "可用",
+    "used": "已用",
+    "total": "總計"
+  }
+}

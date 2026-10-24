@@ -1,0 +1,172 @@
+{
+  "en": {
+    "jobs": "Jobs",
+    "stored": "Stored",
+    "lastBackup": "Last backup",
+    "nextRun": "Next run",
+    "running": "Running",
+    "warnings": "Warnings",
+    "errors": "Errors",
+    "never": "Never"
+  },
+  "nl": {
+    "jobs": "Taken",
+    "stored": "Opgeslagen",
+    "lastBackup": "Laatste back-up",
+    "nextRun": "Volgende keer",
+    "running": "Actief",
+    "warnings": "Waarschuwing",
+    "errors": "Fouten",
+    "never": "Nooit"
+  },
+  "fr": {
+    "jobs": "Tâches",
+    "stored": "Stocké",
+    "lastBackup": "Dernière copie",
+    "nextRun": "Prochaine",
+    "running": "En cours",
+    "warnings": "Alertes",
+    "errors": "Erreurs",
+    "never": "Jamais"
+  },
+  "de": {
+    "jobs": "Aufträge",
+    "stored": "Gespeichert",
+    "lastBackup": "Letztes Backup",
+    "nextRun": "Nächster Lauf",
+    "running": "Läuft",
+    "warnings": "Warnungen",
+    "errors": "Fehler",
+    "never": "Nie"
+  },
+  "es": {
+    "jobs": "Tareas",
+    "stored": "Guardado",
+    "lastBackup": "Última copia",
+    "nextRun": "Próxima",
+    "running": "En marcha",
+    "warnings": "Avisos",
+    "errors": "Errores",
+    "never": "Nunca"
+  },
+  "ca": {
+    "jobs": "Tasques",
+    "stored": "Desat",
+    "lastBackup": "Última còpia",
+    "nextRun": "Propera",
+    "running": "En marxa",
+    "warnings": "Avisos",
+    "errors": "Errors",
+    "never": "Mai"
+  },
+  "he": {
+    "jobs": "משימות",
+    "stored": "מאוחסן",
+    "lastBackup": "גיבוי אחרון",
+    "nextRun": "הרצה הבאה",
+    "running": "פועלים",
+    "warnings": "אזהרות",
+    "errors": "שגיאות",
+    "never": "אף פעם"
+  },
+  "hr": {
+    "jobs": "Zadaci",
+    "stored": "Spremljeno",
+    "lastBackup": "Zadnja kopija",
+    "nextRun": "Sljedeće",
+    "running": "Radi",
+    "warnings": "Upozorenja",
+    "errors": "Pogreške",
+    "never": "Nikad"
+  },
+  "hu": {
+    "jobs": "Feladatok",
+    "stored": "Tárolva",
+    "lastBackup": "Utolsó mentés",
+    "nextRun": "Következő",
+    "running": "Fut",
+    "warnings": "Riasztások",
+    "errors": "Hibák",
+    "never": "Soha"
+  },
+  "it": {
+    "jobs": "Processi",
+    "stored": "Archiviato",
+    "lastBackup": "Ultimo backup",
+    "nextRun": "Prossima",
+    "running": "Attivi",
+    "warnings": "Avvisi",
+    "errors": "Errori",
+    "never": "Mai"
+  },
+  "nb-NO": {
+    "jobs": "Jobber",
+    "stored": "Lagret",
+    "lastBackup": "Siste backup",
+    "nextRun": "Neste kjøring",
+    "running": "Kjører",
+    "warnings": "Advarsler",
+    "errors": "Feil",
+    "never": "Aldri"
+  },
+  "pt": {
+    "jobs": "Tarefas",
+    "stored": "Guardado",
+    "lastBackup": "Última cópia",
+    "nextRun": "Próxima",
+    "running": "Em execução",
+    "warnings": "Avisos",
+    "errors": "Erros",
+    "never": "Nunca"
+  },
+  "ru": {
+    "jobs": "Задания",
+    "stored": "Хранится",
+    "lastBackup": "Последняя копия",
+    "nextRun": "Следующий",
+    "running": "Работает",
+    "warnings": "Замечания",
+    "errors": "Ошибки",
+    "never": "Никогда"
+  },
+  "sv": {
+    "jobs": "Jobb",
+    "stored": "Lagrat",
+    "lastBackup": "Senaste backup",
+    "nextRun": "Nästa körning",
+    "running": "Körs",
+    "warnings": "Varningar",
+    "errors": "Fel",
+    "never": "Aldrig"
+  },
+  "vi": {
+    "jobs": "Tác vụ",
+    "stored": "Đã lưu",
+    "lastBackup": "Sao lưu gần nhất",
+    "nextRun": "Lần tới",
+    "running": "Đang chạy",
+    "warnings": "Cảnh báo",
+    "errors": "Lỗi",
+    "never": "Không bao giờ"
+  },
+  "zh-Hans": {
+    "jobs": "任务",
+    "stored": "已存储",
+    "lastBackup": "上次备份",
+    "nextRun": "下次运行",
+    "running": "运行中",
+    "warnings": "警告",
+    "errors": "错误",
+    "never": "永不"
+  },
+  "zh-Hant": {
+    "jobs": "任務",
+    "stored": "已儲存",
+    "lastBackup": "上次備份",
+    "nextRun": "下次執行",
+    "running": "執行中",
+    "warnings": "警告",
+    "errors": "錯誤",
+    "never": "永不"
+  }
+}

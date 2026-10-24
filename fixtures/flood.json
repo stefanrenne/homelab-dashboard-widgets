@@ -1,0 +1,6 @@
+{ "_note": "Flood: two downloading, one complete (seeding).", "routes": {
+ "POST /api/auth/authenticate": { "_headers": { "set-cookie": "jwt=flood-jwt; Path=/; HttpOnly" }, "_body": { "success": true } },
+ "GET /api/torrents": { "torrents": {
+  "a1": { "name": "debian.iso", "status": ["downloading", "active"], "downRate": 2500000, "upRate": 40000 },
+  "b2": { "name": "ubuntu.iso", "status": ["downloading"], "downRate": 500000, "upRate": 0 },
+  "c3": { "name": "fedora.iso", "status": ["complete", "seeding"], "downRate": 0, "upRate": 110000 } } } } }

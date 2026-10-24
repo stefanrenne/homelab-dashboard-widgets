@@ -1,0 +1,70 @@
+{
+  "en": {
+    "networth": "Net worth",
+    "budget": "Budget"
+  },
+  "nl": {
+    "networth": "Vermogen",
+    "budget": "Budget"
+  },
+  "fr": {
+    "networth": "Patrimoine",
+    "budget": "Budget"
+  },
+  "de": {
+    "networth": "Vermögen",
+    "budget": "Budget"
+  },
+  "es": {
+    "networth": "Patrimonio",
+    "budget": "Presupuesto"
+  },
+  "ca": {
+    "networth": "Patrimoni",
+    "budget": "Pressupost"
+  },
+  "he": {
+    "networth": "שווי נקי",
+    "budget": "תקציב"
+  },
+  "hr": {
+    "networth": "Imovina",
+    "budget": "Proračun"
+  },
+  "hu": {
+    "networth": "Vagyon",
+    "budget": "Költségkeret"
+  },
+  "it": {
+    "networth": "Patrimonio",
+    "budget": "Budget"
+  },
+  "nb-NO": {
+    "networth": "Formue",
+    "budget": "Budsjett"
+  },
+  "pt": {
+    "networth": "Património",
+    "budget": "Orçamento"
+  },
+  "ru": {
+    "networth": "Капитал",
+    "budget": "Бюджет"
+  },
+  "sv": {
+    "networth": "Förmögenhet",
+    "budget": "Budget"
+  },
+  "vi": {
+    "networth": "Tài sản ròng",
+    "budget": "Ngân sách"
+  },
+  "zh-Hans": {
+    "networth": "净资产",
+    "budget": "预算"
+  },
+  "zh-Hant": {
+    "networth": "淨資產",
+    "budget": "預算"
+  }
+}

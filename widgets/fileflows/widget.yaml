@@ -1,0 +1,10 @@
+id: fileflows
+name: FileFlows
+version: 0.1.0
+apiVersion: 1
+description: Files waiting, being processed, processed and failed in FileFlows (homepage's fileflows widget).
+refresh: 30s
+options:
+  url: { type: url, required: true }       # e.g. http://fileflows.lan:19200
+  version: { type: number, default: 1 }    # 2 for FileFlows 26.10 and later
+  key: { type: string, secret: true }      # version 2: the token of Settings > General > Fenrus Dashboard Endpoint

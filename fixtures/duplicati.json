@@ -1,0 +1,7 @@
+{ "_note": "Duplicati: two jobs, one error notification for a backup, nothing running (progressstate 404s: no fixture).", "routes": {
+ "POST /api/v1/auth/login": { "AccessToken": "dup-token" },
+ "GET /api/v1/backups": [
+  { "Backup": { "ID": "1", "Name": "Photos", "Metadata": { "LastBackupFinished": "20260301T021500Z", "TargetFilesSize": "412300000000" } }, "Schedule": { "Time": "2099-01-01T02:00:00Z" } },
+  { "Backup": { "ID": "2", "Name": "Documents", "Metadata": { "LastBackupFinished": "20260302T031500Z", "TargetFilesSize": "12700000000" } }, "Schedule": { "Time": "2099-01-01T03:00:00Z" } }],
+ "GET /api/v1/serverstate": { "ActiveTask": null },
+ "GET /api/v1/notifications": [{ "BackupID": "1", "Type": "Error", "Title": "Failed" }, { "Type": "Information", "Title": "Update available" }] } }

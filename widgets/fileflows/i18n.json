@@ -1,0 +1,121 @@
+{
+  "en": {
+    "queue": "Queue",
+    "processing": "Processing",
+    "processed": "Processed",
+    "time": "Time",
+    "failed": "Failed"
+  },
+  "nl": {
+    "queue": "Wachtrij",
+    "processing": "Bezig",
+    "processed": "Verwerkt",
+    "time": "Tijd",
+    "failed": "Mislukt"
+  },
+  "fr": {
+    "queue": "File",
+    "processing": "En cours",
+    "processed": "Traités",
+    "time": "Durée",
+    "failed": "Échec"
+  },
+  "de": {
+    "queue": "Einträge",
+    "processing": "In Arbeit",
+    "processed": "Verarbeitet",
+    "time": "Zeit",
+    "failed": "Gescheitert"
+  },
+  "es": {
+    "queue": "Cola",
+    "processing": "En proceso",
+    "processed": "Procesados",
+    "time": "Tiempo",
+    "failed": "Fallido"
+  },
+  "ca": {
+    "queue": "Cua",
+    "processing": "En procés",
+    "processed": "Processats",
+    "time": "Temps",
+    "failed": "Fallit"
+  },
+  "he": {
+    "queue": "תור",
+    "processing": "בעיבוד",
+    "processed": "עובדו",
+    "time": "זמן",
+    "failed": "נכשל"
+  },
+  "hr": {
+    "queue": "Red",
+    "processing": "U obradi",
+    "processed": "Obrađeno",
+    "time": "Vrijeme",
+    "failed": "Neuspjelo"
+  },
+  "hu": {
+    "queue": "Sor",
+    "processing": "Feldolgozás",
+    "processed": "Feldolgozva",
+    "time": "Idő",
+    "failed": "Sikertelen"
+  },
+  "it": {
+    "queue": "Coda",
+    "processing": "In corso",
+    "processed": "Elaborati",
+    "time": "Tempo",
+    "failed": "Fallito"
+  },
+  "nb-NO": {
+    "queue": "Kø",
+    "processing": "Behandles",
+    "processed": "Behandlet",
+    "time": "Tid",
+    "failed": "Mislyktes"
+  },
+  "pt": {
+    "queue": "Fila",
+    "processing": "Em curso",
+    "processed": "Processados",
+    "time": "Tempo",
+    "failed": "Falhou"
+  },
+  "ru": {
+    "queue": "Очередь",
+    "processing": "В работе",
+    "processed": "Обработано",
+    "time": "Время",
+    "failed": "Ошибка"
+  },
+  "sv": {
+    "queue": "Kö",
+    "processing": "Bearbetas",
+    "processed": "Bearbetade",
+    "time": "Tid",
+    "failed": "Misslyckades"
+  },
+  "vi": {
+    "queue": "Hàng đợi",
+    "processing": "Đang xử lý",
+    "processed": "Đã xử lý",
+    "time": "Thời gian",
+    "failed": "Thất bại"
+  },
+  "zh-Hans": {
+    "queue": "队列",
+    "processing": "处理中",
+    "processed": "已处理",
+    "time": "时间",
+    "failed": "失败"
+  },
+  "zh-Hant": {
+    "queue": "佇列",
+    "processing": "處理中",
+    "processed": "已處理",
+    "time": "時間",
+    "failed": "失敗"
+  }
+}

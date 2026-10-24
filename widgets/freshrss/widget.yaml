@@ -1,0 +1,10 @@
+id: freshrss
+name: FreshRSS
+version: 0.1.0
+apiVersion: 1
+description: Unread articles and subscriptions in FreshRSS (homepage's freshrss widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://freshrss.lan:8080
+  username: { type: string, required: true }
+  password: { type: string, secret: true, required: true }   # the API password of the user's profile

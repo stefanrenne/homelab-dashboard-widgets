@@ -1,0 +1,3 @@
+{ "_note": "Firefly III: one currency; 312.40 of 1500 spent this month.", "routes": {
+ "GET /api/v1/summary/basic": { "net-worth-in-EUR": { "key": "net-worth-in-EUR", "monetary_value": 24150.5, "currency_symbol": "€", "value_parsed": "€24,150.50" }, "balance-in-EUR": { "value_parsed": "€1,000.00" } },
+ "GET /api/v1/available-budgets": { "data": [{ "type": "available_budgets", "attributes": { "amount": "1500.00", "currency_symbol": "€", "spent_in_budgets": [{ "sum": "-312.40" }] } }] } } }
