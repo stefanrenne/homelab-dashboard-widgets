@@ -1,0 +1,10 @@
+{
+ "_note": "Transmission RPC torrent-get: two downloading, one complete.",
+ "routes": {
+  "POST /transmission/rpc": { "result": "success", "arguments": { "torrents": [
+   { "percentDone": 0.42, "status": 4, "rateDownload": 2500000, "rateUpload": 120000 },
+   { "percentDone": 0.1, "status": 4, "rateDownload": 300000, "rateUpload": 0 },
+   { "percentDone": 1, "status": 6, "rateDownload": 0, "rateUpload": 380000 }
+  ] } }
+ }
+}

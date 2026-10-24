@@ -614,3 +614,27 @@ test('qbittorrent: leech, seed and rates; downloads per row with problems first;
     srv.close();
   }
 });
+
+test('transmission: leech, seed and rates over RPC, with the session id after a 409', async () => {
+  assert.deepEqual(values(await run('transmission', { username: 'u', password: 'p' })), { leech: 2, download: '2.8 MB/s', seed: 1, upload: '500 kB/s' });
+  const req = lastRequest('transmission');
+  assert.equal(req.headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
+  assert.equal(JSON.parse(req.body).method, 'torrent-get');
+  const http = await import('node:http');
+  const seen = [];
+  const srv = http.createServer((q, res) => {
+    seen.push(`${q.url} ${q.headers['x-transmission-session-id'] ?? '-'}`);
+    if (q.headers['x-transmission-session-id'] !== 's1') { res.statusCode = 409; res.setHeader('x-transmission-session-id', 's1'); return res.end(); }
+    res.end(JSON.stringify({ result: 'success', arguments: { torrents: [] } }));
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: transmission } = await import(path.join(WIDGETS, 'transmission', 'server.js'));
+  const ctx = { options: { url: `http://127.0.0.1:${srv.address().port}`, rpcUrl: '/custom' }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) };
+  try {
+    await transmission.fetch(ctx);
+    await transmission.fetch(ctx);
+    assert.deepEqual(seen, ['/custom/rpc -', '/custom/rpc s1', '/custom/rpc s1']);
+  } finally {
+    srv.close();
+  }
+});

@@ -1,0 +1,11 @@
+id: transmission
+name: Transmission
+version: 0.1.0
+apiVersion: 1
+description: Torrents downloading and seeding with their rates (homepage's transmission widget).
+refresh: 10s
+options:
+  url: { type: url, required: true }       # e.g. http://transmission.lan:9091
+  username: { type: string }
+  password: { type: string, secret: true }
+  rpcUrl: { type: string, default: /transmission/ }   # the RPC path; change it only when Transmission's rpc-url is changed
