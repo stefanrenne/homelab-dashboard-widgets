@@ -31,12 +31,16 @@ What the widgets have in common:
 
 ## Install
 
+The dashboard always installs this collection at its newest release; there is
+nothing to add. List it in `settings.yaml` only to pin a release or take some of the widgets;
+that entry replaces the default:
+
 ```yaml
 # settings.yaml of the dashboard
 plugins:
   - source: git+https://github.com/stefanrenne/homelab-dashboard-widgets#latest   # or a tag: #v0.2.0
     only: [radarr, sonarr]        # optional: just these
-  # while developing:
+  # while developing (wins over the installed collection):
   - path: ~/git/homelab-dashboard-widgets
 ```
 
