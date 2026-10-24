@@ -1,0 +1,10 @@
+id: mealie
+name: Mealie
+version: 0.1.0
+apiVersion: 1
+description: Recipes, users, categories and tags in Mealie (homepage's mealie widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://mealie.lan:9000
+  key: { type: string, secret: true, required: true }   # Profile > Manage Your API Tokens > Generate
+  version: { type: number, default: 1 }    # 2 for Mealie 2 and later (households)

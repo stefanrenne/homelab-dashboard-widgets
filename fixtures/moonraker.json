@@ -1,0 +1,2 @@
+{ "_note": "Moonraker: printing layer 42 of 180, 23.4% done.", "routes": {
+ "GET /printer/objects/query": { "result": { "eventtime": 1, "status": { "webhooks": { "state": "ready", "state_message": "Printer is ready" }, "print_stats": { "state": "printing", "filename": "benchy.gcode", "info": { "current_layer": 42, "total_layer": 180 } }, "display_status": { "progress": 0.234 } } } } } }

@@ -1,0 +1,70 @@
+{
+  "en": {
+    "stream": "Stream",
+    "noStream": "No stream"
+  },
+  "nl": {
+    "stream": "Stream",
+    "noStream": "Geen beeld"
+  },
+  "fr": {
+    "stream": "Flux",
+    "noStream": "Pas de flux"
+  },
+  "de": {
+    "stream": "Stream",
+    "noStream": "Kein Bild"
+  },
+  "es": {
+    "stream": "Transmisión",
+    "noStream": "Sin imagen"
+  },
+  "ca": {
+    "stream": "Transmissió",
+    "noStream": "Sense imatge"
+  },
+  "he": {
+    "stream": "שידור",
+    "noStream": "אין שידור"
+  },
+  "hr": {
+    "stream": "Prijenos",
+    "noStream": "Nema slike"
+  },
+  "hu": {
+    "stream": "Stream",
+    "noStream": "Nincs kép"
+  },
+  "it": {
+    "stream": "Flusso",
+    "noStream": "Nessun flusso"
+  },
+  "nb-NO": {
+    "stream": "Strøm",
+    "noStream": "Ingen strøm"
+  },
+  "pt": {
+    "stream": "Transmissão",
+    "noStream": "Sem imagem"
+  },
+  "ru": {
+    "stream": "Трансляция",
+    "noStream": "Нет изображения"
+  },
+  "sv": {
+    "stream": "Ström",
+    "noStream": "Ingen bild"
+  },
+  "vi": {
+    "stream": "Luồng",
+    "noStream": "Không có hình"
+  },
+  "zh-Hans": {
+    "stream": "视频流",
+    "noStream": "没有画面"
+  },
+  "zh-Hant": {
+    "stream": "串流",
+    "noStream": "沒有畫面"
+  }
+}

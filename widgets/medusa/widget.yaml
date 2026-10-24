@@ -1,0 +1,9 @@
+id: medusa
+name: Medusa
+version: 0.1.0
+apiVersion: 1
+description: Episodes wanted and snatched, and active shows, in Medusa (homepage's medusa widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://medusa.lan:8081
+  key: { type: string, secret: true, required: true }   # Settings > General > Interface > API Key

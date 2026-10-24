@@ -1,0 +1,1 @@
+{ "_note": "Minecraft speaks its own TCP protocol: the test starts a fake server.", "routes": {} }

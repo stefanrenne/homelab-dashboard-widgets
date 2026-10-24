@@ -1,0 +1,70 @@
+{
+  "en": {
+    "unread": "Unread",
+    "read": "Read"
+  },
+  "nl": {
+    "unread": "Ongelezen",
+    "read": "Gelezen"
+  },
+  "fr": {
+    "unread": "Non lues",
+    "read": "Lus"
+  },
+  "de": {
+    "unread": "Ungelesen",
+    "read": "Gelesen"
+  },
+  "es": {
+    "unread": "Sin leer",
+    "read": "Leídos"
+  },
+  "ca": {
+    "unread": "No llegides",
+    "read": "Llegits"
+  },
+  "he": {
+    "unread": "לא נקראו",
+    "read": "נקראו"
+  },
+  "hr": {
+    "unread": "Nepročitano",
+    "read": "Pročitano"
+  },
+  "hu": {
+    "unread": "Olvasatlan",
+    "read": "Olvasott"
+  },
+  "it": {
+    "unread": "Non lette",
+    "read": "Letti"
+  },
+  "nb-NO": {
+    "unread": "Uleste",
+    "read": "Lest"
+  },
+  "pt": {
+    "unread": "Não lidas",
+    "read": "Lidos"
+  },
+  "ru": {
+    "unread": "Непрочитано",
+    "read": "Прочитано"
+  },
+  "sv": {
+    "unread": "Olästa",
+    "read": "Lästa"
+  },
+  "vi": {
+    "unread": "Chưa đọc",
+    "read": "Đã đọc"
+  },
+  "zh-Hans": {
+    "unread": "未读",
+    "read": "已读"
+  },
+  "zh-Hant": {
+    "unread": "未讀",
+    "read": "已讀"
+  }
+}

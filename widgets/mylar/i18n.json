@@ -1,0 +1,87 @@
+{
+  "en": {
+    "series": "Series",
+    "issues": "Issues",
+    "wanted": "Wanted"
+  },
+  "nl": {
+    "series": "Series",
+    "issues": "Issues",
+    "wanted": "Gewenst"
+  },
+  "fr": {
+    "series": "Séries",
+    "issues": "Tickets",
+    "wanted": "Voulus"
+  },
+  "de": {
+    "series": "Serien",
+    "issues": "Issues",
+    "wanted": "Gesucht"
+  },
+  "es": {
+    "series": "Series",
+    "issues": "Incidencias",
+    "wanted": "Buscadas"
+  },
+  "ca": {
+    "series": "Sèries",
+    "issues": "Incidències",
+    "wanted": "Desitjats"
+  },
+  "he": {
+    "series": "סדרות",
+    "issues": "בעיות",
+    "wanted": "מבוקשים"
+  },
+  "hr": {
+    "series": "Serije",
+    "issues": "Problemi",
+    "wanted": "Traženo"
+  },
+  "hu": {
+    "series": "Sorozatok",
+    "issues": "Hibajegyek",
+    "wanted": "Keresett"
+  },
+  "it": {
+    "series": "Serie",
+    "issues": "Issue",
+    "wanted": "Desiderati"
+  },
+  "nb-NO": {
+    "series": "Serier",
+    "issues": "Saker",
+    "wanted": "Ønsket"
+  },
+  "pt": {
+    "series": "Séries",
+    "issues": "Issues",
+    "wanted": "Pretendidos"
+  },
+  "ru": {
+    "series": "Сериалы",
+    "issues": "Задачи",
+    "wanted": "Нужно"
+  },
+  "sv": {
+    "series": "Serier",
+    "issues": "Ärenden",
+    "wanted": "Önskade"
+  },
+  "vi": {
+    "series": "Phim bộ",
+    "issues": "Vấn đề",
+    "wanted": "Mong muốn"
+  },
+  "zh-Hans": {
+    "series": "剧集",
+    "issues": "问题",
+    "wanted": "想要"
+  },
+  "zh-Hant": {
+    "series": "影集",
+    "issues": "問題",
+    "wanted": "想要"
+  }
+}

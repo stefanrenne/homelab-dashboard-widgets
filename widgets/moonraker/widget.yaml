@@ -1,0 +1,9 @@
+id: moonraker
+name: Moonraker
+version: 0.1.0
+apiVersion: 1
+description: A Klipper printer's state, the print's progress and layers, through Moonraker (homepage's moonraker widget).
+refresh: 10s
+options:
+  url: { type: url, required: true }       # Moonraker, e.g. http://printer.lan:7125
+  key: { type: string, secret: true }      # when Moonraker's authorization is on and the dashboard is not trusted

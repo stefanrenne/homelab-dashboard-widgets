@@ -51,6 +51,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - Widgets for game servers (Valve's server query), Gatus, Ghostfolio, GitLab, Gluetun, Gotify, HDHomeRun and Headscale.
 - Widgets for Healthchecks, Homebox, Homebridge, JDownloader (through My.JDownloader), Jellystat, Karakeep and Kavita.
 - Widgets for Komga, Komodo, Kopia, Linkwarden, LubeLogger, Mailcow, Maintainerr and Mastodon.
+- Widgets for Mealie, Medusa, MikroTik, Minecraft, Miniflux, MJPEG streams, Moonraker (Klipper) and Mylar3.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

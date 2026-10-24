@@ -15,18 +15,40 @@ let mock;
 let apcupsd; // apcups speaks apcupsd's TCP protocol, not HTTP
 let a2s; // gamedig speaks Valve's server query over UDP
 let myjd; // jdownloader's My.JDownloader answers encrypted
+let mc; // minecraft speaks the Server List Ping over TCP
 before(async () => {
   mock = await startMock();
   apcupsd = await nis(['STATUS   : ONLINE', 'LOADPCT  : 10.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 60.0 Minutes']);
   a2s = await gameServer();
   myjd = await myJDownloader();
+  mc = await minecraftServer();
 });
 after(() => {
   mock.close();
   apcupsd.close();
   a2s.close();
   myjd.close();
+  mc.close();
 });
+
+/** A fake Minecraft server answering the status request (in two TCP chunks). */
+async function minecraftServer() {
+  const net = await import('node:net');
+  const varint = (n) => { const out = []; do { let b = n & 0x7f; n >>>= 7; if (n) b |= 0x80; out.push(b); } while (n); return Buffer.from(out); };
+  const handshakes = [];
+  const srv = net.createServer((socket) => {
+    socket.once('data', (data) => {
+      handshakes.push(data);
+      const json = Buffer.from(JSON.stringify({ version: { name: 'Paper 1.21.4', protocol: 769 }, players: { online: 3, max: 20 }, description: { text: 'Homelab' } }));
+      const body = Buffer.concat([varint(0), varint(json.length), json]);
+      const all = Buffer.concat([varint(body.length), body]);
+      socket.write(all.subarray(0, 10));
+      setTimeout(() => socket.end(all.subarray(10)), 5);
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  return { url: `udp://127.0.0.1:${srv.address().port}`, handshakes, close: () => srv.close() };
+}
 
 /** A fake My.JDownloader: login, the device list and a device's packages, with its crypto. */
 async function myJDownloader() {
@@ -114,6 +136,8 @@ const REQUIRED = {
   homebox: { username: 'anna@example.com', password: 'pw' },
   homebridge: { username: 'admin', password: 'pw' },
   komodo: { secret: 's3cret' },
+  get minecraft() { return { url: mc.url, timeout: 1 }; },
+  mikrotik: { username: 'dashboard', password: 'pw' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -122,6 +146,7 @@ const REQUIRED = {
 };
 
 async function run(id, options = {}, { params } = {}) {
+  if (!fs.existsSync(path.join(WIDGETS, id, 'server.js'))) return { blocks: [] }; // client-only (mjpeg)
   const { default: widget } = await import(path.join(WIDGETS, id, 'server.js'));
   return widget.fetch({
     apiVersion: 1,
@@ -153,13 +178,14 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
     const i18n = JSON.parse(fs.readFileSync(path.join(WIDGETS, id, 'i18n.json'), 'utf8'));
     const keys = Object.keys(i18n.en).sort();
     for (const lang of LANGS) assert.deepEqual(Object.keys(i18n[lang]).sort(), keys, `${id} ${lang}`);
-    const src = fs.readFileSync(path.join(WIDGETS, id, 'server.js'), 'utf8');
+    const src = ['server.js', 'client.js'].filter((f) => fs.existsSync(path.join(WIDGETS, id, f))).map((f) => fs.readFileSync(path.join(WIDGETS, id, f), 'utf8')).join('\n');
+    assert.ok(src, `${id} has a server.js or a client.js`);
     for (const [, spec] of src.matchAll(/^import .* from '([^']+)'/gm)) assert.match(spec, /^node:/, `${id} imports ${spec}`);
   }
 });
 
 // blocks whose value is a name from the service (a host name, an operating system), not a key
-const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'] };
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'], minecraft: ['version'] };
 
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
@@ -1499,4 +1525,42 @@ test('komga, komodo, kopia, linkwarden, lubelogger, mailcow, maintainerr and mas
   assert.deepEqual(values(await run('maintainerr')), { itemsHandled: 312, episodesHandled: 240, moviesHandled: 58, showsHandled: 9, seasonsHandled: 14, reclaimable: '1.8 TB', movieReclaimable: '610 GB', showReclaimable: '1.2 TB', totalCapacity: '24 TB' });
 
   assert.deepEqual(values(await run('mastodon')), { user_count: 1204, status_count: 98231, domain_count: 15002 });
+});
+
+test('mealie, medusa, mikrotik, minecraft, miniflux, mjpeg, moonraker and mylar', async () => {
+  assert.deepEqual(values(await run('mealie')), { recipes: 182, users: 3, categories: 14, tags: 41 });
+  await run('mealie', { version: 2 });
+  assert.deepEqual([lastRequest('mealie').route, lastRequest('mealie').headers.authorization], ['GET /api/households/statistics', 'Bearer test-key']);
+
+  assert.deepEqual(values(await run('medusa')), { wanted: 7, queued: 3, series: 42 });
+
+  const mt = await run('mikrotik');
+  assert.deepEqual(values(mt), { uptime: '9d 3h', cpuLoad: '7%', memoryUsed: '25%', numberOfLeases: 3 });
+  assert.equal(lastRequest('mikrotik').headers.authorization, `Basic ${Buffer.from('dashboard:pw').toString('base64')}`);
+
+  const up = await run('minecraft');
+  assert.deepEqual(values(up), { status: 'up', players: '3 / 20', version: 'Paper 1.21.4' });
+  assert.equal(mc.handshakes.at(-1).toString('latin1').includes('127.0.0.1'), true, 'the handshake names the host');
+  const down = await run('minecraft', { url: 'minecraft://127.0.0.1:9', timeout: 0.3 });
+  assert.deepEqual(down.blocks[0], { key: 'status', label: 'status', value: 'down', status: 'error' });
+
+  assert.deepEqual(values(await run('miniflux')), { unread: 18, read: 154 });
+  assert.equal(lastRequest('miniflux').headers['x-auth-token'], 'test-key');
+
+  const { el } = await renderClient('mjpeg', { stream: 'http://printer.lan/webcam/?action=stream', fit: 'cover' });
+  const imgs = [...el.shadowRoot.querySelectorAll('img')];
+  assert.deepEqual(imgs.map((i) => [i.src, i.style.objectFit]), [['http://printer.lan/webcam/?action=stream', ''], ['http://printer.lan/webcam/?action=stream', 'cover']]);
+  imgs[1].dispatchEvent(new el.ownerDocument.defaultView.Event('error'));
+  assert.equal(el.shadowRoot.querySelector('.failed').textContent, 'noStream');
+  assert.equal((await renderClient('mjpeg', { stream: 'javascript:alert(1)' })).el.shadowRoot.querySelector('img'), null);
+
+  const moon = await run('moonraker', { key: undefined });
+  assert.deepEqual(values(moon), { printer_state: 'ready', layers: '42 / 180', print_progress: '23%', print_status: 'printing' });
+  assert.equal(lastRequest('moonraker').headers['x-api-key'], undefined);
+  assert.ok('display_status' in lastRequest('moonraker').query);
+
+  const mylar = await run('mylar');
+  assert.deepEqual(values(mylar), { series: 2, issues: 116, wanted: 2 });
+  assert.equal(mylar.blocks[2].status, 'warn');
+  assert.equal(lastRequest('mylar').query.apikey, 'test-key');
 });

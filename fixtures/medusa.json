@@ -1,0 +1,2 @@
+{ "_note": "Medusa v1 API: the mock ignores the cmd query, so one answer holds both commands' data.", "routes": {
+ "GET /api/v1/test-key/": { "result": "success", "data": { "ep_snatched": 3, "shows_active": 42, "missed": [{}], "today": [{}, {}], "soon": [{}], "later": [{}, {}, {}] } } } }

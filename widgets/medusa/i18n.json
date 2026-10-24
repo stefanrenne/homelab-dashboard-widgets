@@ -1,0 +1,87 @@
+{
+  "en": {
+    "wanted": "Wanted",
+    "queued": "Snatched",
+    "series": "Shows"
+  },
+  "nl": {
+    "wanted": "Gewenst",
+    "queued": "Opgehaald",
+    "series": "Programma's"
+  },
+  "fr": {
+    "wanted": "Voulus",
+    "queued": "Récupérés",
+    "series": "Émissions"
+  },
+  "de": {
+    "wanted": "Gesucht",
+    "queued": "Geholt",
+    "series": "Sendungen"
+  },
+  "es": {
+    "wanted": "Buscadas",
+    "queued": "Capturados",
+    "series": "Programas"
+  },
+  "ca": {
+    "wanted": "Desitjats",
+    "queued": "Capturats",
+    "series": "Programes"
+  },
+  "he": {
+    "wanted": "מבוקשים",
+    "queued": "נלכדו",
+    "series": "תוכניות"
+  },
+  "hr": {
+    "wanted": "Traženo",
+    "queued": "Preuzeto",
+    "series": "Emisije"
+  },
+  "hu": {
+    "wanted": "Keresett",
+    "queued": "Letöltve",
+    "series": "Műsorok"
+  },
+  "it": {
+    "wanted": "Desiderati",
+    "queued": "Prelevati",
+    "series": "Programmi"
+  },
+  "nb-NO": {
+    "wanted": "Ønsket",
+    "queued": "Hentet",
+    "series": "Programmer"
+  },
+  "pt": {
+    "wanted": "Pretendidos",
+    "queued": "Capturados",
+    "series": "Programas"
+  },
+  "ru": {
+    "wanted": "Нужно",
+    "queued": "Захвачено",
+    "series": "Передачи"
+  },
+  "sv": {
+    "wanted": "Önskade",
+    "queued": "Hämtade",
+    "series": "Program"
+  },
+  "vi": {
+    "wanted": "Mong muốn",
+    "queued": "Đã lấy",
+    "series": "Chương trình"
+  },
+  "zh-Hans": {
+    "wanted": "想要",
+    "queued": "已抓取",
+    "series": "节目"
+  },
+  "zh-Hant": {
+    "wanted": "想要",
+    "queued": "已擷取",
+    "series": "節目"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "en": {
+    "status": "Status",
+    "players": "Players",
+    "version": "Version",
+    "up": "Up",
+    "down": "Down"
+  },
+  "nl": {
+    "status": "Status",
+    "players": "Spelers",
+    "version": "Versie",
+    "up": "Actief",
+    "down": "Offline"
+  },
+  "fr": {
+    "status": "État",
+    "players": "Joueurs",
+    "version": "Version",
+    "up": "Actif",
+    "down": "Hors ligne"
+  },
+  "de": {
+    "status": "Status",
+    "players": "Spieler",
+    "version": "Version",
+    "up": "Aktiv",
+    "down": "Ausgefallen"
+  },
+  "es": {
+    "status": "Estado",
+    "players": "Jugadores",
+    "version": "Versión",
+    "up": "Activa",
+    "down": "Caída"
+  },
+  "ca": {
+    "status": "Estat",
+    "players": "Jugadors",
+    "version": "Versió",
+    "up": "Actiu",
+    "down": "Caigut"
+  },
+  "he": {
+    "status": "מצב",
+    "players": "שחקנים",
+    "version": "גרסה",
+    "up": "פעיל",
+    "down": "נפל"
+  },
+  "hr": {
+    "status": "Stanje",
+    "players": "Igrači",
+    "version": "Verzija",
+    "up": "Radi",
+    "down": "Ne radi"
+  },
+  "hu": {
+    "status": "Állapot",
+    "players": "Játékosok",
+    "version": "Verzió",
+    "up": "Működik",
+    "down": "Leállt"
+  },
+  "it": {
+    "status": "Stato",
+    "players": "Giocatori",
+    "version": "Versione",
+    "up": "Attivo",
+    "down": "Giù"
+  },
+  "nb-NO": {
+    "status": "Status",
+    "players": "Spillere",
+    "version": "Versjon",
+    "up": "Oppe",
+    "down": "Nede"
+  },
+  "pt": {
+    "status": "Estado",
+    "players": "Jogadores",
+    "version": "Versão",
+    "up": "Ativo",
+    "down": "Em baixo"
+  },
+  "ru": {
+    "status": "Состояние",
+    "players": "Игроки",
+    "version": "Версия",
+    "up": "Работает",
+    "down": "Недоступен"
+  },
+  "sv": {
+    "status": "Status",
+    "players": "Spelare",
+    "version": "Version",
+    "up": "Uppe",
+    "down": "Nere"
+  },
+  "vi": {
+    "status": "Trạng thái",
+    "players": "Người chơi",
+    "version": "Phiên bản",
+    "up": "Hoạt động",
+    "down": "Ngừng"
+  },
+  "zh-Hans": {
+    "status": "状态",
+    "players": "玩家",
+    "version": "版本",
+    "up": "正常",
+    "down": "宕机"
+  },
+  "zh-Hant": {
+    "status": "狀態",
+    "players": "玩家",
+    "version": "版本",
+    "up": "正常",
+    "down": "停止"
+  }
+}

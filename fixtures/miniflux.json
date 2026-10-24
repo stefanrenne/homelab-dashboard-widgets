@@ -1,0 +1,2 @@
+{ "_note": "Miniflux counters per feed id.", "routes": {
+ "GET /v1/feeds/counters": { "reads": { "1": 120, "2": 34 }, "unreads": { "1": 5, "2": 12, "3": 1 } } } }

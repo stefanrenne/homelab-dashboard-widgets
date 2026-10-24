@@ -94,6 +94,14 @@ Every widget has its own page with setup, fields and options on the
 | `mailcow` | domains, mailboxes, messages and storage | `url`, `key` |
 | `maintainerr` | what was cleaned up and the space to reclaim | `url` |
 | `mastodon` | users, posts and known domains of an instance | `url` |
+| `mealie` | recipes, users, categories and tags | `url`, `key`, `version` |
+| `medusa` | episodes wanted and snatched, active shows | `url`, `key` |
+| `mikrotik` | uptime, CPU, memory and DHCP leases of a router | `url`, `username`, `password`, `insecure` |
+| `minecraft` | status, players and version of a Java server | `url`, `timeout` |
+| `miniflux` | unread and read entries | `url`, `key` |
+| `mjpeg` | a camera's MJPEG stream | `stream`, `fit`, `height` |
+| `moonraker` | a Klipper printer's state, layers and progress | `url`, `key` |
+| `mylar` | comic series, issues and wanted issues | `url`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

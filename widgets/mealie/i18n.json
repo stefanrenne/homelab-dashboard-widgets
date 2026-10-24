@@ -1,0 +1,104 @@
+{
+  "en": {
+    "recipes": "Recipes",
+    "users": "Users",
+    "categories": "Categories",
+    "tags": "Tags"
+  },
+  "nl": {
+    "recipes": "Recepten",
+    "users": "Gebruikers",
+    "categories": "Categorieën",
+    "tags": "Labels"
+  },
+  "fr": {
+    "recipes": "Recettes",
+    "users": "Utilisateurs",
+    "categories": "Catégories",
+    "tags": "Étiquettes"
+  },
+  "de": {
+    "recipes": "Rezepte",
+    "users": "Nutzer",
+    "categories": "Kategorien",
+    "tags": "Tags"
+  },
+  "es": {
+    "recipes": "Recetas",
+    "users": "Usuarios",
+    "categories": "Categorías",
+    "tags": "Etiquetas"
+  },
+  "ca": {
+    "recipes": "Receptes",
+    "users": "Usuaris",
+    "categories": "Categories",
+    "tags": "Etiquetes"
+  },
+  "he": {
+    "recipes": "מתכונים",
+    "users": "משתמשים",
+    "categories": "קטגוריות",
+    "tags": "תגיות"
+  },
+  "hr": {
+    "recipes": "Recepti",
+    "users": "Korisnici",
+    "categories": "Kategorije",
+    "tags": "Oznake"
+  },
+  "hu": {
+    "recipes": "Receptek",
+    "users": "Felhasználók",
+    "categories": "Kategóriák",
+    "tags": "Címkék"
+  },
+  "it": {
+    "recipes": "Ricette",
+    "users": "Utenti",
+    "categories": "Categorie",
+    "tags": "Tag"
+  },
+  "nb-NO": {
+    "recipes": "Oppskrifter",
+    "users": "Brukere",
+    "categories": "Kategorier",
+    "tags": "Tagger"
+  },
+  "pt": {
+    "recipes": "Receitas",
+    "users": "Utilizadores",
+    "categories": "Categorias",
+    "tags": "Etiquetas"
+  },
+  "ru": {
+    "recipes": "Рецепты",
+    "users": "Пользователи",
+    "categories": "Категории",
+    "tags": "Теги"
+  },
+  "sv": {
+    "recipes": "Recept",
+    "users": "Användare",
+    "categories": "Kategorier",
+    "tags": "Taggar"
+  },
+  "vi": {
+    "recipes": "Công thức",
+    "users": "Người dùng",
+    "categories": "Danh mục",
+    "tags": "Thẻ"
+  },
+  "zh-Hans": {
+    "recipes": "食谱",
+    "users": "用户",
+    "categories": "分类",
+    "tags": "标签"
+  },
+  "zh-Hant": {
+    "recipes": "食譜",
+    "users": "使用者",
+    "categories": "分類",
+    "tags": "標籤"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "en": {
+    "uptime": "Uptime",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memory",
+    "numberOfLeases": "DHCP leases"
+  },
+  "nl": {
+    "uptime": "Uptime",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Geheugen",
+    "numberOfLeases": "DHCP-leases"
+  },
+  "fr": {
+    "uptime": "Temps actif",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Mémoire",
+    "numberOfLeases": "Baux DHCP"
+  },
+  "de": {
+    "uptime": "Laufzeit",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Speicher",
+    "numberOfLeases": "DHCP-Leases"
+  },
+  "es": {
+    "uptime": "Tiempo activo",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memoria",
+    "numberOfLeases": "Concesiones DHCP"
+  },
+  "ca": {
+    "uptime": "Temps actiu",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memòria",
+    "numberOfLeases": "Concessions DHCP"
+  },
+  "he": {
+    "uptime": "זמן פעולה",
+    "cpuLoad": "מעבד",
+    "memoryUsed": "זיכרון",
+    "numberOfLeases": "חכירות DHCP"
+  },
+  "hr": {
+    "uptime": "Vrijeme rada",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memorija",
+    "numberOfLeases": "DHCP zakupi"
+  },
+  "hu": {
+    "uptime": "Üzemidő",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memória",
+    "numberOfLeases": "DHCP bérletek"
+  },
+  "it": {
+    "uptime": "Tempo attivo",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memoria",
+    "numberOfLeases": "Lease DHCP"
+  },
+  "nb-NO": {
+    "uptime": "Oppetid",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Minne",
+    "numberOfLeases": "DHCP-leier"
+  },
+  "pt": {
+    "uptime": "Tempo ativo",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Memória",
+    "numberOfLeases": "Concessões DHCP"
+  },
+  "ru": {
+    "uptime": "Время работы",
+    "cpuLoad": "ЦП",
+    "memoryUsed": "Память",
+    "numberOfLeases": "Аренды DHCP"
+  },
+  "sv": {
+    "uptime": "Drifttid",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Minne",
+    "numberOfLeases": "DHCP-lån"
+  },
+  "vi": {
+    "uptime": "Hoạt động",
+    "cpuLoad": "CPU",
+    "memoryUsed": "Bộ nhớ",
+    "numberOfLeases": "Cấp phát DHCP"
+  },
+  "zh-Hans": {
+    "uptime": "运行时间",
+    "cpuLoad": "CPU",
+    "memoryUsed": "内存",
+    "numberOfLeases": "DHCP 租约"
+  },
+  "zh-Hant": {
+    "uptime": "運作時間",
+    "cpuLoad": "CPU",
+    "memoryUsed": "記憶體",
+    "numberOfLeases": "DHCP 租約"
+  }
+}

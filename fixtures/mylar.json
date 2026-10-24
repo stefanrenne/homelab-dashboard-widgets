@@ -1,0 +1,2 @@
+{ "_note": "Mylar3: the mock ignores cmd, so one answer holds data for all three commands.", "routes": {
+ "GET /api": { "success": true, "data": [{ "ComicName": "Saga", "totalIssues": 66 }, { "ComicName": "Monstress", "totalIssues": 50 }], "issues": [{ "IssueID": "1" }, { "IssueID": "2" }] } } }
