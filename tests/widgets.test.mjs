@@ -147,9 +147,9 @@ test('stash: GraphQL stats with the API key header', async () => {
 
 test('tautulli: one row per stream, with episode number and user when asked', async () => {
   const out = await run('tautulli', { showEpisodeNumber: true, enableUser: true });
-  assert.deepEqual(out.rows, [{ label: '▶ Silo: S03 · E09 - Farewell (alice)', value: '3:54 / 58:00', progress: 7 }]);
+  assert.deepEqual(out.rows, [{ label: 'Silo: S03 · E09 - Farewell (alice)', icon: 'play', value: '3:54 / 58:00', progress: 7 }]);
   const plain = await run('tautulli');
-  assert.equal(plain.rows[0].label, '▶ Silo - Farewell');
+  assert.equal(plain.rows[0].label, 'Silo - Farewell', 'no symbols in the text; the icon carries the state');
   const { clock } = await import(path.join(WIDGETS, 'tautulli', 'server.js'));
   assert.equal(clock(3723000), '1:02:03');
 });

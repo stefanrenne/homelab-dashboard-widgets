@@ -22,8 +22,7 @@ export function streamTitle(s, { showEpisodeNumber, enableUser }) {
   } else {
     title = s.full_title ?? s.title ?? '?';
   }
-  const icon = s.state === 'paused' ? '❚❚' : '▶';
-  return `${icon} ${title}${enableUser && s.friendly_name ? ` (${s.friendly_name})` : ''}`;
+  return `${title}${enableUser && s.friendly_name ? ` (${s.friendly_name})` : ''}`;
 }
 
 export default {
@@ -39,6 +38,8 @@ export default {
     return {
       rows: sessions.map((s) => ({
         label: streamTitle(s, ctx.options),
+        // the dashboard draws ▶ / ❚❚ and says "Playing" / "Paused" to screen readers
+        icon: s.state === 'paused' ? 'pause' : 'play',
         // where it is / how long it is: "3:54 / 58:00"
         value: Number(s.duration) > 0 ? `${clock(s.view_offset)} / ${clock(s.duration)}` : clock(s.view_offset),
         progress: Math.max(0, Math.min(100, Number(s.progress_percent) || 0)),
