@@ -1,0 +1,189 @@
+{
+  "en": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Updates",
+    "downloads": "Downloads",
+    "uploads": "Uploads",
+    "sharedFiles": "Shared",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "updateAvailable": "Update available",
+    "upToDate": "Up to date"
+  },
+  "nl": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Updates",
+    "downloads": "Downloads",
+    "uploads": "Uploads",
+    "sharedFiles": "Gedeeld",
+    "connected": "Verbonden",
+    "disconnected": "Verbroken",
+    "updateAvailable": "Update beschikbaar",
+    "upToDate": "Bijgewerkt"
+  },
+  "fr": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Mises à jour",
+    "downloads": "Reçus",
+    "uploads": "Envois",
+    "sharedFiles": "Partagés",
+    "connected": "Connectés",
+    "disconnected": "Déconnecté",
+    "updateAvailable": "Mise à jour",
+    "upToDate": "À jour"
+  },
+  "de": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Updates",
+    "downloads": "Downloads",
+    "uploads": "Uploads",
+    "sharedFiles": "Geteilt",
+    "connected": "Verbunden",
+    "disconnected": "Getrennt",
+    "updateAvailable": "Update verfügbar",
+    "upToDate": "Aktuell"
+  },
+  "es": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Pendientes",
+    "downloads": "Descargas",
+    "uploads": "Subidas",
+    "sharedFiles": "Compartidos",
+    "connected": "Conectados",
+    "disconnected": "Desconectado",
+    "updateAvailable": "Versión nueva",
+    "upToDate": "Al día"
+  },
+  "ca": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Noves versions",
+    "downloads": "Baixades",
+    "uploads": "Pujades",
+    "sharedFiles": "Compartits",
+    "connected": "Connectats",
+    "disconnected": "Desconnectat",
+    "updateAvailable": "Versió nova",
+    "upToDate": "Al dia"
+  },
+  "he": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "עדכונים",
+    "downloads": "הורדות",
+    "uploads": "העלאות",
+    "sharedFiles": "משותפים",
+    "connected": "מחוברים",
+    "disconnected": "מנותק",
+    "updateAvailable": "עדכון זמין",
+    "upToDate": "מעודכן"
+  },
+  "hr": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Ažuriranja",
+    "downloads": "Preuzimanja",
+    "uploads": "Slanja",
+    "sharedFiles": "Dijeljeno",
+    "connected": "Povezano",
+    "disconnected": "Prekinuto",
+    "updateAvailable": "Ima ažuriranja",
+    "upToDate": "Ažurno"
+  },
+  "hu": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Frissítések",
+    "downloads": "Letöltések",
+    "uploads": "Feltöltések",
+    "sharedFiles": "Megosztva",
+    "connected": "Csatlakozva",
+    "disconnected": "Bontva",
+    "updateAvailable": "Frissítés van",
+    "upToDate": "Naprakész"
+  },
+  "it": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Novità",
+    "downloads": "Download",
+    "uploads": "Upload",
+    "sharedFiles": "Condivisi",
+    "connected": "Connessi",
+    "disconnected": "Disconnesso",
+    "updateAvailable": "Nuova versione",
+    "upToDate": "Aggiornato"
+  },
+  "nb-NO": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Oppdatering",
+    "downloads": "Nedlastinger",
+    "uploads": "Opplastinger",
+    "sharedFiles": "Delt",
+    "connected": "Tilkoblet",
+    "disconnected": "Frakoblet",
+    "updateAvailable": "Oppdatering",
+    "upToDate": "Oppdatert"
+  },
+  "pt": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Atualizações",
+    "downloads": "Recebidos",
+    "uploads": "Envios",
+    "sharedFiles": "Partilhados",
+    "connected": "Ligados",
+    "disconnected": "Desligado",
+    "updateAvailable": "Atualização",
+    "upToDate": "Atualizado"
+  },
+  "ru": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Обновления",
+    "downloads": "Загрузки",
+    "uploads": "Отдачи",
+    "sharedFiles": "Общие",
+    "connected": "Подключено",
+    "disconnected": "Отключено",
+    "updateAvailable": "Есть обновление",
+    "upToDate": "Актуально"
+  },
+  "sv": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Uppdatering",
+    "downloads": "Hämtningar",
+    "uploads": "Sändningar",
+    "sharedFiles": "Delade",
+    "connected": "Anslutna",
+    "disconnected": "Frånkopplad",
+    "updateAvailable": "Uppdatering finns",
+    "upToDate": "Aktuell"
+  },
+  "vi": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "Cập nhật",
+    "downloads": "Tải xuống",
+    "uploads": "Tải lên",
+    "sharedFiles": "Chia sẻ",
+    "connected": "Đã kết nối",
+    "disconnected": "Mất kết nối",
+    "updateAvailable": "Có cập nhật",
+    "upToDate": "Mới nhất"
+  },
+  "zh-Hans": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "更新",
+    "downloads": "下载",
+    "uploads": "上传",
+    "sharedFiles": "共享",
+    "connected": "已连接",
+    "disconnected": "已断开",
+    "updateAvailable": "有更新",
+    "upToDate": "已是最新"
+  },
+  "zh-Hant": {
+    "slskStatus": "Soulseek",
+    "updateStatus": "更新",
+    "downloads": "下載",
+    "uploads": "上傳",
+    "sharedFiles": "共享",
+    "connected": "已連線",
+    "disconnected": "已中斷",
+    "updateAvailable": "有更新",
+    "upToDate": "已是最新"
+  }
+}

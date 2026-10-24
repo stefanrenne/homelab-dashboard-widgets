@@ -126,6 +126,14 @@ Every widget has its own page with setup, fields and options on the
 | `qnap` | CPU, memory, temperature and storage use of a NAS | `url`, `username`, `password`, `volume` |
 | `qui` | torrents and rates across qBittorrent instances | `url`, `key`, `instance` |
 | `romm` | platforms, games, saves and states | `url`, `username`, `password` |
+| `rutorrent` | active torrents, upload and download rates | `url`, `username`, `password` |
+| `slskd` | Soulseek connection, transfers and shared files | `url`, `key` |
+| `sparkyfitness` | calories eaten, burned and remaining, steps | `url`, `key` |
+| `spoolman` | filament left on up to four spools | `url`, `spoolIds` |
+| `sportarr` | events wanted and queued, leagues | `url`, `key` |
+| `strelaysrv` | sessions, connections, data relayed and rate of a Syncthing relay | `url` |
+| `suwayomi` | manga chapters downloaded and read | `url`, `username`, `password`, `category` |
+| `swagdashboard` | proxied and protected hosts, outdated configs, banned IPs | `url` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

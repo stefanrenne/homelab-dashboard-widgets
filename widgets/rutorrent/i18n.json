@@ -1,0 +1,87 @@
+{
+  "en": {
+    "active": "Active",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "nl": {
+    "active": "Actief",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "fr": {
+    "active": "Actifs",
+    "upload": "Envoi",
+    "download": "Réception"
+  },
+  "de": {
+    "active": "Aktiv",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "es": {
+    "active": "Activos",
+    "upload": "Subida",
+    "download": "Descarga"
+  },
+  "ca": {
+    "active": "Actius",
+    "upload": "Pujada",
+    "download": "Baixada"
+  },
+  "he": {
+    "active": "פעילים",
+    "upload": "העלאה",
+    "download": "הורדה"
+  },
+  "hr": {
+    "active": "Aktivni",
+    "upload": "Slanje",
+    "download": "Preuzimanje"
+  },
+  "hu": {
+    "active": "Aktív",
+    "upload": "Feltöltés",
+    "download": "Letöltés"
+  },
+  "it": {
+    "active": "Attivi",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "nb-NO": {
+    "active": "Aktive",
+    "upload": "Opp",
+    "download": "Ned"
+  },
+  "pt": {
+    "active": "Ativos",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "ru": {
+    "active": "Активные",
+    "upload": "Отдача",
+    "download": "Загрузка"
+  },
+  "sv": {
+    "active": "Aktiva",
+    "upload": "Upp",
+    "download": "Ned"
+  },
+  "vi": {
+    "active": "Đang chạy",
+    "upload": "Tải lên",
+    "download": "Tải xuống"
+  },
+  "zh-Hans": {
+    "active": "活动",
+    "upload": "上传",
+    "download": "下载"
+  },
+  "zh-Hant": {
+    "active": "活動",
+    "upload": "上傳",
+    "download": "下載"
+  }
+}

@@ -1,0 +1,2 @@
+{ "_note": "SparkyFitness today.", "routes": {
+ "GET /api/dashboard/stats": { "eaten": 1840.4, "burned": 520, "remaining": 380.2, "steps": 8412 } } }

@@ -1,0 +1,9 @@
+id: spoolman
+name: Spoolman
+version: 0.1.0
+apiVersion: 1
+description: What is left on up to four filament spools in Spoolman (homepage's spoolman widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://spoolman.lan:7912
+  spoolIds: { type: list }                 # the spools to show, e.g. [1, 2, 3, 4]; without it the first four

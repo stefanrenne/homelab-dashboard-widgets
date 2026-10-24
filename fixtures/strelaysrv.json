@@ -1,0 +1,2 @@
+{ "_note": "strelaysrv /status.", "routes": {
+ "GET /status": { "numActiveSessions": 12, "numConnections": 31, "bytesProxied": 48200000000, "kbps10s1m5m15m30m60m": [920.4, 880, 860, 840, 830, 812.6], "uptimeSeconds": 864000 } } }

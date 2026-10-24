@@ -1,0 +1,104 @@
+{
+  "en": {
+    "proxied": "Proxied",
+    "auth": "With login",
+    "outdated": "Outdated",
+    "banned": "Banned"
+  },
+  "nl": {
+    "proxied": "Doorgestuurd",
+    "auth": "Met login",
+    "outdated": "Verouderd",
+    "banned": "Geblokkeerd"
+  },
+  "fr": {
+    "proxied": "Relayés",
+    "auth": "Avec accès",
+    "outdated": "Obsolètes",
+    "banned": "Bannis"
+  },
+  "de": {
+    "proxied": "Umgeleitet",
+    "auth": "Mit Login",
+    "outdated": "Veraltet",
+    "banned": "Gesperrt"
+  },
+  "es": {
+    "proxied": "Redirigidos",
+    "auth": "Con login",
+    "outdated": "Obsoletos",
+    "banned": "Bloqueados"
+  },
+  "ca": {
+    "proxied": "Redirigits",
+    "auth": "Amb accés",
+    "outdated": "Obsolets",
+    "banned": "Bloquejats"
+  },
+  "he": {
+    "proxied": "מועברים",
+    "auth": "עם התחברות",
+    "outdated": "מיושנים",
+    "banned": "חסומים"
+  },
+  "hr": {
+    "proxied": "Proslijeđeno",
+    "auth": "S prijavom",
+    "outdated": "Zastarjelo",
+    "banned": "Zabranjeno"
+  },
+  "hu": {
+    "proxied": "Továbbított",
+    "auth": "Belépéssel",
+    "outdated": "Elavult",
+    "banned": "Kitiltva"
+  },
+  "it": {
+    "proxied": "Inoltrati",
+    "auth": "Con accesso",
+    "outdated": "Obsoleti",
+    "banned": "Bannati"
+  },
+  "nb-NO": {
+    "proxied": "Videresendt",
+    "auth": "Med login",
+    "outdated": "Utdatert",
+    "banned": "Utestengt"
+  },
+  "pt": {
+    "proxied": "Encaminhados",
+    "auth": "Com login",
+    "outdated": "Antigos",
+    "banned": "Bloqueados"
+  },
+  "ru": {
+    "proxied": "Проксируются",
+    "auth": "С входом",
+    "outdated": "Устарели",
+    "banned": "Забанено"
+  },
+  "sv": {
+    "proxied": "Proxade",
+    "auth": "Med login",
+    "outdated": "Inaktuella",
+    "banned": "Spärrade"
+  },
+  "vi": {
+    "proxied": "Chuyển tiếp",
+    "auth": "Có đăng nhập",
+    "outdated": "Đã cũ",
+    "banned": "Bị cấm"
+  },
+  "zh-Hans": {
+    "proxied": "已代理",
+    "auth": "需登录",
+    "outdated": "已过时",
+    "banned": "已封禁"
+  },
+  "zh-Hant": {
+    "proxied": "已代理",
+    "auth": "需登入",
+    "outdated": "已過時",
+    "banned": "已封鎖"
+  }
+}

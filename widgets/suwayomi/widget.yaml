@@ -1,0 +1,12 @@
+id: suwayomi
+name: Suwayomi
+version: 0.1.0
+apiVersion: 1
+description: Manga chapters downloaded or not and read or not in Suwayomi's library (homepage's suwayomi widget).
+refresh: 5m
+defaultFields: [download, nondownload, read, unread]
+options:
+  url: { type: url, required: true }       # e.g. http://suwayomi.lan:4567
+  username: { type: string }               # when Suwayomi has basic authentication on
+  password: { type: string, secret: true }
+  category: { type: number }               # one category's ID (?tab=<id> in its address); without it the whole library

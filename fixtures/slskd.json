@@ -1,0 +1,4 @@
+{ "_note": "slskd: connected, an update available, transfers with two users down and one up.", "routes": {
+ "GET /api/v0/application": { "server": { "isConnected": true }, "version": { "isUpdateAvailable": true }, "shares": { "files": 18342, "directories": 1204 } },
+ "GET /api/v0/transfers/downloads": [{ "username": "alice", "directories": [] }, { "username": "bob", "directories": [] }],
+ "GET /api/v0/transfers/uploads": [{ "username": "carol", "directories": [] }] } }

@@ -1,0 +1,172 @@
+{
+  "en": {
+    "download": "Downloaded",
+    "nondownload": "To download",
+    "read": "Read",
+    "unread": "Unread",
+    "downloadedread": "Downloaded and read",
+    "downloadedunread": "Downloaded, unread",
+    "nondownloadedread": "Not downloaded, read",
+    "nondownloadedunread": "Not downloaded, unread"
+  },
+  "nl": {
+    "download": "Gedownload",
+    "nondownload": "Nog te laden",
+    "read": "Gelezen",
+    "unread": "Ongelezen",
+    "downloadedread": "Gedownload, gelezen",
+    "downloadedunread": "Gedownload, ongelezen",
+    "nondownloadedread": "Niet gedownload, gelezen",
+    "nondownloadedunread": "Niet geladen, ongelezen"
+  },
+  "fr": {
+    "download": "Téléchargé",
+    "nondownload": "Non chargés",
+    "read": "Lus",
+    "unread": "Non lues",
+    "downloadedread": "Téléchargés lus",
+    "downloadedunread": "Téléchargés non lus",
+    "nondownloadedread": "Non téléchargés lus",
+    "nondownloadedunread": "Ni téléchargés ni lus"
+  },
+  "de": {
+    "download": "Geladen",
+    "nondownload": "Nicht geladen",
+    "read": "Gelesen",
+    "unread": "Ungelesen",
+    "downloadedread": "Geladen, gelesen",
+    "downloadedunread": "Geladen, ungelesen",
+    "nondownloadedread": "Nicht geladen, gelesen",
+    "nondownloadedunread": "Nicht geladen, ungelesen"
+  },
+  "es": {
+    "download": "Descargado",
+    "nondownload": "Por bajar",
+    "read": "Leídos",
+    "unread": "Sin leer",
+    "downloadedread": "Descargados leídos",
+    "downloadedunread": "Descargados sin leer",
+    "nondownloadedread": "Sin descargar, leídos",
+    "nondownloadedunread": "Sin descargar ni leer"
+  },
+  "ca": {
+    "download": "Baixat",
+    "nondownload": "Per baixar",
+    "read": "Llegits",
+    "unread": "No llegides",
+    "downloadedread": "Baixats llegits",
+    "downloadedunread": "Baixats sense llegir",
+    "nondownloadedread": "Sense baixar, llegits",
+    "nondownloadedunread": "Sense baixar ni llegir"
+  },
+  "he": {
+    "download": "הורד",
+    "nondownload": "להורדה",
+    "read": "נקראו",
+    "unread": "לא נקראו",
+    "downloadedread": "הורדו ונקראו",
+    "downloadedunread": "הורדו ולא נקראו",
+    "nondownloadedread": "לא הורדו ונקראו",
+    "nondownloadedunread": "לא הורדו ולא נקראו"
+  },
+  "hr": {
+    "download": "Preuzeto",
+    "nondownload": "Za preuzeti",
+    "read": "Pročitano",
+    "unread": "Nepročitano",
+    "downloadedread": "Preuzeto, pročitano",
+    "downloadedunread": "Preuzeto, nepročitano",
+    "nondownloadedread": "Nepreuzeto, pročitano",
+    "nondownloadedunread": "Nepreuzeto, nepročitano"
+  },
+  "hu": {
+    "download": "Letöltve",
+    "nondownload": "Nincs letöltve",
+    "read": "Olvasott",
+    "unread": "Olvasatlan",
+    "downloadedread": "Letöltött, olvasott",
+    "downloadedunread": "Letöltött, olvasatlan",
+    "nondownloadedread": "Nem letöltött, olvasott",
+    "nondownloadedunread": "Nincs meg, olvasatlan"
+  },
+  "it": {
+    "download": "Scaricato",
+    "nondownload": "Non salvati",
+    "read": "Letti",
+    "unread": "Non lette",
+    "downloadedread": "Scaricati e letti",
+    "downloadedunread": "Scaricati non letti",
+    "nondownloadedread": "Non scaricati, letti",
+    "nondownloadedunread": "Né scaricati né letti"
+  },
+  "nb-NO": {
+    "download": "Lastet ned",
+    "nondownload": "Ikke lastet",
+    "read": "Lest",
+    "unread": "Uleste",
+    "downloadedread": "Lastet ned, lest",
+    "downloadedunread": "Lastet ned, ulest",
+    "nondownloadedread": "Ikke lastet, lest",
+    "nondownloadedunread": "Ikke lastet, ulest"
+  },
+  "pt": {
+    "download": "Transferido",
+    "nondownload": "Por baixar",
+    "read": "Lidos",
+    "unread": "Não lidas",
+    "downloadedread": "Transferidos lidos",
+    "downloadedunread": "Transferidos não lidos",
+    "nondownloadedread": "Não transferidos lidos",
+    "nondownloadedunread": "Por baixar, não lidos"
+  },
+  "ru": {
+    "download": "Загружено",
+    "nondownload": "Не скачано",
+    "read": "Прочитано",
+    "unread": "Непрочитано",
+    "downloadedread": "Загружено, прочитано",
+    "downloadedunread": "Загружено, не прочитано",
+    "nondownloadedread": "Не загружено, прочитано",
+    "nondownloadedunread": "Не скачано, не прочитано"
+  },
+  "sv": {
+    "download": "Nedladdat",
+    "nondownload": "Ej hämtade",
+    "read": "Lästa",
+    "unread": "Olästa",
+    "downloadedread": "Nedladdade, lästa",
+    "downloadedunread": "Nedladdade, olästa",
+    "nondownloadedread": "Ej nedladdade, lästa",
+    "nondownloadedunread": "Ej nedladdade, olästa"
+  },
+  "vi": {
+    "download": "Đã tải",
+    "nondownload": "Chưa tải",
+    "read": "Đã đọc",
+    "unread": "Chưa đọc",
+    "downloadedread": "Đã tải, đã đọc",
+    "downloadedunread": "Đã tải, chưa đọc",
+    "nondownloadedread": "Chưa tải, đã đọc",
+    "nondownloadedunread": "Chưa tải, chưa đọc"
+  },
+  "zh-Hans": {
+    "download": "已下载",
+    "nondownload": "待下载",
+    "read": "已读",
+    "unread": "未读",
+    "downloadedread": "已下载已读",
+    "downloadedunread": "已下载未读",
+    "nondownloadedread": "未下载已读",
+    "nondownloadedunread": "未下载未读"
+  },
+  "zh-Hant": {
+    "download": "已下載",
+    "nondownload": "待下載",
+    "read": "已讀",
+    "unread": "未讀",
+    "downloadedread": "已下載已讀",
+    "downloadedunread": "已下載未讀",
+    "nondownloadedread": "未下載已讀",
+    "nondownloadedunread": "未下載未讀"
+  }
+}

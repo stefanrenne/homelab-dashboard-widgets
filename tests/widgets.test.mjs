@@ -1700,3 +1700,35 @@ test('prometheus, prometheusmetric, pterodactyl, pulse, pyload, qnap, qui and ro
 
   assert.deepEqual(values(await run('romm')), { platforms: 14, totalRoms: 1842, saves: 96, states: 41, screenshots: 230, totalfilesize: '612.3 GB' });
 });
+
+test('rutorrent, slskd, sparkyfitness, spoolman, sportarr, strelaysrv, suwayomi and swagdashboard', async () => {
+  assert.deepEqual(values(await run('rutorrent', { username: 'anna', password: 'pw' })), { active: 2, upload: '150 kB/s', download: '2.5 MB/s' });
+  assert.deepEqual([lastRequest('rutorrent').body, lastRequest('rutorrent').headers.authorization], ['mode=list', `Basic ${Buffer.from('anna:pw').toString('base64')}`]);
+
+  const sl = await run('slskd');
+  assert.deepEqual(values(sl), { slskStatus: 'connected', updateStatus: 'updateAvailable', downloads: 2, uploads: 1, sharedFiles: 18342 });
+  assert.equal(sl.blocks[1].status, 'warn');
+  assert.equal(lastRequest('slskd').headers['x-api-key'], 'test-key');
+
+  assert.deepEqual(values(await run('sparkyfitness')), { eaten: '1840kcal', burned: '520kcal', remaining: '380kcal', steps: 8412 });
+
+  const sp = await run('spoolman');
+  assert.deepEqual(sp.blocks.map((b) => [b.key, b.vars.name, b.value, b.status ?? null]), [['spool1', 'PLA Black', 64, null], ['spool2', 'PETG Orange', 7, 'warn'], ['spool3', 'TPU', 100, null]]);
+  assert.deepEqual((await run('spoolman', { spoolIds: [3, 1] })).blocks.map((b) => b.key), ['spool3', 'spool1']);
+
+  assert.deepEqual(values(await run('sportarr')), { wanted: 9, queued: 2, leagues: 3 });
+  assert.equal(lastRequest('sportarr').query.apikey, 'test-key');
+
+  assert.deepEqual(values(await run('strelaysrv')), { numActiveSessions: 12, numConnections: 31, dataRelayed: '48.2 GB', transferRate: '812.6 kbit/s' });
+
+  assert.deepEqual(values(await run('suwayomi')), { download: 120, nondownload: 880, read: 400, unread: 600, downloadedread: 70, downloadedunread: 50, nondownloadedread: 330, nondownloadedunread: 550 });
+  assert.equal(JSON.parse(lastRequest('suwayomi').body).operationName, 'Counts');
+  const cat = values(await run('suwayomi', { category: 2 }));
+  assert.deepEqual([cat.download, cat.nondownload, cat.read, cat.unread, cat.downloadedunread], [2, 1, 1, 2, 1]);
+  assert.deepEqual(JSON.parse(lastRequest('suwayomi').body).variables, { id: 2 });
+
+  const swag = await run('swagdashboard');
+  assert.deepEqual(values(swag), { proxied: 24, auth: 9, outdated: 1, banned: 17 });
+  assert.equal(swag.blocks[2].status, 'warn');
+  assert.equal(lastRequest('swagdashboard').query.stats, 'true');
+});

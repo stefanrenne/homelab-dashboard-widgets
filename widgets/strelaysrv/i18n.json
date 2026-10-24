@@ -1,0 +1,104 @@
+{
+  "en": {
+    "numActiveSessions": "Sessions",
+    "numConnections": "Connections",
+    "dataRelayed": "Data relayed",
+    "transferRate": "Rate"
+  },
+  "nl": {
+    "numActiveSessions": "Sessies",
+    "numConnections": "Verbindingen",
+    "dataRelayed": "Doorgegeven",
+    "transferRate": "Snelheid"
+  },
+  "fr": {
+    "numActiveSessions": "Sessions",
+    "numConnections": "Connexions",
+    "dataRelayed": "Données relayées",
+    "transferRate": "Débit"
+  },
+  "de": {
+    "numActiveSessions": "Sitzungen",
+    "numConnections": "Verbindungen",
+    "dataRelayed": "Übertragen",
+    "transferRate": "Rate"
+  },
+  "es": {
+    "numActiveSessions": "Sesiones",
+    "numConnections": "Conexiones",
+    "dataRelayed": "Reenviado",
+    "transferRate": "Velocidad"
+  },
+  "ca": {
+    "numActiveSessions": "Sessions",
+    "numConnections": "Connexions",
+    "dataRelayed": "Reenviat",
+    "transferRate": "Velocitat"
+  },
+  "he": {
+    "numActiveSessions": "הפעלות",
+    "numConnections": "חיבורים",
+    "dataRelayed": "נתונים שהועברו",
+    "transferRate": "קצב"
+  },
+  "hr": {
+    "numActiveSessions": "Sesije",
+    "numConnections": "Veze",
+    "dataRelayed": "Preneseno",
+    "transferRate": "Brzina"
+  },
+  "hu": {
+    "numActiveSessions": "Munkamenetek",
+    "numConnections": "Kapcsolatok",
+    "dataRelayed": "Továbbított adat",
+    "transferRate": "Sebesség"
+  },
+  "it": {
+    "numActiveSessions": "Sessioni",
+    "numConnections": "Connessioni",
+    "dataRelayed": "Inoltrato",
+    "transferRate": "Velocità"
+  },
+  "nb-NO": {
+    "numActiveSessions": "Økter",
+    "numConnections": "Tilkoblinger",
+    "dataRelayed": "Videresendt",
+    "transferRate": "Hastighet"
+  },
+  "pt": {
+    "numActiveSessions": "Sessões",
+    "numConnections": "Ligações",
+    "dataRelayed": "Reenviado",
+    "transferRate": "Velocidade"
+  },
+  "ru": {
+    "numActiveSessions": "Сеансы",
+    "numConnections": "Соединения",
+    "dataRelayed": "Передано",
+    "transferRate": "Скорость"
+  },
+  "sv": {
+    "numActiveSessions": "Sessioner",
+    "numConnections": "Anslutningar",
+    "dataRelayed": "Skickat",
+    "transferRate": "Hastighet"
+  },
+  "vi": {
+    "numActiveSessions": "Phiên",
+    "numConnections": "Kết nối",
+    "dataRelayed": "Dữ liệu chuyển",
+    "transferRate": "Tốc độ"
+  },
+  "zh-Hans": {
+    "numActiveSessions": "会话",
+    "numConnections": "连接",
+    "dataRelayed": "已中继数据",
+    "transferRate": "速率"
+  },
+  "zh-Hant": {
+    "numActiveSessions": "工作階段",
+    "numConnections": "連線",
+    "dataRelayed": "已中繼資料",
+    "transferRate": "速率"
+  }
+}

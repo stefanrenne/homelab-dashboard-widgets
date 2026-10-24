@@ -1,0 +1,8 @@
+id: strelaysrv
+name: Syncthing Relay Server
+version: 0.1.0
+apiVersion: 1
+description: Active sessions, connections, data relayed and the transfer rate of a Syncthing relay (homepage's strelaysrv widget).
+refresh: 60s
+options:
+  url: { type: url, required: true }       # the relay's status port, e.g. http://relay.lan:22070

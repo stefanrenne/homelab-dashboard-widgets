@@ -1,0 +1,87 @@
+{
+  "en": {
+    "wanted": "Wanted",
+    "queued": "Queued",
+    "leagues": "Leagues"
+  },
+  "nl": {
+    "wanted": "Gewenst",
+    "queued": "In wachtrij",
+    "leagues": "Competities"
+  },
+  "fr": {
+    "wanted": "Voulus",
+    "queued": "En file",
+    "leagues": "Ligues"
+  },
+  "de": {
+    "wanted": "Gesucht",
+    "queued": "Wartend",
+    "leagues": "Ligen"
+  },
+  "es": {
+    "wanted": "Buscadas",
+    "queued": "En cola",
+    "leagues": "Ligas"
+  },
+  "ca": {
+    "wanted": "Desitjats",
+    "queued": "A la cua",
+    "leagues": "Lligues"
+  },
+  "he": {
+    "wanted": "מבוקשים",
+    "queued": "בתור",
+    "leagues": "ליגות"
+  },
+  "hr": {
+    "wanted": "Traženo",
+    "queued": "U redu",
+    "leagues": "Lige"
+  },
+  "hu": {
+    "wanted": "Keresett",
+    "queued": "Sorban",
+    "leagues": "Ligák"
+  },
+  "it": {
+    "wanted": "Desiderati",
+    "queued": "In coda",
+    "leagues": "Campionati"
+  },
+  "nb-NO": {
+    "wanted": "Ønsket",
+    "queued": "I kø",
+    "leagues": "Ligaer"
+  },
+  "pt": {
+    "wanted": "Pretendidos",
+    "queued": "Na fila",
+    "leagues": "Ligas"
+  },
+  "ru": {
+    "wanted": "Нужно",
+    "queued": "В очереди",
+    "leagues": "Лиги"
+  },
+  "sv": {
+    "wanted": "Önskade",
+    "queued": "I kö",
+    "leagues": "Ligor"
+  },
+  "vi": {
+    "wanted": "Mong muốn",
+    "queued": "Đang chờ",
+    "leagues": "Giải đấu"
+  },
+  "zh-Hans": {
+    "wanted": "想要",
+    "queued": "排队中",
+    "leagues": "联赛"
+  },
+  "zh-Hant": {
+    "wanted": "想要",
+    "queued": "排隊中",
+    "leagues": "聯賽"
+  }
+}

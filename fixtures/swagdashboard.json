@@ -1,0 +1,2 @@
+{ "_note": "SWAG dashboard stats.", "routes": {
+ "GET /": { "proxied": "24", "auth": "9", "outdated": "1", "banned": "17" } } }

@@ -1,0 +1,104 @@
+{
+  "en": {
+    "eaten": "Eaten",
+    "burned": "Burned",
+    "remaining": "Remaining",
+    "steps": "Steps"
+  },
+  "nl": {
+    "eaten": "Gegeten",
+    "burned": "Verbrand",
+    "remaining": "Resterend",
+    "steps": "Stappen"
+  },
+  "fr": {
+    "eaten": "Mangé",
+    "burned": "Brûlé",
+    "remaining": "Restant",
+    "steps": "Pas"
+  },
+  "de": {
+    "eaten": "Gegessen",
+    "burned": "Verbrannt",
+    "remaining": "Verbleibend",
+    "steps": "Schritte"
+  },
+  "es": {
+    "eaten": "Consumido",
+    "burned": "Quemado",
+    "remaining": "Restante",
+    "steps": "Pasos"
+  },
+  "ca": {
+    "eaten": "Menjat",
+    "burned": "Cremat",
+    "remaining": "Restant",
+    "steps": "Passos"
+  },
+  "he": {
+    "eaten": "נאכל",
+    "burned": "נשרף",
+    "remaining": "נותר",
+    "steps": "צעדים"
+  },
+  "hr": {
+    "eaten": "Pojedeno",
+    "burned": "Potrošeno",
+    "remaining": "Preostalo",
+    "steps": "Koraci"
+  },
+  "hu": {
+    "eaten": "Elfogyasztva",
+    "burned": "Elégetve",
+    "remaining": "Hátralévő",
+    "steps": "Lépések"
+  },
+  "it": {
+    "eaten": "Mangiato",
+    "burned": "Bruciato",
+    "remaining": "Rimanente",
+    "steps": "Passi"
+  },
+  "nb-NO": {
+    "eaten": "Spist",
+    "burned": "Forbrent",
+    "remaining": "Gjenstår",
+    "steps": "Skritt"
+  },
+  "pt": {
+    "eaten": "Ingerido",
+    "burned": "Queimado",
+    "remaining": "Restante",
+    "steps": "Passos"
+  },
+  "ru": {
+    "eaten": "Съедено",
+    "burned": "Сожжено",
+    "remaining": "Осталось",
+    "steps": "Шаги"
+  },
+  "sv": {
+    "eaten": "Ätit",
+    "burned": "Förbränt",
+    "remaining": "Kvar",
+    "steps": "Steg"
+  },
+  "vi": {
+    "eaten": "Đã ăn",
+    "burned": "Đã đốt",
+    "remaining": "Còn lại",
+    "steps": "Bước"
+  },
+  "zh-Hans": {
+    "eaten": "已摄入",
+    "burned": "已消耗",
+    "remaining": "剩余",
+    "steps": "步数"
+  },
+  "zh-Hant": {
+    "eaten": "已攝取",
+    "burned": "已消耗",
+    "remaining": "剩餘",
+    "steps": "步數"
+  }
+}

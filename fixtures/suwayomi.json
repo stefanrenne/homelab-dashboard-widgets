@@ -1,0 +1,5 @@
+{ "_note": "Suwayomi GraphQL: the mock answers every query alike, so the answer holds the library counts and a category.", "routes": {
+ "POST /api/graphql": { "data": {
+  "download": { "totalCount": 120 }, "nondownload": { "totalCount": 880 }, "read": { "totalCount": 400 }, "unread": { "totalCount": 600 },
+  "downloadedread": { "totalCount": 70 }, "downloadedunread": { "totalCount": 50 }, "nondownloadedread": { "totalCount": 330 }, "nondownloadedunread": { "totalCount": 550 },
+  "category": { "mangas": { "nodes": [{ "chapters": { "nodes": [{ "isRead": true, "isDownloaded": true }, { "isRead": false, "isDownloaded": true }, { "isRead": false, "isDownloaded": false }] } }] } } } } } }

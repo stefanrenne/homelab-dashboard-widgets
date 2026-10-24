@@ -1,0 +1,5 @@
+{ "_note": "Spoolman: three spools, one almost empty.", "routes": {
+ "GET /api/v1/spool": [
+  { "id": 1, "filament": { "name": "PLA Black" }, "initial_weight": 1000, "remaining_weight": 642 },
+  { "id": 2, "filament": { "name": "PETG Orange" }, "initial_weight": 1000, "remaining_weight": 71 },
+  { "id": 3, "filament": { "name": "TPU" }, "initial_weight": 500, "remaining_weight": 500 }] } }

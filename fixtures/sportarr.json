@@ -1,0 +1,4 @@
+{ "_note": "Sportarr: 9 events wanted, two queued, three leagues.", "routes": {
+ "GET /api/wanted/missing": { "page": 1, "pageSize": 1, "totalRecords": 9, "records": [{}] },
+ "GET /api/queue": [{ "id": 1 }, { "id": 2 }],
+ "GET /api/leagues": [{ "name": "Formula 1" }, { "name": "Eredivisie" }, { "name": "NBA" }] } }
