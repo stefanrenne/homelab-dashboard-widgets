@@ -4,9 +4,15 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-10-24
+
 ### Added
 - A `README.md` per widget with the setup in the service, every field and an example. It is the
   widget's page on the [documentation site](https://stefanrenne.github.io/homelab-dashboard/widgets/collection/).
+
+### Changed
+- The dashboard installs this collection by default (`#latest`); list it in `settings.yaml` only
+  to pin a release or use `only:`. No widget code changed, so the widget versions stay the same.
 
 ## [0.2.0] - 2026-10-24
 
