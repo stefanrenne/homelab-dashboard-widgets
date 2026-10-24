@@ -1,0 +1,104 @@
+{
+  "en": {
+    "queries": "Queries",
+    "blocked": "Blocked",
+    "blockedPercent": "Percent blocked",
+    "gravity": "Blocklist"
+  },
+  "nl": {
+    "queries": "Verzoeken",
+    "blocked": "Geblokkeerd",
+    "blockedPercent": "Geblokkeerd %",
+    "gravity": "Zwarte lijst"
+  },
+  "fr": {
+    "queries": "Requêtes",
+    "blocked": "Bloquées",
+    "blockedPercent": "Part bloquée",
+    "gravity": "Liste noire"
+  },
+  "de": {
+    "queries": "Anfragen",
+    "blocked": "Blockiert",
+    "blockedPercent": "Blockiert %",
+    "gravity": "Sperrliste"
+  },
+  "es": {
+    "queries": "Consultas",
+    "blocked": "Bloqueadas",
+    "blockedPercent": "Bloqueadas %",
+    "gravity": "Lista negra"
+  },
+  "ca": {
+    "queries": "Consultes",
+    "blocked": "Bloquejades",
+    "blockedPercent": "Bloquejades %",
+    "gravity": "Llista negra"
+  },
+  "he": {
+    "queries": "שאילתות",
+    "blocked": "נחסמו",
+    "blockedPercent": "אחוז חסום",
+    "gravity": "רשימת חסימה"
+  },
+  "hr": {
+    "queries": "Upiti",
+    "blocked": "Blokirano",
+    "blockedPercent": "Udio blokiran",
+    "gravity": "Crna lista"
+  },
+  "hu": {
+    "queries": "Lekérdezések",
+    "blocked": "Blokkolva",
+    "blockedPercent": "Blokkolt arány",
+    "gravity": "Tiltólista"
+  },
+  "it": {
+    "queries": "Richieste",
+    "blocked": "Bloccate",
+    "blockedPercent": "Quota bloccata",
+    "gravity": "Lista nera"
+  },
+  "nb-NO": {
+    "queries": "Spørringer",
+    "blocked": "Blokkert",
+    "blockedPercent": "Andel blokkert",
+    "gravity": "Blokkliste"
+  },
+  "pt": {
+    "queries": "Consultas",
+    "blocked": "Bloqueadas",
+    "blockedPercent": "Bloqueadas %",
+    "gravity": "Lista negra"
+  },
+  "ru": {
+    "queries": "Запросы",
+    "blocked": "Блокировки",
+    "blockedPercent": "Блокировки %",
+    "gravity": "Черный список"
+  },
+  "sv": {
+    "queries": "Frågor",
+    "blocked": "Blockerade",
+    "blockedPercent": "Blockerade %",
+    "gravity": "Blocklista"
+  },
+  "vi": {
+    "queries": "Truy vấn",
+    "blocked": "Đã chặn",
+    "blockedPercent": "Tỷ lệ chặn",
+    "gravity": "Tên miền chặn"
+  },
+  "zh-Hans": {
+    "queries": "查询",
+    "blocked": "已拦截",
+    "blockedPercent": "拦截比例",
+    "gravity": "拦截列表"
+  },
+  "zh-Hant": {
+    "queries": "查詢",
+    "blocked": "已封鎖",
+    "blockedPercent": "封鎖比例",
+    "gravity": "封鎖清單"
+  }
+}

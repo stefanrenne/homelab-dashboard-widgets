@@ -42,7 +42,9 @@ const values = (out) => Object.fromEntries(out.blocks.map((b) => [b.key, b.unit 
 const lastRequest = (id) => mock.requests.filter((r) => r.widget === id).at(-1);
 
 test('every folder is a valid package: manifest, i18n in all languages, only node: imports', () => {
-  assert.equal(IDS.length, 18);
+  // every widget has a row in the README table (rule 5), and every row a widget
+  const rows = [...fs.readFileSync('README.md', 'utf8').matchAll(/^\| `([a-z0-9_-]+)` \|/gm)].map((m) => m[1]).sort();
+  assert.deepEqual(IDS, rows);
   for (const id of IDS) {
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     assert.equal(m.id, id);
@@ -480,4 +482,19 @@ test('stocks client: price, arrow and change; colour can be turned off', async (
   assert.equal(el.shadowRoot.querySelector('ul').className, 'color');
   el.data = { color: false, quotes: [] };
   assert.equal(el.shadowRoot.querySelector('ul').className, '');
+});
+
+test('pihole: version 6 with a session from the password, version 5 with the token', async () => {
+  const six = await run('pihole', { version: 6, key: 'pw' });
+  assert.deepEqual(values(six), { queries: 48213, blocked: 7514, blocked_percent: '15.6%', gravity: 168437 });
+  const login = mock.requests.filter((r) => r.widget === 'pihole' && r.route === 'POST /api/auth').at(-1);
+  assert.deepEqual(JSON.parse(login.body), { password: 'pw' });
+  assert.equal(lastRequest('pihole').headers['x-ftl-sid'], 'sid-123');
+  const open = await run('pihole', { version: 6, key: undefined });
+  assert.equal(open.blocks[0].value, 48213);
+  assert.equal(lastRequest('pihole').headers['x-ftl-sid'], undefined, 'no password: no session');
+  const five = await run('pihole', { key: 'token' });
+  assert.deepEqual(values(five), { queries: 30500, blocked: 4200, blocked_percent: '13.8%', gravity: 120001 });
+  assert.deepEqual(lastRequest('pihole').query, { summaryRaw: '', auth: 'token' });
+  await assert.rejects(run('pihole', { version: 6, key: 'pw', url: `${mock.url}/nothing` }), /Pi-hole login answered 404/);
 });

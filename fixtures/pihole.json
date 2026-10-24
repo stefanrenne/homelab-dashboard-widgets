@@ -1,0 +1,12 @@
+{
+ "_note": "Pi-hole 6 (/api) with a password, and Pi-hole 5 (/admin/api.php).",
+ "routes": {
+  "POST /api/auth": { "session": { "valid": true, "totp": false, "sid": "sid-123", "csrf": "c", "validity": 1800 } },
+  "GET /api/stats/summary": {
+   "queries": { "total": 48213, "blocked": 7514, "percent_blocked": 15.585, "unique_domains": 3121, "forwarded": 30111, "cached": 10588 },
+   "clients": { "active": 14, "total": 22 },
+   "gravity": { "domains_being_blocked": 168437, "last_update": 1761300000 }
+  },
+  "GET /admin/api.php": { "domains_being_blocked": 120001, "dns_queries_today": 30500, "ads_blocked_today": 4200, "ads_percentage_today": 13.770492, "status": "enabled" }
+ }
+}
