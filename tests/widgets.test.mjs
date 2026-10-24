@@ -113,6 +113,7 @@ const REQUIRED = {
   get jdownloader() { return { url: myjd.url, username: 'Anna@example.com', password: 'pw', client: 'JDownloader@nas' }; },
   homebox: { username: 'anna@example.com', password: 'pw' },
   homebridge: { username: 'admin', password: 'pw' },
+  komodo: { secret: 's3cret' },
   get apcups() { return { url: apcupsd.url }; },
   tailscale: { deviceid: 'n1234567CNTRL' },
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
@@ -158,7 +159,7 @@ test('every folder is a valid package: manifest, i18n in all languages, only nod
 });
 
 // blocks whose value is a name from the service (a host name, an operating system), not a key
-const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'] };
+const NAMES = { tailscale: ['user', 'hostname', 'name', 'os', 'tags', 'address'], beszel: ['name'], gamedig: ['name', 'map'], headscale: ['name'], lubelogger: ['vehicle'] };
 
 test('every label, string value and row state has a translation', async () => {
   for (const id of IDS) {
@@ -1458,4 +1459,44 @@ test('healthchecks, homebox, homebridge, jdownloader, jellystat, karakeep and ka
   assert.deepEqual(values(await run('kavita')), { seriesCount: 186, totalFiles: 2421 });
   assert.deepEqual(JSON.parse(mock.requests.filter((r) => r.widget === 'kavita' && r.route.startsWith('POST')).at(-1).body), { username: '', password: '', apiKey: 'test-key' });
   assert.equal(lastRequest('kavita').headers.authorization, 'Bearer kv-jwt');
+});
+
+test('komga, komodo, kopia, linkwarden, lubelogger, mailcow, maintainerr and mastodon', async () => {
+  assert.deepEqual(values(await run('komga', { username: 'anna', password: 'pw' })), { libraries: 2, series: 128, books: 2210 });
+  assert.equal(lastRequest('komga').headers.authorization, `Basic ${Buffer.from('anna:pw').toString('base64')}`);
+  await run('komga', { version: 2 });
+  assert.deepEqual([lastRequest('komga').route, lastRequest('komga').headers['x-api-key']], ['POST /api/v1/books/list', 'test-key']);
+
+  const containers = await run('komodo');
+  assert.deepEqual(values(containers), { total: 12, running: 10, stopped: 1, unhealthy: 1, unknown: 0 });
+  assert.deepEqual([lastRequest('komodo').headers['x-api-key'], lastRequest('komodo').headers['x-api-secret'], JSON.parse(lastRequest('komodo').body).type], ['test-key', 's3cret', 'GetDockerContainersSummary']);
+  assert.deepEqual(values(await run('komodo', { showStacks: true })), { total: 12, running: 10, down: 2, unhealthy: 1, unknown: 0 });
+  const summary = await run('komodo', { showSummary: true, showStacks: true });
+  assert.deepEqual(values(summary), { servers: '2 / 12', stacks: '10 / 12', containers: '10 / 12' });
+  assert.ok(summary.blocks.every((b) => b.status === 'warn'));
+
+  const kp = values(await run('kopia', { username: 'kopia', password: 'pw' }));
+  assert.deepEqual({ ...kp, lastrun: undefined, nextrun: undefined }, { status: 'idle', size: '412.3 GB', lastrun: undefined, nextrun: undefined });
+  assert.match(kp.lastrun, /^\d+d \d+h$/);
+  assert.match(kp.nextrun, /^\d+d \d+h$/);
+  const docs = await run('kopia', { snapshotPath: '/docs' });
+  assert.deepEqual(values(docs), { status: 'uploading', size: '12.7 GB', lastrun: 'failed', nextrun: null });
+  assert.equal(docs.blocks[2].status, 'error');
+  await assert.rejects(run('kopia', { snapshotHost: 'pc' }), /no Kopia source for pc/);
+
+  assert.deepEqual(values(await run('linkwarden')), { links: 31, collections: 2, tags: 3 });
+
+  const lube = await run('lubelogger');
+  assert.deepEqual(values(lube), { vehicles: 2, serviceRecords: 20, reminders: 4 });
+  assert.equal(lube.blocks[2].status, 'warn');
+  assert.deepEqual(values(await run('lubelogger', { vehicleID: 1 })), { vehicle: '2019 Volvo V60', serviceRecords: 14, reminders: 3, nextReminder: '2026-04-01' });
+  assert.equal(values(await run('lubelogger', { vehicleID: 2 })).nextReminder, 'none');
+  await assert.rejects(run('lubelogger', { vehicleID: 9 }), /no LubeLogger vehicle 9/);
+
+  assert.deepEqual(values(await run('mailcow')), { domains: 2, mailboxes: 7, mails: 18640, storage: '4.3 GB' });
+  assert.equal(lastRequest('mailcow').headers['x-api-key'], 'test-key');
+
+  assert.deepEqual(values(await run('maintainerr')), { itemsHandled: 312, episodesHandled: 240, moviesHandled: 58, showsHandled: 9, seasonsHandled: 14, reclaimable: '1.8 TB', movieReclaimable: '610 GB', showReclaimable: '1.2 TB', totalCapacity: '24 TB' });
+
+  assert.deepEqual(values(await run('mastodon')), { user_count: 1204, status_count: 98231, domain_count: 15002 });
 });

@@ -1,0 +1,6 @@
+{ "_note": "Komga: three libraries, one unavailable; the totals of both API versions.", "routes": {
+ "GET /api/v1/libraries": [{ "id": "a", "name": "Comics" }, { "id": "b", "name": "Manga" }, { "id": "c", "name": "Old disk", "unavailable": true }],
+ "GET /api/v1/series": { "totalElements": 128, "content": [] },
+ "GET /api/v1/books": { "totalElements": 2210, "content": [] },
+ "POST /api/v1/series/list": { "totalElements": 128, "content": [] },
+ "POST /api/v1/books/list": { "totalElements": 2210, "content": [] } } }

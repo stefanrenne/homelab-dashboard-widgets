@@ -1,0 +1,87 @@
+{
+  "en": {
+    "user_count": "Users",
+    "status_count": "Posts",
+    "domain_count": "Domains"
+  },
+  "nl": {
+    "user_count": "Gebruikers",
+    "status_count": "Berichten",
+    "domain_count": "Domeinen"
+  },
+  "fr": {
+    "user_count": "Utilisateurs",
+    "status_count": "Publications",
+    "domain_count": "Domaines"
+  },
+  "de": {
+    "user_count": "Nutzer",
+    "status_count": "Beiträge",
+    "domain_count": "Domains"
+  },
+  "es": {
+    "user_count": "Usuarios",
+    "status_count": "Mensajes",
+    "domain_count": "Dominios"
+  },
+  "ca": {
+    "user_count": "Usuaris",
+    "status_count": "Publicacions",
+    "domain_count": "Dominis"
+  },
+  "he": {
+    "user_count": "משתמשים",
+    "status_count": "פוסטים",
+    "domain_count": "דומיינים"
+  },
+  "hr": {
+    "user_count": "Korisnici",
+    "status_count": "Objave",
+    "domain_count": "Domene"
+  },
+  "hu": {
+    "user_count": "Felhasználók",
+    "status_count": "Bejegyzések",
+    "domain_count": "Domainek"
+  },
+  "it": {
+    "user_count": "Utenti",
+    "status_count": "Post",
+    "domain_count": "Domini"
+  },
+  "nb-NO": {
+    "user_count": "Brukere",
+    "status_count": "Innlegg",
+    "domain_count": "Domener"
+  },
+  "pt": {
+    "user_count": "Utilizadores",
+    "status_count": "Publicações",
+    "domain_count": "Domínios"
+  },
+  "ru": {
+    "user_count": "Пользователи",
+    "status_count": "Посты",
+    "domain_count": "Домены"
+  },
+  "sv": {
+    "user_count": "Användare",
+    "status_count": "Inlägg",
+    "domain_count": "Domäner"
+  },
+  "vi": {
+    "user_count": "Người dùng",
+    "status_count": "Bài đăng",
+    "domain_count": "Tên miền"
+  },
+  "zh-Hans": {
+    "user_count": "用户",
+    "status_count": "嘟文",
+    "domain_count": "域名"
+  },
+  "zh-Hant": {
+    "user_count": "使用者",
+    "status_count": "嘟文",
+    "domain_count": "網域"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "en": {
+    "links": "Links",
+    "collections": "Collections",
+    "tags": "Tags"
+  },
+  "nl": {
+    "links": "Links",
+    "collections": "Collecties",
+    "tags": "Labels"
+  },
+  "fr": {
+    "links": "Liens",
+    "collections": "Collections",
+    "tags": "Étiquettes"
+  },
+  "de": {
+    "links": "Links",
+    "collections": "Sammlungen",
+    "tags": "Tags"
+  },
+  "es": {
+    "links": "Enlaces",
+    "collections": "Colecciones",
+    "tags": "Etiquetas"
+  },
+  "ca": {
+    "links": "Enllaços",
+    "collections": "Col·leccions",
+    "tags": "Etiquetes"
+  },
+  "he": {
+    "links": "קישורים",
+    "collections": "אוספים",
+    "tags": "תגיות"
+  },
+  "hr": {
+    "links": "Poveznice",
+    "collections": "Zbirke",
+    "tags": "Oznake"
+  },
+  "hu": {
+    "links": "Hivatkozások",
+    "collections": "Gyűjtemények",
+    "tags": "Címkék"
+  },
+  "it": {
+    "links": "Link",
+    "collections": "Raccolte",
+    "tags": "Tag"
+  },
+  "nb-NO": {
+    "links": "Lenker",
+    "collections": "Samlinger",
+    "tags": "Tagger"
+  },
+  "pt": {
+    "links": "Ligações",
+    "collections": "Coleções",
+    "tags": "Etiquetas"
+  },
+  "ru": {
+    "links": "Ссылки",
+    "collections": "Коллекции",
+    "tags": "Теги"
+  },
+  "sv": {
+    "links": "Länkar",
+    "collections": "Samlingar",
+    "tags": "Taggar"
+  },
+  "vi": {
+    "links": "Liên kết",
+    "collections": "Bộ sưu tập",
+    "tags": "Thẻ"
+  },
+  "zh-Hans": {
+    "links": "链接",
+    "collections": "收藏集",
+    "tags": "标签"
+  },
+  "zh-Hant": {
+    "links": "連結",
+    "collections": "收藏集",
+    "tags": "標籤"
+  }
+}

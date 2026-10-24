@@ -86,6 +86,14 @@ Every widget has its own page with setup, fields and options on the
 | `jellystat` | songs, movies, episodes and other items played | `url`, `key`, `days` |
 | `karakeep` | bookmarks, favorites, archived items, highlights, lists and tags | `url`, `key` |
 | `kavita` | series and files | `url`, `username`, `password`, `key` |
+| `komga` | libraries, series and books | `url`, `username`, `password`, `key`, `version` |
+| `komodo` | containers, stacks, or a summary with servers | `url`, `key`, `secret`, `showStacks`, `showSummary` |
+| `kopia` | a source's state, size, last and next snapshot | `url`, `username`, `password`, `snapshotHost`, `snapshotPath` |
+| `linkwarden` | links, collections and tags | `url`, `key` |
+| `lubelogger` | vehicles, service records and reminders, or one vehicle | `url`, `username`, `password`, `vehicleID` |
+| `mailcow` | domains, mailboxes, messages and storage | `url`, `key` |
+| `maintainerr` | what was cleaned up and the space to reclaim | `url` |
+| `mastodon` | users, posts and known domains of an instance | `url` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

@@ -1,0 +1,189 @@
+{
+  "en": {
+    "itemsHandled": "Items removed",
+    "episodesHandled": "Episodes removed",
+    "moviesHandled": "Movies removed",
+    "showsHandled": "Shows removed",
+    "seasonsHandled": "Seasons removed",
+    "reclaimable": "Reclaimable",
+    "movieReclaimable": "Movie space",
+    "showReclaimable": "Show space",
+    "totalCapacity": "Total capacity"
+  },
+  "nl": {
+    "itemsHandled": "Items weg",
+    "episodesHandled": "Afleveringen weg",
+    "moviesHandled": "Films weg",
+    "showsHandled": "Series verwijderd",
+    "seasonsHandled": "Seizoenen weg",
+    "reclaimable": "Vrij te maken",
+    "movieReclaimable": "Ruimte films",
+    "showReclaimable": "Ruimte series",
+    "totalCapacity": "Totale ruimte"
+  },
+  "fr": {
+    "itemsHandled": "Éléments retirés",
+    "episodesHandled": "Épisodes retirés",
+    "moviesHandled": "Films retirés",
+    "showsHandled": "Séries retirées",
+    "seasonsHandled": "Saisons retirées",
+    "reclaimable": "Récupérable",
+    "movieReclaimable": "Espace films",
+    "showReclaimable": "Espace séries",
+    "totalCapacity": "Capacité totale"
+  },
+  "de": {
+    "itemsHandled": "Entfernt",
+    "episodesHandled": "Folgen entfernt",
+    "moviesHandled": "Filme entfernt",
+    "showsHandled": "Serien entfernt",
+    "seasonsHandled": "Staffeln entfernt",
+    "reclaimable": "Freigebbar",
+    "movieReclaimable": "Platz Filme",
+    "showReclaimable": "Platz Serien",
+    "totalCapacity": "Kapazität"
+  },
+  "es": {
+    "itemsHandled": "Borrados",
+    "episodesHandled": "Episodios",
+    "moviesHandled": "Películas",
+    "showsHandled": "Series borradas",
+    "seasonsHandled": "Temporadas borradas",
+    "reclaimable": "Recuperable",
+    "movieReclaimable": "Espacio películas",
+    "showReclaimable": "Espacio series",
+    "totalCapacity": "Capacidad total"
+  },
+  "ca": {
+    "itemsHandled": "Esborrats",
+    "episodesHandled": "Episodis",
+    "moviesHandled": "Pel·lícules",
+    "showsHandled": "Sèries esborrades",
+    "seasonsHandled": "Temporades esborrades",
+    "reclaimable": "Recuperable",
+    "movieReclaimable": "Espai pel·lícules",
+    "showReclaimable": "Espai sèries",
+    "totalCapacity": "Capacitat total"
+  },
+  "he": {
+    "itemsHandled": "פריטים שהוסרו",
+    "episodesHandled": "פרקים שהוסרו",
+    "moviesHandled": "סרטים שהוסרו",
+    "showsHandled": "סדרות שהוסרו",
+    "seasonsHandled": "עונות שהוסרו",
+    "reclaimable": "ניתן לפנות",
+    "movieReclaimable": "מקום לסרטים",
+    "showReclaimable": "מקום לסדרות",
+    "totalCapacity": "קיבולת כוללת"
+  },
+  "hr": {
+    "itemsHandled": "Uklonjeno",
+    "episodesHandled": "Epizode",
+    "moviesHandled": "Filmovi",
+    "showsHandled": "Uklonjene serije",
+    "seasonsHandled": "Uklonjene sezone",
+    "reclaimable": "Oslobodivo",
+    "movieReclaimable": "Prostor filmova",
+    "showReclaimable": "Prostor serija",
+    "totalCapacity": "Ukupni kapacitet"
+  },
+  "hu": {
+    "itemsHandled": "Eltávolítva",
+    "episodesHandled": "Törölt epizódok",
+    "moviesHandled": "Törölt filmek",
+    "showsHandled": "Törölt sorozatok",
+    "seasonsHandled": "Törölt évadok",
+    "reclaimable": "Felszabadul",
+    "movieReclaimable": "Filmek helye",
+    "showReclaimable": "Sorozatok helye",
+    "totalCapacity": "Teljes kapacitás"
+  },
+  "it": {
+    "itemsHandled": "Elementi rimossi",
+    "episodesHandled": "Episodi rimossi",
+    "moviesHandled": "Film rimossi",
+    "showsHandled": "Serie rimosse",
+    "seasonsHandled": "Stagioni rimosse",
+    "reclaimable": "Recuperabile",
+    "movieReclaimable": "Spazio film",
+    "showReclaimable": "Spazio serie",
+    "totalCapacity": "Capacità totale"
+  },
+  "nb-NO": {
+    "itemsHandled": "Fjernet",
+    "episodesHandled": "Episoder fjernet",
+    "moviesHandled": "Filmer fjernet",
+    "showsHandled": "Serier fjernet",
+    "seasonsHandled": "Sesonger fjernet",
+    "reclaimable": "Frigjørbar",
+    "movieReclaimable": "Plass filmer",
+    "showReclaimable": "Plass serier",
+    "totalCapacity": "Total kapasitet"
+  },
+  "pt": {
+    "itemsHandled": "Removidos",
+    "episodesHandled": "Episódios",
+    "moviesHandled": "Filmes",
+    "showsHandled": "Séries removidas",
+    "seasonsHandled": "Temporadas removidas",
+    "reclaimable": "Recuperável",
+    "movieReclaimable": "Espaço filmes",
+    "showReclaimable": "Espaço séries",
+    "totalCapacity": "Capacidade total"
+  },
+  "ru": {
+    "itemsHandled": "Удалено",
+    "episodesHandled": "Удалено серий",
+    "moviesHandled": "Удалено фильмов",
+    "showsHandled": "Удалено сериалов",
+    "seasonsHandled": "Удалено сезонов",
+    "reclaimable": "К очистке",
+    "movieReclaimable": "Место фильмов",
+    "showReclaimable": "Место сериалов",
+    "totalCapacity": "Общий объём"
+  },
+  "sv": {
+    "itemsHandled": "Borttagna",
+    "episodesHandled": "Avsnitt",
+    "moviesHandled": "Filmer",
+    "showsHandled": "Serier borttagna",
+    "seasonsHandled": "Säsonger borttagna",
+    "reclaimable": "Kan frigöras",
+    "movieReclaimable": "Utrymme filmer",
+    "showReclaimable": "Utrymme serier",
+    "totalCapacity": "Total kapacitet"
+  },
+  "vi": {
+    "itemsHandled": "Mục đã xóa",
+    "episodesHandled": "Tập đã xóa",
+    "moviesHandled": "Phim đã xóa",
+    "showsHandled": "Chương trình đã xóa",
+    "seasonsHandled": "Mùa đã xóa",
+    "reclaimable": "Có thể xóa",
+    "movieReclaimable": "Dung lượng phim",
+    "showReclaimable": "Dung lượng chương trình",
+    "totalCapacity": "Tổng dung lượng"
+  },
+  "zh-Hans": {
+    "itemsHandled": "已移除项目",
+    "episodesHandled": "已移除剧集",
+    "moviesHandled": "已移除电影",
+    "showsHandled": "已移除节目",
+    "seasonsHandled": "已移除季",
+    "reclaimable": "可回收",
+    "movieReclaimable": "电影空间",
+    "showReclaimable": "节目空间",
+    "totalCapacity": "总容量"
+  },
+  "zh-Hant": {
+    "itemsHandled": "已移除項目",
+    "episodesHandled": "已移除集數",
+    "moviesHandled": "已移除電影",
+    "showsHandled": "已移除節目",
+    "seasonsHandled": "已移除季",
+    "reclaimable": "可回收",
+    "movieReclaimable": "電影空間",
+    "showReclaimable": "節目空間",
+    "totalCapacity": "總容量"
+  }
+}

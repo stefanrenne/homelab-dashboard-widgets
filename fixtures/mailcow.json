@@ -1,0 +1,4 @@
+{ "_note": "Mailcow: two domains (numbers come as text).", "routes": {
+ "GET /api/v1/get/domain/all": [
+  { "domain_name": "example.com", "mboxes_in_domain": "5", "msgs_total": "18230", "bytes_total": "4210000000" },
+  { "domain_name": "example.org", "mboxes_in_domain": 2, "msgs_total": 410, "bytes_total": 90000000 }] } }

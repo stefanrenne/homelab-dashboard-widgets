@@ -1,0 +1,3 @@
+{ "_note": "Maintainerr storage metrics.", "routes": {
+ "GET /api/storage-metrics": { "cleanupTotals": { "itemsHandled": 312, "episodesHandled": 240, "moviesHandled": 58, "showsHandled": 9, "seasonsHandled": 14 },
+  "collectionSummary": { "activeSizeBytes": 1840000000000, "movieSizeBytes": 610000000000, "showSizeBytes": 1230000000000 }, "totals": { "totalSpace": 24000000000000 } } } }

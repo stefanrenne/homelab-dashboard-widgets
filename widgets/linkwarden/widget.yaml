@@ -1,0 +1,9 @@
+id: linkwarden
+name: Linkwarden
+version: 0.1.0
+apiVersion: 1
+description: Links, collections and tags in Linkwarden (homepage's linkwarden widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. http://linkwarden.lan:3000
+  key: { type: string, secret: true, required: true }   # Settings > Access Tokens

@@ -1,0 +1,9 @@
+id: mailcow
+name: Mailcow
+version: 0.1.0
+apiVersion: 1
+description: Domains, mailboxes, messages and storage in Mailcow (homepage's mailcow widget).
+refresh: 5m
+options:
+  url: { type: url, required: true }       # e.g. https://mail.lan
+  key: { type: string, secret: true, required: true }   # System > Configuration > Access > API (read-only is enough)

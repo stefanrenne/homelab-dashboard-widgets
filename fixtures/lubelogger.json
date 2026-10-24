@@ -1,0 +1,4 @@
+{ "_note": "LubeLogger: two vehicles; vehicle 1 has an urgent reminder.", "routes": {
+ "GET /api/vehicle/info": [
+  { "vehicleData": { "id": 1, "year": 2019, "make": "Volvo", "model": "V60" }, "serviceRecordCount": 14, "veryUrgentReminderCount": 0, "pastDueReminderCount": 0, "urgentReminderCount": 1, "notUrgentReminderCount": 2, "nextReminder": { "description": "Tyres", "dueDate": "2026-04-01T00:00:00" } },
+  { "vehicleData": { "id": 2, "year": 2015, "make": "Honda", "model": "CB500" }, "serviceRecordCount": 6, "veryUrgentReminderCount": 0, "pastDueReminderCount": 0, "urgentReminderCount": 0, "notUrgentReminderCount": 1, "nextReminder": null }] } }

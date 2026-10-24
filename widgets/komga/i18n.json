@@ -1,0 +1,87 @@
+{
+  "en": {
+    "libraries": "Libraries",
+    "series": "Series",
+    "books": "Books"
+  },
+  "nl": {
+    "libraries": "Bibliotheken",
+    "series": "Series",
+    "books": "Boeken"
+  },
+  "fr": {
+    "libraries": "Collections",
+    "series": "Séries",
+    "books": "Livres"
+  },
+  "de": {
+    "libraries": "Bibliotheken",
+    "series": "Serien",
+    "books": "Bücher"
+  },
+  "es": {
+    "libraries": "Bibliotecas",
+    "series": "Series",
+    "books": "Libros"
+  },
+  "ca": {
+    "libraries": "Biblioteques",
+    "series": "Sèries",
+    "books": "Llibres"
+  },
+  "he": {
+    "libraries": "ספריות",
+    "series": "סדרות",
+    "books": "ספרים"
+  },
+  "hr": {
+    "libraries": "Knjižnice",
+    "series": "Serije",
+    "books": "Knjige"
+  },
+  "hu": {
+    "libraries": "Könyvtárak",
+    "series": "Sorozatok",
+    "books": "Könyvek"
+  },
+  "it": {
+    "libraries": "Librerie",
+    "series": "Serie",
+    "books": "Libri"
+  },
+  "nb-NO": {
+    "libraries": "Biblioteker",
+    "series": "Serier",
+    "books": "Bøker"
+  },
+  "pt": {
+    "libraries": "Bibliotecas",
+    "series": "Séries",
+    "books": "Livros"
+  },
+  "ru": {
+    "libraries": "Библиотеки",
+    "series": "Сериалы",
+    "books": "Книги"
+  },
+  "sv": {
+    "libraries": "Bibliotek",
+    "series": "Serier",
+    "books": "Böcker"
+  },
+  "vi": {
+    "libraries": "Thư viện",
+    "series": "Phim bộ",
+    "books": "Sách"
+  },
+  "zh-Hans": {
+    "libraries": "书库",
+    "series": "剧集",
+    "books": "图书"
+  },
+  "zh-Hant": {
+    "libraries": "書庫",
+    "series": "影集",
+    "books": "書籍"
+  }
+}

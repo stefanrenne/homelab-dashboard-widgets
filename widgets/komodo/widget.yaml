@@ -1,0 +1,13 @@
+id: komodo
+name: Komodo
+version: 0.1.0
+apiVersion: 1
+description: Containers, or stacks, or a summary of servers, stacks and containers, in Komodo (homepage's komodo widget).
+refresh: 30s
+defaultFields: [total, running, stopped, down, unhealthy, servers, stacks, containers]
+options:
+  url: { type: url, required: true }       # Komodo Core, e.g. http://komodo.lan:9120
+  key: { type: string, secret: true, required: true }      # Settings > API Keys (K-...)
+  secret: { type: string, secret: true, required: true }   # the key's secret (S-...)
+  showStacks: { type: boolean, default: false }    # stacks instead of containers
+  showSummary: { type: boolean, default: false }   # servers, stacks and containers running of all; wins over showStacks

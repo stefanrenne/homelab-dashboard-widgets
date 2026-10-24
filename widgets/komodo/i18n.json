@@ -1,0 +1,189 @@
+{
+  "en": {
+    "total": "Total",
+    "running": "Running",
+    "stopped": "Stopped",
+    "down": "Down",
+    "unhealthy": "Unhealthy",
+    "unknown": "Unknown",
+    "servers": "Servers",
+    "stacks": "Stacks",
+    "containers": "Containers"
+  },
+  "nl": {
+    "total": "Totaal",
+    "running": "Actief",
+    "stopped": "Gestopt",
+    "down": "Offline",
+    "unhealthy": "Ongezond",
+    "unknown": "Onbekend",
+    "servers": "Servers",
+    "stacks": "Stacks",
+    "containers": "Containers"
+  },
+  "fr": {
+    "total": "Total",
+    "running": "En cours",
+    "stopped": "Arrêtés",
+    "down": "Hors ligne",
+    "unhealthy": "Défaillants",
+    "unknown": "Inconnu",
+    "servers": "Serveurs",
+    "stacks": "Stacks",
+    "containers": "Conteneurs"
+  },
+  "de": {
+    "total": "Gesamt",
+    "running": "Läuft",
+    "stopped": "Gestoppt",
+    "down": "Ausgefallen",
+    "unhealthy": "Fehlerhaft",
+    "unknown": "Unbekannt",
+    "servers": "Server",
+    "stacks": "Stacks",
+    "containers": "Container"
+  },
+  "es": {
+    "total": "Total",
+    "running": "En marcha",
+    "stopped": "Detenidos",
+    "down": "Caída",
+    "unhealthy": "Con fallos",
+    "unknown": "Desconocido",
+    "servers": "Servidores",
+    "stacks": "Stacks",
+    "containers": "Contenedores"
+  },
+  "ca": {
+    "total": "Total",
+    "running": "En marxa",
+    "stopped": "Aturat",
+    "down": "Caigut",
+    "unhealthy": "Amb errors",
+    "unknown": "Desconegut",
+    "servers": "Servidors",
+    "stacks": "Stacks",
+    "containers": "Contenidors"
+  },
+  "he": {
+    "total": "סך הכול",
+    "running": "פועלים",
+    "stopped": "נעצר",
+    "down": "נפל",
+    "unhealthy": "לא תקינים",
+    "unknown": "לא ידוע",
+    "servers": "שרתים",
+    "stacks": "מחסניות",
+    "containers": "קונטיינרים"
+  },
+  "hr": {
+    "total": "Ukupno",
+    "running": "Radi",
+    "stopped": "Zaustavljeno",
+    "down": "Ne radi",
+    "unhealthy": "Neispravni",
+    "unknown": "Nepoznato",
+    "servers": "Poslužitelji",
+    "stacks": "Stogovi",
+    "containers": "Kontejneri"
+  },
+  "hu": {
+    "total": "Összesen",
+    "running": "Fut",
+    "stopped": "Leállítva",
+    "down": "Leállt",
+    "unhealthy": "Hibás",
+    "unknown": "Ismeretlen",
+    "servers": "Szerverek",
+    "stacks": "Stackek",
+    "containers": "Konténerek"
+  },
+  "it": {
+    "total": "Totale",
+    "running": "Attivi",
+    "stopped": "Fermato",
+    "down": "Giù",
+    "unhealthy": "Non integri",
+    "unknown": "Sconosciuto",
+    "servers": "Server",
+    "stacks": "Stack",
+    "containers": "Container"
+  },
+  "nb-NO": {
+    "total": "Totalt",
+    "running": "Kjører",
+    "stopped": "Stoppet",
+    "down": "Nede",
+    "unhealthy": "Usunne",
+    "unknown": "Ukjent",
+    "servers": "Servere",
+    "stacks": "Stacker",
+    "containers": "Containere"
+  },
+  "pt": {
+    "total": "Total",
+    "running": "Em execução",
+    "stopped": "Parado",
+    "down": "Em baixo",
+    "unhealthy": "Com falhas",
+    "unknown": "Desconhecido",
+    "servers": "Servidores",
+    "stacks": "Stacks",
+    "containers": "Contentores"
+  },
+  "ru": {
+    "total": "Всего",
+    "running": "Работает",
+    "stopped": "Остановлен",
+    "down": "Недоступен",
+    "unhealthy": "Неисправные",
+    "unknown": "Неизвестно",
+    "servers": "Серверы",
+    "stacks": "Стеки",
+    "containers": "Контейнеры"
+  },
+  "sv": {
+    "total": "Totalt",
+    "running": "Körs",
+    "stopped": "Stoppad",
+    "down": "Nere",
+    "unhealthy": "Ohälsosamma",
+    "unknown": "Okänt",
+    "servers": "Servrar",
+    "stacks": "Stackar",
+    "containers": "Containrar"
+  },
+  "vi": {
+    "total": "Tổng",
+    "running": "Đang chạy",
+    "stopped": "Đã dừng",
+    "down": "Ngừng",
+    "unhealthy": "Không ổn",
+    "unknown": "Không rõ",
+    "servers": "Máy chủ",
+    "stacks": "Ngăn xếp",
+    "containers": "Container"
+  },
+  "zh-Hans": {
+    "total": "总计",
+    "running": "运行中",
+    "stopped": "已停止",
+    "down": "宕机",
+    "unhealthy": "不健康",
+    "unknown": "未知",
+    "servers": "服务器",
+    "stacks": "堆栈",
+    "containers": "容器"
+  },
+  "zh-Hant": {
+    "total": "總計",
+    "running": "執行中",
+    "stopped": "已停止",
+    "down": "停止",
+    "unhealthy": "不健康",
+    "unknown": "未知",
+    "servers": "伺服器",
+    "stacks": "堆疊",
+    "containers": "容器"
+  }
+}

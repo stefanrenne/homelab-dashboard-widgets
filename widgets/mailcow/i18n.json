@@ -1,0 +1,104 @@
+{
+  "en": {
+    "domains": "Domains",
+    "mailboxes": "Mailboxes",
+    "mails": "Messages",
+    "storage": "Storage"
+  },
+  "nl": {
+    "domains": "Domeinen",
+    "mailboxes": "Mailboxen",
+    "mails": "Berichten",
+    "storage": "Opslag"
+  },
+  "fr": {
+    "domains": "Domaines",
+    "mailboxes": "Boîtes mail",
+    "mails": "Messages",
+    "storage": "Stockage"
+  },
+  "de": {
+    "domains": "Domains",
+    "mailboxes": "Postfächer",
+    "mails": "Nachrichten",
+    "storage": "Speicher"
+  },
+  "es": {
+    "domains": "Dominios",
+    "mailboxes": "Buzones",
+    "mails": "Mensajes",
+    "storage": "Espacio"
+  },
+  "ca": {
+    "domains": "Dominis",
+    "mailboxes": "Bústies",
+    "mails": "Missatges",
+    "storage": "Espai"
+  },
+  "he": {
+    "domains": "דומיינים",
+    "mailboxes": "תיבות דואר",
+    "mails": "הודעות",
+    "storage": "אחסון"
+  },
+  "hr": {
+    "domains": "Domene",
+    "mailboxes": "Sandučići",
+    "mails": "Poruke",
+    "storage": "Pohrana"
+  },
+  "hu": {
+    "domains": "Domainek",
+    "mailboxes": "Postafiókok",
+    "mails": "Üzenetek",
+    "storage": "Tárhely"
+  },
+  "it": {
+    "domains": "Domini",
+    "mailboxes": "Caselle",
+    "mails": "Messaggi",
+    "storage": "Spazio"
+  },
+  "nb-NO": {
+    "domains": "Domener",
+    "mailboxes": "Postbokser",
+    "mails": "Meldinger",
+    "storage": "Lagring"
+  },
+  "pt": {
+    "domains": "Domínios",
+    "mailboxes": "Caixas",
+    "mails": "Mensagens",
+    "storage": "Espaço"
+  },
+  "ru": {
+    "domains": "Домены",
+    "mailboxes": "Ящики",
+    "mails": "Сообщения",
+    "storage": "Хранилище"
+  },
+  "sv": {
+    "domains": "Domäner",
+    "mailboxes": "Brevlådor",
+    "mails": "Meddelanden",
+    "storage": "Lagring"
+  },
+  "vi": {
+    "domains": "Tên miền",
+    "mailboxes": "Hộp thư",
+    "mails": "Tin nhắn",
+    "storage": "Lưu trữ"
+  },
+  "zh-Hans": {
+    "domains": "域名",
+    "mailboxes": "邮箱",
+    "mails": "消息",
+    "storage": "存储"
+  },
+  "zh-Hant": {
+    "domains": "網域",
+    "mailboxes": "信箱",
+    "mails": "訊息",
+    "storage": "儲存空間"
+  }
+}

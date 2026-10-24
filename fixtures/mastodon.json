@@ -1,0 +1,2 @@
+{ "_note": "Mastodon instance stats.", "routes": {
+ "GET /api/v1/instance": { "uri": "mastodon.example.com", "stats": { "user_count": 1204, "status_count": 98231, "domain_count": 15002 } } } }

@@ -1,0 +1,138 @@
+{
+  "en": {
+    "vehicles": "Vehicles",
+    "vehicle": "Vehicle",
+    "serviceRecords": "Service records",
+    "reminders": "Reminders",
+    "nextReminder": "Next reminder",
+    "none": "None"
+  },
+  "nl": {
+    "vehicles": "Voertuigen",
+    "vehicle": "Voertuig",
+    "serviceRecords": "Onderhoud",
+    "reminders": "Herinnering",
+    "nextReminder": "Volgende herinnering",
+    "none": "Geen"
+  },
+  "fr": {
+    "vehicles": "Véhicules",
+    "vehicle": "Véhicule",
+    "serviceRecords": "Entretiens",
+    "reminders": "Rappels",
+    "nextReminder": "Prochain rappel",
+    "none": "Aucun"
+  },
+  "de": {
+    "vehicles": "Fahrzeuge",
+    "vehicle": "Fahrzeug",
+    "serviceRecords": "Wartungen",
+    "reminders": "Erinnerungen",
+    "nextReminder": "Nächste Erinnerung",
+    "none": "Keine"
+  },
+  "es": {
+    "vehicles": "Vehículos",
+    "vehicle": "Vehículo",
+    "serviceRecords": "Revisiones",
+    "reminders": "Avisos",
+    "nextReminder": "Próximo aviso",
+    "none": "Ninguno"
+  },
+  "ca": {
+    "vehicles": "Vehicles",
+    "vehicle": "Vehicle",
+    "serviceRecords": "Manteniments",
+    "reminders": "Recordatoris",
+    "nextReminder": "Proper avís",
+    "none": "Cap"
+  },
+  "he": {
+    "vehicles": "רכבים",
+    "vehicle": "רכב",
+    "serviceRecords": "רשומות טיפול",
+    "reminders": "תזכורות",
+    "nextReminder": "התזכורת הבאה",
+    "none": "אין"
+  },
+  "hr": {
+    "vehicles": "Vozila",
+    "vehicle": "Vozilo",
+    "serviceRecords": "Servisi",
+    "reminders": "Podsjetnici",
+    "nextReminder": "Sljedeći podsjetnik",
+    "none": "Nema"
+  },
+  "hu": {
+    "vehicles": "Járművek",
+    "vehicle": "Jármű",
+    "serviceRecords": "Szervizek",
+    "reminders": "Emlékeztetők",
+    "nextReminder": "Következő",
+    "none": "Nincs"
+  },
+  "it": {
+    "vehicles": "Veicoli",
+    "vehicle": "Veicolo",
+    "serviceRecords": "Interventi",
+    "reminders": "Promemoria",
+    "nextReminder": "Prossimo avviso",
+    "none": "Nessuno"
+  },
+  "nb-NO": {
+    "vehicles": "Kjøretøy",
+    "vehicle": "Kjøretøy",
+    "serviceRecords": "Service",
+    "reminders": "Påminnelser",
+    "nextReminder": "Neste påminnelse",
+    "none": "Ingen"
+  },
+  "pt": {
+    "vehicles": "Veículos",
+    "vehicle": "Veículo",
+    "serviceRecords": "Manutenções",
+    "reminders": "Lembretes",
+    "nextReminder": "Próximo lembrete",
+    "none": "Nenhum"
+  },
+  "ru": {
+    "vehicles": "Машины",
+    "vehicle": "Машина",
+    "serviceRecords": "Обслуживание",
+    "reminders": "Напоминания",
+    "nextReminder": "Следующее",
+    "none": "Нет"
+  },
+  "sv": {
+    "vehicles": "Fordon",
+    "vehicle": "Fordon",
+    "serviceRecords": "Service",
+    "reminders": "Påminnelser",
+    "nextReminder": "Nästa påminnelse",
+    "none": "Ingen"
+  },
+  "vi": {
+    "vehicles": "Xe",
+    "vehicle": "Xe",
+    "serviceRecords": "Bảo dưỡng",
+    "reminders": "Nhắc nhở",
+    "nextReminder": "Nhắc tiếp theo",
+    "none": "Không có"
+  },
+  "zh-Hans": {
+    "vehicles": "车辆",
+    "vehicle": "车辆",
+    "serviceRecords": "保养记录",
+    "reminders": "提醒",
+    "nextReminder": "下次提醒",
+    "none": "无"
+  },
+  "zh-Hant": {
+    "vehicles": "車輛",
+    "vehicle": "車輛",
+    "serviceRecords": "保養紀錄",
+    "reminders": "提醒",
+    "nextReminder": "下次提醒",
+    "none": "無"
+  }
+}

@@ -1,0 +1,2 @@
+{ "_note": "Komodo's read endpoint answers every summary type alike in the mock, so the answer holds the fields of all three.", "routes": {
+ "POST /read": { "total": 12, "running": 10, "stopped": 1, "down": 1, "unhealthy": 1, "unknown": 0, "healthy": 2 } } }
