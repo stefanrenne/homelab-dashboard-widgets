@@ -1,0 +1,70 @@
+{
+  "en": {
+    "diffsDetected": "Changes",
+    "totalObserved": "Watched"
+  },
+  "nl": {
+    "diffsDetected": "Wijzigingen",
+    "totalObserved": "Gevolgd"
+  },
+  "fr": {
+    "diffsDetected": "Changements",
+    "totalObserved": "Surveillés"
+  },
+  "de": {
+    "diffsDetected": "Änderungen",
+    "totalObserved": "Beobachtet"
+  },
+  "es": {
+    "diffsDetected": "Cambios",
+    "totalObserved": "Vigilados"
+  },
+  "ca": {
+    "diffsDetected": "Canvis",
+    "totalObserved": "Vigilats"
+  },
+  "he": {
+    "diffsDetected": "שינויים",
+    "totalObserved": "במעקב"
+  },
+  "hr": {
+    "diffsDetected": "Promjene",
+    "totalObserved": "Praćeno"
+  },
+  "hu": {
+    "diffsDetected": "Változások",
+    "totalObserved": "Figyelve"
+  },
+  "it": {
+    "diffsDetected": "Modifiche",
+    "totalObserved": "Monitorati"
+  },
+  "nb-NO": {
+    "diffsDetected": "Endringer",
+    "totalObserved": "Overvåket"
+  },
+  "pt": {
+    "diffsDetected": "Alterações",
+    "totalObserved": "Vigiados"
+  },
+  "ru": {
+    "diffsDetected": "Изменения",
+    "totalObserved": "Под наблюдением"
+  },
+  "sv": {
+    "diffsDetected": "Ändringar",
+    "totalObserved": "Bevakade"
+  },
+  "vi": {
+    "diffsDetected": "Thay đổi",
+    "totalObserved": "Theo dõi"
+  },
+  "zh-Hans": {
+    "diffsDetected": "变更",
+    "totalObserved": "监视中"
+  },
+  "zh-Hant": {
+    "diffsDetected": "變更",
+    "totalObserved": "監視中"
+  }
+}

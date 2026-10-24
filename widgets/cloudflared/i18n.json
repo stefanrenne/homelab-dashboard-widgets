@@ -1,0 +1,138 @@
+{
+  "en": {
+    "status": "Status",
+    "origin_ip": "Origin IP",
+    "healthy": "Healthy one",
+    "degraded": "Degraded one",
+    "down": "Down",
+    "inactive": "Inactive"
+  },
+  "nl": {
+    "status": "Status",
+    "origin_ip": "Herkomst-IP",
+    "healthy": "Gezond",
+    "degraded": "Verminderd",
+    "down": "Offline",
+    "inactive": "Inactief"
+  },
+  "fr": {
+    "status": "État",
+    "origin_ip": "IP d’origine",
+    "healthy": "Sain",
+    "degraded": "Dégradé",
+    "down": "Hors ligne",
+    "inactive": "Inactif"
+  },
+  "de": {
+    "status": "Status",
+    "origin_ip": "Ursprungs-IP",
+    "healthy": "Gesund",
+    "degraded": "Gestört",
+    "down": "Ausgefallen",
+    "inactive": "Inaktiv"
+  },
+  "es": {
+    "status": "Estado",
+    "origin_ip": "IP de origen",
+    "healthy": "Saludable",
+    "degraded": "Degradado",
+    "down": "Caída",
+    "inactive": "Inactivo"
+  },
+  "ca": {
+    "status": "Estat",
+    "origin_ip": "IP d’origen",
+    "healthy": "Saludable",
+    "degraded": "Degradat",
+    "down": "Caigut",
+    "inactive": "Inactiu"
+  },
+  "he": {
+    "status": "מצב",
+    "origin_ip": "כתובת מקור",
+    "healthy": "תקין",
+    "degraded": "פגוע",
+    "down": "נפל",
+    "inactive": "לא פעיל"
+  },
+  "hr": {
+    "status": "Stanje",
+    "origin_ip": "Izvorni IP",
+    "healthy": "Zdravo",
+    "degraded": "Degradirano",
+    "down": "Ne radi",
+    "inactive": "Neaktivno"
+  },
+  "hu": {
+    "status": "Állapot",
+    "origin_ip": "Forrás IP",
+    "healthy": "Egészséges",
+    "degraded": "Romlott",
+    "down": "Leállt",
+    "inactive": "Inaktív"
+  },
+  "it": {
+    "status": "Stato",
+    "origin_ip": "IP di origine",
+    "healthy": "Integro",
+    "degraded": "Degradato",
+    "down": "Giù",
+    "inactive": "Inattivo"
+  },
+  "nb-NO": {
+    "status": "Status",
+    "origin_ip": "Opprinnelses-IP",
+    "healthy": "Sunn",
+    "degraded": "Redusert",
+    "down": "Nede",
+    "inactive": "Inaktiv"
+  },
+  "pt": {
+    "status": "Estado",
+    "origin_ip": "IP de origem",
+    "healthy": "Saudável",
+    "degraded": "Degradado",
+    "down": "Em baixo",
+    "inactive": "Inativo"
+  },
+  "ru": {
+    "status": "Состояние",
+    "origin_ip": "IP источника",
+    "healthy": "Исправен",
+    "degraded": "Деградация",
+    "down": "Недоступен",
+    "inactive": "Неактивен"
+  },
+  "sv": {
+    "status": "Status",
+    "origin_ip": "Ursprungs-IP",
+    "healthy": "Frisk",
+    "degraded": "Försämrad",
+    "down": "Nere",
+    "inactive": "Inaktiv"
+  },
+  "vi": {
+    "status": "Trạng thái",
+    "origin_ip": "IP gốc",
+    "healthy": "Khỏe mạnh",
+    "degraded": "Suy giảm",
+    "down": "Ngừng",
+    "inactive": "Không hoạt động"
+  },
+  "zh-Hans": {
+    "status": "状态",
+    "origin_ip": "源 IP",
+    "healthy": "健康",
+    "degraded": "降级",
+    "down": "宕机",
+    "inactive": "未激活"
+  },
+  "zh-Hant": {
+    "status": "狀態",
+    "origin_ip": "來源 IP",
+    "healthy": "健康",
+    "degraded": "降級",
+    "down": "停止",
+    "inactive": "未啟用"
+  }
+}

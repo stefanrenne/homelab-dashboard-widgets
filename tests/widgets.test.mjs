@@ -30,6 +30,10 @@ const REQUIRED = {
   openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
   stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
   uptimekuma: { slug: 'home' },
+  checkmk: { site: 'cmk', username: 'automation', password: 's3cret' },
+  get cloudflared() { return { url: `${mock.url}/cloudflared`, accountid: 'acc1', tunnelid: 'tun1' }; },
+  coinmarketcap: { symbols: ['BTC', 'ETH'], currency: 'EUR' },
+  crowdsec: { username: 'dashboard', password: 'pw' },
   beszel: { version: 2, username: 'admin@example.com', password: 'pw' },
   get azuredevops() { return { organization: 'example', project: 'homelab', definitionId: '12', repositoryId: 'homelab', userEmail: 'anna@example.com' }; },
   arcane: { env: '1' },
@@ -1199,4 +1203,26 @@ test('bookorbit, caddy and calibreweb', async () => {
   assert.equal(caddy.blocks[2].status, 'warn');
   assert.deepEqual(values(await run('calibreweb', { username: 'u', password: 'p' })), { books: 1543, authors: 702, categories: 48, series: 211 });
   assert.equal(lastRequest('calibreweb').headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
+});
+
+test('changedetectionio, channelsdvrserver, checkmk, cloudflared, coinmarketcap and crowdsec', async () => {
+  const cd = await run('changedetectionio');
+  assert.deepEqual(values(cd), { diffsDetected: 1, totalObserved: 3 });
+  assert.equal(cd.blocks[0].status, 'warn');
+  assert.deepEqual(values(await run('channelsdvrserver')), { shows: 84, recordings: 1203, scheduled: 7, passes: 22 });
+  const cmk = await run('checkmk');
+  assert.deepEqual(values(cmk), { serviceErrors: 2, hostErrors: 0 });
+  assert.equal(lastRequest('checkmk').headers.authorization, 'Bearer automation s3cret');
+  assert.equal(lastRequest('checkmk').query.query, '{"op": "!=", "left": "state", "right": "0"}');
+  const cf = await run('cloudflared');
+  assert.deepEqual(values(cf), { status: 'degraded', origin_ip: '203.0.113.7' });
+  assert.equal(cf.blocks[0].status, 'warn');
+  const cmc = await run('coinmarketcap', { defaultinterval: '24h' });
+  assert.deepEqual(cmc.rows, [{ label: 'Bitcoin', value: '61234.57 EUR ▼ -1.5%' }, { label: 'Ethereum', value: '2345.68 EUR ▲ +2%' }]);
+  assert.deepEqual([lastRequest('coinmarketcap').query.symbol, lastRequest('coinmarketcap').headers['x-cmc_pro_api_key']], ['BTC,ETH', 'test-key']);
+  assert.equal((await run('coinmarketcap', { defaultinterval: '30d' })).rows.length, 1, 'no change: left out, as in homepage');
+  assert.deepEqual((await run('coinmarketcap', { symbols: [] })).rows, [{ label: 'noSymbols' }]);
+  const cs = await run('crowdsec');
+  assert.deepEqual(values(cs), { alerts: 3, bans: 3 });
+  assert.equal(lastRequest('crowdsec').headers.authorization, 'Bearer jwt-1');
 });

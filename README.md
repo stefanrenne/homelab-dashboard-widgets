@@ -51,6 +51,12 @@ Every widget has its own page with setup, fields and options on the
 | `bookorbit` | books, authors, reading, finished; series, storage via `fields` | `url`, `username`, `password` |
 | `caddy` | upstreams, requests, failed requests | `url` (admin API) |
 | `calibreweb` | books, authors, categories, series | `url`, `username`, `password` |
+| `changedetectionio` | unseen changes, watches | `url`, `key` |
+| `channelsdvrserver` | shows, recordings, scheduled, passes | `url` |
+| `checkmk` | services and hosts with problems | `url`, `site`, `username`, `password` |
+| `cloudflared` | tunnel status, origin IP | `accountid`, `tunnelid`, `key` |
+| `coinmarketcap` | a row per cryptocurrency with price and change | `key`, `symbols` or `slugs`, `currency`, `defaultinterval` |
+| `crowdsec` | alerts (24 hours), active bans | `url`, `username`, `password` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

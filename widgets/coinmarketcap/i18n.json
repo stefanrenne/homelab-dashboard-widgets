@@ -1,0 +1,53 @@
+{
+  "en": {
+    "noSymbols": "No symbols"
+  },
+  "nl": {
+    "noSymbols": "Geen symbolen"
+  },
+  "fr": {
+    "noSymbols": "Aucun symbole"
+  },
+  "de": {
+    "noSymbols": "Keine Symbole"
+  },
+  "es": {
+    "noSymbols": "Sin símbolos"
+  },
+  "ca": {
+    "noSymbols": "Cap símbol"
+  },
+  "he": {
+    "noSymbols": "אין סמלים"
+  },
+  "hr": {
+    "noSymbols": "Nema simbola"
+  },
+  "hu": {
+    "noSymbols": "Nincs szimbólum"
+  },
+  "it": {
+    "noSymbols": "Nessun simbolo"
+  },
+  "nb-NO": {
+    "noSymbols": "Ingen symboler"
+  },
+  "pt": {
+    "noSymbols": "Sem símbolos"
+  },
+  "ru": {
+    "noSymbols": "Нет символов"
+  },
+  "sv": {
+    "noSymbols": "Inga symboler"
+  },
+  "vi": {
+    "noSymbols": "Không có mã"
+  },
+  "zh-Hans": {
+    "noSymbols": "没有代码"
+  },
+  "zh-Hant": {
+    "noSymbols": "沒有代號"
+  }
+}

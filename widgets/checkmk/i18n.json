@@ -1,0 +1,70 @@
+{
+  "en": {
+    "serviceErrors": "Service problems",
+    "hostErrors": "Host problems"
+  },
+  "nl": {
+    "serviceErrors": "Diensten met fout",
+    "hostErrors": "Hosts met fout"
+  },
+  "fr": {
+    "serviceErrors": "Services en erreur",
+    "hostErrors": "Hôtes en erreur"
+  },
+  "de": {
+    "serviceErrors": "Dienstfehler",
+    "hostErrors": "Hostfehler"
+  },
+  "es": {
+    "serviceErrors": "Servicios con fallos",
+    "hostErrors": "Hosts con fallos"
+  },
+  "ca": {
+    "serviceErrors": "Serveis amb errors",
+    "hostErrors": "Hosts amb errors"
+  },
+  "he": {
+    "serviceErrors": "בעיות שירותים",
+    "hostErrors": "בעיות מארחים"
+  },
+  "hr": {
+    "serviceErrors": "Problemi usluga",
+    "hostErrors": "Problemi hostova"
+  },
+  "hu": {
+    "serviceErrors": "Hibás szolgáltatás",
+    "hostErrors": "Gazdahibák"
+  },
+  "it": {
+    "serviceErrors": "Servizi in errore",
+    "hostErrors": "Host in errore"
+  },
+  "nb-NO": {
+    "serviceErrors": "Tjenestefeil",
+    "hostErrors": "Vertsfeil"
+  },
+  "pt": {
+    "serviceErrors": "Serviços com erro",
+    "hostErrors": "Hosts com erro"
+  },
+  "ru": {
+    "serviceErrors": "Проблемы служб",
+    "hostErrors": "Проблемы хостов"
+  },
+  "sv": {
+    "serviceErrors": "Tjänstfel",
+    "hostErrors": "Värdfel"
+  },
+  "vi": {
+    "serviceErrors": "Lỗi dịch vụ",
+    "hostErrors": "Lỗi máy chủ"
+  },
+  "zh-Hans": {
+    "serviceErrors": "服务问题",
+    "hostErrors": "主机问题"
+  },
+  "zh-Hant": {
+    "serviceErrors": "服務問題",
+    "hostErrors": "主機問題"
+  }
+}

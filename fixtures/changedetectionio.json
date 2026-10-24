@@ -1,0 +1,4 @@
+{ "_note": "changedetection.io watches: three, one changed and not viewed.", "routes": { "GET /api/v1/watch": {
+ "a": { "url": "https://example.com/a", "last_changed": 1761300000, "viewed": false },
+ "b": { "url": "https://example.com/b", "last_changed": 1761300000, "viewed": true },
+ "c": { "url": "https://example.com/c", "last_changed": 0, "viewed": false } } } }

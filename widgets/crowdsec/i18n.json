@@ -1,0 +1,70 @@
+{
+  "en": {
+    "alerts": "Alerts",
+    "bans": "Bans"
+  },
+  "nl": {
+    "alerts": "Meldingen",
+    "bans": "Bans"
+  },
+  "fr": {
+    "alerts": "Alertes",
+    "bans": "Bannis"
+  },
+  "de": {
+    "alerts": "Warnungen",
+    "bans": "Sperren"
+  },
+  "es": {
+    "alerts": "Alertas",
+    "bans": "Bloqueos"
+  },
+  "ca": {
+    "alerts": "Alertes",
+    "bans": "Bloquejos"
+  },
+  "he": {
+    "alerts": "התראות",
+    "bans": "חסימות"
+  },
+  "hr": {
+    "alerts": "Upozorenja",
+    "bans": "Zabrane"
+  },
+  "hu": {
+    "alerts": "Riasztások",
+    "bans": "Tiltások"
+  },
+  "it": {
+    "alerts": "Avvisi",
+    "bans": "Ban"
+  },
+  "nb-NO": {
+    "alerts": "Varsler",
+    "bans": "Utestengte"
+  },
+  "pt": {
+    "alerts": "Alertas",
+    "bans": "Bloqueios"
+  },
+  "ru": {
+    "alerts": "Оповещения",
+    "bans": "Баны"
+  },
+  "sv": {
+    "alerts": "Larm",
+    "bans": "Spärrar"
+  },
+  "vi": {
+    "alerts": "Cảnh báo",
+    "bans": "Lệnh cấm"
+  },
+  "zh-Hans": {
+    "alerts": "警报",
+    "bans": "封禁"
+  },
+  "zh-Hant": {
+    "alerts": "警示",
+    "bans": "封鎖"
+  }
+}

@@ -1,0 +1,1 @@
+{ "_note": "Channels DVR /dvr.", "routes": { "GET /dvr": { "enabled": true, "path": "/dvr", "stats": { "groups": 84, "files": 1203, "jobs": 7, "rules": 22 } } } }

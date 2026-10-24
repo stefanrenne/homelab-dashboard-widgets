@@ -1,0 +1,13 @@
+id: coinmarketcap
+name: CoinMarketCap
+version: 0.1.0
+apiVersion: 1
+description: Prices and their change of the cryptocurrencies you list, from CoinMarketCap (homepage's coinmarketcap widget).
+refresh: 5m
+options:
+  key: { type: string, secret: true, required: true }   # your CoinMarketCap API key (Pro dashboard)
+  symbols: { type: list }                  # e.g. [BTC, ETH]; or slugs
+  slugs: { type: list }                    # e.g. [bitcoin, chia-network]; win over symbols
+  currency: { type: string, default: USD }
+  defaultinterval: { type: enum, values: [1h, 24h, 7d, 30d], default: 1h }   # the change shown
+  url: { type: url, default: https://pro-api.coinmarketcap.com }   # the CoinMarketCap API

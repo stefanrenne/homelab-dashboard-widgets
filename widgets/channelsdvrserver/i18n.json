@@ -1,0 +1,104 @@
+{
+  "en": {
+    "shows": "Shows",
+    "recordings": "Recordings",
+    "scheduled": "Scheduled",
+    "passes": "Passes"
+  },
+  "nl": {
+    "shows": "Programma's",
+    "recordings": "Opnames",
+    "scheduled": "Gepland",
+    "passes": "Passes"
+  },
+  "fr": {
+    "shows": "Émissions",
+    "recordings": "Enregistrés",
+    "scheduled": "Planifiés",
+    "passes": "Abonnements"
+  },
+  "de": {
+    "shows": "Sendungen",
+    "recordings": "Aufnahmen",
+    "scheduled": "Geplant",
+    "passes": "Serien"
+  },
+  "es": {
+    "shows": "Programas",
+    "recordings": "Grabaciones",
+    "scheduled": "Programadas",
+    "passes": "Pases"
+  },
+  "ca": {
+    "shows": "Programes",
+    "recordings": "Gravacions",
+    "scheduled": "Programades",
+    "passes": "Passis"
+  },
+  "he": {
+    "shows": "תוכניות",
+    "recordings": "הקלטות",
+    "scheduled": "מתוזמנות",
+    "passes": "מנויים"
+  },
+  "hr": {
+    "shows": "Emisije",
+    "recordings": "Snimke",
+    "scheduled": "Zakazano",
+    "passes": "Propusnice"
+  },
+  "hu": {
+    "shows": "Műsorok",
+    "recordings": "Felvételek",
+    "scheduled": "Ütemezett",
+    "passes": "Bérletek"
+  },
+  "it": {
+    "shows": "Programmi",
+    "recordings": "Registrati",
+    "scheduled": "Programmate",
+    "passes": "Pass"
+  },
+  "nb-NO": {
+    "shows": "Programmer",
+    "recordings": "Opptak",
+    "scheduled": "Planlagt",
+    "passes": "Pass"
+  },
+  "pt": {
+    "shows": "Programas",
+    "recordings": "Gravações",
+    "scheduled": "Agendadas",
+    "passes": "Passes"
+  },
+  "ru": {
+    "shows": "Передачи",
+    "recordings": "Записи",
+    "scheduled": "В планах",
+    "passes": "Подписки"
+  },
+  "sv": {
+    "shows": "Program",
+    "recordings": "Inspelningar",
+    "scheduled": "Schemalagda",
+    "passes": "Pass"
+  },
+  "vi": {
+    "shows": "Chương trình",
+    "recordings": "Bản ghi",
+    "scheduled": "Đã lên lịch",
+    "passes": "Lượt"
+  },
+  "zh-Hans": {
+    "shows": "节目",
+    "recordings": "录像",
+    "scheduled": "已计划",
+    "passes": "通行证"
+  },
+  "zh-Hant": {
+    "shows": "節目",
+    "recordings": "錄影",
+    "scheduled": "已排程",
+    "passes": "通行證"
+  }
+}
