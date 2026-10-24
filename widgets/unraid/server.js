@@ -1,5 +1,9 @@
 // Unraid: CPU, memory, array and cache pools through the Unraid API (GraphQL).
 //
+// Checked against a live Unraid 7 server (2026-10-24): capacity comes as strings of KiB, pools
+// as numbers of KiB, one entry per device ("trunk", "trunk2", ...) where the first carries the
+// pool's totals, so pools are matched on their name.
+//
 // Block keys follow homepage's unraid widget, so `fields: [cpu, memoryPercent,
 // pool1UsedPercent]` works the same. Without `fields` the dashboard shows the four in
 // widget.yaml's defaultFields. Each label has one meaning: "Memory" is the percentage,
@@ -51,10 +55,15 @@ export default {
       { key: 'cpu', label: 'cpu', value: metrics.cpu?.percentTotal === undefined ? null : Math.round(metrics.cpu.percentTotal), unit: '%' },
       { key: 'notifications', label: 'notifications', value: unread, ...(unread > 0 ? { status: 'warn' } : {}) },
       { key: 'status', label: 'status', value: state, ...(state === 'started' ? {} : { status: 'warn' }) },
-      { key: 'arrayFree', label: 'arrayFree', value: kib(cap.free) },
-      { key: 'arrayUsed', label: 'arrayUsed', value: kib(cap.used) },
-      { key: 'arrayUsedPercent', label: 'array', value: pct(Number(cap.used), Number(cap.total)), unit: '%' },
     ];
+    // A server that keeps everything in pools (ZFS) has an array of 0 KB: no array blocks then.
+    if (Number(cap.total) > 0) {
+      blocks.push(
+        { key: 'arrayFree', label: 'arrayFree', value: kib(cap.free) },
+        { key: 'arrayUsed', label: 'arrayUsed', value: kib(cap.used) },
+        { key: 'arrayUsedPercent', label: 'array', value: pct(Number(cap.used), Number(cap.total)), unit: '%' },
+      );
+    }
     for (const n of [1, 2, 3, 4]) {
       const name = ctx.options[`pool${n}`];
       if (!name) continue;

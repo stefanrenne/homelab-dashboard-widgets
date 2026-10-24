@@ -62,5 +62,6 @@ npm ci && npm test        # every widget against fixtures/, through a mock serve
 npm run mock              # the mock on http://127.0.0.1:4100/<widget>/... for trying things by hand
 ```
 
-The fixtures in `fixtures/` are API answers in the shape the real services give. The Unraid
-API schema is the documented one for Unraid 7; check it against a real server.
+The fixtures in `fixtures/` are API answers in the shape the real services give. All widgets
+except tdarr and whatsupdocker were checked against live services (Radarr, Sonarr, Bazarr,
+Prowlarr, SABnzbd, Seerr, Tautulli, Portainer CE, Unraid 7, Stash) on 2026-10-24.
