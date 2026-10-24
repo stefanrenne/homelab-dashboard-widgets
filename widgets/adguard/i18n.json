@@ -1,0 +1,104 @@
+{
+  "en": {
+    "queries": "Queries",
+    "blocked": "Blocked",
+    "filtered": "Filtered",
+    "latency": "Latency"
+  },
+  "nl": {
+    "queries": "Verzoeken",
+    "blocked": "Geblokkeerd",
+    "filtered": "Gefilterd",
+    "latency": "Latentie"
+  },
+  "fr": {
+    "queries": "Requêtes",
+    "blocked": "Bloquées",
+    "filtered": "Filtrées",
+    "latency": "Latence"
+  },
+  "de": {
+    "queries": "Anfragen",
+    "blocked": "Blockiert",
+    "filtered": "Gefiltert",
+    "latency": "Latenz"
+  },
+  "es": {
+    "queries": "Consultas",
+    "blocked": "Bloqueadas",
+    "filtered": "Filtradas",
+    "latency": "Latencia"
+  },
+  "ca": {
+    "queries": "Consultes",
+    "blocked": "Bloquejades",
+    "filtered": "Filtrades",
+    "latency": "Latència"
+  },
+  "he": {
+    "queries": "שאילתות",
+    "blocked": "נחסמו",
+    "filtered": "סוננו",
+    "latency": "השהיה"
+  },
+  "hr": {
+    "queries": "Upiti",
+    "blocked": "Blokirano",
+    "filtered": "Filtrirano",
+    "latency": "Latencija"
+  },
+  "hu": {
+    "queries": "Lekérdezések",
+    "blocked": "Blokkolva",
+    "filtered": "Szűrve",
+    "latency": "Késleltetés"
+  },
+  "it": {
+    "queries": "Richieste",
+    "blocked": "Bloccate",
+    "filtered": "Filtrate",
+    "latency": "Latenza"
+  },
+  "nb-NO": {
+    "queries": "Spørringer",
+    "blocked": "Blokkert",
+    "filtered": "Filtrert",
+    "latency": "Forsinkelse"
+  },
+  "pt": {
+    "queries": "Consultas",
+    "blocked": "Bloqueadas",
+    "filtered": "Filtradas",
+    "latency": "Latência"
+  },
+  "ru": {
+    "queries": "Запросы",
+    "blocked": "Блокировки",
+    "filtered": "Отсеяно",
+    "latency": "Задержка"
+  },
+  "sv": {
+    "queries": "Frågor",
+    "blocked": "Blockerade",
+    "filtered": "Filtrerade",
+    "latency": "Latens"
+  },
+  "vi": {
+    "queries": "Truy vấn",
+    "blocked": "Đã chặn",
+    "filtered": "Đã lọc",
+    "latency": "Độ trễ"
+  },
+  "zh-Hans": {
+    "queries": "查询",
+    "blocked": "已拦截",
+    "filtered": "已过滤",
+    "latency": "延迟"
+  },
+  "zh-Hant": {
+    "queries": "查詢",
+    "blocked": "已封鎖",
+    "filtered": "已過濾",
+    "latency": "延遲"
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "_note": "AdGuard Home /control/stats (abbreviated: the per-hour lists are left out).",
+ "routes": {
+  "GET /control/stats": {
+   "time_units": "hours",
+   "num_dns_queries": 61234,
+   "num_blocked_filtering": 9876,
+   "num_replaced_safebrowsing": 12,
+   "num_replaced_safesearch": 30,
+   "num_replaced_parental": 3,
+   "avg_processing_time": 0.004567,
+   "top_queried_domains": [],
+   "top_clients": [],
+   "top_blocked_domains": []
+  }
+ }
+}

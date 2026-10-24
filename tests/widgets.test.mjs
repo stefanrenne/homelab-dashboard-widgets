@@ -498,3 +498,9 @@ test('pihole: version 6 with a session from the password, version 5 with the tok
   assert.deepEqual(lastRequest('pihole').query, { summaryRaw: '', auth: 'token' });
   await assert.rejects(run('pihole', { version: 6, key: 'pw', url: `${mock.url}/nothing` }), /Pi-hole login answered 404/);
 });
+
+test('adguard: queries, blocked, filtered (Safe Browsing, Safe Search, parental) and latency', async () => {
+  const out = await run('adguard', { username: 'admin', password: 'pw' });
+  assert.deepEqual(values(out), { queries: 61234, blocked: 9876, filtered: 45, latency: '4.6ms' });
+  assert.equal(lastRequest('adguard').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
+});
