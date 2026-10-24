@@ -848,3 +848,14 @@ test('truenas version 2: the same over the JSON-RPC WebSocket API, with an API k
     srv.close();
   }
 });
+
+test('diskstation: uptime, free space on a volume (marked below 10%), CPU and memory; the login is POSTed', async () => {
+  const out = await run('diskstation', { username: 'remote_stats', password: 'p&w' });
+  assert.deepEqual(values(out), { uptime: '5d 3h', volumeAvailable: '600 GB', 'resources.cpu': '6%', 'resources.mem': '37%' });
+  assert.equal(out.blocks[1].status, 'warn');
+  const login = mock.requests.filter((r) => r.widget === 'diskstation' && r.route === 'POST /webapi/entry.cgi').at(-1);
+  assert.equal(new URLSearchParams(login.body).get('passwd'), 'p&w', 'the password goes in the body, not the address');
+  assert.equal(lastRequest('diskstation').query._sid, 'sid-abc');
+  assert.equal(values(await run('diskstation', { volume: 'volume_2' })).volumeAvailable, '1.5 TB');
+  await assert.rejects(run('diskstation', { volume: 'volume_9' }), /no volume "volume_9"/);
+});

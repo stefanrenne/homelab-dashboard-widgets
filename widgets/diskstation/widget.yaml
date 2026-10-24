@@ -1,0 +1,12 @@
+id: diskstation
+name: Synology DiskStation
+version: 0.1.0
+apiVersion: 1
+description: Uptime, free space on a volume, CPU and memory of a Synology NAS (homepage's diskstation widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }       # e.g. http://nas.lan:5000
+  username: { type: string, required: true }               # an administrator without access to files (see the page)
+  password: { type: string, secret: true, required: true }
+  volume: { type: string }                 # volume_1, volume_2, ...; default the first volume
+  insecure: { type: boolean, default: false }   # accept a self-signed certificate (https on port 5001)

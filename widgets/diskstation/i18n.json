@@ -1,0 +1,104 @@
+{
+  "en": {
+    "uptime": "Uptime",
+    "volumeAvailable": "Volume free",
+    "cpu": "CPU",
+    "memory": "Memory"
+  },
+  "nl": {
+    "uptime": "Uptime",
+    "volumeAvailable": "Volume vrij",
+    "cpu": "CPU",
+    "memory": "Geheugen"
+  },
+  "fr": {
+    "uptime": "Temps actif",
+    "volumeAvailable": "Volume libre",
+    "cpu": "CPU",
+    "memory": "Mémoire"
+  },
+  "de": {
+    "uptime": "Laufzeit",
+    "volumeAvailable": "Volume frei",
+    "cpu": "CPU",
+    "memory": "Speicher"
+  },
+  "es": {
+    "uptime": "Tiempo activo",
+    "volumeAvailable": "Volumen libre",
+    "cpu": "CPU",
+    "memory": "Memoria"
+  },
+  "ca": {
+    "uptime": "Temps actiu",
+    "volumeAvailable": "Volum lliure",
+    "cpu": "CPU",
+    "memory": "Memòria"
+  },
+  "he": {
+    "uptime": "זמן פעולה",
+    "volumeAvailable": "נפח פנוי",
+    "cpu": "מעבד",
+    "memory": "זיכרון"
+  },
+  "hr": {
+    "uptime": "Vrijeme rada",
+    "volumeAvailable": "Slobodni volumen",
+    "cpu": "CPU",
+    "memory": "Memorija"
+  },
+  "hu": {
+    "uptime": "Üzemidő",
+    "volumeAvailable": "Szabad kötet",
+    "cpu": "CPU",
+    "memory": "Memória"
+  },
+  "it": {
+    "uptime": "Tempo attivo",
+    "volumeAvailable": "Volume libero",
+    "cpu": "CPU",
+    "memory": "Memoria"
+  },
+  "nb-NO": {
+    "uptime": "Oppetid",
+    "volumeAvailable": "Ledig volum",
+    "cpu": "CPU",
+    "memory": "Minne"
+  },
+  "pt": {
+    "uptime": "Tempo ativo",
+    "volumeAvailable": "Volume livre",
+    "cpu": "CPU",
+    "memory": "Memória"
+  },
+  "ru": {
+    "uptime": "Время работы",
+    "volumeAvailable": "Том свободно",
+    "cpu": "ЦП",
+    "memory": "Память"
+  },
+  "sv": {
+    "uptime": "Drifttid",
+    "volumeAvailable": "Ledig volym",
+    "cpu": "CPU",
+    "memory": "Minne"
+  },
+  "vi": {
+    "uptime": "Hoạt động",
+    "volumeAvailable": "Ổ trống",
+    "cpu": "CPU",
+    "memory": "Bộ nhớ"
+  },
+  "zh-Hans": {
+    "uptime": "运行时间",
+    "volumeAvailable": "卷可用",
+    "cpu": "CPU",
+    "memory": "内存"
+  },
+  "zh-Hant": {
+    "uptime": "運作時間",
+    "volumeAvailable": "磁碟區可用",
+    "cpu": "CPU",
+    "memory": "記憶體"
+  }
+}

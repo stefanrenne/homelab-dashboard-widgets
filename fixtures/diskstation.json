@@ -1,0 +1,20 @@
+{
+ "_note": "Synology DSM 7: the mock answers by path only, so entry.cgi gives one answer with the fields of all three calls.",
+ "routes": {
+  "GET /webapi/query.cgi": { "success": true, "data": {
+   "SYNO.API.Auth": { "path": "entry.cgi", "maxVersion": 7, "minVersion": 1 },
+   "SYNO.Core.System": { "path": "entry.cgi", "maxVersion": 3, "minVersion": 1 },
+   "SYNO.Core.System.Utilization": { "path": "entry.cgi", "maxVersion": 1, "minVersion": 1 }
+  } },
+  "POST /webapi/entry.cgi": { "success": true, "data": { "sid": "sid-abc", "did": "d" } },
+  "GET /webapi/entry.cgi": { "success": true, "data": {
+   "up_time": "123:45:12",
+   "vol_info": [
+    { "name": "volume_1", "total_size": "8000000000000", "used_size": "7400000000000" },
+    { "name": "volume_2", "total_size": "2000000000000", "used_size": "500000000000" }
+   ],
+   "cpu": { "user_load": 4, "system_load": 2, "other_load": 1 },
+   "memory": { "real_usage": 37, "total_real": 8000000, "avail_real": 3000000, "cached": 2000000 }
+  } }
+ }
+}
