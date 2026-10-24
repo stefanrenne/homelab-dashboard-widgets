@@ -1,0 +1,12 @@
+{
+ "_note": "Nginx Proxy Manager: a token, and four proxy hosts of which one is disabled.",
+ "routes": {
+  "POST /api/tokens": { "token": "eyJ.test.token", "expires": "2099-01-01T00:00:00.000Z" },
+  "GET /api/nginx/proxy-hosts": [
+   { "id": 1, "domain_names": ["cloud.example.com"], "enabled": true },
+   { "id": 2, "domain_names": ["media.example.com"], "enabled": true },
+   { "id": 3, "domain_names": ["old.example.com"], "enabled": false },
+   { "id": 4, "domain_names": ["home.example.com"], "enabled": 1 }
+  ]
+ }
+}

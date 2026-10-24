@@ -25,6 +25,8 @@ Every widget has its own page with setup, fields and options on the
 | `immich` | users, photos, videos, storage | `url`, `key`, `version` (1 or 2) |
 | `paperlessngx` | inbox, total documents | `url`, `key` or `username`/`password` |
 | `uptimekuma` | up, down, uptime, incident of a status page | `url`, `slug` |
+| `traefik` | routers, services, middlewares (marked with errors or warnings) | `url`, `username`, `password` |
+| `npm` | proxy hosts enabled, disabled, total (Nginx Proxy Manager) | `url`, `username`, `password` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

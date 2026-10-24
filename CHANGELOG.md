@@ -31,6 +31,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `nextcloud`: free space, active users, files and shares (and the older cpuload and memoryusage through `fields`), as homepage's nextcloud widget.
 - `immich`: users, photos, videos and storage, as homepage's immich widget.
 - `paperlessngx` (inbox and total documents) and `uptimekuma` (monitors up and down, uptime and the incident of a status page), as homepage's widgets.
+- `traefik` (routers, services and middlewares, marked with errors or warnings) and `npm` (Nginx Proxy Manager proxy hosts), as homepage's widgets.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

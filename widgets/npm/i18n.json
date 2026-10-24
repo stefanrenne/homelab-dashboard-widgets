@@ -1,0 +1,87 @@
+{
+  "en": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "total": "Total"
+  },
+  "nl": {
+    "enabled": "Aan",
+    "disabled": "Uit",
+    "total": "Totaal"
+  },
+  "fr": {
+    "enabled": "Actifs",
+    "disabled": "Inactifs",
+    "total": "Total"
+  },
+  "de": {
+    "enabled": "Aktiv",
+    "disabled": "Inaktiv",
+    "total": "Gesamt"
+  },
+  "es": {
+    "enabled": "Activos",
+    "disabled": "Inactivos",
+    "total": "Total"
+  },
+  "ca": {
+    "enabled": "Actius",
+    "disabled": "Inactius",
+    "total": "Total"
+  },
+  "he": {
+    "enabled": "פעילים",
+    "disabled": "מושבתים",
+    "total": "סך הכול"
+  },
+  "hr": {
+    "enabled": "Uključeno",
+    "disabled": "Isključeno",
+    "total": "Ukupno"
+  },
+  "hu": {
+    "enabled": "Engedélyezve",
+    "disabled": "Letiltva",
+    "total": "Összesen"
+  },
+  "it": {
+    "enabled": "Attivi",
+    "disabled": "Disattivi",
+    "total": "Totale"
+  },
+  "nb-NO": {
+    "enabled": "Aktive",
+    "disabled": "Deaktivert",
+    "total": "Totalt"
+  },
+  "pt": {
+    "enabled": "Ativos",
+    "disabled": "Inativos",
+    "total": "Total"
+  },
+  "ru": {
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "total": "Всего"
+  },
+  "sv": {
+    "enabled": "Aktiva",
+    "disabled": "Inaktiva",
+    "total": "Totalt"
+  },
+  "vi": {
+    "enabled": "Đang bật",
+    "disabled": "Đã tắt",
+    "total": "Tổng"
+  },
+  "zh-Hans": {
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "total": "总计"
+  },
+  "zh-Hant": {
+    "enabled": "已啟用",
+    "disabled": "已停用",
+    "total": "總計"
+  }
+}

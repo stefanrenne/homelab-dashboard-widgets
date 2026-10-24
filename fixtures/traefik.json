@@ -1,0 +1,7 @@
+{
+ "_note": "Traefik /api/overview: routers with one warning, services with an error.",
+ "routes": { "GET /api/overview": {
+  "http": { "routers": { "total": 24, "warnings": 1, "errors": 0 }, "services": { "total": 27, "warnings": 0, "errors": 1 }, "middlewares": { "total": 8, "warnings": 0, "errors": 0 } },
+  "tcp": { "routers": { "total": 1, "warnings": 0, "errors": 0 } }
+ } }
+}

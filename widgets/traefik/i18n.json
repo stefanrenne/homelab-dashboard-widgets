@@ -1,0 +1,87 @@
+{
+  "en": {
+    "routers": "Routers",
+    "services": "Services",
+    "middleware": "Middleware"
+  },
+  "nl": {
+    "routers": "Routers",
+    "services": "Diensten",
+    "middleware": "Middleware"
+  },
+  "fr": {
+    "routers": "Routeurs",
+    "services": "Services",
+    "middleware": "Middlewares"
+  },
+  "de": {
+    "routers": "Router",
+    "services": "Dienste",
+    "middleware": "Middlewares"
+  },
+  "es": {
+    "routers": "Routers",
+    "services": "Servicios",
+    "middleware": "Middlewares"
+  },
+  "ca": {
+    "routers": "Encaminadors",
+    "services": "Serveis",
+    "middleware": "Middlewares"
+  },
+  "he": {
+    "routers": "נתבים",
+    "services": "שירותים",
+    "middleware": "תווכה"
+  },
+  "hr": {
+    "routers": "Usmjerivači",
+    "services": "Usluge",
+    "middleware": "Međusloj"
+  },
+  "hu": {
+    "routers": "Útválasztók",
+    "services": "Szolgáltatás",
+    "middleware": "Köztes réteg"
+  },
+  "it": {
+    "routers": "Router",
+    "services": "Servizi",
+    "middleware": "Middleware"
+  },
+  "nb-NO": {
+    "routers": "Rutere",
+    "services": "Tjenester",
+    "middleware": "Mellomvare"
+  },
+  "pt": {
+    "routers": "Routers",
+    "services": "Serviços",
+    "middleware": "Middlewares"
+  },
+  "ru": {
+    "routers": "Роутеры",
+    "services": "Сервисы",
+    "middleware": "Посредники"
+  },
+  "sv": {
+    "routers": "Routrar",
+    "services": "Tjänster",
+    "middleware": "Mellanlager"
+  },
+  "vi": {
+    "routers": "Bộ định tuyến",
+    "services": "Dịch vụ",
+    "middleware": "Trung gian"
+  },
+  "zh-Hans": {
+    "routers": "路由",
+    "services": "服务",
+    "middleware": "中间件"
+  },
+  "zh-Hant": {
+    "routers": "路由",
+    "services": "服務",
+    "middleware": "中介軟體"
+  }
+}

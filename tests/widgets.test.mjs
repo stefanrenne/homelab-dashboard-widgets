@@ -773,3 +773,22 @@ test('uptimekuma: up, down (marked), average uptime and the incident of a status
   assert.deepEqual(out.blocks.map((b) => b.status ?? null), [null, 'error', null, 'warn']);
   await assert.rejects(run('uptimekuma', { slug: '../x' }), /slug/);
 });
+
+test('traefik: routers, services and middlewares, marked with errors or warnings', async () => {
+  const out = await run('traefik', { username: 'u', password: 'p' });
+  assert.deepEqual(values(out), { routers: 24, services: 27, middleware: 8 });
+  assert.deepEqual(out.blocks.map((b) => b.status ?? null), ['warn', 'error', null]);
+  assert.equal(lastRequest('traefik').headers.authorization, `Basic ${Buffer.from('u:p').toString('base64')}`);
+});
+
+test('npm: enabled, disabled and total proxy hosts, with a token that is kept', async () => {
+  const { default: npm } = await import(path.join(WIDGETS, 'npm', 'server.js'));
+  const ctx = { options: { url: `${mock.url}/npm`, username: 'viewer@example.com', password: 'pw' }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) };
+  assert.deepEqual(values(await npm.fetch(ctx)), { enabled: 3, disabled: 1, total: 4 });
+  const login = mock.requests.filter((r) => r.widget === 'npm' && r.route === 'POST /api/tokens').at(-1);
+  assert.deepEqual(JSON.parse(login.body), { identity: 'viewer@example.com', secret: 'pw' });
+  assert.equal(lastRequest('npm').headers.authorization, 'Bearer eyJ.test.token');
+  const before = mock.requests.length;
+  await npm.fetch(ctx);
+  assert.deepEqual(mock.requests.slice(before).map((r) => r.route), ['GET /api/nginx/proxy-hosts'], 'the token is kept');
+});
