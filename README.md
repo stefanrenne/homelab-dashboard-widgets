@@ -17,6 +17,7 @@ Every widget has its own page with setup, fields and options on the
 | `homeassistant` | people home, lights on, switches on; or up to four states and templates (`custom`) | `url`, `key`, `custom` |
 | `proxmox` | VMs and containers running, CPU and memory of the cluster or a node | `url`, `username` (token id), `password` (secret), `node`, `insecure` |
 | `proxmoxbackupserver` | datastore usage, failed tasks (24 hours), CPU, memory | `url`, `username` (token id), `password` (secret), `datastore`, `insecure` |
+| `qbittorrent` | leech, download rate, seed, upload rate; downloads per row with `enableLeechProgress` | `url`, `username`, `password` or `key`, `enableLeechProgress`, `enableLeechSize`, `queueLimit` (5) |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |

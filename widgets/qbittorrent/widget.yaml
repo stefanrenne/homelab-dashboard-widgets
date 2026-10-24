@@ -1,0 +1,14 @@
+id: qbittorrent
+name: qBittorrent
+version: 0.1.0
+apiVersion: 1
+description: Torrents downloading and seeding with their rates, and optionally the downloads one per row (homepage's qbittorrent widget).
+refresh: 10s
+options:
+  url: { type: url, required: true }       # e.g. http://qbittorrent.lan:8080
+  username: { type: string }
+  password: { type: string, secret: true }
+  key: { type: string, secret: true }      # instead of username and password: Options > WebUI > Authentication > API Key
+  enableLeechProgress: { type: boolean, default: false }   # a row per download with its progress and time left
+  enableLeechSize: { type: boolean, default: false }       # the size in those rows
+  queueLimit: { type: number, default: 5 }  # rows before "+N more"

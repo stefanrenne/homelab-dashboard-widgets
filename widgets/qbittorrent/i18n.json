@@ -1,0 +1,155 @@
+{
+  "en": {
+    "leech": "Leeching",
+    "download": "Download",
+    "seed": "Seeding",
+    "upload": "Upload",
+    "stalled": "Stalled",
+    "error": "Error",
+    "moreItems": "+{count} more"
+  },
+  "nl": {
+    "leech": "Downloaden",
+    "download": "Download",
+    "seed": "Seeden",
+    "upload": "Upload",
+    "stalled": "Vastgelopen",
+    "error": "Fout",
+    "moreItems": "+{count} meer"
+  },
+  "fr": {
+    "leech": "Téléchargés",
+    "download": "Réception",
+    "seed": "Partagés",
+    "upload": "Envoi",
+    "stalled": "Bloqué",
+    "error": "Erreur",
+    "moreItems": "+{count} de plus"
+  },
+  "de": {
+    "leech": "Laden",
+    "download": "Download",
+    "seed": "Seeden",
+    "upload": "Upload",
+    "stalled": "Hängt",
+    "error": "Fehler",
+    "moreItems": "+{count} weitere"
+  },
+  "es": {
+    "leech": "Descargando",
+    "download": "Descarga",
+    "seed": "Compartiendo",
+    "upload": "Subida",
+    "stalled": "Atascado",
+    "error": "Error",
+    "moreItems": "+{count} más"
+  },
+  "ca": {
+    "leech": "Baixant",
+    "download": "Baixada",
+    "seed": "Compartint",
+    "upload": "Pujada",
+    "stalled": "Encallat",
+    "error": "Error",
+    "moreItems": "{count} més"
+  },
+  "he": {
+    "leech": "בהורדה",
+    "download": "הורדה",
+    "seed": "בשיתוף",
+    "upload": "העלאה",
+    "stalled": "תקוע",
+    "error": "שגיאה",
+    "moreItems": "עוד {count}"
+  },
+  "hr": {
+    "leech": "Preuzimanje",
+    "download": "Preuzimanje",
+    "seed": "Dijeljenje",
+    "upload": "Slanje",
+    "stalled": "Zastoj",
+    "error": "Pogreška",
+    "moreItems": "Još {count}"
+  },
+  "hu": {
+    "leech": "Letöltés",
+    "download": "Letöltés",
+    "seed": "Seedelés",
+    "upload": "Feltöltés",
+    "stalled": "Elakadt",
+    "error": "Hiba",
+    "moreItems": "További {count}"
+  },
+  "it": {
+    "leech": "In download",
+    "download": "Download",
+    "seed": "In seed",
+    "upload": "Upload",
+    "stalled": "Bloccato",
+    "error": "Errore",
+    "moreItems": "Altri {count}"
+  },
+  "nb-NO": {
+    "leech": "Laster ned",
+    "download": "Ned",
+    "seed": "Deler",
+    "upload": "Opp",
+    "stalled": "Står fast",
+    "error": "Feil",
+    "moreItems": "{count} til"
+  },
+  "pt": {
+    "leech": "Em download",
+    "download": "Download",
+    "seed": "Em partilha",
+    "upload": "Upload",
+    "stalled": "Parado",
+    "error": "Erro",
+    "moreItems": "Mais {count}"
+  },
+  "ru": {
+    "leech": "Загрузка",
+    "download": "Загрузка",
+    "seed": "Раздача",
+    "upload": "Отдача",
+    "stalled": "Застрял",
+    "error": "Ошибка",
+    "moreItems": "Ещё {count}"
+  },
+  "sv": {
+    "leech": "Laddar ned",
+    "download": "Ned",
+    "seed": "Delar",
+    "upload": "Upp",
+    "stalled": "Fastnat",
+    "error": "Fel",
+    "moreItems": "{count} till"
+  },
+  "vi": {
+    "leech": "Đang tải",
+    "download": "Tải xuống",
+    "seed": "Đang chia sẻ",
+    "upload": "Tải lên",
+    "stalled": "Bị treo",
+    "error": "Lỗi",
+    "moreItems": "Thêm {count}"
+  },
+  "zh-Hans": {
+    "leech": "下载中",
+    "download": "下载",
+    "seed": "做种中",
+    "upload": "上传",
+    "stalled": "停滞",
+    "error": "错误",
+    "moreItems": "还有 {count} 个"
+  },
+  "zh-Hant": {
+    "leech": "下載中",
+    "download": "下載",
+    "seed": "做種中",
+    "upload": "上傳",
+    "stalled": "停滯",
+    "error": "錯誤",
+    "moreItems": "還有 {count} 個"
+  }
+}

@@ -572,3 +572,45 @@ test('proxmoxbackupserver: datastores, failed tasks of the last day (marked), CP
   assert.equal(values(await run('proxmoxbackupserver', { datastore: 'offsite' })).datastore_usage, '40%');
   await assert.rejects(run('proxmoxbackupserver', { datastore: 'nope' }), /no datastore "nope"/);
 });
+
+test('qbittorrent: leech, seed and rates; downloads per row with problems first; login with a cookie or an API key', async () => {
+  const out = await run('qbittorrent', { key: 'qbt-key', enableLeechProgress: true, enableLeechSize: true, queueLimit: 3 });
+  assert.deepEqual(values(out), { leech: 4, download: '2.5 MB/s', seed: 2, upload: '500 kB/s' });
+  assert.equal(lastRequest('qbittorrent').headers.authorization, 'Bearer qbt-key');
+  assert.deepEqual(out.rows, [
+    { label: 'archlinux-2026.10.01-x86_64.iso', value: 'error', progress: 5, icon: 'play', status: 'error' },
+    { label: 'ubuntu-24.04.3-desktop-amd64.iso', value: 'stalled', progress: 10, icon: 'play', status: 'warn' },
+    { label: 'debian-13.1.0-amd64-DVD-1.iso', value: '12:30 · 3.9 GB', progress: 42, icon: 'play' },
+    { label: 'moreItems', vars: { count: 1 } },
+  ]);
+  assert.equal((await run('qbittorrent')).rows, undefined, 'rows only with enableLeechProgress');
+
+  const http = await import('node:http');
+  const seen = [];
+  const srv = http.createServer((req, res) => {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', () => {
+      seen.push(`${req.method} ${req.url} ${req.headers.cookie ?? ''}`.trim());
+      if (req.url === '/api/v2/auth/login') {
+        if (body !== 'username=admin&password=p%26w') { res.end('Fails.'); return; }
+        res.setHeader('set-cookie', 'SID=abc; HttpOnly; path=/');
+        return res.end('Ok.');
+      }
+      if (req.headers.cookie !== 'SID=abc') { res.statusCode = 403; return res.end('Forbidden'); }
+      res.end('[]');
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: qbt } = await import(path.join(WIDGETS, 'qbittorrent', 'server.js'));
+  const ctx = (password) => ({ options: { url: `http://127.0.0.1:${srv.address().port}`, username: 'admin', password }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) });
+  try {
+    const c = ctx('p&w');
+    assert.deepEqual(values(await qbt.fetch(c)), { leech: 0, download: '0 B/s', seed: 0, upload: '0 B/s' });
+    await qbt.fetch(c);
+    assert.deepEqual(seen, ['GET /api/v2/torrents/info', 'POST /api/v2/auth/login', 'GET /api/v2/torrents/info SID=abc', 'GET /api/v2/torrents/info SID=abc'], 'the session is kept');
+    await assert.rejects(qbt.fetch(ctx('wrong')), /qBittorrent login answered 401/);
+  } finally {
+    srv.close();
+  }
+});

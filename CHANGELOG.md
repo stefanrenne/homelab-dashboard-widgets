@@ -22,6 +22,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `homeassistant`: people at home, lights and switches on, or up to four states and templates of your own (`custom`), as homepage's homeassistant widget.
 - `proxmox`: VMs and containers running, and the CPU and memory of a Proxmox VE cluster or one node, as homepage's proxmox widget.
 - `proxmoxbackupserver`: datastore usage, failed tasks of the last 24 hours (marked), CPU and memory, as homepage's proxmoxbackupserver widget.
+- `qbittorrent`: torrents downloading and seeding with their rates, downloads per row with `enableLeechProgress` (problems first), a login or an API key, as homepage's qbittorrent widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

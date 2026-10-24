@@ -1,0 +1,13 @@
+{
+ "_note": "qBittorrent torrents/info: two downloading (one stalled), one paused, one errored, two seeding.",
+ "routes": {
+  "GET /api/v2/torrents/info": [
+   { "name": "debian-13.1.0-amd64-DVD-1.iso", "state": "downloading", "progress": 0.42, "dlspeed": 2500000, "upspeed": 120000, "eta": 750, "size": 3900000000 },
+   { "name": "ubuntu-24.04.3-desktop-amd64.iso", "state": "stalledDL", "progress": 0.1, "dlspeed": 0, "upspeed": 0, "eta": 8640000, "size": 6100000000 },
+   { "name": "fedora-43-x86_64.iso", "state": "pausedDL", "progress": 0.75, "dlspeed": 0, "upspeed": 0, "eta": 8640000, "size": 2300000000 },
+   { "name": "archlinux-2026.10.01-x86_64.iso", "state": "error", "progress": 0.05, "dlspeed": 0, "upspeed": 0, "eta": 8640000, "size": 1200000000 },
+   { "name": "big-buck-bunny-1080p.mkv", "state": "uploading", "progress": 1, "dlspeed": 0, "upspeed": 380000, "eta": 8640000, "size": 700000000 },
+   { "name": "sintel-4k.mkv", "state": "stalledUP", "progress": 1, "dlspeed": 0, "upspeed": 0, "eta": 8640000, "size": 4200000000 }
+  ]
+ }
+}
