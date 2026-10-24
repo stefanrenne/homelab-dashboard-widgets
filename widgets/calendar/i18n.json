@@ -1,0 +1,172 @@
+{
+  "en": {
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "today": "Today",
+    "noEvents": "No events",
+    "inCinemas": "In cinemas",
+    "physicalRelease": "Physical release",
+    "digitalRelease": "Digital release",
+    "notAnswered": "Did not answer"
+  },
+  "nl": {
+    "previousMonth": "Vorige maand",
+    "nextMonth": "Volgende maand",
+    "today": "Vandaag",
+    "noEvents": "Geen afspraken",
+    "inCinemas": "In de bioscoop",
+    "physicalRelease": "Fysieke release",
+    "digitalRelease": "Digitale release",
+    "notAnswered": "Gaf geen antwoord"
+  },
+  "fr": {
+    "previousMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "today": "Aujourd’hui",
+    "noEvents": "Aucun événement",
+    "inCinemas": "Au cinéma",
+    "physicalRelease": "Sortie physique",
+    "digitalRelease": "Sortie numérique",
+    "notAnswered": "Sans réponse"
+  },
+  "de": {
+    "previousMonth": "Vorheriger Monat",
+    "nextMonth": "Nächster Monat",
+    "today": "Heute",
+    "noEvents": "Keine Termine",
+    "inCinemas": "Im Kino",
+    "physicalRelease": "Disc-Release",
+    "digitalRelease": "Digital-Release",
+    "notAnswered": "Keine Antwort"
+  },
+  "es": {
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "today": "Hoy",
+    "noEvents": "Sin eventos",
+    "inCinemas": "En cines",
+    "physicalRelease": "Edición física",
+    "digitalRelease": "Estreno digital",
+    "notAnswered": "Sin respuesta"
+  },
+  "ca": {
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes següent",
+    "today": "Avui",
+    "noEvents": "Cap esdeveniment",
+    "inCinemas": "Als cinemes",
+    "physicalRelease": "Edició física",
+    "digitalRelease": "Estrena digital",
+    "notAnswered": "Sense resposta"
+  },
+  "he": {
+    "previousMonth": "החודש הקודם",
+    "nextMonth": "החודש הבא",
+    "today": "היום",
+    "noEvents": "אין אירועים",
+    "inCinemas": "בבתי הקולנוע",
+    "physicalRelease": "הפצה פיזית",
+    "digitalRelease": "הפצה דיגיטלית",
+    "notAnswered": "לא ענו"
+  },
+  "hr": {
+    "previousMonth": "Prethodni mjesec",
+    "nextMonth": "Sljedeći mjesec",
+    "today": "Danas",
+    "noEvents": "Nema događaja",
+    "inCinemas": "U kinima",
+    "physicalRelease": "Fizičko izdanje",
+    "digitalRelease": "Digitalno izdanje",
+    "notAnswered": "Nema odgovora"
+  },
+  "hu": {
+    "previousMonth": "Előző hónap",
+    "nextMonth": "Következő hónap",
+    "today": "Ma",
+    "noEvents": "Nincs esemény",
+    "inCinemas": "Moziban",
+    "physicalRelease": "Lemezes kiadás",
+    "digitalRelease": "Digitális kiadás",
+    "notAnswered": "Nem válaszolt"
+  },
+  "it": {
+    "previousMonth": "Mese precedente",
+    "nextMonth": "Mese successivo",
+    "today": "Oggi",
+    "noEvents": "Nessun evento",
+    "inCinemas": "Al cinema",
+    "physicalRelease": "Uscita fisica",
+    "digitalRelease": "Uscita digitale",
+    "notAnswered": "Nessuna risposta"
+  },
+  "nb-NO": {
+    "previousMonth": "Forrige måned",
+    "nextMonth": "Neste måned",
+    "today": "I dag",
+    "noEvents": "Ingen hendelser",
+    "inCinemas": "På kino",
+    "physicalRelease": "Fysisk utgivelse",
+    "digitalRelease": "Digital utgivelse",
+    "notAnswered": "Svarte ikke"
+  },
+  "pt": {
+    "previousMonth": "Mês anterior",
+    "nextMonth": "Mês seguinte",
+    "today": "Hoje",
+    "noEvents": "Sem eventos",
+    "inCinemas": "Nos cinemas",
+    "physicalRelease": "Edição física",
+    "digitalRelease": "Lançamento digital",
+    "notAnswered": "Sem resposta"
+  },
+  "ru": {
+    "previousMonth": "Предыдущий месяц",
+    "nextMonth": "Следующий месяц",
+    "today": "Сегодня",
+    "noEvents": "Нет событий",
+    "inCinemas": "В кино",
+    "physicalRelease": "Выход на дисках",
+    "digitalRelease": "Цифровой релиз",
+    "notAnswered": "Нет ответа"
+  },
+  "sv": {
+    "previousMonth": "Föregående månad",
+    "nextMonth": "Nästa månad",
+    "today": "Idag",
+    "noEvents": "Inga händelser",
+    "inCinemas": "På bio",
+    "physicalRelease": "Fysisk utgåva",
+    "digitalRelease": "Digital utgåva",
+    "notAnswered": "Svarade inte"
+  },
+  "vi": {
+    "previousMonth": "Tháng trước",
+    "nextMonth": "Tháng sau",
+    "today": "Hôm nay",
+    "noEvents": "Không có sự kiện",
+    "inCinemas": "Ra rạp",
+    "physicalRelease": "Phát hành đĩa",
+    "digitalRelease": "Phát hành số",
+    "notAnswered": "Không phản hồi"
+  },
+  "zh-Hans": {
+    "previousMonth": "上个月",
+    "nextMonth": "下个月",
+    "today": "今天",
+    "noEvents": "没有事件",
+    "inCinemas": "院线上映",
+    "physicalRelease": "实体发行",
+    "digitalRelease": "数字发行",
+    "notAnswered": "未响应"
+  },
+  "zh-Hant": {
+    "previousMonth": "上個月",
+    "nextMonth": "下個月",
+    "today": "今天",
+    "noEvents": "沒有事件",
+    "inCinemas": "院線上映",
+    "physicalRelease": "實體發行",
+    "digitalRelease": "數位發行",
+    "notAnswered": "未回應"
+  }
+}

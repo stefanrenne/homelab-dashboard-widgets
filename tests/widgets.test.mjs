@@ -85,7 +85,7 @@ test('every label, string value and row state has a translation', async () => {
 });
 
 // row texts and client.js messages have the full card width
-const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
+const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'previousMonth', 'nextMonth', 'today', 'noEvents', 'inCinemas', 'physicalRelease', 'digitalRelease', 'notAnswered', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
   'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable']);
 const BLOCK_LABELS = { radarr: ['wanted', 'missing', 'queued', 'movies'], sonarr: ['wanted', 'queued', 'series'] };
 
@@ -1028,4 +1028,72 @@ test('syncthing: devices connected, in sync (marked below 100%), errors (marked)
   assert.deepEqual(values(out), { connected: '2 / 3', synced: '97.4%', errors: 1, storage: '412.3 GB' });
   assert.deepEqual(out.blocks.map((b) => b.status ?? null), [null, 'warn', 'error', null]);
   assert.equal(lastRequest('syncthing').headers['x-api-key'], 'test-key');
+});
+
+test('calendar: events of the month in view from the *arrs and an iCal feed, one integration failing', async () => {
+  const integrations = [
+    { type: 'sonarr', url: `${mock.url}/calendar`, key: 'k', color: 'teal', baseUrl: 'https://sonarr.lan' },
+    { type: 'radarr', url: `${mock.url}/calendar`, key: 'k' },
+    { type: 'lidarr', url: `${mock.url}/calendar`, key: 'k' },
+    { type: 'ical', url: `${mock.url}/calendar/family.ics`, name: 'Family', params: { showName: true } },
+    { type: 'readarr', url: `${mock.url}/nothing`, key: 'k', name: 'Books' },
+  ];
+  const out = await run('calendar', { integrations }, { params: { month: '2026-10' } });
+  const ev = out.data?.calendar ?? out.calendar;
+  assert.equal(ev.month, '2026-10');
+  assert.deepEqual(ev.failed, ['Books']);
+  const req = mock.requests.filter((r) => r.route === 'GET /api/v3/calendar' && r.query.includeSeries).at(-1);
+  assert.deepEqual([req.query.start, req.query.end, req.query.includeSeries], ['2026-09-24T00:00:00.000Z', '2026-11-08T00:00:00.000Z', 'true']);
+  assert.equal(req.headers['x-api-key'], 'k');
+  const brief = ev.events.map((e) => [e.date.slice(0, 16), e.title, e.detail ?? e.detailKey ?? null, e.source]);
+  assert.deepEqual(brief, [
+    ['2026-10-05T15:00', 'Family: Swimming, kids', null, 'Family'],
+    ['2026-10-12T15:00', 'Family: Swimming, kids', null, 'Family'],
+    ['2026-10-19T15:00', 'Family: Swimming, kids', null, 'Family'],
+    ['2026-10-26T00:00', 'Family: Holiday', null, 'Family'],
+    ['2026-10-26T16:00', 'Family: Swimming, kids', null, 'Family'],
+    ['2026-10-28T02:00', 'Silo', 'S02E01', 'sonarr'],
+    ['2026-10-29T00:00', 'Pink Floyd - Animals', null, 'lidarr'],
+    ['2026-10-30T00:00', 'Pilot', 'inCinemas', 'radarr'],
+    ['2026-11-02T16:00', 'Family: Swimming, kids', null, 'Family'],
+  ]);
+  assert.equal(ev.events.find((e) => e.title === 'Silo').url, 'https://sonarr.lan/series/silo');
+  await assert.rejects(run('calendar', { integrations: [{ type: 'ical', url: `${mock.url}/nothing/x.ics`, name: 'X' }] }), /no integration answered \(X\)/);
+});
+
+test('calendar client: a month with dots, the chosen day\'s events, paging asks for the month; an agenda', async () => {
+  const { el, window } = await renderClient('calendar');
+  window.document.documentElement.lang = 'en';
+  el.t = (k) => ({ today: 'Today', noEvents: 'No events', inCinemas: 'In cinemas', notAnswered: 'Did not answer' })[k] ?? k;
+  const events = [
+    { date: '2026-10-05T15:00:00.000Z', title: 'Swimming', color: 'zinc' },
+    { date: '2026-10-05T18:00:00.000Z', title: 'Silo', detail: 'S02E01', color: 'teal', url: 'https://sonarr.lan/series/silo', done: true },
+    { date: '2026-10-30T00:00:00.000Z', allDay: true, title: 'Pilot', detailKey: 'inCinemas', color: 'amber' },
+  ];
+  el.data = { blocks: [], calendar: { view: 'monthly', month: '2026-10', firstDayInWeek: 'monday', maxEvents: 10, timezone: 'UTC', events, failed: ['Books'] } };
+  const root = el.shadowRoot;
+  assert.equal(root.querySelector('.title').textContent.toLowerCase(), 'october 2026');
+  const days = [...root.querySelectorAll('.day')];
+  assert.equal(days.length, 35, 'Monday 28 September to Sunday 1 November');
+  assert.equal(days[0].querySelector('.n').textContent, '28');
+  const fifth = days.find((d) => d.getAttribute('aria-label').startsWith('Monday, October 5'));
+  assert.equal(fifth.querySelectorAll('.dot').length, 2);
+  fifth.click();
+  const items = [...root.querySelectorAll('li')];
+  assert.deepEqual(items.map((li) => li.querySelector('.t').textContent), ['Swimming', 'Silo · S02E01']);
+  assert.equal(items[1].querySelector('a').getAttribute('href'), 'https://sonarr.lan/series/silo');
+  assert.ok(items[1].classList.contains('done'));
+  assert.equal(root.querySelector('.failed').textContent, 'Did not answer: Books');
+  const asked = [];
+  el.addEventListener('hd-widget-params', (e) => asked.push({ ...e.detail }));
+  root.querySelector('[aria-label="nextMonth"]').click();
+  assert.deepEqual(asked, [{ month: '2026-11' }]);
+  assert.equal(root.querySelector('.title').textContent.toLowerCase(), 'november 2026');
+
+  const agenda = await renderClient('calendar');
+  agenda.el.t = (k) => k;
+  const soon = new Date(Date.now() + 2 * 86400_000).toISOString();
+  agenda.el.data = { blocks: [], calendar: { view: 'agenda', maxEvents: 1, timezone: 'UTC', events: [{ date: soon, title: 'Dentist', color: 'rose' }, { date: soon, title: 'Later', color: 'rose' }], failed: [] } };
+  assert.deepEqual([...agenda.el.shadowRoot.querySelectorAll('li .t')].map((n) => n.textContent), ['Dentist'], 'maxEvents');
+  assert.equal(agenda.el.shadowRoot.querySelectorAll('h4').length, 1);
 });

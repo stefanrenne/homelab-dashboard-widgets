@@ -1,0 +1,16 @@
+id: calendar
+name: Calendar
+version: 0.1.0
+apiVersion: 1
+description: A month or an agenda with releases from Sonarr, Radarr, Lidarr and Readarr and events from iCal feeds (homepage's calendar widget).
+refresh: 5m
+params: [month]   # the month the viewer pages to (YYYY-MM)
+options:
+  view: { type: enum, values: [monthly, agenda], default: monthly }
+  firstDayInWeek: { type: enum, values: [monday, sunday], default: monday }
+  maxEvents: { type: number, default: 10 }   # events listed at most
+  showTime: { type: boolean, default: false } # the time of today's events
+  previousDays: { type: number, default: 0 }  # agenda: also the events of this many days ago
+  timezone: { type: string }                  # e.g. Europe/Amsterdam; default the viewer's
+  # [{ type: sonarr|radarr|lidarr|readarr|ical, service_group, service_name | url (+ key), name, color, baseUrl, params }]
+  integrations: { type: list, secret: true }

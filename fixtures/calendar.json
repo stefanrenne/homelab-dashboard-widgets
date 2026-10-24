@@ -1,0 +1,11 @@
+{
+ "_note": "Calendar sources under one mock name: Sonarr and Radarr calendars (Lidarr and Readarr share /api/v1/calendar) and an iCal feed.",
+ "routes": {
+  "GET /api/v3/calendar": [
+   { "title": "Pilot", "seasonNumber": 2, "episodeNumber": 1, "airDateUtc": "2026-10-28T02:00:00Z", "hasFile": false, "series": { "title": "Silo", "titleSlug": "silo" },
+     "inCinemas": "2026-10-30T00:00:00Z", "digitalRelease": "2026-12-12T00:00:00Z", "titleSlug": "silo-movie" }
+  ],
+  "GET /api/v1/calendar": [{ "title": "Animals", "releaseDate": "2026-10-29T00:00:00Z", "artist": { "artistName": "Pink Floyd" }, "author": { "authorName": "Frank Herbert" }, "statistics": { "percentOfTracks": 100, "bookFileCount": 1 } }],
+  "GET /family.ics": { "_headers": { "content-type": "text/calendar" }, "_text": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nUID:a1\r\nSUMMARY:Swimming\\, kids\r\nDTSTART;TZID=Europe/Amsterdam:20261005T170000\r\nDTEND;TZID=Europe/Amsterdam:20261005T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=MO\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:a2\r\nSUMMARY:Holiday\r\nDTSTART;VALUE=DATE:20261026\r\nDTEND;VALUE=DATE:20261027\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:a3\r\nSUMMARY:Cancelled\r\nSTATUS:CANCELLED\r\nDTSTART:20261027T100000Z\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n" }
+ }
+}

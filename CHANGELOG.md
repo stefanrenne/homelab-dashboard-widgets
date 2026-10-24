@@ -39,6 +39,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 - `tailscale`, `authentik`, `audiobookshelf` and `navidrome`, as homepage's widgets.
 - `frigate`, `scrutiny` and `watchtower`, as homepage's widgets; the mock can answer plain text.
 - `syncthing`: devices connected, how far in sync, errors and the shared data, as homepage's syncthing widget.
+- `calendar`: a month or an agenda with releases from Sonarr, Radarr, Lidarr and Readarr and events from iCal feeds, integrations by `service_group`/`service_name` as in homepage (needs the dashboard's service references).
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

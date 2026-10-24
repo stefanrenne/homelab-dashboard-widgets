@@ -38,6 +38,7 @@ Every widget has its own page with setup, fields and options on the
 | `scrutiny` | disks passed, failed, unknown | `url` |
 | `watchtower` | containers scanned, updated, failed | `url`, `key` |
 | `syncthing` | devices connected, synced, errors, storage | `url`, `key` |
+| `calendar` | a month or an agenda with Sonarr, Radarr, Lidarr, Readarr and iCal events | `view`, `firstDayInWeek`, `maxEvents`, `showTime`, `previousDays`, `timezone`, `integrations` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
