@@ -1,0 +1,11 @@
+{
+ "_note": "Deluge Web UI web.update_ui (logged in): two downloading, one errored, one seeding.",
+ "routes": {
+  "POST /json": { "id": 1, "error": null, "result": { "connected": true, "torrents": {
+   "a1": { "queue": 0, "name": "debian-13.1.0-amd64-DVD-1.iso", "state": "Downloading", "progress": 42.0, "download_payload_rate": 2500000, "upload_payload_rate": 100000, "total_remaining": 2262000000, "eta": 750, "total_wanted": 3900000000 },
+   "b2": { "queue": 1, "name": "fedora-43-x86_64.iso", "state": "Downloading", "progress": 75.5, "download_payload_rate": 500000, "upload_payload_rate": 0, "total_remaining": 563000000, "eta": 3725, "total_wanted": 2300000000 },
+   "c3": { "queue": 2, "name": "archlinux-2026.10.01-x86_64.iso", "state": "Error", "progress": 5.0, "download_payload_rate": 0, "upload_payload_rate": 0, "total_remaining": 1140000000, "eta": 0, "total_wanted": 1200000000 },
+   "d4": { "queue": -1, "name": "sintel-4k.mkv", "state": "Seeding", "progress": 100.0, "download_payload_rate": 0, "upload_payload_rate": 400000, "total_remaining": 0, "eta": 0, "total_wanted": 4200000000 }
+  }, "stats": {} } }
+ }
+}

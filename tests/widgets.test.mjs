@@ -638,3 +638,41 @@ test('transmission: leech, seed and rates over RPC, with the session id after a 
     srv.close();
   }
 });
+
+test('deluge: leech, seed and rates over JSON-RPC, downloads per row, a login when Deluge asks', async () => {
+  const out = await run('deluge', { password: 'pw', enableLeechProgress: true });
+  assert.deepEqual(values(out), { leech: 3, download: '3 MB/s', seed: 1, upload: '500 kB/s' });
+  assert.deepEqual(out.rows.map((r) => [r.label, r.value, r.progress, r.status ?? null]), [
+    ['archlinux-2026.10.01-x86_64.iso', 'error', 5, 'error'],
+    ['fedora-43-x86_64.iso', '1:02:05', 75.5, null],
+    ['debian-13.1.0-amd64-DVD-1.iso', '12:30', 42, null],
+  ]);
+  const http = await import('node:http');
+  const seen = [];
+  const srv = http.createServer((q, res) => {
+    let body = '';
+    q.on('data', (c) => (body += c));
+    q.on('end', () => {
+      const { method, params } = JSON.parse(body);
+      seen.push(`${method} ${q.headers.cookie ?? '-'}`);
+      if (method === 'auth.login') {
+        if (params[0] === 'pw') res.setHeader('set-cookie', '_session_id=xyz; Path=/json');
+        return res.end(JSON.stringify({ id: 1, error: null, result: params[0] === 'pw' }));
+      }
+      if (q.headers.cookie !== '_session_id=xyz') return res.end(JSON.stringify({ id: 1, result: null, error: { message: 'Not authenticated', code: 1 } }));
+      res.end(JSON.stringify({ id: 1, error: null, result: { torrents: {} } }));
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const { default: deluge } = await import(path.join(WIDGETS, 'deluge', 'server.js'));
+  const ctx = (password) => ({ options: { url: `http://127.0.0.1:${srv.address().port}`, password }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) });
+  try {
+    const c = ctx('pw');
+    await deluge.fetch(c);
+    await deluge.fetch(c);
+    assert.deepEqual(seen, ['web.update_ui -', 'auth.login -', 'web.update_ui _session_id=xyz', 'web.update_ui _session_id=xyz']);
+    await assert.rejects(deluge.fetch(ctx('wrong')), /Deluge login answered 401/);
+  } finally {
+    srv.close();
+  }
+});
