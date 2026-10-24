@@ -34,7 +34,7 @@ What the widgets have in common:
 ```yaml
 # settings.yaml of the dashboard
 plugins:
-  - source: git+https://github.com/stefanrenne/homelab-dashboard-widgets#v0.2.0
+  - source: git+https://github.com/stefanrenne/homelab-dashboard-widgets#latest   # or a tag: #v0.2.0
     only: [radarr, sonarr]        # optional: just these
   # while developing:
   - path: ~/git/homelab-dashboard-widgets
