@@ -1,0 +1,67 @@
+{
+  "en": {
+    "uptime": "Uptime",
+    "wan": "WAN",
+    "lan": "LAN",
+    "wlan": "WLAN",
+    "lan_users": "LAN users",
+    "lan_devices": "LAN devices",
+    "wlan_users": "WLAN users",
+    "wlan_devices": "WLAN devices",
+    "up": "Up",
+    "down": "Down",
+    "unknown": "Unknown"
+  },
+  "nl": {
+    "uptime": "Uptime",
+    "wan": "WAN",
+    "lan": "LAN",
+    "wlan": "WLAN",
+    "lan_users": "LAN-gebruikers",
+    "lan_devices": "LAN-apparaten",
+    "wlan_users": "WLAN-gebruikers",
+    "wlan_devices": "WLAN-apparaten",
+    "up": "Actief",
+    "down": "Offline",
+    "unknown": "Onbekend"
+  },
+  "fr": {
+    "uptime": "Temps actif",
+    "wan": "WAN",
+    "lan": "LAN",
+    "wlan": "WLAN",
+    "lan_users": "Clients LAN",
+    "lan_devices": "Appareils LAN",
+    "wlan_users": "Clients WLAN",
+    "wlan_devices": "Appareils WLAN",
+    "up": "Actif",
+    "down": "Hors ligne",
+    "unknown": "Inconnu"
+  },
+  "de": {
+    "uptime": "Laufzeit",
+    "wan": "WAN",
+    "lan": "LAN",
+    "wlan": "WLAN",
+    "lan_users": "LAN-Nutzer",
+    "lan_devices": "LAN-Geräte",
+    "wlan_users": "WLAN-Nutzer",
+    "wlan_devices": "WLAN-Geräte",
+    "up": "Aktiv",
+    "down": "Ausgefallen",
+    "unknown": "Unbekannt"
+  },
+  "es": {
+    "uptime": "Tiempo activo",
+    "wan": "WAN",
+    "lan": "LAN",
+    "wlan": "WLAN",
+    "lan_users": "Clientes LAN",
+    "lan_devices": "Equipos LAN",
+    "wlan_users": "Clientes WLAN",
+    "wlan_devices": "Equipos WLAN",
+    "up": "Activa",
+    "down": "Caída",
+    "unknown": "Desconocido"
+  }
+}

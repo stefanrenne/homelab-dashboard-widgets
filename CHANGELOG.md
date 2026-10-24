@@ -9,6 +9,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
   homepage's glances info widget.
 - `longhorn`: storage used in total and per node from the Longhorn API, with `provider: longhorn`,
   as homepage's longhorn info widget.
+- `unifi` (also `unifi_console`): uptime, WAN status and LAN/WLAN users and devices from a UniFi
+  Network controller, with an API key or a local account (UniFi OS or classic), as in homepage.
 
 ## [0.2.1] - 2026-10-24
 

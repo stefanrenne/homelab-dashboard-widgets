@@ -1,0 +1,60 @@
+{
+ "_note": "UniFi OS with an API key: sites Default and Office; Office's LAN is down.",
+ "routes": {
+  "GET /proxy/network/api/self/sites": {
+   "data": [
+    {
+     "name": "default",
+     "desc": "Default"
+    },
+    {
+     "name": "ab12cd34",
+     "desc": "Office"
+    }
+   ]
+  },
+  "GET /proxy/network/api/s/default/stat/health": {
+   "data": [
+    {
+     "subsystem": "wlan",
+     "status": "ok",
+     "num_user": 18,
+     "num_guest": 2,
+     "num_adopted": 3
+    },
+    {
+     "subsystem": "wan",
+     "status": "ok",
+     "num_gw": 1,
+     "gw_system-stats": {
+      "cpu": "4.2",
+      "mem": "38.1",
+      "uptime": "1123200"
+     }
+    },
+    {
+     "subsystem": "www",
+     "status": "ok",
+     "uptime": 1100000
+    },
+    {
+     "subsystem": "lan",
+     "status": "ok",
+     "num_user": 25,
+     "num_guest": 0,
+     "num_adopted": 4
+    }
+   ]
+  },
+  "GET /proxy/network/api/s/ab12cd34/stat/health": {
+   "data": [
+    {
+     "subsystem": "lan",
+     "status": "error",
+     "num_user": 0,
+     "num_adopted": 1
+    }
+   ]
+  }
+ }
+}

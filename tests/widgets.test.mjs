@@ -33,7 +33,7 @@ const values = (out) => Object.fromEntries(out.blocks.map((b) => [b.key, b.unit 
 const lastRequest = (id) => mock.requests.filter((r) => r.widget === id).at(-1);
 
 test('every folder is a valid package: manifest, i18n in all languages, only node: imports', () => {
-  assert.equal(IDS.length, 14);
+  assert.equal(IDS.length, 15);
   for (const id of IDS) {
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     assert.equal(m.id, id);
@@ -255,7 +255,7 @@ test('every widget has a README for its docs page: title, every field, an exampl
     const readme = fs.readFileSync(path.join(WIDGETS, id, 'README.md'), 'utf8');
     assert.equal(readme.split('\n')[0], `# ${m.name}`, `${id}: the title is the manifest name`);
     assert.match(readme.split(/^## Example$/m)[1] ?? '', new RegExp(`type: ${id}\\b`), `${id}: an example that uses it`);
-    const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9]+)`/g)].map((x) => x[1]));
+    const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9_]+)`/g)].map((x) => x[1]));
     const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
     for (const b of out.blocks ?? []) assert.ok(fields.has(b.key ?? b.label), `${id}: field ${b.key ?? b.label} missing from README`);
   }
@@ -286,4 +286,65 @@ test('longhorn: total and per node over their disks, include, numbered labels an
   assert.equal(lastRequest('longhorn').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
   const some = await run('longhorn', { include: ['node-c'], total: false, labels: false });
   assert.deepEqual(some.blocks, [{ key: 'node1', label: 'nodeNumber', vars: { n: 1 }, value: 25, unit: '%' }]);
+});
+
+
+test('unifi: health with an API key, a site by its description, a subsystem that is down', async () => {
+  const out = await run('unifi', { key: 'k3y' });
+  assert.deepEqual(values(out), {
+    uptime: '13d 0h', wan: 'up', lan: 'up', lan_users: 25, lan_devices: 4, wlan: 'up', wlan_users: 20, wlan_devices: 3,
+  });
+  assert.equal(lastRequest('unifi').headers['x-api-key'], 'k3y');
+  const office = await run('unifi', { key: 'k3y', site: 'Office' });
+  assert.deepEqual(office.blocks.map((b) => [b.key, b.value, b.status ?? null]), [
+    ['uptime', null, null], ['lan', 'down', 'error'], ['lan_users', 0, null], ['lan_devices', 1, null],
+  ]);
+  await assert.rejects(run('unifi', { key: 'k3y', site: 'Nowhere' }), /UniFi has no site "Nowhere"/);
+  await assert.rejects(run('unifi', { key: '' }), /UniFi needs key, or username and password/);
+});
+
+test('unifi: login on UniFi OS (cookie and CSRF token) or a classic controller, again after a 401', async () => {
+  const { default: unifi } = await import(path.join(WIDGETS, 'unifi', 'server.js'));
+  const http = await import('node:http');
+  const seen = [];
+  let classic = false;
+  let expire = false;
+  const srv = http.createServer((req, res) => {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', () => {
+      seen.push(`${req.method} ${req.url} ${req.headers.cookie ?? ''} ${req.headers['x-csrf-token'] ?? ''}`.trim());
+      res.setHeader('content-type', 'application/json');
+      if (req.url === '/api/auth/login' && !classic) {
+        assert.deepEqual(JSON.parse(body), { username: 'ro', password: 'pw' });
+        res.setHeader('set-cookie', ['TOKEN=t1; Path=/; HttpOnly']);
+        res.setHeader('x-csrf-token', 'c1');
+        return res.end('{}');
+      }
+      if (req.url === '/api/auth/login') { res.statusCode = 404; return res.end('{}'); }
+      if (req.url === '/api/login') { res.setHeader('set-cookie', ['unifises=s1; Path=/', 'csrf_token=x; Path=/']); return res.end('{}'); }
+      const ok = classic ? req.url === '/api/s/default/stat/health' && req.headers.cookie === 'unifises=s1; csrf_token=x'
+        : req.url === '/proxy/network/api/s/default/stat/health' && req.headers.cookie === 'TOKEN=t1' && req.headers['x-csrf-token'] === 'c1';
+      if (!ok || expire) { expire = false; res.statusCode = 401; return res.end('{}'); }
+      res.end(JSON.stringify({ data: [{ subsystem: 'wan', status: 'ok', 'gw_system-stats': { uptime: '7200' } }] }));
+    });
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const url = `http://127.0.0.1:${srv.address().port}`;
+  const ctx = { options: { url, username: 'ro', password: 'pw' }, cache: new Map(), log: silent, signal: new AbortController().signal, fetch: (u, i) => fetch(u, i) };
+  try {
+    assert.deepEqual(values(await unifi.fetch(ctx)), { uptime: '2h 0m', wan: 'up' });
+    await unifi.fetch(ctx);
+    assert.equal(seen.filter((r) => r.startsWith('POST')).length, 1, 'the session is kept');
+    expire = true;
+    assert.deepEqual(values(await unifi.fetch(ctx)), { uptime: '2h 0m', wan: 'up' });
+    assert.equal(seen.filter((r) => r.startsWith('POST')).length, 2, 'logged in again after a 401');
+
+    classic = true;
+    const old = { ...ctx, cache: new Map() };
+    assert.deepEqual(values(await unifi.fetch(old)), { uptime: '2h 0m', wan: 'up' });
+    assert.ok(seen.includes('POST /api/login'));
+  } finally {
+    srv.close();
+  }
 });

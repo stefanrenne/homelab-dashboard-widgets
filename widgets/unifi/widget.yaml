@@ -1,0 +1,15 @@
+id: unifi
+name: UniFi Controller
+version: 0.1.0
+apiVersion: 1
+aliases: [unifi_console]   # homepage's name for the header widget (dashboard 0.5 and later)
+description: Uptime, WAN status and LAN and WLAN users and devices from a UniFi Network controller (homepage's unifi widget).
+refresh: 30s
+defaultFields: [uptime, wan, lan_users, wlan_users]
+options:
+  url: { type: url, required: true }          # e.g. https://unifi.lan (UniFi OS) or https://unifi.lan:8443
+  site: { type: string }                      # the site's name or description; default: the default site
+  key: { type: string, secret: true }         # an API key (UniFi OS: Settings > Control Plane > Integrations), or:
+  username: { type: string }                  # a local account with read access
+  password: { type: string, secret: true }
+  insecure: { type: boolean, default: false } # true: accept the controller's self-signed certificate
