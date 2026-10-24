@@ -8,7 +8,7 @@ one widget package following the dashboard's widget API 1
 
 | Path | What |
 |---|---|
-| `widgets/<id>/` | `widget.yaml`, `server.js`, `i18n.json`, `README.md` (its docs page, rule 13). Folder name = widget id. |
+| `widgets/<id>/` | `widget.yaml`, `server.js`, `i18n.json`, `README.md` (its docs page, rule 13), optionally `client.js` (its own look). Folder name = widget id. |
 | `fixtures/<id>.json` | API answers per route (`"GET /api/v3/movie": ...`), used by tests and the mock. |
 | `scripts/mock-homelab.mjs` | Serves the fixtures at `/<id>/...`; the tests start it, `npm run mock` too. |
 | `tests/widgets.test.mjs` | Every widget through the public `ctx` against the mock, plus package checks. |
@@ -42,7 +42,8 @@ one widget package following the dashboard's widget API 1
     3. `Learn more about [<service>](<url>).`
     4. `## Fields`: every block `key` the widget can return, in backticks. A test runs the widget
        on its fixture and fails when a returned key is missing.
-    5. `## Example`: a complete `services.yaml` entry with `type: <id>`, the key through
+    5. `## Example`: a complete `services.yaml` entry with `type: <id>` (or a `widgets.yaml` entry
+       `- <id>:` for a header widget), the key through
        `{{HD_VAR_...}}`, made-up hosts (`*.lan`).
     The options table comes from widget.yaml: give an option a line comment (`# e.g.
     http://radarr:7878`, `# Settings > Management Access > API Keys`) when its name does not

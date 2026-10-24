@@ -24,6 +24,9 @@ Every widget has its own page with setup, fields and options on the
 | `unifi` | uptime, WAN, LAN and WLAN users and devices (also as `unifi_console`) | `url`, `key` or `username`/`password`, `site`, `insecure` |
 | `longhorn` | storage used, in total and per node | `url`, `username`, `password` (or `provider: longhorn`), `include`, `expanded` |
 | `glances` | cpu, memory, CPU temperature, uptime, disks | `url`, `username`, `password`, `version`, `cputemp`, `uptime`, `disk`, `expanded` |
+| `openmeteo` | the current weather, no account needed (a header widget) | `latitude`, `longitude` (else the viewer's location), `label`, `units`, `timezone`, `cache` |
+| `openweathermap` | the current weather (a header widget) | `apiKey` (or `provider: openweathermap`), `latitude`, `longitude`, `label`, `units`, `cache` |
+| `stocks` | price and day change of up to eight symbols, from Finnhub (a header widget) | `watchlist`, `apiKey` (or `provider: finnhub`), `color`, `cache` |
 | `unraid` | memory %, cpu, array %, pool1 %; more via `fields` (homepage field names) | `url`, `key`, `pool1`–`pool4` |
 
 Pick blocks with the dashboard's `fields`, e.g. `fields: [cpu, memoryPercent, pool1UsedPercent]`.

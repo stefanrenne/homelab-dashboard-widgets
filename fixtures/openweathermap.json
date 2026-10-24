@@ -1,0 +1,6 @@
+{
+ "_note": "OpenWeatherMap's current weather (data/2.5/weather): broken clouds at night.",
+ "routes": {
+  "GET /data/2.5/weather": { "main": { "temp": 12.6 }, "weather": [{ "id": 803, "icon": "04n" }] }
+ }
+}

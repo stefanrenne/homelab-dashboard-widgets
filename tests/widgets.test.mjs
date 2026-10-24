@@ -16,12 +16,20 @@ after(() => mock.close());
 
 const silent = { info() {}, warn() {}, error() {} };
 
-async function run(id, options = {}) {
+// Options a widget cannot do without, for the tests that run every widget.
+const REQUIRED = {
+  openmeteo: { latitude: 52.37, longitude: 4.89, units: 'metric', cache: 5 },
+  openweathermap: { latitude: 52.37, longitude: 4.89, apiKey: 'test-key', units: 'metric', cache: 5 },
+  stocks: { watchlist: ['AAPL'], apiKey: 'test-key', color: true, cache: 1 },
+};
+
+async function run(id, options = {}, { params } = {}) {
   const { default: widget } = await import(path.join(WIDGETS, id, 'server.js'));
   return widget.fetch({
     apiVersion: 1,
     instanceId: 't',
-    options: { url: `${mock.url}/${id}`, key: 'test-key', ...options },
+    params: params ?? {},
+    options: { url: `${mock.url}/${id}`, key: 'test-key', ...REQUIRED[id], ...options },
     signal: new AbortController().signal,
     cache: new Map(),
     log: silent,
@@ -33,7 +41,7 @@ const values = (out) => Object.fromEntries(out.blocks.map((b) => [b.key, b.unit 
 const lastRequest = (id) => mock.requests.filter((r) => r.widget === id).at(-1);
 
 test('every folder is a valid package: manifest, i18n in all languages, only node: imports', () => {
-  assert.equal(IDS.length, 15);
+  assert.equal(IDS.length, 18);
   for (const id of IDS) {
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     assert.equal(m.id, id);
@@ -65,7 +73,8 @@ test('every label, string value and row state has a translation', async () => {
   }
 });
 
-const ROW_TEXTS = new Set(['moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
+// row texts and client.js messages have the full card width
+const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
   'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable']);
 const BLOCK_LABELS = { radarr: ['wanted', 'missing', 'queued', 'movies'], sonarr: ['wanted', 'queued', 'series'] };
 
@@ -254,7 +263,8 @@ test('every widget has a README for its docs page: title, every field, an exampl
     const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
     const readme = fs.readFileSync(path.join(WIDGETS, id, 'README.md'), 'utf8');
     assert.equal(readme.split('\n')[0], `# ${m.name}`, `${id}: the title is the manifest name`);
-    assert.match(readme.split(/^## Example$/m)[1] ?? '', new RegExp(`type: ${id}\\b`), `${id}: an example that uses it`);
+    // a service widget (type: <id>) or a header widget in widgets.yaml (- <id>:)
+    assert.match(readme.split(/^## Example$/m)[1] ?? '', new RegExp(`type: ${id}\\b|^- ${id}:`, 'm'), `${id}: an example that uses it`);
     const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9_]+)`/g)].map((x) => x[1]));
     const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
     for (const b of out.blocks ?? []) assert.ok(fields.has(b.key ?? b.label), `${id}: field ${b.key ?? b.label} missing from README`);
@@ -347,4 +357,126 @@ test('unifi: login on UniFi OS (cookie and CSRF token) or a classic controller, 
   } finally {
     srv.close();
   }
+});
+
+
+/** A widget's client.js in jsdom, as the dashboard mounts it. */
+async function renderClient(id, options = {}) {
+  const { JSDOM } = await import('jsdom');
+  const dom = new JSDOM('<!doctype html><html lang="en"><body></body></html>', { runScripts: 'outside-only', url: 'http://localhost/' });
+  dom.window.eval(fs.readFileSync(path.join(WIDGETS, id, 'client.js'), 'utf8'));
+  const el = dom.window.document.createElement(`hd-${id}`);
+  Object.assign(el, { options, t: (k) => k });
+  dom.window.document.body.append(el);
+  return { el, window: dom.window };
+}
+
+test('openmeteo: the current weather, units, the cache in minutes, and errors', async () => {
+  const { condition } = await import(path.join(WIDGETS, 'openmeteo', 'server.js'));
+  const cache = new Map();
+  const out = await run('openmeteo', { label: 'Amsterdam' });
+  assert.deepEqual(out.blocks, [{ key: 'temperature', label: 'temperature', value: 10.3, unit: '°C' }, { key: 'condition', label: 'condition', value: 'drizzle' }]);
+  assert.deepEqual(out.weather, { temperature: 10.3, unit: '°C', condition: 'drizzle', day: false, label: 'Amsterdam', format: null });
+  assert.deepEqual([lastRequest('openmeteo').query.latitude, lastRequest('openmeteo').query.timezone, lastRequest('openmeteo').query.temperature_unit], ['52.37', 'auto', undefined]);
+  await run('openmeteo', { units: 'imperial', timezone: 'Europe/Amsterdam' });
+  assert.deepEqual([lastRequest('openmeteo').query.temperature_unit, lastRequest('openmeteo').query.timezone], ['fahrenheit', 'Europe/Amsterdam']);
+  const { default: widget } = await import(path.join(WIDGETS, 'openmeteo', 'server.js'));
+  const ctx = { options: { url: `${mock.url}/openmeteo`, ...REQUIRED.openmeteo }, params: {}, cache, log: silent, fetch: (u, i) => fetch(u, i) };
+  const before = mock.requests.length;
+  await widget.fetch(ctx);
+  await widget.fetch(ctx);
+  assert.equal(mock.requests.length - before, 1, 'within cache minutes no new call');
+  await assert.rejects(run('openmeteo', { url: `${mock.url}/nothing` }), /Open-Meteo answered 404/);
+  assert.deepEqual([0, 2, 3, 45, 51, 63, 81, 73, 95, 7].map(condition),
+    ['clear', 'partlyCloudy', 'cloudy', 'fog', 'drizzle', 'rain', 'showers', 'snow', 'thunderstorm', 'unknown']);
+});
+
+test('openmeteo client: an icon, the temperature in the page language, label and condition', async () => {
+  const { el, window } = await renderClient('openmeteo');
+  window.document.documentElement.lang = 'nl';
+  el.t = (k) => ({ drizzle: 'Motregen' })[k] ?? k;
+  el.data = { weather: { temperature: 10.35, unit: '°C', condition: 'drizzle', day: false, label: 'Amsterdam', format: null } };
+  const root = el.shadowRoot;
+  assert.equal(root.querySelector('.temp').textContent, '10,4°C');
+  assert.equal(root.querySelector('.cond').textContent, 'Amsterdam · Motregen');
+  assert.ok(root.querySelector('svg'));
+  assert.equal(root.querySelector('.w').getAttribute('aria-label'), 'Amsterdam, 10,4°C, Motregen');
+});
+
+test('weather widgets: no coordinates ask for the viewer\'s location, then use it', async () => {
+  for (const id of ['openmeteo', 'openweathermap']) {
+    assert.deepEqual(await run(id, { latitude: undefined, longitude: undefined }), { blocks: [], weather: null, needsLocation: true });
+    const out = await run(id, { latitude: undefined, longitude: undefined }, { params: { latitude: '51.44', longitude: '5.47' } });
+    assert.equal(typeof out.weather.temperature, 'number');
+    const q = lastRequest(id).query;
+    assert.deepEqual([q.latitude ?? q.lat, q.longitude ?? q.lon], ['51.44', '5.47']);
+  }
+  const secure = await renderClient('openmeteo');
+  Object.defineProperty(secure.window, 'isSecureContext', { value: true });
+  Object.defineProperty(secure.window.navigator, 'geolocation', { value: { getCurrentPosition: (ok) => ok({ coords: { latitude: 52.3676, longitude: 4.9041 } }) } });
+  const events = [];
+  secure.el.addEventListener('hd-widget-params', (e) => events.push(e.detail));
+  secure.el.data = { blocks: [], weather: null, needsLocation: true };
+  assert.deepEqual({ ...events[0] }, { latitude: '52.37', longitude: '4.90' }, 'rounded to two decimals'); // detail comes from the page's realm
+  const plain = await renderClient('openweathermap');
+  plain.el.t = (k) => ({ noLocation: 'Set latitude and longitude' })[k] ?? k;
+  plain.el.data = { blocks: [], weather: null, needsLocation: true };
+  assert.equal(plain.el.shadowRoot.querySelector('.cond').textContent, 'Set latitude and longitude', 'no HTTPS: an explanation');
+});
+
+test('openweathermap: the current weather with the key on the server, night icons and errors', async () => {
+  const { condition } = await import(path.join(WIDGETS, 'openweathermap', 'server.js'));
+  const out = await run('openweathermap', { apiKey: 'k3y', units: 'imperial', label: 'Amsterdam' });
+  assert.deepEqual(out.weather, { temperature: 12.6, unit: '°F', condition: 'cloudy', day: false, label: 'Amsterdam', format: null });
+  const q = lastRequest('openweathermap').query;
+  assert.deepEqual([q.lat, q.lon, q.units, q.appid], ['52.37', '4.89', 'imperial', 'k3y']);
+  await assert.rejects(run('openweathermap', { url: `${mock.url}/nothing` }), (err) => /OpenWeatherMap answered 404/.test(err.message) && !err.message.includes('test-key'));
+  assert.deepEqual([211, 301, 501, 521, 601, 741, 800, 802, 804, 900].map(condition),
+    ['thunderstorm', 'drizzle', 'rain', 'showers', 'snow', 'fog', 'clear', 'partlyCloudy', 'cloudy', 'unknown']);
+});
+
+test('stocks: Finnhub quotes for up to eight symbols, unknown ones, the cache and errors', async () => {
+  const http = await import('node:http');
+  const asked = [];
+  let status = 200;
+  const srv = http.createServer((req, res) => {
+    const q = new URL(req.url, 'http://x').searchParams;
+    asked.push([q.get('symbol'), q.get('token')]);
+    res.statusCode = status;
+    res.end(JSON.stringify({ AAPL: { c: 231.5, dp: 1.234 }, MSFT: { c: 410, dp: -0.5 }, NOPE: { c: 0, dp: null } }[q.get('symbol')] ?? { c: 10, dp: 0 }));
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const url = `http://127.0.0.1:${srv.address().port}`;
+  const { default: stocks } = await import(path.join(WIDGETS, 'stocks', 'server.js'));
+  const ctxFor = (options) => ({ options: { url, color: true, cache: 1, ...options }, params: {}, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) });
+  try {
+    const ctx = ctxFor({ watchlist: ['aapl', 'MSFT', 'nope', 'A', 'B', 'C', 'D', 'E', 'F'], apiKey: 'k3y' });
+    const out = await stocks.fetch(ctx);
+    assert.equal(asked.length, 8, 'at most eight symbols');
+    assert.deepEqual(asked[0], ['AAPL', 'k3y']);
+    assert.deepEqual(out.quotes.slice(0, 3), [
+      { symbol: 'AAPL', price: 231.5, change: 1.23 }, { symbol: 'MSFT', price: 410, change: -0.5 }, { symbol: 'NOPE', price: null, change: null },
+    ]);
+    assert.deepEqual(out.blocks[0], { key: 'AAPL', label: 'symbol', vars: { symbol: 'AAPL' }, value: 231.5 });
+    await stocks.fetch(ctx);
+    assert.equal(asked.length, 8, 'cached');
+    status = 403;
+    await assert.rejects(stocks.fetch(ctxFor({ watchlist: ['AAPL'], apiKey: 'bad' })), /Finnhub answered 403/);
+  } finally {
+    srv.close();
+  }
+  assert.deepEqual(values(await run('stocks')), { AAPL: 231.5 }, 'the fixture through the mock');
+});
+
+test('stocks client: price, arrow and change; colour can be turned off', async () => {
+  const { el } = await renderClient('stocks');
+  el.t = (k) => ({ up: 'up', down: 'down', unknownSymbol: 'Unknown symbol' })[k] ?? k;
+  el.data = { color: true, quotes: [{ symbol: 'AAPL', price: 231.5, change: 1.23 }, { symbol: 'MSFT', price: 410, change: -0.5 }, { symbol: 'NOPE', price: null, change: null }] };
+  const items = [...el.shadowRoot.querySelectorAll('li')];
+  assert.deepEqual(items.map((li) => li.textContent), ['AAPL231.50 ▲+1.23%', 'MSFT410.00 ▼-0.50%', 'NOPEUnknown symbol']);
+  assert.equal(items[0].getAttribute('aria-label'), 'AAPL: 231.50, up 1.23%');
+  assert.ok(items[1].querySelector('.chg').classList.contains('down'));
+  assert.equal(el.shadowRoot.querySelector('ul').className, 'color');
+  el.data = { color: false, quotes: [] };
+  assert.equal(el.shadowRoot.querySelector('ul').className, '');
 });

@@ -1,0 +1,6 @@
+{
+ "_note": "Open-Meteo's forecast API with current=temperature_2m,weather_code,is_day: drizzle at night.",
+ "routes": {
+  "GET /v1/forecast": { "current": { "temperature_2m": 10.3, "weather_code": 53, "is_day": 0 } }
+ }
+}

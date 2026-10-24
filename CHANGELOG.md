@@ -11,6 +11,11 @@ Changes to the widget collection. Each widget also has its own `version` in its 
   as homepage's longhorn info widget.
 - `unifi` (also `unifi_console`): uptime, WAN status and LAN/WLAN users and devices from a UniFi
   Network controller, with an API key or a local account (UniFi OS or classic), as in homepage.
+- `openmeteo`, `openweathermap` and `stocks` (Finnhub), moved here from the dashboard's built-in
+  widgets: they talk to an outside service. Same options, plus `url` (another API server, e.g.
+  your own Open-Meteo). A stock's block label is its symbol through `vars`. The dashboard keeps
+  its built-in copies until its next release, and those win over these meanwhile.
+- The first widgets with a `client.js` (their own look in the browser); tests render them in jsdom.
 
 ## [0.2.1] - 2026-10-24
 

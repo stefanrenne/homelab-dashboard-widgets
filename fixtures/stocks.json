@@ -1,0 +1,6 @@
+{
+ "_note": "Finnhub's quote API: the same quote for every symbol (the tests vary it with their own server).",
+ "routes": {
+  "GET /api/v1/quote": { "c": 231.5, "d": 2.82, "dp": 1.234, "h": 232, "l": 228.1, "o": 229, "pc": 228.68 }
+ }
+}
