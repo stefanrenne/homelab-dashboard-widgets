@@ -17,6 +17,7 @@ Changes to the widget collection. Each widget also has its own `version` in its 
   its built-in copies until its next release, and those win over these meanwhile.
 - `pihole`: queries, blocked (also as a share) and the blocklist size, Pi-hole 5 and 6 (with a session from the password), as homepage's pihole widget.
 - `adguard`: queries, blocked, filtered and processing time of AdGuard Home, as homepage's adguard widget.
+- `plex`: active streams and the movie, TV and album counts of a Plex Media Server, as homepage's plex widget.
 - Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
   Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
   (simplified and traditional), within the label length rules.

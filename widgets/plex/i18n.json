@@ -1,0 +1,104 @@
+{
+  "en": {
+    "streams": "Streams",
+    "albums": "Albums",
+    "movies": "Movies",
+    "tv": "TV shows"
+  },
+  "nl": {
+    "streams": "Streams",
+    "albums": "Albums",
+    "movies": "Films",
+    "tv": "Series"
+  },
+  "fr": {
+    "streams": "Flux",
+    "albums": "Albums",
+    "movies": "Films",
+    "tv": "Séries"
+  },
+  "de": {
+    "streams": "Streams",
+    "albums": "Alben",
+    "movies": "Filme",
+    "tv": "Serien"
+  },
+  "es": {
+    "streams": "Streams",
+    "albums": "Álbumes",
+    "movies": "Películas",
+    "tv": "Series"
+  },
+  "ca": {
+    "streams": "Fluxos",
+    "albums": "Àlbums",
+    "movies": "Pel·lícules",
+    "tv": "Sèries"
+  },
+  "he": {
+    "streams": "הזרמות",
+    "albums": "אלבומים",
+    "movies": "סרטים",
+    "tv": "סדרות"
+  },
+  "hr": {
+    "streams": "Streamovi",
+    "albums": "Albumi",
+    "movies": "Filmovi",
+    "tv": "Serije"
+  },
+  "hu": {
+    "streams": "Streamek",
+    "albums": "Albumok",
+    "movies": "Filmek",
+    "tv": "Sorozatok"
+  },
+  "it": {
+    "streams": "Stream",
+    "albums": "Album",
+    "movies": "Film",
+    "tv": "Serie TV"
+  },
+  "nb-NO": {
+    "streams": "Strømmer",
+    "albums": "Album",
+    "movies": "Filmer",
+    "tv": "Serier"
+  },
+  "pt": {
+    "streams": "Streams",
+    "albums": "Álbuns",
+    "movies": "Filmes",
+    "tv": "Séries"
+  },
+  "ru": {
+    "streams": "Потоки",
+    "albums": "Альбомы",
+    "movies": "Фильмы",
+    "tv": "Сериалы"
+  },
+  "sv": {
+    "streams": "Strömmar",
+    "albums": "Album",
+    "movies": "Filmer",
+    "tv": "Serier"
+  },
+  "vi": {
+    "streams": "Luồng phát",
+    "albums": "Album",
+    "movies": "Phim",
+    "tv": "Phim bộ"
+  },
+  "zh-Hans": {
+    "streams": "串流",
+    "albums": "专辑",
+    "movies": "电影",
+    "tv": "剧集"
+  },
+  "zh-Hant": {
+    "streams": "串流",
+    "albums": "專輯",
+    "movies": "電影",
+    "tv": "影集"
+  }
+}

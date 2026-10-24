@@ -1,0 +1,17 @@
+{
+ "_note": "Plex Media Server with Accept: application/json: two streams, two movie libraries, one TV and one music library (counts with a container size of 0).",
+ "routes": {
+  "GET /status/sessions": { "MediaContainer": { "size": 2, "Metadata": [{ "type": "episode" }, { "type": "movie" }] } },
+  "GET /library/sections": { "MediaContainer": { "size": 5, "Directory": [
+   { "key": "1", "type": "movie", "title": "Movies" },
+   { "key": "2", "type": "show", "title": "TV Shows" },
+   { "key": "3", "type": "artist", "title": "Music" },
+   { "key": "4", "type": "movie", "title": "Kids" },
+   { "key": "5", "type": "photo", "title": "Photos" }
+  ] } },
+  "GET /library/sections/1/all": { "MediaContainer": { "size": 0, "totalSize": 812 } },
+  "GET /library/sections/2/all": { "MediaContainer": { "size": 0, "totalSize": 143 } },
+  "GET /library/sections/3/albums": { "MediaContainer": { "size": 0, "totalSize": 527 } },
+  "GET /library/sections/4/all": { "MediaContainer": { "size": 0, "totalSize": 64 } }
+ }
+}

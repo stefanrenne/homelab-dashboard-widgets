@@ -504,3 +504,15 @@ test('adguard: queries, blocked, filtered (Safe Browsing, Safe Search, parental)
   assert.deepEqual(values(out), { queries: 61234, blocked: 9876, filtered: 45, latency: '4.6ms' });
   assert.equal(lastRequest('adguard').headers.authorization, `Basic ${Buffer.from('admin:pw').toString('base64')}`);
 });
+
+test('plex: streams on every call, library counts per type, kept for a while', async () => {
+  const { default: plex } = await import(path.join(WIDGETS, 'plex', 'server.js'));
+  const ctx = { options: { url: `${mock.url}/plex`, key: 'tok' }, cache: new Map(), log: silent, fetch: (u, i) => fetch(u, i) };
+  assert.deepEqual(values(await plex.fetch(ctx)), { streams: 2, albums: 527, movies: 876, tv: 143 });
+  const req = mock.requests.filter((r) => r.widget === 'plex');
+  assert.equal(req.at(-1).headers['x-plex-token'], 'tok');
+  assert.equal(req.find((r) => r.route === 'GET /library/sections/1/all').headers['x-plex-container-size'], '0');
+  const before = mock.requests.length;
+  await plex.fetch(ctx);
+  assert.deepEqual(mock.requests.slice(before).map((r) => r.route), ['GET /status/sessions'], 'libraries and counts are kept');
+});
