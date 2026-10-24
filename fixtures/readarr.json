@@ -1,0 +1,13 @@
+{
+ "_note": "Readarr API v1: 12 missing books, an empty queue, 4 books of which 3 have a file.",
+ "routes": {
+  "GET /api/v1/wanted/missing": { "page": 1, "pageSize": 1, "totalRecords": 12, "records": [] },
+  "GET /api/v1/queue/status": { "totalCount": 0, "count": 0, "unknownCount": 0, "errors": false, "warnings": false },
+  "GET /api/v1/book": [
+   { "title": "Dune", "statistics": { "bookFileCount": 1 } },
+   { "title": "Hyperion", "statistics": { "bookFileCount": 2 } },
+   { "title": "Neuromancer", "statistics": { "bookFileCount": 1 } },
+   { "title": "Snow Crash", "statistics": { "bookFileCount": 0 } }
+  ]
+ }
+}

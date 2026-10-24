@@ -1,0 +1,9 @@
+id: readarr
+name: Readarr
+version: 0.1.0
+apiVersion: 1
+description: Wanted and queued books and the number of books you have (homepage's readarr widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }      # e.g. http://readarr.lan:8787
+  key: { type: string, secret: true, required: true }   # Settings > General > API Key

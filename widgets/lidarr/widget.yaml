@@ -1,0 +1,9 @@
+id: lidarr
+name: Lidarr
+version: 0.1.0
+apiVersion: 1
+description: Wanted and queued albums and the number of artists (homepage's lidarr widget).
+refresh: 1m
+options:
+  url: { type: url, required: true }      # e.g. http://lidarr.lan:8686
+  key: { type: string, secret: true, required: true }   # Settings > General > API Key

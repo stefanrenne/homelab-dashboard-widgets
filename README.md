@@ -24,6 +24,8 @@ Every widget has its own page with setup, fields and options on the
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
+| `lidarr` | wanted, queued, artists | `url`, `key` |
+| `readarr` | wanted, queued, books | `url`, `key` |
 | `bazarr` | missing episodes, missing movies | `url`, `key` |
 | `prowlarr` | grabs, queries, failed grabs, failed queries | `url`, `key` |
 | `sabnzbd` | rate, queue, time left | `url`, `key` |

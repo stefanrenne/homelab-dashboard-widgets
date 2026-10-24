@@ -1,0 +1,87 @@
+{
+  "en": {
+    "wanted": "Wanted",
+    "queued": "Queued",
+    "books": "Books"
+  },
+  "nl": {
+    "wanted": "Gewenst",
+    "queued": "In wachtrij",
+    "books": "Boeken"
+  },
+  "fr": {
+    "wanted": "Voulus",
+    "queued": "En file",
+    "books": "Livres"
+  },
+  "de": {
+    "wanted": "Gesucht",
+    "queued": "Wartend",
+    "books": "Bücher"
+  },
+  "es": {
+    "wanted": "Buscadas",
+    "queued": "En cola",
+    "books": "Libros"
+  },
+  "ca": {
+    "wanted": "Desitjats",
+    "queued": "A la cua",
+    "books": "Llibres"
+  },
+  "he": {
+    "wanted": "מבוקשים",
+    "queued": "בתור",
+    "books": "ספרים"
+  },
+  "hr": {
+    "wanted": "Traženo",
+    "queued": "U redu",
+    "books": "Knjige"
+  },
+  "hu": {
+    "wanted": "Keresett",
+    "queued": "Sorban",
+    "books": "Könyvek"
+  },
+  "it": {
+    "wanted": "Desiderati",
+    "queued": "In coda",
+    "books": "Libri"
+  },
+  "nb-NO": {
+    "wanted": "Ønsket",
+    "queued": "I kø",
+    "books": "Bøker"
+  },
+  "pt": {
+    "wanted": "Pretendidos",
+    "queued": "Na fila",
+    "books": "Livros"
+  },
+  "ru": {
+    "wanted": "Нужно",
+    "queued": "В очереди",
+    "books": "Книги"
+  },
+  "sv": {
+    "wanted": "Önskade",
+    "queued": "I kö",
+    "books": "Böcker"
+  },
+  "vi": {
+    "wanted": "Mong muốn",
+    "queued": "Đang chờ",
+    "books": "Sách"
+  },
+  "zh-Hans": {
+    "wanted": "想要",
+    "queued": "排队中",
+    "books": "图书"
+  },
+  "zh-Hant": {
+    "wanted": "想要",
+    "queued": "排隊中",
+    "books": "書籍"
+  }
+}

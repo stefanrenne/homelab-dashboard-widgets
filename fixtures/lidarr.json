@@ -1,0 +1,8 @@
+{
+ "_note": "Lidarr API v1: 37 missing albums, a queue of 3 with a warning, 4 artists.",
+ "routes": {
+  "GET /api/v1/wanted/missing": { "page": 1, "pageSize": 1, "totalRecords": 37, "records": [{ "title": "Animals" }] },
+  "GET /api/v1/queue/status": { "totalCount": 3, "count": 3, "unknownCount": 0, "errors": false, "warnings": true, "unknownErrors": false, "unknownWarnings": false },
+  "GET /api/v1/artist": [{ "artistName": "Pink Floyd" }, { "artistName": "Radiohead" }, { "artistName": "Björk" }, { "artistName": "Massive Attack" }]
+ }
+}

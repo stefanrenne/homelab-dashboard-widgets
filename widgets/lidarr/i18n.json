@@ -1,0 +1,87 @@
+{
+  "en": {
+    "wanted": "Wanted",
+    "queued": "Queued",
+    "artists": "Artists"
+  },
+  "nl": {
+    "wanted": "Gewenst",
+    "queued": "In wachtrij",
+    "artists": "Artiesten"
+  },
+  "fr": {
+    "wanted": "Voulus",
+    "queued": "En file",
+    "artists": "Artistes"
+  },
+  "de": {
+    "wanted": "Gesucht",
+    "queued": "Wartend",
+    "artists": "Künstler"
+  },
+  "es": {
+    "wanted": "Buscadas",
+    "queued": "En cola",
+    "artists": "Artistas"
+  },
+  "ca": {
+    "wanted": "Desitjats",
+    "queued": "A la cua",
+    "artists": "Artistes"
+  },
+  "he": {
+    "wanted": "מבוקשים",
+    "queued": "בתור",
+    "artists": "אמנים"
+  },
+  "hr": {
+    "wanted": "Traženo",
+    "queued": "U redu",
+    "artists": "Izvođači"
+  },
+  "hu": {
+    "wanted": "Keresett",
+    "queued": "Sorban",
+    "artists": "Előadók"
+  },
+  "it": {
+    "wanted": "Desiderati",
+    "queued": "In coda",
+    "artists": "Artisti"
+  },
+  "nb-NO": {
+    "wanted": "Ønsket",
+    "queued": "I kø",
+    "artists": "Artister"
+  },
+  "pt": {
+    "wanted": "Pretendidos",
+    "queued": "Na fila",
+    "artists": "Artistas"
+  },
+  "ru": {
+    "wanted": "Нужно",
+    "queued": "В очереди",
+    "artists": "Исполнители"
+  },
+  "sv": {
+    "wanted": "Önskade",
+    "queued": "I kö",
+    "artists": "Artister"
+  },
+  "vi": {
+    "wanted": "Mong muốn",
+    "queued": "Đang chờ",
+    "artists": "Nghệ sĩ"
+  },
+  "zh-Hans": {
+    "wanted": "想要",
+    "queued": "排队中",
+    "artists": "艺人"
+  },
+  "zh-Hant": {
+    "wanted": "想要",
+    "queued": "排隊中",
+    "artists": "藝人"
+  }
+}

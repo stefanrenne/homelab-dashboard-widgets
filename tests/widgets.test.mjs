@@ -686,3 +686,13 @@ test('nzbget: rate, remaining and downloaded in decimal units; paused is marked'
   const paused = await nzbget.fetch({ options: { url: 'http://x' }, fetch: async () => new Response(JSON.stringify({ result: { DownloadPaused: true } })) });
   assert.deepEqual(paused.blocks[0], { key: 'rate', label: 'rate', value: 'paused', status: 'warn' });
 });
+
+test('lidarr and readarr: wanted, queued (marked with warnings or errors), artists and books with a file', async () => {
+  const lidarr = await run('lidarr');
+  assert.deepEqual(values(lidarr), { wanted: 37, queued: 3, artists: 4 });
+  assert.equal(lidarr.blocks[1].status, 'warn');
+  assert.equal(lastRequest('lidarr').headers['x-api-key'], 'test-key');
+  const readarr = await run('readarr');
+  assert.deepEqual(values(readarr), { wanted: 12, queued: 0, books: 3 });
+  assert.equal(readarr.blocks[1].status, undefined);
+});
