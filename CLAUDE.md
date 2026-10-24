@@ -19,7 +19,8 @@ one widget package following the dashboard's widget API 1
    users may install one folder (`subdir:` / `only:`). A test checks the imports.
 2. **Keys and passwords are `secret: true`** in widget.yaml. A test checks names like key/password/token.
 3. **Field keys follow homepage's widget** (block `key`), so `fields:` lists from homepage keep working.
-4. **Every label has a translation in en, nl, fr, de and es** (a test checks this).
+4. **Every label has a translation in the dashboard's 17 languages**: en, nl, fr, de, es, ca, he,
+   hr, hu, it, nb-NO, pt, ru, sv, vi, zh-Hans, zh-Hant (a test checks this).
 5. **A new widget comes with a fixture, a test and a `README.md`**, and a row in the README table.
 6. **Bump `version` in a widget's widget.yaml when it changes**, and tag the repo for a release.
 7. Errors are thrown with a short message without secrets (`Radarr movie answered 401`); the

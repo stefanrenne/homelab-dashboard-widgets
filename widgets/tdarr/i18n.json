@@ -28,5 +28,77 @@
     "processed": "Procesados",
     "errored": "Con error",
     "saved": "Ahorrado"
+  },
+  "ca": {
+    "queue": "Cua",
+    "processed": "Processats",
+    "errored": "Amb errors",
+    "saved": "Estalviat"
+  },
+  "he": {
+    "queue": "תור",
+    "processed": "עובדו",
+    "errored": "שגיאות",
+    "saved": "נחסך"
+  },
+  "hr": {
+    "queue": "Red",
+    "processed": "Obrađeno",
+    "errored": "Pogreške",
+    "saved": "Ušteđeno"
+  },
+  "hu": {
+    "queue": "Sor",
+    "processed": "Feldolgozva",
+    "errored": "Hibás",
+    "saved": "Megtakarítva"
+  },
+  "it": {
+    "queue": "Coda",
+    "processed": "Elaborati",
+    "errored": "Con errori",
+    "saved": "Risparmiato"
+  },
+  "nb-NO": {
+    "queue": "Kø",
+    "processed": "Behandlet",
+    "errored": "Med feil",
+    "saved": "Spart"
+  },
+  "pt": {
+    "queue": "Fila",
+    "processed": "Processados",
+    "errored": "Com erro",
+    "saved": "Poupado"
+  },
+  "ru": {
+    "queue": "Очередь",
+    "processed": "Обработано",
+    "errored": "С ошибкой",
+    "saved": "Сэкономлено"
+  },
+  "sv": {
+    "queue": "Kö",
+    "processed": "Bearbetade",
+    "errored": "Med fel",
+    "saved": "Sparat"
+  },
+  "vi": {
+    "queue": "Hàng đợi",
+    "processed": "Đã xử lý",
+    "errored": "Bị lỗi",
+    "saved": "Đã tiết kiệm"
+  },
+  "zh-Hans": {
+    "queue": "队列",
+    "processed": "已处理",
+    "errored": "出错",
+    "saved": "已节省"
+  },
+  "zh-Hant": {
+    "queue": "佇列",
+    "processed": "已處理",
+    "errored": "出錯",
+    "saved": "已節省"
   }
 }

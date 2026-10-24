@@ -8,7 +8,8 @@ import { startMock } from '../scripts/mock-homelab.mjs';
 
 const WIDGETS = path.resolve('widgets');
 const IDS = fs.readdirSync(WIDGETS).filter((d) => fs.existsSync(path.join(WIDGETS, d, 'widget.yaml'))).sort();
-const LANGS = ['en', 'nl', 'fr', 'de', 'es'];
+// homepage's languages plus Dutch, as the dashboard
+const LANGS = ['en', 'nl', 'fr', 'de', 'es', 'ca', 'he', 'hr', 'hu', 'it', 'nb-NO', 'pt', 'ru', 'sv', 'vi', 'zh-Hans', 'zh-Hant'];
 
 let mock;
 before(async () => (mock = await startMock()));

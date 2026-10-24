@@ -18,5 +18,53 @@
   "es": {
     "missingEpisodes": "Episodios faltantes",
     "missingMovies": "Películas faltantes"
+  },
+  "ca": {
+    "missingEpisodes": "Episodis absents",
+    "missingMovies": "Pel·lícules absents"
+  },
+  "he": {
+    "missingEpisodes": "פרקים חסרים",
+    "missingMovies": "סרטים חסרים"
+  },
+  "hr": {
+    "missingEpisodes": "Epizode nedostaju",
+    "missingMovies": "Filmovi nedostaju"
+  },
+  "hu": {
+    "missingEpisodes": "Hiányzó epizódok",
+    "missingMovies": "Hiányzó filmek"
+  },
+  "it": {
+    "missingEpisodes": "Episodi mancanti",
+    "missingMovies": "Film mancanti"
+  },
+  "nb-NO": {
+    "missingEpisodes": "Episoder mangler",
+    "missingMovies": "Filmer mangler"
+  },
+  "pt": {
+    "missingEpisodes": "Episódios em falta",
+    "missingMovies": "Filmes em falta"
+  },
+  "ru": {
+    "missingEpisodes": "Нет серий",
+    "missingMovies": "Нет фильмов"
+  },
+  "sv": {
+    "missingEpisodes": "Avsnitt saknas",
+    "missingMovies": "Filmer saknas"
+  },
+  "vi": {
+    "missingEpisodes": "Tập còn thiếu",
+    "missingMovies": "Phim còn thiếu"
+  },
+  "zh-Hans": {
+    "missingEpisodes": "缺失剧集",
+    "missingMovies": "缺失电影"
+  },
+  "zh-Hant": {
+    "missingEpisodes": "缺少集數",
+    "missingMovies": "缺少電影"
   }
 }

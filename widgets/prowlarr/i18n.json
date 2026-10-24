@@ -28,5 +28,77 @@
     "queries": "Consultas",
     "failGrabs": "Errores captura",
     "failQueries": "Errores búsqueda"
+  },
+  "ca": {
+    "grabs": "Captures",
+    "queries": "Consultes",
+    "failGrabs": "Captures fallides",
+    "failQueries": "Errors consulta"
+  },
+  "he": {
+    "grabs": "הורדות",
+    "queries": "שאילתות",
+    "failGrabs": "הורדות שנכשלו",
+    "failQueries": "שאילתות שנכשלו"
+  },
+  "hr": {
+    "grabs": "Preuzimanja",
+    "queries": "Upiti",
+    "failGrabs": "Greške dohvata",
+    "failQueries": "Neuspjeli upiti"
+  },
+  "hu": {
+    "grabs": "Letöltések",
+    "queries": "Lekérdezések",
+    "failGrabs": "Hibás letöltés",
+    "failQueries": "Hibás keresés"
+  },
+  "it": {
+    "grabs": "Prelievi",
+    "queries": "Ricerche",
+    "failGrabs": "Prelievi falliti",
+    "failQueries": "Ricerche fallite"
+  },
+  "nb-NO": {
+    "grabs": "Hentinger",
+    "queries": "Søk",
+    "failGrabs": "Feil ved henting",
+    "failQueries": "Mislykkede søk"
+  },
+  "pt": {
+    "grabs": "Capturas",
+    "queries": "Pesquisas",
+    "failGrabs": "Capturas falhadas",
+    "failQueries": "Erros de pesquisa"
+  },
+  "ru": {
+    "grabs": "Загрузки",
+    "queries": "Запросы",
+    "failGrabs": "Сбои загрузки",
+    "failQueries": "Сбои запросов"
+  },
+  "sv": {
+    "grabs": "Hämtningar",
+    "queries": "Sökningar",
+    "failGrabs": "Fel vid hämtning",
+    "failQueries": "Fel vid sökning"
+  },
+  "vi": {
+    "grabs": "Lượt lấy",
+    "queries": "Truy vấn",
+    "failGrabs": "Lấy thất bại",
+    "failQueries": "Truy vấn lỗi"
+  },
+  "zh-Hans": {
+    "grabs": "抓取",
+    "queries": "查询",
+    "failGrabs": "抓取失败",
+    "failQueries": "查询失败"
+  },
+  "zh-Hant": {
+    "grabs": "擷取",
+    "queries": "查詢",
+    "failGrabs": "擷取失敗",
+    "failQueries": "查詢失敗"
   }
 }

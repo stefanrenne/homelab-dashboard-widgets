@@ -1,6 +1,6 @@
 id: stash
 name: Stash
-version: 0.2.0
+version: 0.2.1
 apiVersion: 1
 description: Library counts from Stash. Shows scenes, performers and tags; pick others with `fields`.
 defaultFields: [scenes, performers, tags]

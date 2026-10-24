@@ -48,5 +48,125 @@
     "uptime": "Tiempo activo",
     "disk": "Disco",
     "free": "Libre"
+  },
+  "ca": {
+    "cpu": "CPU",
+    "memory": "Memòria",
+    "memoryUsed": "Memòria usada",
+    "memoryTotal": "Memòria total",
+    "cputemp": "Temperatura CPU",
+    "uptime": "Temps actiu",
+    "disk": "Disc",
+    "free": "Lliure"
+  },
+  "he": {
+    "cpu": "מעבד",
+    "memory": "זיכרון",
+    "memoryUsed": "זיכרון בשימוש",
+    "memoryTotal": "סך הזיכרון",
+    "cputemp": "טמפרטורת מעבד",
+    "uptime": "זמן פעולה",
+    "disk": "דיסק",
+    "free": "פנוי"
+  },
+  "hr": {
+    "cpu": "CPU",
+    "memory": "Memorija",
+    "memoryUsed": "Zauzeta memorija",
+    "memoryTotal": "Ukupna memorija",
+    "cputemp": "Temperatura CPU",
+    "uptime": "Vrijeme rada",
+    "disk": "Disk",
+    "free": "Slobodno"
+  },
+  "hu": {
+    "cpu": "CPU",
+    "memory": "Memória",
+    "memoryUsed": "Foglalt memória",
+    "memoryTotal": "Teljes memória",
+    "cputemp": "CPU hőmérséklet",
+    "uptime": "Üzemidő",
+    "disk": "Lemez",
+    "free": "Szabad"
+  },
+  "it": {
+    "cpu": "CPU",
+    "memory": "Memoria",
+    "memoryUsed": "Memoria usata",
+    "memoryTotal": "Memoria totale",
+    "cputemp": "Temperatura CPU",
+    "uptime": "Tempo attivo",
+    "disk": "Disco",
+    "free": "Libero"
+  },
+  "nb-NO": {
+    "cpu": "CPU",
+    "memory": "Minne",
+    "memoryUsed": "Brukt minne",
+    "memoryTotal": "Totalt minne",
+    "cputemp": "CPU-temperatur",
+    "uptime": "Oppetid",
+    "disk": "Disk",
+    "free": "Ledig"
+  },
+  "pt": {
+    "cpu": "CPU",
+    "memory": "Memória",
+    "memoryUsed": "Memória usada",
+    "memoryTotal": "Memória total",
+    "cputemp": "Temperatura CPU",
+    "uptime": "Tempo ativo",
+    "disk": "Disco",
+    "free": "Livre"
+  },
+  "ru": {
+    "cpu": "ЦП",
+    "memory": "Память",
+    "memoryUsed": "Занято памяти",
+    "memoryTotal": "Всего памяти",
+    "cputemp": "Температура ЦП",
+    "uptime": "Время работы",
+    "disk": "Диск",
+    "free": "Свободно"
+  },
+  "sv": {
+    "cpu": "CPU",
+    "memory": "Minne",
+    "memoryUsed": "Använt minne",
+    "memoryTotal": "Totalt minne",
+    "cputemp": "CPU-temperatur",
+    "uptime": "Drifttid",
+    "disk": "Disk",
+    "free": "Ledigt"
+  },
+  "vi": {
+    "cpu": "CPU",
+    "memory": "Bộ nhớ",
+    "memoryUsed": "Bộ nhớ đã dùng",
+    "memoryTotal": "Tổng bộ nhớ",
+    "cputemp": "Nhiệt độ CPU",
+    "uptime": "Thời gian chạy",
+    "disk": "Ổ đĩa",
+    "free": "Trống"
+  },
+  "zh-Hans": {
+    "cpu": "CPU",
+    "memory": "内存",
+    "memoryUsed": "已用内存",
+    "memoryTotal": "内存总量",
+    "cputemp": "CPU 温度",
+    "uptime": "运行时间",
+    "disk": "磁盘",
+    "free": "可用"
+  },
+  "zh-Hant": {
+    "cpu": "CPU",
+    "memory": "記憶體",
+    "memoryUsed": "已用記憶體",
+    "memoryTotal": "記憶體總量",
+    "cputemp": "CPU 溫度",
+    "uptime": "運作時間",
+    "disk": "磁碟",
+    "free": "可用"
   }
 }

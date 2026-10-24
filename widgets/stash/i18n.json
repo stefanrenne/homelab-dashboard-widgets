@@ -38,5 +38,101 @@
     "performers": "Intérpretes",
     "studios": "Estudios",
     "tags": "Etiquetas"
+  },
+  "ca": {
+    "scenes": "Escenes",
+    "images": "Imatges",
+    "galleries": "Galeries",
+    "performers": "Intèrprets",
+    "studios": "Estudis",
+    "tags": "Etiquetes"
+  },
+  "he": {
+    "scenes": "סצנות",
+    "images": "תמונות",
+    "galleries": "גלריות",
+    "performers": "מבצעים",
+    "studios": "אולפנים",
+    "tags": "תגיות"
+  },
+  "hr": {
+    "scenes": "Scene",
+    "images": "Slike",
+    "galleries": "Galerije",
+    "performers": "Izvođači",
+    "studios": "Studiji",
+    "tags": "Oznake"
+  },
+  "hu": {
+    "scenes": "Jelenetek",
+    "images": "Képek",
+    "galleries": "Galériák",
+    "performers": "Szereplők",
+    "studios": "Stúdiók",
+    "tags": "Címkék"
+  },
+  "it": {
+    "scenes": "Scene",
+    "images": "Immagini",
+    "galleries": "Gallerie",
+    "performers": "Interpreti",
+    "studios": "Studi",
+    "tags": "Tag"
+  },
+  "nb-NO": {
+    "scenes": "Scener",
+    "images": "Bilder",
+    "galleries": "Gallerier",
+    "performers": "Utøvere",
+    "studios": "Studioer",
+    "tags": "Merker"
+  },
+  "pt": {
+    "scenes": "Cenas",
+    "images": "Imagens",
+    "galleries": "Galerias",
+    "performers": "Artistas",
+    "studios": "Estúdios",
+    "tags": "Etiquetas"
+  },
+  "ru": {
+    "scenes": "Сцены",
+    "images": "Изображения",
+    "galleries": "Галереи",
+    "performers": "Исполнители",
+    "studios": "Студии",
+    "tags": "Теги"
+  },
+  "sv": {
+    "scenes": "Scener",
+    "images": "Bilder",
+    "galleries": "Gallerier",
+    "performers": "Artister",
+    "studios": "Studior",
+    "tags": "Taggar"
+  },
+  "vi": {
+    "scenes": "Cảnh",
+    "images": "Hình ảnh",
+    "galleries": "Bộ sưu tập",
+    "performers": "Diễn viên",
+    "studios": "Hãng phim",
+    "tags": "Thẻ"
+  },
+  "zh-Hans": {
+    "scenes": "场景",
+    "images": "图片",
+    "galleries": "图库",
+    "performers": "演员",
+    "studios": "工作室",
+    "tags": "标签"
+  },
+  "zh-Hant": {
+    "scenes": "場景",
+    "images": "圖片",
+    "galleries": "相簿",
+    "performers": "演出者",
+    "studios": "製片商",
+    "tags": "標籤"
   }
 }

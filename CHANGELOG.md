@@ -15,6 +15,9 @@ Changes to the widget collection. Each widget also has its own `version` in its 
   widgets: they talk to an outside service. Same options, plus `url` (another API server, e.g.
   your own Open-Meteo). A stock's block label is its symbol through `vars`. The dashboard keeps
   its built-in copies until its next release, and those win over these meanwhile.
+- Twelve more languages for every widget, the dashboard's set: Catalan, Hebrew, Croatian,
+  Hungarian, Italian, Norwegian Bokmål, Portuguese, Russian, Swedish, Vietnamese and Chinese
+  (simplified and traditional), within the label length rules.
 - The first widgets with a `client.js` (their own look in the browser); tests render them in jsdom.
 
 ## [0.2.1] - 2026-10-24

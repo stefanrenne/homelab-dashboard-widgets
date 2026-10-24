@@ -23,5 +23,65 @@
     "pending": "Pendientes",
     "approved": "Aprobadas",
     "completed": "Completadas"
+  },
+  "ca": {
+    "pending": "Pendents",
+    "approved": "Aprovades",
+    "completed": "Completats"
+  },
+  "he": {
+    "pending": "ממתינים",
+    "approved": "אושרו",
+    "completed": "הושלמו"
+  },
+  "hr": {
+    "pending": "Na čekanju",
+    "approved": "Odobreno",
+    "completed": "Dovršeno"
+  },
+  "hu": {
+    "pending": "Függőben",
+    "approved": "Jóváhagyva",
+    "completed": "Kész"
+  },
+  "it": {
+    "pending": "In attesa",
+    "approved": "Approvate",
+    "completed": "Completati"
+  },
+  "nb-NO": {
+    "pending": "Venter",
+    "approved": "Godkjent",
+    "completed": "Fullført"
+  },
+  "pt": {
+    "pending": "Pendentes",
+    "approved": "Aprovados",
+    "completed": "Concluídos"
+  },
+  "ru": {
+    "pending": "Ожидают",
+    "approved": "Одобрено",
+    "completed": "Завершено"
+  },
+  "sv": {
+    "pending": "Väntar",
+    "approved": "Godkända",
+    "completed": "Klara"
+  },
+  "vi": {
+    "pending": "Đang chờ",
+    "approved": "Đã duyệt",
+    "completed": "Hoàn tất"
+  },
+  "zh-Hans": {
+    "pending": "待处理",
+    "approved": "已批准",
+    "completed": "已完成"
+  },
+  "zh-Hant": {
+    "pending": "待處理",
+    "approved": "已核准",
+    "completed": "已完成"
   }
 }

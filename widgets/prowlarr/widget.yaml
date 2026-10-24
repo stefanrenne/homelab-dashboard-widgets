@@ -1,6 +1,6 @@
 id: prowlarr
 name: Prowlarr
-version: 0.2.0
+version: 0.2.1
 apiVersion: 1
 description: Grabs and queries over all indexers, and how many failed.
 refresh: 1m

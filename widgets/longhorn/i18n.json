@@ -23,5 +23,65 @@
     "total": "Total",
     "nodeNumber": "Nodo {n}",
     "node": "{name}"
+  },
+  "ca": {
+    "total": "Total",
+    "nodeNumber": "Node {n}",
+    "node": "{name}"
+  },
+  "he": {
+    "total": "סך הכול",
+    "nodeNumber": "צומת {n}",
+    "node": "{name}"
+  },
+  "hr": {
+    "total": "Ukupno",
+    "nodeNumber": "Čvor {n}",
+    "node": "{name}"
+  },
+  "hu": {
+    "total": "Összesen",
+    "nodeNumber": "Csomópont {n}",
+    "node": "{name}"
+  },
+  "it": {
+    "total": "Totale",
+    "nodeNumber": "Nodo {n}",
+    "node": "{name}"
+  },
+  "nb-NO": {
+    "total": "Totalt",
+    "nodeNumber": "Node {n}",
+    "node": "{name}"
+  },
+  "pt": {
+    "total": "Total",
+    "nodeNumber": "Nó {n}",
+    "node": "{name}"
+  },
+  "ru": {
+    "total": "Всего",
+    "nodeNumber": "Узел {n}",
+    "node": "{name}"
+  },
+  "sv": {
+    "total": "Totalt",
+    "nodeNumber": "Nod {n}",
+    "node": "{name}"
+  },
+  "vi": {
+    "total": "Tổng",
+    "nodeNumber": "Nút {n}",
+    "node": "{name}"
+  },
+  "zh-Hans": {
+    "total": "总计",
+    "nodeNumber": "节点 {n}",
+    "node": "{name}"
+  },
+  "zh-Hant": {
+    "total": "總計",
+    "nodeNumber": "節點 {n}",
+    "node": "{name}"
   }
 }

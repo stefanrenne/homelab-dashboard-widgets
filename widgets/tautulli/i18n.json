@@ -13,5 +13,41 @@
   },
   "es": {
     "noActiveStreams": "Sin transmisiones activas"
+  },
+  "ca": {
+    "noActiveStreams": "Cap reproducció activa"
+  },
+  "he": {
+    "noActiveStreams": "אין הזרמות פעילות"
+  },
+  "hr": {
+    "noActiveStreams": "Nema aktivnih streamova"
+  },
+  "hu": {
+    "noActiveStreams": "Nincs aktív lejátszás"
+  },
+  "it": {
+    "noActiveStreams": "Nessuna riproduzione attiva"
+  },
+  "nb-NO": {
+    "noActiveStreams": "Ingen aktive strømmer"
+  },
+  "pt": {
+    "noActiveStreams": "Sem transmissões ativas"
+  },
+  "ru": {
+    "noActiveStreams": "Нет активных потоков"
+  },
+  "sv": {
+    "noActiveStreams": "Inga aktiva strömmar"
+  },
+  "vi": {
+    "noActiveStreams": "Không có luồng phát"
+  },
+  "zh-Hans": {
+    "noActiveStreams": "无活动串流"
+  },
+  "zh-Hant": {
+    "noActiveStreams": "無播放中串流"
   }
 }

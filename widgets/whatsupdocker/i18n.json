@@ -18,5 +18,53 @@
   "es": {
     "monitoring": "Vigilados",
     "updates": "Por actualizar"
+  },
+  "ca": {
+    "monitoring": "Supervisats",
+    "updates": "Noves versions"
+  },
+  "he": {
+    "monitoring": "במעקב",
+    "updates": "עדכונים"
+  },
+  "hr": {
+    "monitoring": "Praćeno",
+    "updates": "Ažuriranja"
+  },
+  "hu": {
+    "monitoring": "Figyelve",
+    "updates": "Frissítések"
+  },
+  "it": {
+    "monitoring": "Monitorati",
+    "updates": "Da aggiornare"
+  },
+  "nb-NO": {
+    "monitoring": "Overvåkes",
+    "updates": "Nye versjoner"
+  },
+  "pt": {
+    "monitoring": "Vigiados",
+    "updates": "Atualizações"
+  },
+  "ru": {
+    "monitoring": "Наблюдаются",
+    "updates": "Обновления"
+  },
+  "sv": {
+    "monitoring": "Bevakas",
+    "updates": "Nya versioner"
+  },
+  "vi": {
+    "monitoring": "Đang theo dõi",
+    "updates": "Cập nhật"
+  },
+  "zh-Hans": {
+    "monitoring": "监控中",
+    "updates": "更新"
+  },
+  "zh-Hant": {
+    "monitoring": "監控中",
+    "updates": "更新"
   }
 }

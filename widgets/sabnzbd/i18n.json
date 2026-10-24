@@ -28,5 +28,77 @@
     "queue": "Cola",
     "timeleft": "Restante",
     "paused": "En pausa"
+  },
+  "ca": {
+    "rate": "Velocitat",
+    "queue": "Cua",
+    "timeleft": "Temps restant",
+    "paused": "En pausa"
+  },
+  "he": {
+    "rate": "קצב",
+    "queue": "תור",
+    "timeleft": "זמן שנותר",
+    "paused": "מושהה"
+  },
+  "hr": {
+    "rate": "Brzina",
+    "queue": "Red",
+    "timeleft": "Preostalo vrijeme",
+    "paused": "Pauzirano"
+  },
+  "hu": {
+    "rate": "Sebesség",
+    "queue": "Sor",
+    "timeleft": "Hátralévő idő",
+    "paused": "Szüneteltetve"
+  },
+  "it": {
+    "rate": "Velocità",
+    "queue": "Coda",
+    "timeleft": "Tempo rimasto",
+    "paused": "In pausa"
+  },
+  "nb-NO": {
+    "rate": "Hastighet",
+    "queue": "Kø",
+    "timeleft": "Tid igjen",
+    "paused": "Pauset"
+  },
+  "pt": {
+    "rate": "Velocidade",
+    "queue": "Fila",
+    "timeleft": "Tempo restante",
+    "paused": "Em pausa"
+  },
+  "ru": {
+    "rate": "Скорость",
+    "queue": "Очередь",
+    "timeleft": "Осталось",
+    "paused": "Пауза"
+  },
+  "sv": {
+    "rate": "Hastighet",
+    "queue": "Kö",
+    "timeleft": "Tid kvar",
+    "paused": "Pausad"
+  },
+  "vi": {
+    "rate": "Tốc độ",
+    "queue": "Hàng đợi",
+    "timeleft": "Còn lại",
+    "paused": "Tạm dừng"
+  },
+  "zh-Hans": {
+    "rate": "速率",
+    "queue": "队列",
+    "timeleft": "剩余时间",
+    "paused": "已暂停"
+  },
+  "zh-Hant": {
+    "rate": "速率",
+    "queue": "佇列",
+    "timeleft": "剩餘時間",
+    "paused": "已暫停"
   }
 }

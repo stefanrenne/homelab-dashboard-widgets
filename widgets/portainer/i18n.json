@@ -23,5 +23,65 @@
     "running": "En marcha",
     "stopped": "Detenidos",
     "total": "Total"
+  },
+  "ca": {
+    "running": "En marxa",
+    "stopped": "Aturat",
+    "total": "Total"
+  },
+  "he": {
+    "running": "פועלים",
+    "stopped": "נעצר",
+    "total": "סך הכול"
+  },
+  "hr": {
+    "running": "Radi",
+    "stopped": "Zaustavljeno",
+    "total": "Ukupno"
+  },
+  "hu": {
+    "running": "Fut",
+    "stopped": "Leállítva",
+    "total": "Összesen"
+  },
+  "it": {
+    "running": "In esecuzione",
+    "stopped": "Fermato",
+    "total": "Totale"
+  },
+  "nb-NO": {
+    "running": "Kjører",
+    "stopped": "Stoppet",
+    "total": "Totalt"
+  },
+  "pt": {
+    "running": "Em execução",
+    "stopped": "Parado",
+    "total": "Total"
+  },
+  "ru": {
+    "running": "Работает",
+    "stopped": "Остановлен",
+    "total": "Всего"
+  },
+  "sv": {
+    "running": "Körs",
+    "stopped": "Stoppad",
+    "total": "Totalt"
+  },
+  "vi": {
+    "running": "Đang chạy",
+    "stopped": "Đã dừng",
+    "total": "Tổng"
+  },
+  "zh-Hans": {
+    "running": "运行中",
+    "stopped": "已停止",
+    "total": "总计"
+  },
+  "zh-Hant": {
+    "running": "執行中",
+    "stopped": "已停止",
+    "total": "總計"
   }
 }
