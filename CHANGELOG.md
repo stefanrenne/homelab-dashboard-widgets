@@ -4,6 +4,12 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-25
+
+Every service widget of homepage now has a counterpart here (or built into the dashboard): about
+150 new widgets, each in the dashboard's 17 languages. openmeteo, openweathermap and stocks moved
+here from the dashboard; this release is needed by dashboard 0.5.0.
+
 ### Added
 - `glances`: CPU, memory, CPU temperature, uptime and disks from Glances (API 3 or 4), as
   homepage's glances info widget.
