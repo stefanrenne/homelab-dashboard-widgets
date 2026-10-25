@@ -4,6 +4,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-25
+
 The dashboard's built-in widgets moved here, so every widget is now in this collection; the
 dashboard's next release needs this one.
 
