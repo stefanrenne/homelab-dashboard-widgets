@@ -20,6 +20,29 @@ export function memoryMB(stats) {
   return Math.round((usage - cache) / 1e6);
 }
 
+/** Bytes in decimal units with one decimal, as { value, unit } (55.5 MB). */
+export function byteValue(b) {
+  const units = ['B', 'kB', 'MB', 'GB', 'TB'];
+  let i = 0;
+  while (b >= 1000 && i < units.length - 1) { b /= 1000; i++; }
+  return { value: Math.round(b * 10) / 10, unit: units[i] };
+}
+
+/** CPU, memory, and data received and sent over all networks (as homepage's RX and TX). */
+function statsBlocks(stats) {
+  const blocks = [
+    { label: 'cpu', value: cpuPercent(stats), unit: '%' },
+    { label: 'memory', value: memoryMB(stats), unit: 'MB' },
+  ];
+  const nets = Object.values(stats.networks ?? {});
+  if (nets.length) {
+    const sum = (k) => nets.reduce((n, x) => n + (Number(x[k]) || 0), 0);
+    blocks.push({ key: 'rx', label: 'rx', ...byteValue(sum('rx_bytes')) });
+    blocks.push({ key: 'tx', label: 'tx', ...byteValue(sum('tx_bytes')) });
+  }
+  return blocks;
+}
+
 /**
  * A Docker Swarm service by name (docker.yaml swarm: true): running tasks against the wanted
  * replicas, as in homepage, and stats when a running task's container is on this node.
@@ -42,8 +65,7 @@ async function swarmService(get, name) {
     const id = task.Status?.ContainerStatus?.ContainerID;
     const stats = id ? await get(`/containers/${encodeURIComponent(id)}/stats?stream=false`).catch(() => null) : null;
     if (!stats) continue;
-    blocks.push({ label: 'cpu', value: cpuPercent(stats), unit: '%' });
-    blocks.push({ label: 'memory', value: memoryMB(stats), unit: 'MB' });
+    blocks.push(...statsBlocks(stats));
     break;
   }
   return { status, statusText: state, blocks };
@@ -75,10 +97,7 @@ export default {
     if (state === 'running') {
       status = health === 'unhealthy' ? 'warn' : 'up';
       const stats = await get(`/containers/${name}/stats?stream=false`);
-      if (stats) {
-        blocks.push({ label: 'cpu', value: cpuPercent(stats), unit: '%' });
-        blocks.push({ label: 'memory', value: memoryMB(stats), unit: 'MB' });
-      }
+      if (stats) blocks.push(...statsBlocks(stats));
     }
     blocks[0].status = status === 'up' ? 'ok' : status === 'warn' ? 'warn' : 'error';
     return { status, statusText: health ?? state, blocks };

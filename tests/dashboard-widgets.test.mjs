@@ -9,7 +9,7 @@ import path from 'node:path';
 import http from 'node:http';
 import httpStatus from '../widgets/http-status/server.js';
 import customApi, { pick } from '../widgets/custom-api/server.js';
-import docker, { cpuPercent } from '../widgets/docker/server.js';
+import docker, { cpuPercent, byteValue } from '../widgets/docker/server.js';
 import proxmoxvm, { memoryBlock } from '../widgets/proxmoxvm/server.js';
 import kubernetesPods from '../widgets/kubernetes-pods/server.js';
 import kubernetes, { PATHS as K8S, cores, bytes as k8sBytes } from '../widgets/kubernetes/server.js';
@@ -120,6 +120,7 @@ test('docker: running container over a unix socket', async () => {
         cpu_stats: { cpu_usage: { total_usage: 300 }, system_cpu_usage: 2000, online_cpus: 2 },
         precpu_stats: { cpu_usage: { total_usage: 100 }, system_cpu_usage: 1000 },
         memory_stats: { usage: 300 * 1048576, stats: { inactive_file: 100 * 1048576 } },
+        networks: { eth0: { rx_bytes: 55_500_000, tx_bytes: 20_000_000 }, eth1: { rx_bytes: 0, tx_bytes: 4_600_000 } },
       }));
     }
     res.statusCode = 404;
@@ -132,12 +133,13 @@ test('docker: running container over a unix socket', async () => {
   try {
     const out = await docker.fetch(ctxFor('plex'));
     assert.equal(out.status, 'up');
-    assert.deepEqual(out.blocks.map((b) => b.value), ['running (healthy)', 40, 210]);
+    assert.deepEqual(out.blocks.map((b) => [b.label, b.value, b.unit]), [['status', 'running (healthy)', undefined], ['cpu', 40, '%'], ['memory', 210, 'MB'], ['rx', 55.5, 'MB'], ['tx', 24.6, 'MB']], 'RX and TX over all networks, as homepage');
     assert.equal((await docker.fetch(ctxFor('nope'))).status, 'down');
   } finally {
     await srv.close();
   }
   assert.equal(cpuPercent({}), null);
+  assert.deepEqual([byteValue(512), byteValue(1500), byteValue(2.25e9)], [{ value: 512, unit: 'B' }, { value: 1.5, unit: 'kB' }, { value: 2.3, unit: 'GB' }]);
 });
 
 test('docker: a Swarm service by name, running tasks against its replicas, as in homepage', async () => {

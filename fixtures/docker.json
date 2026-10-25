@@ -27,6 +27,16 @@
         "stats": {
           "inactive_file": 104857600
         }
+      },
+      "networks": {
+        "eth0": {
+          "rx_bytes": 55500000,
+          "tx_bytes": 20000000
+        },
+        "eth1": {
+          "rx_bytes": 0,
+          "tx_bytes": 4600000
+        }
       }
     }
   }

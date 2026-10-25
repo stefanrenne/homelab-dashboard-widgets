@@ -4,6 +4,12 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-25
+
+### Added
+- `docker` (1.4.0): `rx` and `tx`, the data received and sent over the container's networks, as
+  homepage's RX and TX next to CPU and memory.
+
 ## [0.4.0] - 2026-10-25
 
 The dashboard's built-in widgets moved here, so every widget is now in this collection; the

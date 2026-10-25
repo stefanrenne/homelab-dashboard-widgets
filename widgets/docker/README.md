@@ -17,7 +17,7 @@ marked when only some run.
 
 ## Fields
 
-`status`, `replicas`, `cpu`, `memory`
+`status`, `replicas`, `cpu`, `memory`, `rx`, `tx` (data received and sent over the container's networks, as homepage's RX and TX)
 
 ## Example
 
