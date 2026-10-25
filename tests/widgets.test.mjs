@@ -205,6 +205,7 @@ const REQUIRED = {
   grafana: { username: 'admin', password: 'pw' },
   openmediavault: { method: 'services.getStatus', username: 'admin', password: 'pw' },
   'custom-api': { mappings: [] },
+  button: { text: 'Pull', command: 'true' },
   get docker() { return { url: dockerd.url, container: 'plex' }; },
   proxmoxvm: { node: 'pve', vmid: '101', token: 'api@pam!dash', secret: 's3cret' },
   'kubernetes-pods': { namespace: 'media', app: 'jellyfin' },

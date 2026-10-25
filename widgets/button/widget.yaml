@@ -1,0 +1,12 @@
+id: button
+name: Button
+version: 1.0.0
+apiVersion: 1
+description: A button that opens a link or runs a script or shell command on the dashboard's server.
+options:
+  text: { type: string, required: true }   # the button's label
+  href: { type: url }                       # opens this page in a new tab, e.g. https://grafana.lan/
+  script: { type: string, secret: true }    # a bash script to run, e.g. scripts/update.sh (relative to the config folder)
+  command: { type: string, secret: true }   # a shell command to run with bash -c, e.g. docker compose pull
+  timeout: { type: number, default: 300 }   # seconds before the run is stopped
+  inheritEnv: { type: boolean, default: false }   # give the run the dashboard's whole environment, not only PATH and HOME

@@ -15,6 +15,7 @@ import kubernetesPods from '../widgets/kubernetes-pods/server.js';
 import kubernetes, { PATHS as K8S, cores, bytes as k8sBytes } from '../widgets/kubernetes/server.js';
 import resources, { PATHS as RESOURCE_PATHS, formatUptime, formatBytes } from '../widgets/resources/server.js';
 import { parseLatency } from '../widgets/ping/server.js';
+import button, { OUTPUT_LIMIT, CUT_MARKER } from '../widgets/button/server.js';
 
 const silentLog = { info() {}, warn() {}, error() {} };
 
@@ -569,4 +570,101 @@ test('kubernetes client: cluster meters and a line per node, a node that is not 
 test('header widgets: the search button is a 28px target, resources honour Reduce Motion', () => {
   assert.match(fs.readFileSync('widgets/search/client.js', 'utf8'), /min-width: 28px; height: 28px/);
   assert.match(fs.readFileSync('widgets/resources/client.js', 'utf8'), /prefers-reduced-motion/);
+});
+
+// ---- button: a link, or a script or command run through the widget API's action call
+const buttonCtx = (options, overrides = {}) => fakeCtx({ text: 'Run', ...options }, { configDir: tmpDir('hd-button-'), ...overrides });
+
+test('button: exactly one of href, script or command, from fetch and action', async () => {
+  for (const options of [{}, { href: 'https://a.lan/', command: 'true' }, { script: 'a.sh', command: 'true' }, { command: '  ' }]) {
+    await assert.rejects(button.fetch(buttonCtx(options)), /set (one|only one) of href, script or command/);
+    await assert.rejects(button.action(buttonCtx(options)), /set (one|only one) of href, script or command/);
+  }
+  await assert.rejects(button.fetch(buttonCtx({ href: 'https://a.lan/', script: 'x', command: 'y' })), /found href, script, command/);
+  for (const options of [{ href: 'https://a.lan/' }, { script: 'a.sh' }, { command: 'true' }]) assert.deepEqual(await button.fetch(buttonCtx(options)), { blocks: [] });
+  await assert.rejects(button.action(buttonCtx({ href: 'https://a.lan/' })), /nothing to run/);
+});
+
+test('button: a script relative to the config folder, run there', async () => {
+  const ctx = buttonCtx({ script: 'scripts/hello.sh' });
+  fs.mkdirSync(path.join(ctx.configDir, 'scripts'));
+  fs.writeFileSync(path.join(ctx.configDir, 'scripts/hello.sh'), 'echo "hello from $(basename "$PWD")"\necho oops >&2\necho done\n');
+  const out = await button.action(ctx);
+  assert.deepEqual(out, { status: 'ok', output: `hello from ${path.basename(ctx.configDir)}\noops\ndone\n`, exitCode: 0 }, 'stdout and stderr in order, cwd is the config folder');
+  const missing = await button.action(buttonCtx({ script: 'nope.sh' }));
+  assert.equal(missing.status, 'error');
+  assert.equal(missing.output, '');
+  assert.match(missing.error, /^script not found: .*nope\.sh$/);
+});
+
+test('button: an inline command, and a non-zero exit code', async () => {
+  assert.deepEqual(await button.action(buttonCtx({ command: 'echo one; echo two | tr a-z A-Z' })), { status: 'ok', output: 'one\nTWO\n', exitCode: 0 });
+  assert.deepEqual(await button.action(buttonCtx({ command: 'echo failing >&2; exit 3' })), { status: 'error', output: 'failing\n', exitCode: 3 });
+});
+
+test('button: a timeout stops the whole process group, also a child in a subshell', async () => {
+  const ctx = buttonCtx({ command: '(sleep 30; echo late) & echo $! > child.pid; echo started; sleep 30', timeout: 0.5 });
+  const started = Date.now();
+  const out = await button.action(ctx);
+  assert.ok(Date.now() - started < 5000, 'does not wait for sleep');
+  assert.deepEqual(out, { status: 'error', output: 'started\n', error: 'timed out after 0.5 s' });
+  const pid = Number(fs.readFileSync(path.join(ctx.configDir, 'child.pid'), 'utf8'));
+  await new Promise((r) => setTimeout(r, 100));
+  assert.throws(() => process.kill(pid, 0), { code: 'ESRCH' }, 'the subshell is gone');
+});
+
+test('button: an aborted signal stops the run', async () => {
+  const abort = new AbortController();
+  const run = button.action(buttonCtx({ command: 'sleep 30' }, { signal: abort.signal }));
+  setTimeout(() => abort.abort(), 100);
+  assert.deepEqual(await run, { status: 'error', output: '', error: 'stopped' });
+});
+
+test('button: only PATH and HOME from the environment, unless inheritEnv', async () => {
+  process.env.HD_BUTTON_TEST = 'visible';
+  try {
+    const names = async (options) => (await button.action(buttonCtx({ command: 'env | cut -d= -f1 | sort', ...options }))).output.trim().split('\n');
+    const own = await names({});
+    assert.ok(own.includes('PATH') && own.includes('HOME'));
+    assert.ok(!own.includes('HD_BUTTON_TEST'));
+    assert.deepEqual(own.filter((n) => !['PATH', 'HOME', 'PWD', 'SHLVL', '_', 'OLDPWD'].includes(n)), [], 'nothing else but what bash sets itself');
+    assert.ok((await names({ inheritEnv: true })).includes('HD_BUTTON_TEST'));
+  } finally {
+    delete process.env.HD_BUTTON_TEST;
+  }
+});
+
+test('button: output is capped at 64 KB, keeping the end', async () => {
+  const out = await button.action(buttonCtx({ command: 'for i in $(seq 1 20000); do echo "line $i"; done' }));
+  assert.equal(out.status, 'ok');
+  assert.ok(out.output.startsWith(CUT_MARKER));
+  assert.equal(Buffer.byteLength(out.output) - Buffer.byteLength(CUT_MARKER), OUTPUT_LIMIT);
+  assert.ok(out.output.endsWith('line 20000\n'));
+  const small = await button.action(buttonCtx({ command: 'echo small' }));
+  assert.equal(small.output, 'small\n', 'no marker when nothing was cut');
+});
+
+test('button: a link, or a button that asks for the action and is disabled while busy', async () => {
+  const link = (await renderClient('button', { text: 'Grafana <x>', href: 'https://grafana.lan/' })).el.shadowRoot;
+  const a = link.querySelector('a');
+  assert.deepEqual([a.href, a.target, a.rel, a.textContent, link.querySelector('button')], ['https://grafana.lan/', '_blank', 'noopener noreferrer', 'Grafana <x>', null]);
+  assert.equal((await renderClient('button', { text: 'x', href: 'javascript:alert(1)' })).el.shadowRoot.querySelector('a'), null, 'only http(s) links');
+
+  const { el, window } = await renderClient('button', { text: 'Pull images', command: 'x' });
+  const b = el.shadowRoot.querySelector('button');
+  assert.deepEqual([b.textContent, b.type, b.disabled, b.getAttribute('aria-busy')], ['Pull images', 'button', false, null]);
+  const events = [];
+  window.document.body.addEventListener('hd-widget-action', (e) => events.push([e.target, e.bubbles, e.composed, e.detail.title]));
+  b.click();
+  assert.deepEqual(events, [[el, true, true, 'Pull images']]);
+  el.busy = true;
+  assert.deepEqual([b.disabled, b.getAttribute('aria-busy')], [true, 'true']);
+  b.click();
+  assert.equal(events.length, 1, 'no second run while busy');
+  el.busy = false;
+  assert.deepEqual([b.disabled, b.getAttribute('aria-busy')], [false, null]);
+  const css = fs.readFileSync('widgets/button/client.js', 'utf8');
+  assert.match(css, /min-block-size: 2\.25rem/, 'a target of at least 28px');
+  assert.match(css, /prefers-reduced-motion/);
+  window.close();
 });

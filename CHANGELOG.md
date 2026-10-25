@@ -4,6 +4,16 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-25
+
+### Added
+- `button` (1.0.0): a full-width button on a card or in the header that opens a link (`href`), or
+  runs a bash script (`script`, relative to the config folder) or a shell command (`command`) on
+  the dashboard's server through the widget API's new `action` call. The run gets only `PATH` and
+  `HOME` unless `inheritEnv: true`, is stopped with everything it started after `timeout` seconds
+  (default 300), and returns the last 64 kB of output and the exit code. Needs a dashboard with
+  `action` support (0.8.0 or newer).
+
 ## [0.4.1] - 2026-10-25
 
 ### Added

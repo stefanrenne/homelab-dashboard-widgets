@@ -27,6 +27,7 @@ Every widget has its own page with setup, fields and options on the
 | `beszel` | systems up; one system's status, CPU, memory, disk, network with `systemId` | `url`, `username`, `password`, `systemId`, `version` |
 | `booklore` | libraries, books, reading, finished | `url`, `username`, `password` |
 | `bookorbit` | books, authors, reading, finished; series, storage via `fields` | `url`, `username`, `password` |
+| `button` | a button that opens a link or runs a script or shell command on the server (card or header) | `text`, `href`, `script`, `command`, `timeout`, `inheritEnv` |
 | `caddy` | upstreams, requests, failed requests | `url` (admin API) |
 | `calendar` | a month or an agenda with Sonarr, Radarr, Lidarr, Readarr and iCal events | `view`, `firstDayInWeek`, `maxEvents`, `showTime`, `previousDays`, `timezone`, `integrations` |
 | `calibreweb` | books, authors, categories, series | `url`, `username`, `password` |
