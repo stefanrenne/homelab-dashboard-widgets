@@ -15,7 +15,7 @@ import kubernetesPods from '../widgets/kubernetes-pods/server.js';
 import kubernetes, { PATHS as K8S, cores, bytes as k8sBytes } from '../widgets/kubernetes/server.js';
 import resources, { PATHS as RESOURCE_PATHS, formatUptime, formatBytes } from '../widgets/resources/server.js';
 import { parseLatency } from '../widgets/ping/server.js';
-import button, { OUTPUT_LIMIT, CUT_MARKER } from '../widgets/button/server.js';
+import button, { OUTPUT_LIMIT, CUT_MARKER, ROOT, ROOT_OFF } from '../widgets/button/server.js';
 
 const silentLog = { info() {}, warn() {}, error() {} };
 
@@ -667,4 +667,34 @@ test('button: a link, or a button that asks for the action and is disabled while
   assert.match(css, /min-block-size: 2\.25rem/, 'a target of at least 28px');
   assert.match(css, /prefers-reduced-motion/);
   window.close();
+});
+
+test('button: user root runs through sudo -n and the image\'s runner, -E only with inheritEnv; a clear error when it is off', async () => {
+  const dir = tmpDir('hd-sudo-');
+  const log = path.join(dir, 'sudo.log');
+  // a stand-in for sudo: logs its arguments, then runs what follows "--" as it is
+  fs.writeFileSync(path.join(dir, 'sudo'), `#!/bin/sh\nprintf '%s\\n' "$*" >> "${log}"\nwhile [ "$1" != "--" ]; do shift; done; shift\nexec "$@"\n`, { mode: 0o755 });
+  fs.writeFileSync(path.join(dir, 'hd-root'), '#!/bin/sh\necho "as root"\nexec /bin/bash "$@"\n', { mode: 0o755 });
+  // sudo without a rule for this user
+  fs.writeFileSync(path.join(dir, 'nosudo'), '#!/bin/sh\necho "sudo: a password is required" >&2\nexit 1\n', { mode: 0o755 });
+  const saved = { ...ROOT };
+  try {
+    Object.assign(ROOT, { sudo: path.join(dir, 'sudo'), runner: path.join(dir, 'hd-root') });
+    assert.deepEqual(await button.action(buttonCtx({ command: 'echo hi', user: 'root' })), { status: 'ok', output: 'as root\nhi\n', exitCode: 0 });
+    await button.action(buttonCtx({ command: 'true', user: 'root', inheritEnv: true }));
+    const calls = fs.readFileSync(log, 'utf8').trim().split('\n');
+    assert.match(calls[0], new RegExp(`^-n -- ${path.join(dir, 'hd-root')} -c `), 'never asks for a password; no -E without inheritEnv');
+    assert.match(calls[1], /^-n -E -- /, 'inheritEnv keeps the environment');
+    assert.deepEqual(await button.action(buttonCtx({ command: 'echo node' })), { status: 'ok', output: 'node\n', exitCode: 0 }, 'node does not use sudo');
+    assert.equal(fs.readFileSync(log, 'utf8').trim().split('\n').length, 2);
+
+    ROOT.sudo = path.join(dir, 'nosudo');
+    const off = await button.action(buttonCtx({ command: 'true', user: 'root' }));
+    assert.deepEqual([off.status, off.error], ['error', ROOT_OFF]);
+    ROOT.sudo = path.join(dir, 'missing');
+    assert.equal((await button.action(buttonCtx({ command: 'true', user: 'root' }))).error, ROOT_OFF);
+    await assert.rejects(button.action(buttonCtx({ command: 'true', user: 'admin' })), /user: "admin" is not node or root/);
+  } finally {
+    Object.assign(ROOT, saved);
+  }
 });

@@ -6,6 +6,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const OUTPUT_LIMIT = 64 * 1024;
+// `user: root` runs through sudo and this wrapper of the dashboard image (docker/hd-root there);
+// replaceable in tests
+export const ROOT = { sudo: 'sudo', runner: '/usr/local/bin/hd-root' };
+export const ROOT_OFF = 'user: root needs HD_ALLOW_ROOT_SCRIPTS=true on the dashboard container (dashboard image 0.9.0 or newer)';
 export const CUT_MARKER = '[earlier output cut]\n';
 const KILL_GRACE = 2000;
 
@@ -51,14 +55,18 @@ function killGroup(child, signal) {
   }
 }
 
-/** Runs bash with `args` in `cwd`; resolves with the action result, never rejects. */
-function run(args, { cwd, env, timeoutMs, signal }) {
+/** Runs bash with `args` in `cwd` (as root through sudo with `root`); resolves with the action result, never rejects. */
+function run(args, { cwd, env, timeoutMs, signal, root = false, keepEnv = false }) {
   return new Promise((resolve) => {
     const out = new Tail(OUTPUT_LIMIT);
     let child;
     try {
       // stderr onto stdout inside bash: one pipe keeps both in the order they were written
-      child = spawn('bash', ['-c', 'exec 2>&1; exec bash "$@"', 'bash', ...args], { cwd, env, detached: true, stdio: ['ignore', 'pipe', 'pipe'] });
+      const inner = ['-c', 'exec 2>&1; exec bash "$@"', 'bash', ...args];
+      // root: sudo -n never asks for a password; -E keeps the environment only with inheritEnv
+      child = root
+        ? spawn(ROOT.sudo, ['-n', ...(keepEnv ? ['-E'] : []), '--', ROOT.runner, ...inner], { cwd, env, detached: true, stdio: ['ignore', 'pipe', 'pipe'] })
+        : spawn('bash', inner, { cwd, env, detached: true, stdio: ['ignore', 'pipe', 'pipe'] });
     } catch (err) {
       resolve({ status: 'error', output: '', error: err.message });
       return;
@@ -88,10 +96,12 @@ function run(args, { cwd, env, timeoutMs, signal }) {
       clearTimeout(killTimer);
       resolve(result);
     };
-    child.on('error', (err) => finish({ status: 'error', output: out.toString(), error: err.code === 'ENOENT' ? 'bash is not installed' : err.message }));
+    child.on('error', (err) => finish({ status: 'error', output: out.toString(), error: err.code !== 'ENOENT' ? err.message : root ? ROOT_OFF : 'bash is not installed' }));
     // close (not exit): all output is read, also from children that kept the pipes open
     child.on('close', (code) => {
       if (stopped) return finish({ status: 'error', output: out.toString(), error: stopped });
+      // sudo refused (no rule for node): say what to set instead of sudo's own words
+      if (root && code === 1 && /^sudo: (a password is required|sorry|.*not allowed)/m.test(out.toString())) return finish({ status: 'error', output: out.toString(), exitCode: 1, error: ROOT_OFF });
       finish(code === 0 ? { status: 'ok', output: out.toString(), exitCode: 0 } : { status: 'error', output: out.toString(), exitCode: code });
     });
   });
@@ -110,7 +120,8 @@ export default {
     const cwd = ctx.configDir ?? process.cwd();
     const env = o.inheritEnv === true ? { ...process.env } : Object.fromEntries(['PATH', 'HOME'].filter((k) => process.env[k] !== undefined).map((k) => [k, process.env[k]]));
     const seconds = Number(o.timeout) > 0 ? Number(o.timeout) : 300;
-    const opts = { cwd, env, timeoutMs: seconds * 1000, signal: ctx.signal };
+    if (o.user !== undefined && o.user !== 'node' && o.user !== 'root') throw new Error(`user: "${o.user}" is not node or root`);
+    const opts = { cwd, env, timeoutMs: seconds * 1000, signal: ctx.signal, root: o.user === 'root', keepEnv: o.inheritEnv === true };
     if (target.script) {
       const file = path.resolve(cwd, target.script);
       if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return { status: 'error', output: '', error: `script not found: ${file}` };

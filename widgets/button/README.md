@@ -17,7 +17,18 @@ stderr together, the last 64 kB) and the exit code. A run that takes longer than
 The run gets only `PATH` and `HOME` from the dashboard's environment; set `inheritEnv: true` to
 pass all of it (including every `HD_VAR_*`). It runs as the dashboard's user (`node`, uid 1000, in
 the image), so tools such as `curl`, `jq` or `docker` must be in the image and the Docker socket
-must allow that user. Anyone who can open the dashboard can press the button: put the dashboard
+must allow that user.
+
+### Running as root
+
+`user: root` runs the script as root inside the container, for a script that writes files which
+must stay owned by root (a proxy's config, `chown`). It needs dashboard 0.9.0 or newer and
+`HD_ALLOW_ROOT_SCRIPTS: "true"` in the dashboard container's environment; without it the button
+says so. The dashboard itself keeps running as `node`: the image lets it start one fixed runner as
+root through sudo, and only when that variable is set. `HOME` is then `/root`; `inheritEnv: true`
+passes the dashboard's environment to the root script too. A timeout stops the root script and
+what it started. Once the variable is on, any installed widget could run as root in the
+container, so set it only on a dashboard you trust. Anyone who can open the dashboard can press the button: put the dashboard
 behind authentication before you add buttons that change things. `script` and `command` are kept
 on the server; the browser only gets the label.
 
@@ -45,4 +56,11 @@ No blocks: the button is drawn by the widget.
           - type: button
             text: Release notes
             href: https://github.com/jellyfin/jellyfin/releases
+- Proxy:
+    - SWAG:
+        widget:
+          type: button
+          text: Generate proxy configs
+          command: cd /srv/configs && ./gen-swag.sh
+          user: root                 # needs HD_ALLOW_ROOT_SCRIPTS: "true" on the dashboard container
 ```

@@ -4,6 +4,13 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-25
+
+### Added
+- `button` (1.1.0): `user: root` runs the script as root in the dashboard container, for files
+  that must stay owned by root. Needs dashboard 0.9.0 or newer with `HD_ALLOW_ROOT_SCRIPTS=true`;
+  without it the button says so.
+
 ## [0.5.0] - 2026-10-25
 
 ### Added
