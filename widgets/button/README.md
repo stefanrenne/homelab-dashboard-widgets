@@ -9,8 +9,10 @@ Set exactly one of `href`, `script` or `command`; with none or several, the card
   the container), which is also the folder the run starts in.
 - `command` runs a line with `bash -c`, such as `docker compose -f stacks/media.yaml pull`.
 
-While it runs, the button is disabled; when it is done, the dashboard shows the output (stdout and
-stderr together, the last 64 kB) and the exit code. A run that takes longer than `timeout` seconds
+While it runs, the button shows a spinner instead of its label and cannot be pressed. A run that
+succeeds (exit code 0) shows a check for a moment, then the label again. A run that fails opens
+the dashboard's result dialog with the output (stdout and stderr together, the last 64 kB) and the
+exit code; the output can be copied from there. A run that takes longer than `timeout` seconds
 (default 300) is stopped, together with everything it started. Values filled in from
 `{{HD_VAR_*}}` are scrubbed from the output.
 

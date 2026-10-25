@@ -4,6 +4,13 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-25
+
+### Changed
+- `button` (1.2.0): a spinner instead of the label while the run lasts; a successful run shows a
+  check for a moment and no dialog, a failed one opens the result dialog. Needs dashboard 0.10.0
+  or newer for the quiet success (an older one shows the dialog every time).
+
 ## [0.6.0] - 2026-10-25
 
 ### Added

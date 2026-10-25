@@ -1,19 +1,70 @@
 {
-  "en": {},
-  "nl": {},
-  "fr": {},
-  "de": {},
-  "es": {},
-  "ca": {},
-  "he": {},
-  "hr": {},
-  "hu": {},
-  "it": {},
-  "nb-NO": {},
-  "pt": {},
-  "ru": {},
-  "sv": {},
-  "vi": {},
-  "zh-Hans": {},
-  "zh-Hant": {}
+  "en": {
+    "running": "Running…",
+    "done": "Done"
+  },
+  "nl": {
+    "running": "Bezig…",
+    "done": "Klaar"
+  },
+  "fr": {
+    "running": "En cours…",
+    "done": "Terminé"
+  },
+  "de": {
+    "running": "Läuft…",
+    "done": "Fertig"
+  },
+  "es": {
+    "running": "En curso…",
+    "done": "Hecho"
+  },
+  "ca": {
+    "running": "En curs…",
+    "done": "Fet"
+  },
+  "he": {
+    "running": "פועל…",
+    "done": "הושלם"
+  },
+  "hr": {
+    "running": "Izvodi se…",
+    "done": "Gotovo"
+  },
+  "hu": {
+    "running": "Fut…",
+    "done": "Kész"
+  },
+  "it": {
+    "running": "In corso…",
+    "done": "Fatto"
+  },
+  "nb-NO": {
+    "running": "Kjører…",
+    "done": "Ferdig"
+  },
+  "pt": {
+    "running": "Em curso…",
+    "done": "Concluído"
+  },
+  "ru": {
+    "running": "Выполняется…",
+    "done": "Готово"
+  },
+  "sv": {
+    "running": "Körs…",
+    "done": "Klart"
+  },
+  "vi": {
+    "running": "Đang chạy…",
+    "done": "Xong"
+  },
+  "zh-Hans": {
+    "running": "运行中…",
+    "done": "完成"
+  },
+  "zh-Hant": {
+    "running": "執行中…",
+    "done": "完成"
+  }
 }

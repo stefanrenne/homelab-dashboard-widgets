@@ -654,15 +654,29 @@ test('button: a link, or a button that asks for the action and is disabled while
   const b = el.shadowRoot.querySelector('button');
   assert.deepEqual([b.textContent, b.type, b.disabled, b.getAttribute('aria-busy')], ['Pull images', 'button', false, null]);
   const events = [];
-  window.document.body.addEventListener('hd-widget-action', (e) => events.push([e.target, e.bubbles, e.composed, e.detail.title]));
+  window.document.body.addEventListener('hd-widget-action', (e) => events.push([e.target, e.bubbles, e.composed, e.detail.title, e.detail.showResult]));
   b.click();
-  assert.deepEqual(events, [[el, true, true, 'Pull images']]);
+  assert.deepEqual(events, [[el, true, true, 'Pull images', 'failure']], 'a dialog only when it fails');
   el.busy = true;
-  assert.deepEqual([b.disabled, b.getAttribute('aria-busy')], [true, 'true']);
+  assert.deepEqual([b.disabled, b.getAttribute('aria-busy'), b.textContent, Boolean(b.querySelector('.spinner'))], [true, 'true', '', true], 'a spinner instead of the label');
+  assert.equal(b.getAttribute('aria-label'), 'Pull images: running');
   b.click();
   assert.equal(events.length, 1, 'no second run while busy');
   el.busy = false;
-  assert.deepEqual([b.disabled, b.getAttribute('aria-busy')], [false, null]);
+  assert.deepEqual([b.disabled, b.getAttribute('aria-busy'), b.textContent], [false, null, 'Pull images']);
+
+  // success: a check for a moment, not clickable meanwhile, then the label again
+  el.busy = true;
+  el.actionResult = { status: 'ok' };
+  el.busy = false;
+  assert.deepEqual([b.disabled, b.classList.contains('done'), Boolean(b.querySelector('svg.check')), b.getAttribute('aria-label')], [true, true, true, 'Pull images: done']);
+  b.click();
+  assert.equal(events.length, 1, 'not again while the check shows');
+  await new Promise((r) => setTimeout(r, 1600));
+  assert.deepEqual([b.disabled, b.classList.contains('done'), b.textContent], [false, false, 'Pull images']);
+  // failure: straight back to the label (the dashboard shows the dialog)
+  el.actionResult = { status: 'error' };
+  assert.deepEqual([b.disabled, b.textContent], [false, 'Pull images']);
   const css = fs.readFileSync('widgets/button/client.js', 'utf8');
   assert.match(css, /min-block-size: 2\.25rem/, 'a target of at least 28px');
   assert.match(css, /prefers-reduced-motion/);
