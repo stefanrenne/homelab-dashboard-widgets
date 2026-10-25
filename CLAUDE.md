@@ -64,6 +64,13 @@ GitHub release with a zip per widget. When a tag cannot be pushed, run the CI wo
 `main` (workflow_dispatch): it releases package.json's version (unless released already)
 and creates the tag.
 
+**Every widget update reaches the documentation site.** The site is built by the dashboard
+repository and picks up a new release of this collection only once a day. After the release is
+published, rebuild it: `gh workflow run pages.yml --repo stefanrenne/homelab-dashboard`, and check
+that each new or changed widget's page is there
+(`https://stefanrenne.github.io/homelab-dashboard/widgets/collection/<id>.html`) and shows the
+new version.
+
 ## Commands
 
 ```bash
