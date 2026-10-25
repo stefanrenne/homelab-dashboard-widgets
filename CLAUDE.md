@@ -1,8 +1,13 @@
 # CLAUDE.md
 
-Widget collection for homelab-dashboard (`../homelab-dashboard`). Each folder in `widgets/` is
-one widget package following the dashboard's widget API 1
+Widget collection for homelab-dashboard (`../homelab-dashboard`): every widget it has. Each folder
+in `widgets/` is one widget package following the dashboard's widget API 1
 (`../homelab-dashboard/docs/widgets/api-reference.md`).
+
+The dashboard creates `http-status`, `ping`, `docker`, `kubernetes-pods` and `proxmoxvm` itself for a
+service's `siteMonitor:`, `ping:`, `container:`, `app:` and `proxmoxNode:`, and fills in their
+options (`src/layout.js` there). Their ids and options are a contract with the dashboard: change
+them only in a backward-compatible way.
 
 ## Structure
 
@@ -12,6 +17,7 @@ one widget package following the dashboard's widget API 1
 | `fixtures/<id>.json` | API answers per route (`"GET /api/v3/movie": ...`; `{ "_headers": {...}, "_body": ... }` for headers, `"_text"` for a plain text body), used by tests and the mock. |
 | `scripts/mock-homelab.mjs` | Serves the fixtures at `/<id>/...`; the tests start it, `npm run mock` too. |
 | `tests/widgets.test.mjs` | Every widget through the public `ctx` against the mock, plus package checks. |
+| `tests/dashboard-widgets.test.mjs` | The widgets that came from the dashboard (service fields, header, generic), against small servers of their own. |
 
 ## Rules
 

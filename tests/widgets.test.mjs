@@ -17,6 +17,7 @@ let a2s; // gamedig speaks Valve's server query over UDP
 let myjd; // jdownloader's My.JDownloader answers encrypted
 let mc; // minecraft speaks the Server List Ping over TCP
 let urb; // urbackup checks its login hash
+let dockerd; // docker asks for absolute paths (/containers/...) on its url
 before(async () => {
   mock = await startMock();
   apcupsd = await nis(['STATUS   : ONLINE', 'LOADPCT  : 10.0 Percent', 'BCHARGE  : 100.0 Percent', 'TIMELEFT : 60.0 Minutes']);
@@ -24,6 +25,7 @@ before(async () => {
   myjd = await myJDownloader();
   mc = await minecraftServer();
   urb = await urbackupServer();
+  dockerd = await atRoot('docker');
 });
 after(() => {
   mock.close();
@@ -32,7 +34,21 @@ after(() => {
   myjd.close();
   mc.close();
   urb.close();
+  dockerd.close();
 });
+
+/** A widget's fixture served at the root, for widgets that ask absolute paths on their url. */
+async function atRoot(id) {
+  const http = await import('node:http');
+  const { routes } = JSON.parse(fs.readFileSync(path.resolve(`fixtures/${id}.json`), 'utf8'));
+  const srv = http.createServer((req, res) => {
+    const answer = routes[`${req.method} ${new URL(req.url, 'http://x').pathname}`];
+    res.statusCode = answer === undefined ? 404 : 200;
+    res.end(JSON.stringify(answer ?? {}));
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  return { url: `http://127.0.0.1:${srv.address().port}`, close: () => srv.close() };
+}
 
 /** A fake UrBackup web interface: salt, login (checking the hash), status and usage. */
 async function urbackupServer() {
@@ -188,6 +204,12 @@ const REQUIRED = {
   navidrome: { user: 'anna', token: 't0k', salt: 's4lt' },
   grafana: { username: 'admin', password: 'pw' },
   openmediavault: { method: 'services.getStatus', username: 'admin', password: 'pw' },
+  'custom-api': { mappings: [] },
+  get docker() { return { url: dockerd.url, container: 'plex' }; },
+  proxmoxvm: { node: 'pve', vmid: '101', token: 'api@pam!dash', secret: 's3cret' },
+  'kubernetes-pods': { namespace: 'media', app: 'jellyfin' },
+  ping: { host: '127.0.0.1' },
+  resources: { cpu: true, memory: true, disk: ['/'] },
 };
 
 async function run(id, options = {}, { params } = {}) {
@@ -201,7 +223,8 @@ async function run(id, options = {}, { params } = {}) {
     signal: new AbortController().signal,
     cache: new Map(),
     log: silent,
-    fetch: (u, init) => fetch(u, init),
+    // a path is relative to options.url, as the dashboard's ctx.fetch
+    fetch: (u, init) => fetch(/^[a-z][a-z0-9+.-]*:/i.test(String(u)) ? u : new URL(String(u), options.url ?? `${mock.url}/${id}`), init),
   });
 }
 
@@ -250,7 +273,7 @@ test('every label, string value and row state has a translation', async () => {
 
 // row texts and client.js messages have the full card width
 const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'previousMonth', 'nextMonth', 'today', 'noEvents', 'inCinemas', 'physicalRelease', 'digitalRelease', 'notAnswered', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
-  'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable', 'noItems']);
+  'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable', 'noItems', 'placeholderFilter']);
 const BLOCK_LABELS = { radarr: ['wanted', 'missing', 'queued', 'movies'], sonarr: ['wanted', 'queued', 'series'] };
 
 test('block labels fit a narrow block: no abbreviations, words of 12 letters or less, 24 in all', () => {

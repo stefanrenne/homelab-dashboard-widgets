@@ -1,0 +1,76 @@
+{
+  "routes": {
+    "GET /api/v1/namespaces/media/pods": {
+      "items": [
+        {
+          "metadata": {
+            "name": "j1"
+          },
+          "status": {
+            "phase": "Running"
+          },
+          "spec": {
+            "containers": [
+              {
+                "resources": {
+                  "limits": {
+                    "cpu": "500m"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "metadata": {
+            "name": "j2"
+          },
+          "status": {
+            "phase": "Running"
+          },
+          "spec": {
+            "containers": [
+              {
+                "resources": {
+                  "limits": {
+                    "cpu": "500m"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "GET /apis/metrics.k8s.io/v1beta1/namespaces/media/pods": {
+      "items": [
+        {
+          "metadata": {
+            "name": "j1"
+          },
+          "containers": [
+            {
+              "usage": {
+                "cpu": "250m",
+                "memory": "500Mi"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "j2"
+          },
+          "containers": [
+            {
+              "usage": {
+                "cpu": "50m",
+                "memory": "600Mi"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

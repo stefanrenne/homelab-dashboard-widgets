@@ -1,0 +1,64 @@
+{
+  "routes": {
+    "GET /api/v1/nodes": {
+      "items": [
+        {
+          "metadata": {
+            "name": "node-a"
+          },
+          "status": {
+            "allocatable": {
+              "cpu": "4",
+              "memory": "8Gi"
+            },
+            "conditions": [
+              {
+                "type": "Ready",
+                "status": "True"
+              }
+            ]
+          }
+        },
+        {
+          "metadata": {
+            "name": "node-b"
+          },
+          "status": {
+            "allocatable": {
+              "cpu": "2",
+              "memory": "4Gi"
+            },
+            "conditions": [
+              {
+                "type": "Ready",
+                "status": "False"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "GET /apis/metrics.k8s.io/v1beta1/nodes": {
+      "items": [
+        {
+          "metadata": {
+            "name": "node-a"
+          },
+          "usage": {
+            "cpu": "1000m",
+            "memory": "2Gi"
+          }
+        },
+        {
+          "metadata": {
+            "name": "node-b"
+          },
+          "usage": {
+            "cpu": "500000000n",
+            "memory": "1Gi"
+          }
+        }
+      ]
+    }
+  }
+}

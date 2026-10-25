@@ -4,6 +4,23 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+The dashboard's built-in widgets moved here, so every widget is now in this collection; the
+dashboard's next release needs this one.
+
+### Added
+- `http-status`, `ping`, `docker`, `kubernetes-pods` and `proxmoxvm`: the widgets behind a
+  service's `siteMonitor:`, `ping:`, `container:`, `app:` and `proxmoxNode:`, moved here from the
+  dashboard with the same options.
+- `custom-api` (also `customapi`), `iframe`, `kubernetes`, and the header widgets `datetime`,
+  `greeting`, `logo`, `resources` and `search`, moved here from the dashboard with the same
+  options. The dashboard's built-in copies win over these until its next release.
+
+### Changed
+- `kubernetes-pods` has its own copy of the Kubernetes connection code instead of importing it
+  from `kubernetes`, so the folder can be installed on its own.
+- `resources`: shorter French and Croatian labels for CPU temperature and uptime, without
+  abbreviations.
+
 ## [0.3.0] - 2026-10-25
 
 Every service widget of homepage now has a counterpart here (or built into the dashboard): about

@@ -1,0 +1,33 @@
+{
+  "routes": {
+    "GET /containers/plex/json": {
+      "State": {
+        "Status": "running",
+        "Health": {
+          "Status": "healthy"
+        }
+      }
+    },
+    "GET /containers/plex/stats": {
+      "cpu_stats": {
+        "cpu_usage": {
+          "total_usage": 300
+        },
+        "system_cpu_usage": 2000,
+        "online_cpus": 2
+      },
+      "precpu_stats": {
+        "cpu_usage": {
+          "total_usage": 100
+        },
+        "system_cpu_usage": 1000
+      },
+      "memory_stats": {
+        "usage": 314572800,
+        "stats": {
+          "inactive_file": 104857600
+        }
+      }
+    }
+  }
+}

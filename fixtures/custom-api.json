@@ -1,0 +1,15 @@
+{
+  "routes": {
+    "GET /": {
+      "data": {
+        "count": 42,
+        "ratio": 0.25,
+        "items": [
+          {
+            "name": "a"
+          }
+        ]
+      }
+    }
+  }
+}

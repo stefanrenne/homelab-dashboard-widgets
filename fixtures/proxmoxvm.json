@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "GET /api2/json/nodes/pve/qemu/101/status/current": {
+      "data": {
+        "status": "running",
+        "cpu": 0.0451,
+        "mem": 2150000000
+      }
+    }
+  }
+}

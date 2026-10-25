@@ -1,8 +1,11 @@
 # homelab-dashboard widgets
 
-Widgets for [homelab-dashboard](https://github.com/stefanrenne/homelab-dashboard) for the usual homelab services, with the
-same fields as the matching [homepage](https://gethomepage.dev) widgets. They live outside the
-dashboard on purpose: this repository is an ordinary widget collection, installed like any third-party one.
+Every widget of [homelab-dashboard](https://github.com/stefanrenne/homelab-dashboard): the ones for the usual homelab
+services, with the same fields as the matching [homepage](https://gethomepage.dev) widgets, the
+header widgets (`datetime`, `search`, `resources`, ...) and the ones behind the dashboard's own
+service fields (`siteMonitor:` uses `http-status`, `ping:` `ping`, `container:` `docker`, `app:`
+`kubernetes-pods`, `proxmoxNode:` `proxmoxvm`). They live outside the dashboard on purpose: this
+repository is an ordinary widget collection, installed like any third-party one.
 
 Every widget has its own page with setup, fields and options on the
 [documentation site](https://stefanrenne.github.io/homelab-dashboard/widgets/collection/)
@@ -33,10 +36,13 @@ Every widget has its own page with setup, fields and options on the
 | `cloudflared` | tunnel status, origin IP | `accountid`, `tunnelid`, `key` |
 | `coinmarketcap` | a row per cryptocurrency with price and change | `key`, `symbols` or `slugs`, `currency`, `defaultinterval` |
 | `crowdsec` | alerts (24 hours), active bans | `url`, `username`, `password` |
+| `custom-api` | fields from any JSON API, as homepage's customapi | `url`, `method`, `headers`, `body`, `display`, `mappings` |
+| `datetime` | the current date and time (header) | `locale`, `dateStyle`, `timeStyle` |
 | `deluge` | leech, download rate, seed, upload rate; downloads per row with `enableLeechProgress` | `url`, `password`, `enableLeechProgress`, `queueLimit` (5) |
 | `develancacheui` | data from the LAN cache and from the internet | `url` |
 | `diskstation` | uptime, volume free, CPU, memory (Synology) | `url`, `username`, `password`, `volume`, `insecure` |
 | `dispatcharr` | channels, active streams; streams per row with `enableActiveStreams` | `url`, `username`, `password` |
+| `docker` | state, CPU and memory of one container; behind a service's `container:` | `container`, `socket` or `url`, `swarm`, `tlsCa`, `tlsCert`, `tlsKey` |
 | `dockhand` | containers, CPU, memory; more via `fields` | `url`, `environment`, `username`/`password` or `key` |
 | `downloadstation` | leech, download rate, seed, upload rate (Synology) | `url`, `username`, `password` |
 | `duplicati` | backup jobs, last and next run, warnings and errors | `url`, `password` |
@@ -60,12 +66,15 @@ Every widget has its own page with setup, fields and options on the
 | `gluetun` | the VPN's public IP, region, country and forwarded port | `url`, `key`, `version` |
 | `gotify` | applications, clients and messages | `url`, `key` |
 | `grafana` | dashboards, data sources, alert rules, alerts firing | `url`, `username`, `password`, `version`, `alerts` |
+| `greeting` | a line of text (header) | `text`, `text_size` |
 | `hdhomerun` | channels, tuners in use, a tuner's channel and signal | `url`, `tuner` |
 | `headscale` | a node's name, address, last seen and online state | `url`, `nodeId`, `key` |
 | `healthchecks` | checks up and down, or one check's state and last ping | `url`, `key`, `uuid` |
 | `homeassistant` | people home, lights on, switches on; or up to four states and templates (`custom`) | `url`, `key`, `custom` |
 | `homebox` | items, locations, labels and the inventory's value | `url`, `username`, `password` |
 | `homebridge` | status, updates and child bridges | `url`, `username`, `password` |
+| `http-status` | status code and response time of a URL; behind a service's `siteMonitor:` | `url`, `method` |
+| `iframe` | another page in a frame on the card | `src`, `height`, `allowPolicy`, `refreshInterval`, ... |
 | `immich` | users, photos, videos, storage | `url`, `key`, `version` (1 or 2) |
 | `jackett` | configured, errored indexers | `url`, `key`, `password` |
 | `jdownloader` | packages, size, remaining and download rate (My.JDownloader) | `username`, `password`, `client` |
@@ -76,8 +85,11 @@ Every widget has its own page with setup, fields and options on the
 | `komga` | libraries, series and books | `url`, `username`, `password`, `key`, `version` |
 | `komodo` | containers, stacks, or a summary with servers | `url`, `key`, `secret`, `showStacks`, `showSummary` |
 | `kopia` | a source's state, size, last and next snapshot | `url`, `username`, `password`, `snapshotHost`, `snapshotPath` |
+| `kubernetes` | CPU and memory of a Kubernetes cluster, in total and per node | `cluster`, `nodes`, `url`, `token`, ... |
+| `kubernetes-pods` | state, CPU and memory of an app's pods; behind a service's `app:` | `namespace`, `app`, `podSelector`, `url`, `token`, ... |
 | `lidarr` | wanted, queued, artists | `url`, `key` |
 | `linkwarden` | links, collections and tags | `url`, `key` |
+| `logo` | the dashboard's mark or an icon (header) | `icon` |
 | `longhorn` | storage used, in total and per node | `url`, `username`, `password` (or `provider: longhorn`), `include`, `expanded` |
 | `lubelogger` | vehicles, service records and reminders, or one vehicle | `url`, `username`, `password`, `vehicleID` |
 | `mailcow` | domains, mailboxes, messages and storage | `url`, `key` |
@@ -116,6 +128,7 @@ Every widget has its own page with setup, fields and options on the
 | `pfsense` | load, memory, temperature, disk and the WAN of a firewall | `url`, `wan`, `version`, `username`, `password`, `headers` |
 | `photoprism` | albums, photos, videos and people | `url`, `username`, `password`, `key` |
 | `pihole` | queries, blocked (also as a share), blocklist size | `url`, `version` (5 or 6), `key` |
+| `ping` | round-trip time to a host; behind a service's `ping:` | `host` |
 | `plantit` | diary events, plants, photos and species | `url`, `key` |
 | `plex` | streams, albums, movies, TV shows | `url`, `key` |
 | `portainer` | running, stopped, total | `url`, `key`, `env` |
@@ -124,6 +137,7 @@ Every widget has its own page with setup, fields and options on the
 | `prowlarr` | grabs, queries, failed grabs, failed queries | `url`, `key` |
 | `proxmox` | VMs and containers running, CPU and memory of the cluster or a node | `url`, `username` (token id), `password` (secret), `node`, `insecure` |
 | `proxmoxbackupserver` | datastore usage, failed tasks (24 hours), CPU, memory | `url`, `username` (token id), `password` (secret), `datastore`, `insecure` |
+| `proxmoxvm` | state, CPU and memory of one Proxmox VM or LXC container; behind `proxmoxNode:` | `url`, `token`, `secret`, `node`, `vmid`, `type` |
 | `pterodactyl` | nodes and game servers | `url`, `key` |
 | `pulse` | Proxmox nodes, VMs and containers running | `url`, `key`, `version` |
 | `pyload` | download rate, active and queued downloads | `url`, `username`, `password`, `key` |
@@ -132,10 +146,12 @@ Every widget has its own page with setup, fields and options on the
 | `qui` | torrents and rates across qBittorrent instances | `url`, `key`, `instance` |
 | `radarr` | wanted, missing, queued, movies; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `readarr` | wanted, queued, books | `url`, `key` |
+| `resources` | CPU, memory, disk, CPU temperature, uptime and network of the dashboard's machine (header) | `cpu`, `memory`, `disk`, `cputemp`, `uptime`, `network`, ... |
 | `romm` | platforms, games, saves and states | `url`, `username`, `password` |
 | `rutorrent` | active torrents, upload and download rates | `url`, `username`, `password` |
 | `sabnzbd` | rate, queue, time left | `url`, `key` |
 | `scrutiny` | disks passed, failed, unknown | `url` |
+| `search` | filters the services as you type, or searches the web (header) | `provider`, `url`, `target`, `showSearchSuggestions` |
 | `seerr` | pending, approved, completed (Overseerr, Jellyseerr, Seerr) | `url`, `key` |
 | `slskd` | Soulseek connection, transfers and shared files | `url`, `key` |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
@@ -196,7 +212,7 @@ that entry replaces the default:
 # settings.yaml of the dashboard
 plugins:
   - source: git+https://github.com/stefanrenne/homelab-dashboard-widgets#latest   # or a tag: #v0.2.0
-    only: [radarr, sonarr]        # optional: just these
+    only: [radarr, sonarr]        # optional: just these (plus the five behind the service fields)
   # while developing (wins over the installed collection):
   - path: ~/git/homelab-dashboard-widgets
 ```
