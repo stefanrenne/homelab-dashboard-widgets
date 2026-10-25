@@ -55,7 +55,8 @@ one widget package following the dashboard's widget API 1
 Bump the changed widgets' `version`, add a CHANGELOG section, set `package.json`'s version, tag
 `vX.Y.Z`, push with tags. CI checks the tag against package.json and the CHANGELOG and publishes a
 GitHub release with a zip per widget. When a tag cannot be pushed, run the CI workflow by hand on
-`main` (workflow_dispatch): it releases package.json's version and creates the tag.
+`main` (workflow_dispatch): it releases package.json's version (unless released already)
+and creates the tag.
 
 ## Commands
 

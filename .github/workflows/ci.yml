@@ -25,7 +25,7 @@ jobs:
   # A tag vX.Y.Z becomes a GitHub release: the CHANGELOG section as notes, a zip of the whole
   # collection and one zip per widget (<id>-<widget version>.zip) for installing a single widget.
   # Run by hand on main (workflow_dispatch), it releases package.json's version and creates the
-  # tag on that commit, for when a tag cannot be pushed.
+  # tag on that commit, for when a tag cannot be pushed; a version released already is skipped.
   release:
     needs: test
     if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
@@ -41,13 +41,15 @@ jobs:
           pkg=$(node -p "require('./package.json').version")
           if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
             tag="v$pkg"
-            if gh release view "$tag" >/dev/null 2>&1; then echo "::error::$tag is already released; bump package.json"; exit 1; fi
+            # dependabot-automerge.yml starts runs on main too: a released version is no release
+            if gh release view "$tag" >/dev/null 2>&1; then echo "$tag is released already: nothing to release"; echo "SKIP=true" >> "$GITHUB_ENV"; exit 0; fi
           else
             tag="$GITHUB_REF_NAME"
           fi
           if [ "${tag#v}" != "$pkg" ]; then echo "::error::tag $tag but package.json says $pkg"; exit 1; fi
           echo "TAG=$tag" >> "$GITHUB_ENV"
       - name: Notes and assets
+        if: env.SKIP != 'true'
         run: |
           version="${TAG#v}"
           awk -v v="$version" '
@@ -79,7 +81,8 @@ jobs:
             (cd widgets && zip -qr "../dist/$id-$v.zip" "$id")
           done
           ls dist
-      - env:
+      - if: env.SKIP != 'true'
+        env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # a pushed tag must exist; by hand, the release creates the tag on this commit
         run: |
