@@ -1,0 +1,52 @@
+{
+ "_note": "A Shelly Plug S Gen3 on 1.4.4 with 1.5.0 available (a beta too); Gen1 is tested against a server of its own.",
+ "routes": {
+  "GET /shelly": {
+   "name": "Garage plug",
+   "id": "shellyplugsg3-8cbfea9a1b2c",
+   "mac": "8CBFEA9A1B2C",
+   "slot": 0,
+   "model": "S3PL-00112EU",
+   "gen": 3,
+   "fw_id": "20241011-114455/1.4.4-g6d2a586",
+   "ver": "1.4.4",
+   "app": "PlugSG3",
+   "auth_en": false,
+   "auth_domain": null
+  },
+  "GET /rpc/Shelly.CheckForUpdate": {
+   "stable": {
+    "version": "1.5.0",
+    "build_id": "20250109-150410/1.5.0-g7b4a7f8"
+   },
+   "beta": {
+    "version": "1.5.1-beta1",
+    "build_id": "20250212-091522/1.5.1-beta1-gc1d3a2e"
+   }
+  },
+  "GET /rpc/Sys.GetStatus": {
+   "mac": "8CBFEA9A1B2C",
+   "restart_required": false,
+   "time": "14:32",
+   "unixtime": 1761834720,
+   "uptime": 86400,
+   "ram_size": 262144,
+   "ram_free": 112000,
+   "fs_size": 1048576,
+   "fs_free": 540000,
+   "cfg_rev": 12,
+   "kvs_rev": 0,
+   "schedule_rev": 0,
+   "webhook_rev": 0,
+   "available_updates": {
+    "stable": {
+     "version": "1.5.0"
+    },
+    "beta": {
+     "version": "1.5.1-beta1"
+    }
+   }
+  },
+  "GET /rpc/Shelly.Update": null
+ }
+}

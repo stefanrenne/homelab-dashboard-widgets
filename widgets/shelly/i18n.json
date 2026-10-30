@@ -1,0 +1,155 @@
+{
+  "en": {
+    "firmware": "Firmware",
+    "update": "Update",
+    "upToDate": "Up to date",
+    "updating": "Updating",
+    "updateFirmware": "Update firmware",
+    "updateStarted": "Update started",
+    "attention": "Needs attention"
+  },
+  "nl": {
+    "firmware": "Firmware",
+    "update": "Update",
+    "upToDate": "Bijgewerkt",
+    "updating": "Bezig",
+    "updateFirmware": "Firmware bijwerken",
+    "updateStarted": "Update gestart",
+    "attention": "Aandacht nodig"
+  },
+  "fr": {
+    "firmware": "Firmware",
+    "update": "Mise à jour",
+    "upToDate": "À jour",
+    "updating": "En cours",
+    "updateFirmware": "Mettre à jour le firmware",
+    "updateStarted": "Mise à jour lancée",
+    "attention": "À surveiller"
+  },
+  "de": {
+    "firmware": "Firmware",
+    "update": "Update",
+    "upToDate": "Aktuell",
+    "updating": "Läuft",
+    "updateFirmware": "Firmware aktualisieren",
+    "updateStarted": "Update gestartet",
+    "attention": "Achtung"
+  },
+  "es": {
+    "firmware": "Firmware",
+    "update": "Nueva versión",
+    "upToDate": "Al día",
+    "updating": "En curso",
+    "updateFirmware": "Actualizar firmware",
+    "updateStarted": "Actualización iniciada",
+    "attention": "Requiere atención"
+  },
+  "ca": {
+    "firmware": "Firmware",
+    "update": "Nova versió",
+    "upToDate": "Al dia",
+    "updating": "En curs",
+    "updateFirmware": "Actualitza el firmware",
+    "updateStarted": "Actualització iniciada",
+    "attention": "Cal atenció"
+  },
+  "he": {
+    "firmware": "קושחה",
+    "update": "עדכון",
+    "upToDate": "מעודכן",
+    "updating": "מתעדכן",
+    "updateFirmware": "עדכון קושחה",
+    "updateStarted": "העדכון התחיל",
+    "attention": "דורש תשומת לב"
+  },
+  "hr": {
+    "firmware": "Firmver",
+    "update": "Ažuriranje",
+    "upToDate": "Ažurno",
+    "updating": "Ažurira se",
+    "updateFirmware": "Ažuriraj firmver",
+    "updateStarted": "Ažuriranje pokrenuto",
+    "attention": "Treba pažnju"
+  },
+  "hu": {
+    "firmware": "Firmware",
+    "update": "Frissítés",
+    "upToDate": "Naprakész",
+    "updating": "Frissül",
+    "updateFirmware": "Firmware frissítése",
+    "updateStarted": "Frissítés elindítva",
+    "attention": "Figyelmet igényel"
+  },
+  "it": {
+    "firmware": "Firmware",
+    "update": "Nuova versione",
+    "upToDate": "Aggiornato",
+    "updating": "In corso",
+    "updateFirmware": "Aggiorna firmware",
+    "updateStarted": "Aggiornamento avviato",
+    "attention": "Richiede attenzione"
+  },
+  "nb-NO": {
+    "firmware": "Fastvare",
+    "update": "Oppdatering",
+    "upToDate": "Oppdatert",
+    "updating": "Oppdaterer",
+    "updateFirmware": "Oppdater fastvare",
+    "updateStarted": "Oppdatering startet",
+    "attention": "Trenger tilsyn"
+  },
+  "pt": {
+    "firmware": "Firmware",
+    "update": "Atualização",
+    "upToDate": "Atualizado",
+    "updating": "Em curso",
+    "updateFirmware": "Atualizar firmware",
+    "updateStarted": "Atualização iniciada",
+    "attention": "Requer atenção"
+  },
+  "ru": {
+    "firmware": "Прошивка",
+    "update": "Обновление",
+    "upToDate": "Актуально",
+    "updating": "Обновляется",
+    "updateFirmware": "Обновить прошивку",
+    "updateStarted": "Обновление запущено",
+    "attention": "Требует внимания"
+  },
+  "sv": {
+    "firmware": "Firmware",
+    "update": "Uppdatering",
+    "upToDate": "Aktuell",
+    "updating": "Uppdateras",
+    "updateFirmware": "Uppdatera firmware",
+    "updateStarted": "Uppdatering startad",
+    "attention": "Kräver åtgärd"
+  },
+  "vi": {
+    "firmware": "Phần sụn",
+    "update": "Cập nhật",
+    "upToDate": "Mới nhất",
+    "updating": "Đang cập nhật",
+    "updateFirmware": "Cập nhật phần sụn",
+    "updateStarted": "Đã bắt đầu cập nhật",
+    "attention": "Cần chú ý"
+  },
+  "zh-Hans": {
+    "firmware": "固件",
+    "update": "更新",
+    "upToDate": "已是最新",
+    "updating": "更新中",
+    "updateFirmware": "更新固件",
+    "updateStarted": "已开始更新",
+    "attention": "需要注意"
+  },
+  "zh-Hant": {
+    "firmware": "韌體",
+    "update": "更新",
+    "upToDate": "已是最新",
+    "updating": "更新中",
+    "updateFirmware": "更新韌體",
+    "updateStarted": "已開始更新",
+    "attention": "需要注意"
+  }
+}

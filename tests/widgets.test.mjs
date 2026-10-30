@@ -274,7 +274,8 @@ test('every label, string value and row state has a translation', async () => {
 
 // row texts and client.js messages have the full card width
 const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'previousMonth', 'nextMonth', 'today', 'noEvents', 'inCinemas', 'physicalRelease', 'digitalRelease', 'notAnswered', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
-  'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable', 'noItems', 'placeholderFilter']);
+  'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable', 'noItems', 'placeholderFilter',
+  'updateFirmware', 'updateStarted']);
 const BLOCK_LABELS = { radarr: ['wanted', 'missing', 'queued', 'movies'], sonarr: ['wanted', 'queued', 'series'] };
 
 test('block labels fit a narrow block: no abbreviations, words of 12 letters or less, 24 in all', () => {
@@ -1862,4 +1863,131 @@ test('urbackup, vikunja, wallos, wgeasy, xteve, yourspotify and zabbix', async (
   assert.deepEqual(values(zb), { unclassified: 0, information: 1, warning: 2, average: 0, high: 1, disaster: 0 });
   assert.deepEqual(zb.blocks.map((b) => b.status ?? null), [null, null, 'warn', null, 'error', null]);
   assert.deepEqual([JSON.parse(lastRequest('zabbix').body).method, lastRequest('zabbix').headers.authorization], ['trigger.get', 'Bearer test-key']);
+});
+
+/** A fake Shelly: Gen2 behind digest auth (SHA-256, checked here) or Gen1 behind basic auth, with these answers. */
+async function shellyDevice({ gen, password, routes }) {
+  const http = await import('node:http');
+  const crypto = await import('node:crypto');
+  const sha = (s) => crypto.createHash('sha256').update(s).digest('hex');
+  const calls = [];
+  const srv = http.createServer((req, res) => {
+    const u = new URL(req.url, 'http://x');
+    calls.push(req.url);
+    const auth = req.headers.authorization ?? '';
+    let ok = !password || u.pathname === '/shelly';
+    if (!ok && gen === 1) ok = auth === `Basic ${Buffer.from(`admin:${password}`).toString('base64')}`;
+    if (!ok && gen >= 2 && auth.startsWith('Digest ')) {
+      const p = Object.fromEntries([...auth.matchAll(/(\w+)="?([^",]*)"?/g)].map((m) => [m[1], m[2]]));
+      const expect = sha(`${sha(`admin:shelly-test:${password}`)}:n0nce:${p.nc}:${p.cnonce}:auth:${sha(`GET:${req.url}`)}`);
+      ok = p.username === 'admin' && p.uri === req.url && p.response === expect;
+    }
+    if (!ok) {
+      res.writeHead(401, gen >= 2 ? { 'www-authenticate': 'Digest qop="auth", realm="shelly-test", nonce="n0nce", algorithm=SHA-256' } : {});
+      return res.end();
+    }
+    const answer = routes[u.pathname];
+    if (answer === undefined) return res.writeHead(404).end('{}');
+    res.end(JSON.stringify(typeof answer === 'function' ? answer(u) : answer));
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  return { url: `http://127.0.0.1:${srv.address().port}`, calls, close: () => srv.close() };
+}
+
+test('shelly: Gen2+ version and stable update (marked), checked once an hour, and the update through action', async () => {
+  const { default: shelly, cleanVersion, compareVersions } = await import(path.join(WIDGETS, 'shelly', 'server.js'));
+  const ctx = (options, cache = new Map()) => ({ options: { username: 'admin', ...options }, cache, log: silent, signal: new AbortController().signal, fetch });
+  const cache = new Map();
+  const out = await shelly.fetch(ctx({ url: `${mock.url}/shelly` }, cache));
+  assert.deepEqual(out.blocks, [{ key: 'firmware', label: 'firmware', value: '1.4.4' }, { key: 'update', label: 'update', value: '1.5.0', status: 'warn' }]);
+  assert.deepEqual(out.update, { available: true, version: '1.5.0', stage: 'stable' });
+  assert.equal(lastRequest('shelly').route, 'GET /rpc/Shelly.CheckForUpdate');
+  await shelly.fetch(ctx({ url: `${mock.url}/shelly` }, cache));
+  assert.equal(lastRequest('shelly').route, 'GET /rpc/Sys.GetStatus', 'the cloud check waits an hour; the device status in between');
+  assert.deepEqual(await shelly.action(ctx({ url: `${mock.url}/shelly` }, cache)), { status: 'ok', output: 'Updating from 1.4.4 to 1.5.0; the device restarts when it is done.\n' });
+  assert.deepEqual([lastRequest('shelly').route, lastRequest('shelly').query.stage], ['GET /rpc/Shelly.Update', 'stable']);
+
+  // digest auth as admin, a beta only with beta: true, up to date otherwise
+  const routes = { '/shelly': { gen: 2, ver: '1.4.4', auth_en: true }, '/rpc/Shelly.CheckForUpdate': { beta: { version: '1.5.1-beta1' } }, '/rpc/Shelly.Update': null };
+  const dev = await shellyDevice({ gen: 2, password: 'pw', routes });
+  try {
+    const plain = await shelly.fetch(ctx({ url: dev.url, password: 'pw' }));
+    assert.deepEqual([plain.blocks[1], plain.update.available], [{ key: 'update', label: 'update', value: 'upToDate' }, false]);
+    assert.deepEqual((await shelly.action(ctx({ url: dev.url, password: 'pw' }))).status, 'error', 'nothing to install');
+    const beta = await shelly.fetch(ctx({ url: dev.url, password: 'pw', beta: true }));
+    assert.deepEqual(beta.update, { available: true, version: '1.5.1-beta1', stage: 'beta' });
+    assert.equal((await shelly.action(ctx({ url: dev.url, password: 'pw', beta: true }))).status, 'ok');
+    assert.equal(dev.calls.at(-1), '/rpc/Shelly.Update?stage=beta');
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url })), /^Error: Shelly Shelly.CheckForUpdate answered 401$/);
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), (err) => /answered 401/.test(err.message) && !err.message.includes('wrong'));
+  } finally {
+    dev.close();
+  }
+  await assert.rejects(shelly.fetch(ctx({ url: `${mock.url}/nothing-here` })), /Shelly shelly answered 404/);
+
+  assert.equal(cleanVersion('20230913-112003/v1.14.0-gcb84623'), '1.14.0');
+  assert.equal(cleanVersion('20231107-162425/v1.14.1-rc1-g7b4a7f8'), '1.14.1-rc1');
+  assert.ok(compareVersions('1.14.1-rc1', '1.14.0') > 0 && compareVersions('1.14.1-rc1', '1.14.1') < 0 && compareVersions('1.10.0', '1.9.9') > 0);
+});
+
+test('shelly: Gen1 over /shelly and /ota with basic auth; a beta, an update that runs', async () => {
+  const { default: shelly } = await import(path.join(WIDGETS, 'shelly', 'server.js'));
+  const ctx = (options) => ({ options: { username: 'admin', password: 'pw', ...options }, cache: new Map(), log: silent, signal: new AbortController().signal, fetch });
+  const ota = { status: 'idle', has_update: true, new_version: '20231107-162425/v1.14.1-gcb84623', old_version: '20230913-112003/v1.14.0-gcb84623', beta_version: '20231020-090000/v1.14.1-rc1-gab12cd3' };
+  const routes = { '/shelly': { type: 'SHSW-1', fw: '20230913-112003/v1.14.0-gcb84623', auth: true }, '/ota/check': { status: 'ok' }, '/ota': () => ota };
+  const dev = await shellyDevice({ gen: 1, password: 'pw', routes });
+  try {
+    const out = await shelly.fetch(ctx({ url: dev.url }));
+    assert.deepEqual(values(out), { firmware: '1.14.0', update: '1.14.1' });
+    assert.deepEqual(dev.calls.slice(-2), ['/ota/check', '/ota'], 'asks the device to look first');
+    assert.equal((await shelly.action(ctx({ url: dev.url }))).status, 'ok');
+    assert.equal(dev.calls.at(-1), '/ota?update=true');
+
+    Object.assign(ota, { has_update: false, new_version: ota.old_version });
+    assert.equal((await shelly.fetch(ctx({ url: dev.url }))).blocks[1].value, 'upToDate');
+    assert.deepEqual((await shelly.fetch(ctx({ url: dev.url, beta: true }))).update, { available: true, version: '1.14.1-rc1', stage: 'beta' });
+    await shelly.action(ctx({ url: dev.url, beta: true }));
+    assert.equal(dev.calls.at(-1), '/ota?beta=true');
+
+    ota.status = 'updating';
+    const busy = await shelly.fetch(ctx({ url: dev.url, beta: true }));
+    assert.deepEqual([busy.blocks[1], busy.update.available], [{ key: 'update', label: 'update', value: 'updating', status: 'warn' }, false]);
+    assert.equal((await shelly.action(ctx({ url: dev.url, beta: true }))).status, 'error');
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), /Shelly ota\/check answered 401/);
+  } finally {
+    dev.close();
+  }
+});
+
+test('shelly client: blocks with the update marked, a button only for an update, busy, then started', async () => {
+  const { el, window } = await renderClient('shelly');
+  const data = { blocks: [{ key: 'firmware', label: 'firmware', value: '1.4.4' }, { key: 'update', label: 'update', value: '1.5.0', status: 'warn' }], update: { available: true, version: '1.5.0', stage: 'stable' } };
+  el.data = data;
+  const root = el.shadowRoot;
+  const blocks = [...root.querySelectorAll('.block')];
+  assert.deepEqual(blocks.map((b) => [b.className, b.querySelector('.l').textContent]), [['block', 'firmware'], ['block warn', 'update']]);
+  assert.equal(blocks[1].querySelector('.v').textContent, '▲attention: 1.5.0');
+  const button = root.querySelector('button');
+  assert.deepEqual([button.hidden, button.disabled, button.textContent], [false, false, 'updateFirmware']);
+  const events = [];
+  window.document.body.addEventListener('hd-widget-action', (e) => events.push([e.bubbles, e.composed, e.detail.title, e.detail.showResult]));
+  button.click();
+  assert.deepEqual(events, [[true, true, 'updateFirmware', 'failure']]);
+  el.busy = true;
+  assert.deepEqual([button.disabled, button.getAttribute('aria-busy'), Boolean(button.querySelector('.spinner'))], [true, 'true', true]);
+  button.click();
+  assert.equal(events.length, 1, 'no second run while busy');
+  el.actionResult = { status: 'ok' };
+  el.busy = false;
+  assert.deepEqual([button.disabled, button.textContent, root.querySelector('button') === button], [true, 'updateStarted', true]);
+  el.data = data;
+  assert.equal(button.textContent, 'updateStarted', 'still started while the device has not updated yet');
+  el.data = { blocks: [{ key: 'firmware', label: 'firmware', value: '1.5.0' }, { key: 'update', label: 'update', value: 'upToDate' }], update: { available: false, version: null, stage: null } };
+  assert.equal(button.hidden, true, 'no button without an update');
+  el.data = data;
+  assert.deepEqual([button.hidden, button.disabled, button.textContent], [false, false, 'updateFirmware'], 'ready for a next update');
+  el.actionResult = { status: 'error' };
+  assert.equal(button.disabled, false, 'a failed start can be tried again');
+  el.error = 'Shelly shelly answered 404';
+  assert.deepEqual([root.querySelector('.error').textContent, button.hidden], ['Shelly shelly answered 404', true]);
 });

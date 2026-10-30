@@ -4,6 +4,13 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+### Added
+- `shelly` (1.0.0): a Shelly device's firmware version and an available update (marked), with an
+  **Update firmware** button that starts it through the widget API's `action` call. Gen2, Gen3
+  and Gen4 over the RPC API (digest auth as `admin`), Gen1 over `/shelly` and `/ota` (basic auth);
+  `beta: true` also offers beta firmware. Needs dashboard 0.10.0 or newer for the button's quiet
+  success (0.8.0 or newer for the button).
+
 ## [0.7.0] - 2026-10-25
 
 ### Changed

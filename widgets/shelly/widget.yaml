@@ -1,0 +1,11 @@
+id: shelly
+name: Shelly
+version: 1.0.0
+apiVersion: 1
+description: A Shelly device's firmware version, whether an update is available, and a button that starts it.
+refresh: 5m
+options:
+  url: { type: url, required: true }          # e.g. http://shelly-plug.lan
+  password: { type: string, secret: true }    # only when the device has authentication on
+  username: { type: string, default: admin }  # Gen1 only; Gen2 and newer always use admin
+  beta: { type: boolean, default: false }     # also offer beta firmware

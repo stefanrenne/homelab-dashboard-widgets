@@ -154,6 +154,7 @@ Every widget has its own page with setup, fields and options on the
 | `scrutiny` | disks passed, failed, unknown | `url` |
 | `search` | filters the services as you type, or searches the web (header) | `provider`, `url`, `target`, `showSearchSuggestions` |
 | `seerr` | pending, approved, completed (Overseerr, Jellyseerr, Seerr) | `url`, `key` |
+| `shelly` | firmware version, an available update (marked) and a button that starts it | `url`, `password`, `beta` |
 | `slskd` | Soulseek connection, transfers and shared files | `url`, `key` |
 | `sonarr` | wanted, queued, series; the queue with `enableQueue: true` | `url`, `key`, `queueLimit` (5) |
 | `sparkyfitness` | calories eaten, burned and remaining, steps | `url`, `key` |
