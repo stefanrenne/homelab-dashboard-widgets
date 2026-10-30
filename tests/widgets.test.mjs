@@ -275,7 +275,7 @@ test('every label, string value and row state has a translation', async () => {
 // row texts and client.js messages have the full card width
 const ROW_TEXTS = new Set(['noLocation', 'locating', 'unknownSymbol', 'previousMonth', 'nextMonth', 'today', 'noEvents', 'inCinemas', 'physicalRelease', 'digitalRelease', 'notAnswered', 'moreItems', 'noActiveStreams', 'downloading', 'queued', 'paused', 'completed', 'delay', 'failed', 'failedPending',
   'warning', 'importPending', 'importBlocked', 'importing', 'imported', 'downloadClientUnavailable', 'noItems', 'placeholderFilter',
-  'updateFirmware', 'updateStarted']);
+  'updateFirmware', 'updateStarted', 'wrongPassword', 'passwordNeeded']);
 const BLOCK_LABELS = { radarr: ['wanted', 'missing', 'queued', 'movies'], sonarr: ['wanted', 'queued', 'series'] };
 
 test('block labels fit a narrow block: no abbreviations, words of 12 letters or less, 24 in all', () => {
@@ -1918,8 +1918,8 @@ test('shelly: Gen2+ version and stable update (marked), checked once an hour, an
     assert.deepEqual(beta.update, { available: true, version: '1.5.1-beta1', stage: 'beta' });
     assert.equal((await shelly.action(ctx({ url: dev.url, password: 'pw', beta: true }))).status, 'ok');
     assert.equal(dev.calls.at(-1), '/rpc/Shelly.Update?stage=beta');
-    await assert.rejects(shelly.fetch(ctx({ url: dev.url })), /^Error: Shelly Shelly.CheckForUpdate answered 401$/);
-    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), (err) => /answered 401/.test(err.message) && !err.message.includes('wrong'));
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url })), /^Error: Shelly Shelly.CheckForUpdate answered 401 \(no password set\)$/);
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), (err) => /^Shelly Shelly.CheckForUpdate answered 401 \(password refused\)$/.test(err.message));
   } finally {
     dev.close();
   }
@@ -1953,7 +1953,8 @@ test('shelly: Gen1 over /shelly and /ota with basic auth; a beta, an update that
     const busy = await shelly.fetch(ctx({ url: dev.url, beta: true }));
     assert.deepEqual([busy.blocks[1], busy.update.available], [{ key: 'update', label: 'update', value: 'updating', status: 'warn' }, false]);
     assert.equal((await shelly.action(ctx({ url: dev.url, beta: true }))).status, 'error');
-    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), /Shelly ota\/check answered 401/);
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), /Shelly ota\/check answered 401 \(password refused\)/);
+    await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: undefined })), /Shelly ota\/check answered 401 \(no password set\)/);
   } finally {
     dev.close();
   }
@@ -1990,4 +1991,15 @@ test('shelly client: blocks with the update marked, a button only for an update,
   assert.equal(button.disabled, false, 'a failed start can be tried again');
   el.error = 'Shelly shelly answered 404';
   assert.deepEqual([root.querySelector('.error').textContent, button.hidden], ['Shelly shelly answered 404', true]);
+});
+
+test('shelly client: a 401 becomes advice about the password, with the raw error as a detail', async () => {
+  const { el } = await renderClient('shelly');
+  const shown = () => [...el.shadowRoot.querySelector('.error').childNodes].map((n) => n.textContent);
+  el.error = 'Shelly Shelly.CheckForUpdate answered 401 (password refused)';
+  assert.deepEqual(shown(), ['wrongPassword', 'Shelly Shelly.CheckForUpdate answered 401 (password refused)']);
+  el.error = 'Shelly ota/check answered 401 (no password set)';
+  assert.deepEqual(shown(), ['passwordNeeded', 'Shelly ota/check answered 401 (no password set)']);
+  el.error = 'Shelly shelly answered 404';
+  assert.deepEqual(shown(), ['Shelly shelly answered 404'], 'other errors as they are');
 });

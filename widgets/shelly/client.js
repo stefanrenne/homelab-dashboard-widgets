@@ -58,6 +58,7 @@ class HdShelly extends HTMLElement {
         .sym { display: inline-block; margin-inline-end: 3px; font-size: .75em; vertical-align: .05em; }
         .sr-only { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         .error { margin: 4px; font-size: .75rem; color: var(--hd-error); }
+        .detail { margin-block-start: 2px; color: var(--hd-muted); overflow-wrap: anywhere; }
         button {
           box-sizing: border-box; display: flex; align-items: center; justify-content: center;
           inline-size: calc(100% - 8px); min-block-size: 2.25rem; margin: 4px; padding-block: .5rem; padding-inline: 1rem;
@@ -122,7 +123,13 @@ class HdShelly extends HTMLElement {
     }
     box.replaceChildren();
     const d = this._error ? null : this._data;
-    if (this._error) box.append(Object.assign(document.createElement('div'), { className: 'error', textContent: this._error }));
+    if (this._error) {
+      // a 401 gets advice (server.js says whether a password was set), the raw text as a detail
+      const advice = /answered 401/.test(this._error) ? t(/no password set/.test(this._error) ? 'passwordNeeded' : 'wrongPassword') : null;
+      const error = Object.assign(document.createElement('div'), { className: 'error', textContent: advice ?? this._error });
+      if (advice) error.append(Object.assign(document.createElement('div'), { className: 'detail', textContent: this._error }));
+      box.append(error);
+    }
     if (Array.isArray(d?.blocks) && d.blocks.length) {
       const grid = document.createElement('div');
       grid.className = 'blocks';

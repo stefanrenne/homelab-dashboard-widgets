@@ -65,6 +65,8 @@ function client(ctx) {
       res = await ctx.fetch(url, { headers: { ...headers, authorization: digestHeader(challenge, { username: 'admin', password: o.password, method: 'GET', uri }) } });
     }
     const name = path.split('?')[0].replace(/^\/(rpc\/)?/, '');
+    // the browser never sees the password: say which case a 401 is, for client.js's advice
+    if (res.status === 401) throw new Error(`Shelly ${name} answered 401 (${o.password ? 'password refused' : 'no password set'})`);
     if (!res.ok) throw new Error(`Shelly ${name} answered ${res.status}`);
     return res.json();
   };

@@ -7,7 +7,9 @@ new version. Works with Gen2, Gen3 and Gen4 devices (the RPC API) and with Gen1 
 
 Set `password` only when the device has authentication on (Settings > Authentication on Gen2
 and newer, Internet & Security > Restrict login on Gen1): Gen2 and newer log in as `admin` with
-digest authentication, Gen1 with the `username` and password set there. The widget asks the
+digest authentication, Gen1 with the `username` and password set there. When the device refuses
+the password, or asks for one while none is set, the card says so. Fill the password in through
+`{{HD_VAR_...}}`, not `{{...}}` alone: an unknown placeholder stays literal and is refused. The widget asks the
 device to look for new firmware at most once an hour (it also looks by itself); with `beta: true`
 a beta version is offered when there is no newer stable one.
 

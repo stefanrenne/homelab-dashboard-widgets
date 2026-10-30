@@ -1,6 +1,6 @@
 id: shelly
 name: Shelly
-version: 1.0.0
+version: 1.0.1
 apiVersion: 1
 description: A Shelly device's firmware version, whether an update is available, and a button that starts it.
 refresh: 5m

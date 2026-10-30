@@ -4,6 +4,11 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+### Changed
+- `shelly` (1.0.1): a refused password (401) says so on the card ("The password was refused –
+  check "password""), or asks for `password` when none is set, with the raw error below it,
+  instead of only "Shelly Shelly.CheckForUpdate answered 401".
+
 ## [0.8.0] - 2026-10-30
 
 ### Added

@@ -6,7 +6,9 @@
     "updating": "Updating",
     "updateFirmware": "Update firmware",
     "updateStarted": "Update started",
-    "attention": "Needs attention"
+    "attention": "Needs attention",
+    "wrongPassword": "The password was refused – check \"password\"",
+    "passwordNeeded": "The device asks for a password – set \"password\""
   },
   "nl": {
     "firmware": "Firmware",
@@ -15,7 +17,9 @@
     "updating": "Bezig",
     "updateFirmware": "Firmware bijwerken",
     "updateStarted": "Update gestart",
-    "attention": "Aandacht nodig"
+    "attention": "Aandacht nodig",
+    "wrongPassword": "Het wachtwoord is geweigerd – controleer \"password\"",
+    "passwordNeeded": "Het apparaat vraagt een wachtwoord – stel \"password\" in"
   },
   "fr": {
     "firmware": "Firmware",
@@ -24,7 +28,9 @@
     "updating": "En cours",
     "updateFirmware": "Mettre à jour le firmware",
     "updateStarted": "Mise à jour lancée",
-    "attention": "À surveiller"
+    "attention": "À surveiller",
+    "wrongPassword": "Mot de passe refusé – vérifiez \"password\"",
+    "passwordNeeded": "L'appareil demande un mot de passe – définissez \"password\""
   },
   "de": {
     "firmware": "Firmware",
@@ -33,7 +39,9 @@
     "updating": "Läuft",
     "updateFirmware": "Firmware aktualisieren",
     "updateStarted": "Update gestartet",
-    "attention": "Achtung"
+    "attention": "Achtung",
+    "wrongPassword": "Das Passwort wurde abgelehnt – prüfe \"password\"",
+    "passwordNeeded": "Das Gerät verlangt ein Passwort – setze \"password\""
   },
   "es": {
     "firmware": "Firmware",
@@ -42,7 +50,9 @@
     "updating": "En curso",
     "updateFirmware": "Actualizar firmware",
     "updateStarted": "Actualización iniciada",
-    "attention": "Requiere atención"
+    "attention": "Requiere atención",
+    "wrongPassword": "Contraseña rechazada – revisa \"password\"",
+    "passwordNeeded": "El dispositivo pide una contraseña – define \"password\""
   },
   "ca": {
     "firmware": "Firmware",
@@ -51,7 +61,9 @@
     "updating": "En curs",
     "updateFirmware": "Actualitza el firmware",
     "updateStarted": "Actualització iniciada",
-    "attention": "Cal atenció"
+    "attention": "Cal atenció",
+    "wrongPassword": "Contrasenya rebutjada – revisa \"password\"",
+    "passwordNeeded": "El dispositiu demana una contrasenya – defineix \"password\""
   },
   "he": {
     "firmware": "קושחה",
@@ -60,7 +72,9 @@
     "updating": "מתעדכן",
     "updateFirmware": "עדכון קושחה",
     "updateStarted": "העדכון התחיל",
-    "attention": "דורש תשומת לב"
+    "attention": "דורש תשומת לב",
+    "wrongPassword": "הסיסמה נדחתה – בדקו את \"password\"",
+    "passwordNeeded": "המכשיר דורש סיסמה – הגדירו את \"password\""
   },
   "hr": {
     "firmware": "Firmver",
@@ -69,7 +83,9 @@
     "updating": "Ažurira se",
     "updateFirmware": "Ažuriraj firmver",
     "updateStarted": "Ažuriranje pokrenuto",
-    "attention": "Treba pažnju"
+    "attention": "Treba pažnju",
+    "wrongPassword": "Lozinka je odbijena – provjerite \"password\"",
+    "passwordNeeded": "Uređaj traži lozinku – postavite \"password\""
   },
   "hu": {
     "firmware": "Firmware",
@@ -78,7 +94,9 @@
     "updating": "Frissül",
     "updateFirmware": "Firmware frissítése",
     "updateStarted": "Frissítés elindítva",
-    "attention": "Figyelmet igényel"
+    "attention": "Figyelmet igényel",
+    "wrongPassword": "Az eszköz elutasította a jelszót – ellenőrizze: \"password\"",
+    "passwordNeeded": "Az eszköz jelszót kér – adja meg: \"password\""
   },
   "it": {
     "firmware": "Firmware",
@@ -87,7 +105,9 @@
     "updating": "In corso",
     "updateFirmware": "Aggiorna firmware",
     "updateStarted": "Aggiornamento avviato",
-    "attention": "Richiede attenzione"
+    "attention": "Richiede attenzione",
+    "wrongPassword": "Password rifiutata – controlla \"password\"",
+    "passwordNeeded": "Il dispositivo chiede una password – imposta \"password\""
   },
   "nb-NO": {
     "firmware": "Fastvare",
@@ -96,7 +116,9 @@
     "updating": "Oppdaterer",
     "updateFirmware": "Oppdater fastvare",
     "updateStarted": "Oppdatering startet",
-    "attention": "Trenger tilsyn"
+    "attention": "Trenger tilsyn",
+    "wrongPassword": "Passordet ble avvist – sjekk \"password\"",
+    "passwordNeeded": "Enheten ber om et passord – angi \"password\""
   },
   "pt": {
     "firmware": "Firmware",
@@ -105,7 +127,9 @@
     "updating": "Em curso",
     "updateFirmware": "Atualizar firmware",
     "updateStarted": "Atualização iniciada",
-    "attention": "Requer atenção"
+    "attention": "Requer atenção",
+    "wrongPassword": "Palavra-passe recusada – verifique \"password\"",
+    "passwordNeeded": "O dispositivo pede uma palavra-passe – defina \"password\""
   },
   "ru": {
     "firmware": "Прошивка",
@@ -114,7 +138,9 @@
     "updating": "Обновляется",
     "updateFirmware": "Обновить прошивку",
     "updateStarted": "Обновление запущено",
-    "attention": "Требует внимания"
+    "attention": "Требует внимания",
+    "wrongPassword": "Пароль отклонён – проверьте \"password\"",
+    "passwordNeeded": "Устройство требует пароль – укажите \"password\""
   },
   "sv": {
     "firmware": "Firmware",
@@ -123,7 +149,9 @@
     "updating": "Uppdateras",
     "updateFirmware": "Uppdatera firmware",
     "updateStarted": "Uppdatering startad",
-    "attention": "Kräver åtgärd"
+    "attention": "Kräver åtgärd",
+    "wrongPassword": "Lösenordet nekades – kontrollera \"password\"",
+    "passwordNeeded": "Enheten kräver ett lösenord – ange \"password\""
   },
   "vi": {
     "firmware": "Phần sụn",
@@ -132,7 +160,9 @@
     "updating": "Đang cập nhật",
     "updateFirmware": "Cập nhật phần sụn",
     "updateStarted": "Đã bắt đầu cập nhật",
-    "attention": "Cần chú ý"
+    "attention": "Cần chú ý",
+    "wrongPassword": "Mật khẩu bị từ chối – kiểm tra \"password\"",
+    "passwordNeeded": "Thiết bị yêu cầu mật khẩu – hãy đặt \"password\""
   },
   "zh-Hans": {
     "firmware": "固件",
@@ -141,7 +171,9 @@
     "updating": "更新中",
     "updateFirmware": "更新固件",
     "updateStarted": "已开始更新",
-    "attention": "需要注意"
+    "attention": "需要注意",
+    "wrongPassword": "密码被拒绝。请检查 \"password\"。",
+    "passwordNeeded": "设备需要密码。请设置 \"password\"。"
   },
   "zh-Hant": {
     "firmware": "韌體",
@@ -150,6 +182,8 @@
     "updating": "更新中",
     "updateFirmware": "更新韌體",
     "updateStarted": "已開始更新",
-    "attention": "需要注意"
+    "attention": "需要注意",
+    "wrongPassword": "密碼遭拒。請檢查 \"password\"。",
+    "passwordNeeded": "裝置需要密碼。請設定 \"password\"。"
   }
 }
