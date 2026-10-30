@@ -4,6 +4,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-10-30
+
 ### Added
 - `shelly` (1.0.0): a Shelly device's firmware version and an available update (marked), with an
   **Update firmware** button that starts it through the widget API's `action` call. Gen2, Gen3
