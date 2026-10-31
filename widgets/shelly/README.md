@@ -24,12 +24,6 @@ Learn more about [Shelly](https://shelly-api-docs.shelly.cloud/).
 
 `firmware`, `update` (only when an update is available or being installed)
 
-## Attributes
-
-For a service's `filter:` (dashboard 0.12.0 or newer): `update` (true while an update is
-available or being installed), `version` (the installed firmware), `available` (the firmware on
-offer, or null).
-
 ## Example
 
 ```yaml

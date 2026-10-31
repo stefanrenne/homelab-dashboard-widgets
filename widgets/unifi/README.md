@@ -16,8 +16,7 @@ Sign in with either:
 Most controllers use a self-signed certificate: set `insecure: true` to accept it (the connection
 stays encrypted, but the certificate is not checked).
 
-In `widgets.yaml` the header form also works under homepage's name, `unifi_console` (dashboard 0.5
-and later).
+In `widgets.yaml` the header form also works under homepage's name, `unifi_console`.
 
 Learn more about [UniFi Network](https://help.ui.com/hc/en-us/categories/6583256751383).
 

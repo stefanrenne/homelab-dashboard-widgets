@@ -24,7 +24,7 @@ must allow that user.
 ### Running as root
 
 `user: root` runs the script as root inside the container, for a script that writes files which
-must stay owned by root (a proxy's config, `chown`). It needs dashboard 0.9.0 or newer and
+must stay owned by root (a proxy's config, `chown`). It needs
 `HD_ALLOW_ROOT_SCRIPTS: "true"` in the dashboard container's environment; without it the button
 says so. The dashboard itself keeps running as `node`: the image lets it start one fixed runner as
 root through sudo, and only when that variable is set. `HOME` is then `/root`; `inheritEnv: true`

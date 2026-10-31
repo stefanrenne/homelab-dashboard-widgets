@@ -52,6 +52,12 @@ them only in a backward-compatible way.
     5. `## Example`: a complete `services.yaml` entry with `type: <id>` (or a `widgets.yaml` entry
        `- <id>:` for a header widget), the key through
        `{{HD_VAR_...}}`, made-up hosts (`*.lan`).
+    No dashboard or collection versions in a README before the dashboard's 1.0 ("needs dashboard
+    0.9.0 or newer"): they go in CHANGELOG.md. Versions of the service itself are fine.
+    Filter attributes (widget.yaml `attributes:`, for the dashboard's service `filter:`) get a
+    table on the page from widget.yaml too: give each a line comment, and no README section.
+    On the page `## Fields` is shown as "Display fields" and the example gets `fields: [...]`
+    with them, unless it has a `fields:` line already.
     The options table comes from widget.yaml: give an option a line comment (`# e.g.
     http://radarr:7878`, `# Settings > Management Access > API Keys`) when its name does not
     explain it. A changed option, field or setup step updates the README in the same commit.
