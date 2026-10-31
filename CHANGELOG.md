@@ -4,6 +4,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-10-31
+
 ### Added
 - `shelly` (1.1.0): publishes the attributes `update`, `version` and `available` for the
   dashboard's service `filter:` (dashboard 0.12.0 or newer), so a card can show only while a
