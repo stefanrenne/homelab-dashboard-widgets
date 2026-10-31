@@ -127,6 +127,8 @@ export default {
     return {
       blocks: [{ key: 'firmware', label: 'firmware', value: s.version }, ...(update ? [update] : [])],
       update: { available: Boolean(s.available) && !s.updating, version: s.available, stage: s.stage },
+      // public, for a service's filter: (filter: widget.update == false)
+      attributes: { update: Boolean(s.available) || s.updating, version: s.version ?? null, available: s.available ?? null },
     };
   },
 

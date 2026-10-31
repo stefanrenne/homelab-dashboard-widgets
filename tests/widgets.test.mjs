@@ -1917,6 +1917,7 @@ test('shelly: Gen2+ version and stable update (marked), checked once an hour, an
   const out = await shelly.fetch(ctx({ url: `${mock.url}/shelly` }, cache));
   assert.deepEqual(out.blocks, [{ key: 'firmware', label: 'firmware', value: '1.4.4' }, { key: 'update', label: 'update', value: '1.5.0', status: 'warn' }]);
   assert.deepEqual(out.update, { available: true, version: '1.5.0', stage: 'stable' });
+  assert.deepEqual(out.attributes, { update: true, version: '1.4.4', available: '1.5.0' }, 'attributes for a service filter');
   assert.equal(lastRequest('shelly').route, 'GET /rpc/Shelly.CheckForUpdate');
   await shelly.fetch(ctx({ url: `${mock.url}/shelly` }, cache));
   assert.equal(lastRequest('shelly').route, 'GET /rpc/Sys.GetStatus', 'the cloud check waits an hour; the device status in between');
@@ -1929,6 +1930,7 @@ test('shelly: Gen2+ version and stable update (marked), checked once an hour, an
   try {
     const plain = await shelly.fetch(ctx({ url: dev.url, password: 'pw' }));
     assert.deepEqual([plain.blocks, plain.update.available], [[{ key: 'firmware', label: 'firmware', value: '1.4.4' }], false], 'up to date: only the version');
+    assert.deepEqual(plain.attributes, { update: false, version: '1.4.4', available: null });
     assert.deepEqual((await shelly.action(ctx({ url: dev.url, password: 'pw' }))).status, 'error', 'nothing to install');
     const beta = await shelly.fetch(ctx({ url: dev.url, password: 'pw', beta: true }));
     assert.deepEqual(beta.update, { available: true, version: '1.5.1-beta1', stage: 'beta' });
@@ -1968,6 +1970,7 @@ test('shelly: Gen1 over /shelly and /ota with basic auth; a beta, an update that
     ota.status = 'updating';
     const busy = await shelly.fetch(ctx({ url: dev.url, beta: true }));
     assert.deepEqual([busy.blocks[1], busy.update.available], [{ key: 'update', label: 'update', value: 'updating', status: 'warn' }, false]);
+    assert.equal(busy.attributes.update, true, 'updating counts as an update');
     assert.equal((await shelly.action(ctx({ url: dev.url, beta: true }))).status, 'error');
     await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: 'wrong' })), /Shelly ota\/check answered 401 \(password refused\)/);
     await assert.rejects(shelly.fetch(ctx({ url: dev.url, password: undefined })), /Shelly ota\/check answered 401 \(no password set\)/);

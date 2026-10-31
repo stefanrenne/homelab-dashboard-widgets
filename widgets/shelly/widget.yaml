@@ -1,6 +1,6 @@
 id: shelly
 name: Shelly
-version: 1.0.2
+version: 1.1.0
 apiVersion: 1
 description: A Shelly device's firmware version, whether an update is available, and a button that starts it.
 refresh: 5m
@@ -9,3 +9,7 @@ options:
   password: { type: string, secret: true }    # only when the device has authentication on
   username: { type: string, default: admin }  # Gen1 only; Gen2 and newer always use admin
   beta: { type: boolean, default: false }     # also offer beta firmware
+attributes:
+  update: { type: boolean }                   # true while an update is available or being installed
+  version: { type: string }                   # the installed firmware
+  available: { type: string }                 # the firmware on offer, or null
