@@ -1,6 +1,6 @@
 id: npm
 name: Nginx Proxy Manager
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Proxy hosts enabled, disabled and in total (homepage's npm widget).
 refresh: 5m
@@ -8,3 +8,7 @@ options:
   url: { type: url, required: true }       # e.g. http://npm.lan:81
   username: { type: string, required: true }               # the e-mail address of a view-only user
   password: { type: string, secret: true, required: true }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  enabled: { type: number, from: enabled }     # Enabled
+  disabled: { type: number, from: disabled }   # Disabled
+  total: { type: number, from: total }         # Total

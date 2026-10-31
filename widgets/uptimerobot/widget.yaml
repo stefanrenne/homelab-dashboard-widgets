@@ -1,9 +1,12 @@
 id: uptimerobot
 name: UptimeRobot
-version: 0.1.1
+version: 0.2.0
 apiVersion: 1
 description: Monitors up and down in UptimeRobot, or one monitor's state, uptime and last downtime (homepage's uptimerobot widget).
 refresh: 5m
 options:
   key: { type: string, secret: true, required: true }   # My Settings > API: a Read-Only or a Monitor-Specific API Key
   url: { type: url, default: "https://api.uptimerobot.com" }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  status: { type: string, from: status }             # Status, a state such as up
+  attention: { type: boolean, from: '@attention' }   # true while the card marks something as needing attention

@@ -1,9 +1,15 @@
 id: maintainerr
 name: Maintainerr
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Items, episodes, movies, shows and seasons handled, and the space to reclaim, in Maintainerr (homepage's maintainerr widget).
 refresh: 5m
 defaultFields: [itemsHandled, episodesHandled, moviesHandled, reclaimable]
 options:
   url: { type: url, required: true }       # e.g. http://maintainerr.lan:6246
+attributes:                 # public values for a service's filter: (widget.<name>)
+  itemsHandled: { type: number, from: itemsHandled }         # Items removed
+  episodesHandled: { type: number, from: episodesHandled }   # Episodes removed
+  moviesHandled: { type: number, from: moviesHandled }       # Movies removed
+  showsHandled: { type: number, from: showsHandled }         # Shows removed
+  seasonsHandled: { type: number, from: seasonsHandled }     # Seasons removed

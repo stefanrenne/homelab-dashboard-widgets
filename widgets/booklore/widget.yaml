@@ -1,6 +1,6 @@
 id: booklore
 name: BookLore
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Libraries, books, books you are reading and finished in BookLore (homepage's booklore widget).
 refresh: 10m
@@ -8,3 +8,8 @@ options:
   url: { type: url, required: true }       # e.g. http://booklore.lan:6060
   username: { type: string, required: true }
   password: { type: string, secret: true, required: true }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  libraries: { type: number, from: libraries }   # Libraries
+  books: { type: number, from: books }           # Books
+  reading: { type: number, from: reading }       # Reading
+  finished: { type: number, from: finished }     # Finished

@@ -1,6 +1,6 @@
 id: zabbix
 name: Zabbix
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Problems in Zabbix by severity, from unclassified to disaster (homepage's zabbix widget).
 refresh: 60s
@@ -8,3 +8,11 @@ defaultFields: [warning, average, high, disaster]
 options:
   url: { type: url, required: true }       # the front end, e.g. http://zabbix.lan/zabbix
   key: { type: string, secret: true, required: true }   # Users > API tokens
+attributes:                 # public values for a service's filter: (widget.<name>)
+  unclassified: { type: number, from: unclassified }   # Unclassified
+  information: { type: number, from: information }     # Information
+  warning: { type: number, from: warning }             # Warning
+  average: { type: number, from: average }             # Average
+  high: { type: number, from: high }                   # High
+  disaster: { type: number, from: disaster }           # Disaster
+  attention: { type: boolean, from: '@attention' }     # true while the card marks something as needing attention

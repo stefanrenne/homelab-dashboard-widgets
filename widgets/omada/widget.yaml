@@ -1,6 +1,6 @@
 id: omada
 name: TP-Link Omada
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Access points, clients, alerts, gateways and switches of an Omada site (homepage's omada widget).
 refresh: 60s
@@ -11,3 +11,10 @@ options:
   password: { type: string, secret: true, required: true }
   site: { type: string, required: true }   # the site's name, e.g. Default
   insecure: { type: boolean, default: false }  # accept the controller's self-signed certificate
+attributes:                 # public values for a service's filter: (widget.<name>)
+  connectedAp: { type: number, from: connectedAp }               # Access points
+  activeUser: { type: number, from: activeUser }                 # Clients
+  alerts: { type: number, from: alerts }                         # Alerts
+  connectedGateways: { type: number, from: connectedGateways }   # Gateways
+  connectedSwitches: { type: number, from: connectedSwitches }   # Switches
+  attention: { type: boolean, from: '@attention' }               # true while the card marks something as needing attention

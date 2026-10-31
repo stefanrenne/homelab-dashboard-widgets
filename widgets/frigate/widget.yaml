@@ -1,6 +1,6 @@
 id: frigate
 name: Frigate
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Cameras, uptime and version of Frigate, and optionally its recent events (homepage's frigate widget).
 refresh: 1m
@@ -10,3 +10,6 @@ options:
   password: { type: string, secret: true }
   enableRecentEvents: { type: boolean, default: false }   # a row per recent event
   insecure: { type: boolean, default: false }             # accept Frigate's self-signed certificate (port 8971)
+attributes:                 # public values for a service's filter: (widget.<name>)
+  cameras: { type: number, from: cameras }   # Cameras
+  version: { type: string, from: version }   # Version, such as 0.16.2

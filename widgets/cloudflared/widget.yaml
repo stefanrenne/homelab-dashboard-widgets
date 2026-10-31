@@ -1,6 +1,6 @@
 id: cloudflared
 name: Cloudflare Tunnel
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: The status and origin IP of a Cloudflare Tunnel (homepage's cloudflared widget).
 refresh: 5m
@@ -9,3 +9,6 @@ options:
   tunnelid: { type: string, required: true }    # under the tunnel's name in Networks > Tunnels
   key: { type: string, secret: true, required: true }   # an API token with Account > Cloudflare Tunnel > Read
   url: { type: url, default: https://api.cloudflare.com }   # the Cloudflare API
+attributes:                 # public values for a service's filter: (widget.<name>)
+  status: { type: string, from: status }             # Status, a state such as degraded
+  attention: { type: boolean, from: '@attention' }   # true while the card marks something as needing attention

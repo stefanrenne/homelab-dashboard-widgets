@@ -1,6 +1,6 @@
 id: emby
 name: Emby
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: What is playing on Emby, one row per stream, and optionally the library counts (homepage's emby widget).
 refresh: 10s
@@ -11,3 +11,5 @@ options:
   enableBlocks: { type: boolean, default: false }       # movies, series, episodes and songs
   enableUser: { type: boolean, default: false }         # the user's name after the title
   showEpisodeNumber: { type: boolean, default: false }  # S01 · E02 in episode titles
+attributes:                 # public values for a service's filter: (widget.<name>)
+  streams: { type: number, from: '@rows' }   # streams playing now

@@ -1,6 +1,6 @@
 id: gitlab
 name: GitLab
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Groups, issues, merge requests and projects of a GitLab user (homepage's gitlab widget).
 refresh: 5m
@@ -8,3 +8,8 @@ options:
   url: { type: url, required: true }       # e.g. https://gitlab.lan
   key: { type: string, secret: true, required: true }   # a personal access token with read_api
   user_id: { type: string, required: true }   # the number on your profile page (User ID)
+attributes:                 # public values for a service's filter: (widget.<name>)
+  groups: { type: number, from: groups }       # Groups
+  issues: { type: number, from: issues }       # Issues
+  merges: { type: number, from: merges }       # Merge requests
+  projects: { type: number, from: projects }   # Projects

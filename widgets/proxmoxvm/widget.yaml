@@ -1,6 +1,6 @@
 id: proxmoxvm
 name: Proxmox VM
-version: 1.0.0
+version: 1.1.0
 apiVersion: 1
 description: State, CPU and memory of one Proxmox VM or LXC container. Used for services with "proxmoxNode:" and "proxmoxVMID:".
 refresh: 15s
@@ -12,3 +12,6 @@ options:
   vmid: { type: string, required: true }   # the VM or container id, as proxmoxVMID
   type: { type: enum, values: [qemu, lxc], default: qemu }   # qemu for a VM, lxc for a container
   insecure: { type: boolean, default: true }   # accept Proxmox's self-signed certificate (as homepage does)
+attributes:                 # public values for a service's filter: (widget.<name>)
+  status: { type: string, from: '@status' }          # up or down, as the status label
+  attention: { type: boolean, from: '@attention' }   # true while the card marks something as needing attention

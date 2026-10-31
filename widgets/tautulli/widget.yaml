@@ -1,6 +1,6 @@
 id: tautulli
 name: Tautulli
-version: 0.3.1
+version: 0.4.0
 apiVersion: 1
 description: Current Plex streams with their progress.
 refresh: 15s
@@ -9,3 +9,5 @@ options:
   key: { type: string, secret: true, required: true }
   enableUser: { type: boolean, default: false }
   showEpisodeNumber: { type: boolean, default: false }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  streams: { type: number, from: '@rows' }   # streams playing now

@@ -1,6 +1,6 @@
 id: atsumeru
 name: Atsumeru
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Series, archives, chapters and categories in Atsumeru (homepage's atsumeru widget).
 refresh: 10m
@@ -8,3 +8,8 @@ options:
   url: { type: url, required: true }       # e.g. http://atsumeru.lan:31337
   username: { type: string, required: true }
   password: { type: string, secret: true, required: true }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  series: { type: number, from: series }           # Series
+  archives: { type: number, from: archives }       # Archives
+  chapters: { type: number, from: chapters }       # Chapters
+  categories: { type: number, from: categories }   # Categories

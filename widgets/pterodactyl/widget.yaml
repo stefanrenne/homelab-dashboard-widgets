@@ -1,9 +1,12 @@
 id: pterodactyl
 name: Pterodactyl
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Nodes and game servers in a Pterodactyl panel (homepage's pterodactyl widget).
 refresh: 5m
 options:
   url: { type: url, required: true }       # the panel, e.g. https://panel.lan
   key: { type: string, secret: true, required: true }   # an application API key (Admin > Application API), read on nodes and servers
+attributes:                 # public values for a service's filter: (widget.<name>)
+  nodes: { type: number, from: nodes }       # Nodes
+  servers: { type: number, from: servers }   # Servers

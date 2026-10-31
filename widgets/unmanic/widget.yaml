@@ -1,8 +1,12 @@
 id: unmanic
 name: Unmanic
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Workers busy and in all, and the pending tasks in Unmanic (homepage's unmanic widget).
 refresh: 30s
 options:
   url: { type: url, required: true }       # e.g. http://unmanic.lan:8888
+attributes:                 # public values for a service's filter: (widget.<name>)
+  active_workers: { type: number, from: active_workers }   # Busy workers
+  total_workers: { type: number, from: total_workers }     # Workers
+  records_total: { type: number, from: records_total }     # Pending

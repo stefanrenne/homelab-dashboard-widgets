@@ -1,9 +1,14 @@
 id: tdarr
 name: Tdarr
-version: 0.2.1
+version: 0.3.0
 apiVersion: 1
 description: Transcode and health-check queue, processed and failed files, and space saved.
 refresh: 1m
 options:
   url: { type: url, required: true }      # e.g. http://tdarr:8265
   key: { type: string, secret: true }     # only when Tdarr has authentication on
+attributes:                 # public values for a service's filter: (widget.<name>)
+  queue: { type: number, from: queue }               # Queue
+  processed: { type: number, from: processed }       # Processed
+  errored: { type: number, from: errored }           # Errored
+  attention: { type: boolean, from: '@attention' }   # true while the card marks something as needing attention

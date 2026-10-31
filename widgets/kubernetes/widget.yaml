@@ -1,6 +1,6 @@
 id: kubernetes
 name: Kubernetes
-version: 1.1.0
+version: 1.2.0
 apiVersion: 1
 description: CPU and memory of a Kubernetes cluster (the one the dashboard runs in, or kubernetes.yaml's kubeconfig), in total and per node (homepage's kubernetes widget).
 refresh: 15s
@@ -18,3 +18,8 @@ options:
   tlsCert: { type: string, secret: true }   # PEM text of a client certificate
   tlsKey: { type: string, secret: true }    # PEM text of its key
   insecure: { type: boolean, default: false }   # skip the certificate check (insecure-skip-tls-verify)
+attributes:                 # public values for a service's filter: (widget.<name>)
+  cpu: { type: number, from: cpu }         # CPU (%)
+  memory: { type: number, from: memory }   # Memory (%)
+  nodes: { type: number, from: nodes }     # Nodes
+  ready: { type: number, from: ready }     # Ready

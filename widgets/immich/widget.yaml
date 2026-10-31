@@ -1,6 +1,6 @@
 id: immich
 name: Immich
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Users, photos, videos and storage used of an Immich server (homepage's immich widget).
 refresh: 5m
@@ -8,3 +8,7 @@ options:
   url: { type: url, required: true }       # e.g. http://immich.lan:2283
   key: { type: string, secret: true, required: true }   # an admin's API key with server.statistics: Account Settings > API Keys
   version: { type: number, default: 1 }    # 2 for Immich 1.118 or later, as in homepage
+attributes:                 # public values for a service's filter: (widget.<name>)
+  users: { type: number, from: users }     # Users
+  photos: { type: number, from: photos }   # Photos
+  videos: { type: number, from: videos }   # Videos

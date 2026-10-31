@@ -471,6 +471,34 @@ test('every widget has a README for its docs page: title, every field, an exampl
   }
 });
 
+// Filter attributes (widget.yaml `attributes:`): what the dashboard takes from a block (`from:`)
+// names a block of the README's Fields; what server.js returns itself comes back on the fixture,
+// and every value has the declared type (or is null).
+test('filter attributes: declared, documented and of the declared type on the fixture', async () => {
+  const SOURCES = { '@attention': 'boolean', '@status': 'string', '@rows': 'number' };
+  for (const id of IDS) {
+    const m = YAML.parse(fs.readFileSync(path.join(WIDGETS, id, 'widget.yaml'), 'utf8'));
+    if (!m.attributes) continue;
+    const readme = fs.readFileSync(path.join(WIDGETS, id, 'README.md'), 'utf8');
+    const fields = new Set([...(readme.split(/^## Fields$/m)[1]?.split(/^## /m)[0] ?? '').matchAll(/`([A-Za-z0-9_.]+)`/g)].map((x) => x[1]));
+    const out = await run(id, { env: 1, pool1: 'trunk', enableQueue: true, queueLimit: 2 });
+    for (const [name, def] of Object.entries(m.attributes)) {
+      assert.ok(['boolean', 'number', 'string'].includes(def.type), `${id}.${name}: type`);
+      const ofType = (v) => v === null || typeof v === def.type;
+      if (def.from?.startsWith('@')) {
+        assert.equal(SOURCES[def.from], def.type, `${id}.${name}: ${def.from} is a ${SOURCES[def.from]}`);
+      } else if (def.from) {
+        assert.ok(fields.has(def.from), `${id}.${name}: block ${def.from} is not in the README's Fields`);
+        const block = (out.blocks ?? []).find((b) => (b.key ?? b.label) === def.from);
+        if (block) assert.ok(ofType(block.value), `${id}.${name}: block ${def.from} is ${typeof block.value}, declared ${def.type}`);
+      } else {
+        assert.ok(out.attributes && name in out.attributes, `${id}.${name}: server.js does not return it`);
+        assert.ok(ofType(out.attributes[name]), `${id}.${name}: ${typeof out.attributes[name]}, declared ${def.type}`);
+      }
+    }
+  }
+});
+
 // The docs site's highlighter (Rouge) marks the colon after a key with [ ] or ' in red, quoted
 // or not: write ’ for an apostrophe in a name, and Docker labels with [n] as a list (- k=v).
 test('README examples: no YAML key with [ ] or \'', () => {

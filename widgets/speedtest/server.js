@@ -21,7 +21,10 @@ export default {
     const d = (await res.json()).data;
     if (!d) return { blocks: [{ key: 'download', label: 'download', value: null }, { key: 'upload', label: 'upload', value: null }, { key: 'ping', label: 'ping', value: null }] };
     const bits = (v) => (v2 ? Number(v) * 8 : Number(v) * 1e6);
+    const mbits = (v) => (v === null || v === undefined ? null : Math.round(bits(v) / 1e5) / 10);
     return {
+      // public, for a service's filter: (filter: widget.download < 100)
+      attributes: { download: mbits(d.download), upload: mbits(d.upload) },
       blocks: [
         { key: 'download', label: 'download', value: formatBitrate(bits(d.download), o.bitratePrecision) },
         { key: 'upload', label: 'upload', value: formatBitrate(bits(d.upload), o.bitratePrecision) },

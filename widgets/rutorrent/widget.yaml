@@ -1,6 +1,6 @@
 id: rutorrent
 name: ruTorrent
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Active torrents and the upload and download rates in ruTorrent (homepage's rutorrent widget).
 refresh: 15s
@@ -8,3 +8,5 @@ options:
   url: { type: url, required: true }       # e.g. http://rutorrent.lan
   username: { type: string }               # when ruTorrent sits behind basic authentication
   password: { type: string, secret: true }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  active: { type: number, from: active }   # Active

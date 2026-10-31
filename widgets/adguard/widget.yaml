@@ -1,6 +1,6 @@
 id: adguard
 name: AdGuard Home
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: DNS queries, blocked and filtered queries and the processing time of AdGuard Home (homepage's adguard widget).
 refresh: 1m
@@ -8,3 +8,8 @@ options:
   url: { type: url, required: true }       # e.g. http://adguard.lan:3000
   username: { type: string }               # the web interface login
   password: { type: string, secret: true }
+attributes:                 # public values for a service's filter: (widget.<name>)
+  queries: { type: number, from: queries }     # Queries
+  blocked: { type: number, from: blocked }     # Blocked
+  filtered: { type: number, from: filtered }   # Filtered
+  latency: { type: number, from: latency }     # Latency, in ms

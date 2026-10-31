@@ -1,6 +1,6 @@
 id: stocks
 name: Stocks
-version: 1.1.0
+version: 1.2.0
 apiVersion: 1
 description: The price and day change of up to eight stocks, from Finnhub (homepage's stocks widget).
 refresh: 1m
@@ -10,3 +10,5 @@ options:
   apiKey: { type: string, secret: true, required: true }     # or provider: finnhub (settings.yaml providers)
   color: { type: boolean, default: true }                     # green up, red down (the arrows show it either way)
   cache: { type: number, default: 1 }                         # minutes between calls to Finnhub
+attributes:                 # public values for a service's filter: (widget.<name>)
+  AAPL: { type: number, from: AAPL }   # AAPL

@@ -1,6 +1,6 @@
 id: grafana
 name: Grafana
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Dashboards, data sources, alert rules and alerts firing in Grafana (homepage's grafana widget).
 refresh: 1m
@@ -10,3 +10,9 @@ options:
   password: { type: string, secret: true, required: true }
   version: { type: number, default: 1 }    # 2 for Grafana 11 or later (after 10.4), as in homepage
   alerts: { type: enum, values: [grafana, alertmanager], default: grafana }   # version 2: which alertmanager to ask
+attributes:                 # public values for a service's filter: (widget.<name>)
+  dashboards: { type: number, from: dashboards }             # Dashboards
+  datasources: { type: number, from: datasources }           # Data sources
+  totalalerts: { type: number, from: totalalerts }           # Alert rules
+  alertstriggered: { type: number, from: alertstriggered }   # Alerts firing
+  attention: { type: boolean, from: '@attention' }           # true while the card marks something as needing attention

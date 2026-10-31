@@ -17,12 +17,21 @@ export default {
     const nodes = all.filter((r) => r.type === 'node' && r.status === 'online');
     const sum = (f) => nodes.reduce((s, n) => s + (Number(f(n)) || 0), 0);
     const online = nodes.length > 0;
+    const count = (list, state) => list.filter((r) => state === undefined || r.status === state).length;
+    const cpu = online ? pct(sum((n) => n.cpu * n.maxcpu), sum((n) => n.maxcpu)) : null;
+    const memory = online ? pct(sum((n) => n.mem), sum((n) => n.maxmem)) : null;
     return {
+      // public, for a service's filter: (filter: widget.vmsStopped > 0)
+      attributes: {
+        vmsRunning: count(guests('qemu'), 'running'), vmsStopped: count(guests('qemu')) - count(guests('qemu'), 'running'),
+        lxcRunning: count(guests('lxc'), 'running'), lxcStopped: count(guests('lxc')) - count(guests('lxc'), 'running'),
+        nodesOnline: nodes.length, cpu, memory,
+      },
       blocks: [
         { key: 'vms', label: 'vms', value: running(guests('qemu')) },
         { key: 'lxc', label: 'lxc', value: running(guests('lxc')) },
-        { key: 'resources.cpu', label: 'cpu', value: online ? pct(sum((n) => n.cpu * n.maxcpu), sum((n) => n.maxcpu)) : null, unit: '%' },
-        { key: 'resources.mem', label: 'memory', value: online ? pct(sum((n) => n.mem), sum((n) => n.maxmem)) : null, unit: '%' },
+        { key: 'resources.cpu', label: 'cpu', value: cpu, unit: '%' },
+        { key: 'resources.mem', label: 'memory', value: memory, unit: '%' },
       ],
     };
   },

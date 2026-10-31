@@ -1,6 +1,6 @@
 id: photoprism
 name: PhotoPrism
-version: 0.1.0
+version: 0.2.0
 apiVersion: 1
 description: Albums, photos, videos and people in PhotoPrism (homepage's photoprism widget).
 refresh: 5m
@@ -9,3 +9,8 @@ options:
   username: { type: string }               # or use key
   password: { type: string, secret: true }
   key: { type: string, secret: true }      # an app password (Settings > Account > Apps and Devices), instead of a user
+attributes:                 # public values for a service's filter: (widget.<name>)
+  albums: { type: number, from: albums }   # Albums
+  photos: { type: number, from: photos }   # Photos
+  videos: { type: number, from: videos }   # Videos
+  people: { type: number, from: people }   # People

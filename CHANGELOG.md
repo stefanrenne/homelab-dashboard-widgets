@@ -4,6 +4,14 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+### Added
+- Filter attributes for every widget that has something to filter on (167 widgets), for the
+  dashboard's service `filter:`: their number and state blocks, `attention` when they mark
+  anything, `status` for status checks, `streams` for the media servers, and raw values for
+  `proxmox` (VMs and containers running and stopped, nodes, CPU, memory) and `speedtest`
+  (download and upload in Mbit/s). Each widget's docs page lists them. Every changed widget's
+  minor version went up.
+
 ## [0.9.1] - 2026-10-31
 
 ### Changed

@@ -56,6 +56,11 @@ them only in a backward-compatible way.
     0.9.0 or newer"): they go in CHANGELOG.md. Versions of the service itself are fine.
     Filter attributes (widget.yaml `attributes:`, for the dashboard's service `filter:`) get a
     table on the page from widget.yaml too: give each a line comment, and no README section.
+14. **Every widget publishes filter attributes** where it has something to filter on: plain
+    number and state blocks with `from: <block key>`, `attention: { type: boolean, from:
+    '@attention' }` when it marks anything, `status` from `'@status'` for status widgets, a row
+    count from `'@rows'`, and raw numbers from `fetch` (`attributes: { ... }`) where the card shows
+    formatted text (Proxmox, Speedtest). A test checks them on every fixture.
     On the page `## Fields` is shown as "Display fields" and the example gets `fields: [...]`
     with them, unless it has a `fields:` line already.
     The options table comes from widget.yaml: give an option a line comment (`# e.g.
