@@ -4,6 +4,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.8.2] - 2026-10-31
+
 ### Changed
 - `shelly` (1.0.2): no `update` block when the device is up to date, so the card shows only the
   firmware version; the block (marked) appears when an update is available or being installed.
