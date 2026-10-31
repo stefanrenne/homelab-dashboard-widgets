@@ -4,6 +4,10 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+### Changed
+- The fake services and the options every widget needs for its fixture moved from the tests to
+  `scripts/fakes.mjs`, so the dashboard's docs site uses them for each widget's example image.
+
 ## [0.10.0] - 2026-10-31
 
 ### Added
