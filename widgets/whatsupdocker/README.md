@@ -13,7 +13,7 @@ Learn more about [What's up Docker](https://getwud.github.io/wud/).
 ```yaml
 # services.yaml
 - Infrastructure:
-    - What's up Docker:
+    - "What's up Docker":
         href: https://wud.lan
         icon: whats-up-docker
         widget:
