@@ -4,6 +4,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-10-31
+
 ### Added
 - Filter attributes for every widget that has something to filter on (167 widgets), for the
   dashboard's service `filter:`: their number and state blocks, `attention` when they mark
