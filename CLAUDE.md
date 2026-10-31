@@ -16,6 +16,8 @@ them only in a backward-compatible way.
 | `widgets/<id>/` | `widget.yaml`, `server.js`, `i18n.json`, `README.md` (its docs page, rule 13), optionally `client.js` (its own look; mjpeg has only a `client.js`). Folder name = widget id. |
 | `fixtures/<id>.json` | API answers per route (`"GET /api/v3/movie": ...`; `{ "_headers": {...}, "_body": ... }` for headers, `"_text"` for a plain text body), used by tests and the mock. |
 | `scripts/mock-homelab.mjs` | Serves the fixtures at `/<id>/...`; the tests start it, `npm run mock` too. |
+| `scripts/fakes.mjs` | Fake services for widgets that do not speak HTTP with JSON, and the options each widget needs for its fixture; used by the tests and the dashboard's docs images. |
+| `todo.md` | Open work; remove an item when it is done (the CHANGELOG records it). |
 | `tests/widgets.test.mjs` | Every widget through the public `ctx` against the mock, plus package checks. |
 | `tests/dashboard-widgets.test.mjs` | The widgets that came from the dashboard (service fields, header, generic), against small servers of their own. |
 
