@@ -4,6 +4,8 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-10-31
+
 ### Changed
 - `shelly` (1.0.1): a refused password (401) says so on the card ("The password was refused –
   check "password""), or asks for `password` when none is set, with the raw error below it,
