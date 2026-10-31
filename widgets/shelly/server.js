@@ -118,13 +118,14 @@ export async function deviceState(ctx) {
 export default {
   async fetch(ctx) {
     const s = await deviceState(ctx);
+    // no update block when there is nothing to install: the card shows only the version
     const update = s.updating
       ? { key: 'update', label: 'update', value: 'updating', status: 'warn' }
       : s.available
         ? { key: 'update', label: 'update', value: s.available, status: 'warn' }
-        : { key: 'update', label: 'update', value: 'upToDate' };
+        : null;
     return {
-      blocks: [{ key: 'firmware', label: 'firmware', value: s.version }, update],
+      blocks: [{ key: 'firmware', label: 'firmware', value: s.version }, ...(update ? [update] : [])],
       update: { available: Boolean(s.available) && !s.updating, version: s.available, stage: s.stage },
     };
   },

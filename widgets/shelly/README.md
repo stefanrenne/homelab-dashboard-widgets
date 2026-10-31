@@ -1,7 +1,8 @@
 # Shelly
 
-A Shelly device's firmware version and whether a newer one is available; an available update is
-marked as needing attention, and an **Update firmware** button under the blocks starts it. While
+A Shelly device's firmware version and, when a newer one is available, that version in a block
+marked as needing attention, with an **Update firmware** button under the blocks that starts it.
+An up-to-date device shows only its version. While
 the device updates, the button says the update started; it goes away once the device reports the
 new version. Works with Gen2, Gen3 and Gen4 devices (the RPC API) and with Gen1 devices.
 
@@ -21,7 +22,7 @@ Learn more about [Shelly](https://shelly-api-docs.shelly.cloud/).
 
 ## Fields
 
-`firmware`, `update`
+`firmware`, `update` (only when an update is available or being installed)
 
 ## Example
 

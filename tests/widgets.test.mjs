@@ -1912,7 +1912,7 @@ test('shelly: Gen2+ version and stable update (marked), checked once an hour, an
   const dev = await shellyDevice({ gen: 2, password: 'pw', routes });
   try {
     const plain = await shelly.fetch(ctx({ url: dev.url, password: 'pw' }));
-    assert.deepEqual([plain.blocks[1], plain.update.available], [{ key: 'update', label: 'update', value: 'upToDate' }, false]);
+    assert.deepEqual([plain.blocks, plain.update.available], [[{ key: 'firmware', label: 'firmware', value: '1.4.4' }], false], 'up to date: only the version');
     assert.deepEqual((await shelly.action(ctx({ url: dev.url, password: 'pw' }))).status, 'error', 'nothing to install');
     const beta = await shelly.fetch(ctx({ url: dev.url, password: 'pw', beta: true }));
     assert.deepEqual(beta.update, { available: true, version: '1.5.1-beta1', stage: 'beta' });
@@ -1944,7 +1944,7 @@ test('shelly: Gen1 over /shelly and /ota with basic auth; a beta, an update that
     assert.equal(dev.calls.at(-1), '/ota?update=true');
 
     Object.assign(ota, { has_update: false, new_version: ota.old_version });
-    assert.equal((await shelly.fetch(ctx({ url: dev.url }))).blocks[1].value, 'upToDate');
+    assert.deepEqual(values(await shelly.fetch(ctx({ url: dev.url }))), { firmware: '1.14.0' }, 'up to date: no update block');
     assert.deepEqual((await shelly.fetch(ctx({ url: dev.url, beta: true }))).update, { available: true, version: '1.14.1-rc1', stage: 'beta' });
     await shelly.action(ctx({ url: dev.url, beta: true }));
     assert.equal(dev.calls.at(-1), '/ota?beta=true');
@@ -1983,7 +1983,7 @@ test('shelly client: blocks with the update marked, a button only for an update,
   assert.deepEqual([button.disabled, button.textContent, root.querySelector('button') === button], [true, 'updateStarted', true]);
   el.data = data;
   assert.equal(button.textContent, 'updateStarted', 'still started while the device has not updated yet');
-  el.data = { blocks: [{ key: 'firmware', label: 'firmware', value: '1.5.0' }, { key: 'update', label: 'update', value: 'upToDate' }], update: { available: false, version: null, stage: null } };
+  el.data = { blocks: [{ key: 'firmware', label: 'firmware', value: '1.5.0' }], update: { available: false, version: null, stage: null } };
   assert.equal(button.hidden, true, 'no button without an update');
   el.data = data;
   assert.deepEqual([button.hidden, button.disabled, button.textContent], [false, false, 'updateFirmware'], 'ready for a next update');
