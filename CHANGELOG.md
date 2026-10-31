@@ -4,6 +4,14 @@ Changes to the widget collection. Each widget also has its own `version` in its 
 
 ## [Unreleased]
 
+## [0.9.1] - 2026-10-31
+
+### Changed
+- READMEs no longer name the dashboard version a feature needs (`button`, `unifi`), and
+  `shelly`'s attributes are listed on its docs page from widget.yaml instead of twice.
+- `whatsupdocker`'s example spells What’s up Docker with a typographic apostrophe, so it
+  highlights as YAML on the docs site; a test checks every README example for this.
+
 ## [0.9.0] - 2026-10-31
 
 ### Added
