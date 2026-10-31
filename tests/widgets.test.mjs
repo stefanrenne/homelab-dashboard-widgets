@@ -471,6 +471,22 @@ test('every widget has a README for its docs page: title, every field, an exampl
   }
 });
 
+// The docs site's highlighter (Rouge) marks the colon after a key with [ ] or ' in red, quoted
+// or not: write ’ for an apostrophe in a name, and Docker labels with [n] as a list (- k=v).
+test('README examples: no YAML key with [ ] or \'', () => {
+  const bad = [];
+  for (const id of IDS) {
+    const readme = fs.readFileSync(path.join(WIDGETS, id, 'README.md'), 'utf8');
+    for (const [, block] of readme.matchAll(/```ya?ml\n([\s\S]*?)```/g)) {
+      for (const line of block.split('\n')) {
+        const key = /^\s*(?:- )?("[^"]*"|'[^']*'|[^"'\s#{[][^:"#]*?)\s*:(?:\s|$)/.exec(line)?.[1];
+        if (key && /[[\]']/.test(key.replace(/^'|'$/g, ''))) bad.push(`${id}: ${line.trim()}`);
+      }
+    }
+  }
+  assert.deepEqual(bad, []);
+});
+
 
 test('glances: CPU, memory, the hottest CPU sensor, uptime and disks; version 4; basic auth', async () => {
   const out = await run('glances', { cputemp: true, uptime: true, disk: ['/', '/mnt/data'], expanded: true, username: 'g', password: 'p' });
